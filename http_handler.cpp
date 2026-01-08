@@ -1,0 +1,18 @@
+#include <iostream>
+#include "crow.h"
+#include "http_handler.h"
+
+using namespace std;
+
+int main() {
+    crow::SimpleApp app;
+
+    CROW_ROUTE(app, "/<path>")([](const crow::request& req, string path){
+        string client_ip = req.remote_ip_address;
+
+        return "Shot from " + client_ip + " with your name is " + find_mac_addr(client_ip) + " and hitting tower " + path;
+    });
+
+
+    app.port(18080).multithreaded().run();
+}

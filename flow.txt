@@ -1,0 +1,1 @@
+Device connects to Controller -> Detects Hostname -> Use the Hostname as a source to give to target devices as defined in Registration Profile
