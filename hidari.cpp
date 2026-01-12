@@ -1,21 +1,12 @@
+#include <data_queues.hpp>
 #include <iostream>
-#include <nlohmann/json.hpp>
-
-using json = nlohmann::json;
-using namespace std;
-
-struct Simple {
-  json payload;
-  int id;
-};
-
-void print_simple(Simple *s) { cout << s->payload.dump() << endl; }
 
 int main() {
-  Simple *s1 = (Simple *)malloc(sizeof(Simple));
-  s1->payload = {{"hello", "broman"}, {"legio", 8}};
+  Queues ques;
+  ques.create_key(&ques.httpmap, "strongman", "superbus");
+  cout << ques.httpmap["strongman"] << endl;
 
-  print_simple(s1);
+  ques.print_list(ques.httpmap["strongman"]);
 
   return 0;
 }
