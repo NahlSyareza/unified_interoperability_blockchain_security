@@ -3,11 +3,58 @@
 
 int main()
 {
-  Queues::WiFiList *wlist = (Queues::WiFiList *)calloc(1, sizeof(Queues::WiFiList));
+  Queues que;
+  que.wifilist = (Queues::LinkedList *)calloc(1, sizeof(Queues::LinkedList));
 
-  Queues::WiFiNode *wnode1 = Queues::createNode("Sayonara to", &wlist);
-  Queues::WiFiNode *wnode2 = Queues::createNode("Itta kimi no", &wlist);
-  Queues::WiFiNode *wnode3 = Queues::createNode("Kimochi ga wakaranai kedo", &wlist);
+  // Queues::Node *wnode1 = que.create_node("Sayonara to", que.wifilist);
+  // Queues::Node *wnode2 = que.create_node("Itta kimi no", que.wifilist);
+  // Queues::Node *wnode3 = que.create_node("Kimochi ga wakaranai kedo", que.wifilist);
 
-  Queues::printWiFiList(wlist);
+  que.create_node("Sayonara to", que.wifilist);
+  que.create_node("Itta kimi no", que.wifilist);
+  que.create_node("Kimochi ga wakaranai kedo", que.wifilist);
+
+  que.print_linked_list(que.wifilist);
+
+  printf("%d\n", que.wifilist->size);
+
+  printf("--------------------------------\n");
+
+  que.pop(que.wifilist);
+
+  que.print_linked_list(que.wifilist);
+
+  printf("%d\n", que.wifilist->size);
+
+  printf("--------------------------------\n");
+
+  que.pop(que.wifilist);
+
+  que.print_linked_list(que.wifilist);
+
+  printf("%d\n", que.wifilist->size);
+
+  printf("--------------------------------\n");
+
+  que.pop(que.wifilist);
+
+  que.print_linked_list(que.wifilist);
+
+  printf("%d\n", que.wifilist->size);
+
+  printf("--------------------------------\n");
+
+  que.pop(que.wifilist);
+
+  que.print_linked_list(que.wifilist);
+
+  printf("%d\n", que.wifilist->size);
+
+  printf("--------------------------------\n");
+
+  que.pop(que.wifilist);
+
+  que.print_linked_list(que.wifilist);
+
+  printf("%d\n", que.wifilist->size);
 }

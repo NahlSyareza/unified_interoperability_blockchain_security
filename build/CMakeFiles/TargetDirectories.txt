@@ -1,0 +1,3 @@
+C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/build/CMakeFiles/legendary_boss.dir
+C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/build/CMakeFiles/edit_cache.dir
+C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/build/CMakeFiles/rebuild_cache.dir

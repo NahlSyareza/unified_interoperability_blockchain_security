@@ -6,25 +6,25 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 include_directories("./include")
 include_directories("C:/vcpkg/installed/x64-mingw-static/include")
-
 link_directories("C:/vcpkg/installed/x64-mingw-static/lib")
+# link_directories("./lib")
 
 find_package(Crow CONFIG REQUIRED)
+find_package(nlohmann_json CONFIG REQUIRED)
 find_package(unofficial-mosquitto CONFIG REQUIRED)
 find_package(OpenSSL REQUIRED)
 
-file(GLOB PROJECT_SOURCES "*.cpp")
+add_executable(legendary_boss main.cpp)
 
-foreach(source_file ${PROJECT_SOURCES})
-    get_filename_component(exe_name ${source_file} NAME_WE)
-    
-    add_executable(${exe_name} ${source_file})
-
-    target_link_libraries(${exe_name} PRIVATE 
-        unofficial::mosquitto::mosquitto
-        OpenSSL::SSL
-        OpenSSL::Crypto
-        ws2_32 
-        mswsock
-    )
-endforeach()
+target_link_libraries(legendary_boss PRIVATE 
+    Crow::Crow
+    nlohmann_json::nlohmann_json
+    unofficial::mosquitto::mosquitto
+    # mosquitto
+    OpenSSL::SSL
+    OpenSSL::Crypto
+    ws2_32 
+    mswsock
+    crypt32
+    # -lpthread
+)
