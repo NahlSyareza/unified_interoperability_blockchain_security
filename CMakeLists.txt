@@ -5,9 +5,12 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 include_directories("./include")
-# include_directories("C:/vcpkg/installed/x64-mingw-static/include")
+include_directories("C:/vcpkg/installed/x64-mingw-static/include")
 
-find_package(Boost REQUIRED COMPONENTS system)
+link_directories("C:/vcpkg/installed/x64-mingw-static/lib")
+
+find_package(Crow CONFIG REQUIRED)
+find_package(unofficial-mosquitto CONFIG REQUIRED)
 find_package(OpenSSL REQUIRED)
 
 file(GLOB PROJECT_SOURCES "*.cpp")
@@ -17,10 +20,8 @@ foreach(source_file ${PROJECT_SOURCES})
     
     add_executable(${exe_name} ${source_file})
 
-    target_link_options(${exe_name} PRIVATE -static-libgcc -static-libstdc++)
-    
     target_link_libraries(${exe_name} PRIVATE 
-        Boost::system
+        unofficial::mosquitto::mosquitto
         OpenSSL::SSL
         OpenSSL::Crypto
         ws2_32 
