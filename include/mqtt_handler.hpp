@@ -1,4 +1,5 @@
-#include <data_queues.hpp>
+#include <chrono>
+#include <data_structure.hpp>
 #include <iostream>
 #include <mosquitto.h>
 #include <mosquitto_broker.h>
@@ -6,6 +7,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <thread>
 #include <unistd.h>
 
 using namespace std;
@@ -42,33 +44,50 @@ void on_subscribe(struct mosquitto *mosq, void *obj, int mid, int qos_count, con
   }
 }
 
-// void on_publish
+void on_publish(struct mosquitto *mosq, void *obj, int mid) { printf("Message with mid %d has been published.\n", mid); }
 
 void on_message(struct mosquitto *mosq, void *obj, const struct mosquitto_message *msg) {
-  Queues *ques = (Queues *)obj;
-
-  Queues::Node *current = ques->pop_tropica(ques->mqttlist);
-
-  if (current != NULL) {
-    json payload = json::parse(current->payload);
-
-    cout << payload << endl;
-  } else {
-    cout << "There is no payload!" << endl;
-  }
-
-  // ques->print_linked_list(ques->mqttlist);
+  DataStructure *dstructure = (DataStructure *)obj;
 
   printf("%s %d %s\n", msg->topic, msg->qos, (char *)msg->payload);
+
+  json payload;
+  try {
+    payload = json::parse((char *)msg->payload);
+  } catch (const nlohmann::json::parse_error &e) {
+    return;
+  }
+  /**
+   * on_message also triggers when this code publishes message
+   */
+  if (payload["sender"] != "gate-control") {
+    de_ruyter(dstructure, msg->topic, (char *)msg->payload);
+  }
 }
 
-int mqtt_handler(Queues *ques) {
+void do_publish(struct mosquitto *mosq, DataStructure *dstructure) {
+  while (true) {
+    int rc;
+
+    for (const auto &[k, v] : dstructure->mqtt_map) {
+      // cout << k << endl;
+      rc = mosquitto_publish(mosq, NULL, k.c_str(), strlen(v->payload.c_str()), v->payload.c_str(), 2, false);
+      if (rc != MOSQ_ERR_SUCCESS) {
+        fprintf(stderr, "Error publishing: %s\n", mosquitto_strerror(rc));
+      }
+    }
+
+    this_thread::sleep_for(chrono::seconds(5));
+  }
+}
+
+int mqtt_handler(DataStructure *dstructure) {
   struct mosquitto *mosq;
   int rc;
 
   mosquitto_lib_init();
 
-  mosq = mosquitto_new(NULL, true, ques);
+  mosq = mosquitto_new(NULL, true, dstructure);
   if (mosq == NULL) {
     fprintf(stderr, "Error: Out of memory.\n");
     return 1;
@@ -77,6 +96,7 @@ int mqtt_handler(Queues *ques) {
   mosquitto_message_callback_set(mosq, on_message);
   mosquitto_connect_callback_set(mosq, on_connect);
   mosquitto_subscribe_callback_set(mosq, on_subscribe);
+  mosquitto_publish_callback_set(mosq, on_publish);
 
   rc = mosquitto_connect(mosq, "127.0.0.1", 1883, 60);
   if (rc != MOSQ_ERR_SUCCESS) {
@@ -84,6 +104,9 @@ int mqtt_handler(Queues *ques) {
     fprintf(stderr, "Error: %s\n", mosquitto_strerror(rc));
     return 1;
   }
+
+  thread t1(do_publish, mosq, dstructure);
+  t1.detach();
 
   mosquitto_loop_forever(mosq, -1, 1);
 

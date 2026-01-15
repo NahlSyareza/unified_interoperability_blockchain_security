@@ -5,7 +5,7 @@
     "destination": "device-10/course"
   },
   {
-    "source": "device-1/sokom",
+    "source": "device-12/sokom",
     "protocol": "http",
     "destination": "device-67/stranger"
   }

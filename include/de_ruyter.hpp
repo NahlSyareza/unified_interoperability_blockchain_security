@@ -1,4 +1,4 @@
-#include <data_queues.hpp>
+#include <data_structure.hpp>
 #include <fstream>
 #include <iostream>
 #include <map>
@@ -12,7 +12,7 @@ struct Contents {
   string destination;
 };
 
-int de_ruyter(Queues *ques, string source, string payload) {
+int de_ruyter(DataStructure *dstructure, string source, string payload) {
   ifstream f("./include/connections.json");
   map<string, Contents *> connections_map;
 
@@ -34,7 +34,9 @@ int de_ruyter(Queues *ques, string source, string payload) {
   Contents *selected_contents = connections_map[source];
 
   if (selected_contents->protocol == "mqtt") {
-    ques->create_node(payload, selected_contents->destination, ques->mqttlist);
+    dstructure->insert_map_key(&dstructure->mqtt_map, selected_contents->destination, payload);
+  } else if (selected_contents->protocol == "http") {
+    dstructure->insert_map_key(&dstructure->http_map, selected_contents->destination, payload);
   }
 
   return 0;
