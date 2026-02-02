@@ -1052,6 +1052,25 @@ CMakeFiles/legendary_boss.dir/main.cpp.obj: \
  C:/vcpkg/installed/x64-mingw-static/include/crow/version.h \
  C:/vcpkg/installed/x64-mingw-static/include/crow/app.h \
  C:/Users/NAHLSY~1/DOCUME~1/MYKULI~1/Seminar/UNIFIE~1/./include/de_ruyter.hpp \
+ C:/vcpkg/installed/x64-mingw-static/include/spdlog/spdlog.h \
+ C:/vcpkg/installed/x64-mingw-static/include/spdlog/common.h \
+ C:/vcpkg/installed/x64-mingw-static/include/spdlog/details/null_mutex.h \
+ C:/vcpkg/installed/x64-mingw-static/include/spdlog/tweakme.h \
+ C:/vcpkg/installed/x64-mingw-static/include/spdlog/fmt/fmt.h \
+ C:/vcpkg/installed/x64-mingw-static/include/fmt/format.h \
+ C:/vcpkg/installed/x64-mingw-static/include/fmt/base.h \
+ C:/vcpkg/installed/x64-mingw-static/include/spdlog/details/registry.h \
+ C:/vcpkg/installed/x64-mingw-static/include/spdlog/details/periodic_worker.h \
+ C:/vcpkg/installed/x64-mingw-static/include/spdlog/details/synchronous_factory.h \
+ C:/vcpkg/installed/x64-mingw-static/include/spdlog/logger.h \
+ C:/vcpkg/installed/x64-mingw-static/include/spdlog/details/backtracer.h \
+ C:/vcpkg/installed/x64-mingw-static/include/spdlog/details/circular_q.h \
+ C:/vcpkg/installed/x64-mingw-static/include/spdlog/details/log_msg_buffer.h \
+ C:/vcpkg/installed/x64-mingw-static/include/spdlog/details/log_msg.h \
+ C:/vcpkg/installed/x64-mingw-static/include/spdlog/version.h \
+ C:/vcpkg/installed/x64-mingw-static/include/mosquitto.h \
+ C:/msys64/ucrt64/include/mosquitto_broker.h \
+ C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.1.0/include/stdbool.h \
  C:/vcpkg/installed/x64-mingw-static/include/nlohmann/json.hpp \
  C:/vcpkg/installed/x64-mingw-static/include/nlohmann/adl_serializer.hpp \
  C:/vcpkg/installed/x64-mingw-static/include/nlohmann/detail/abi_macros.hpp \
@@ -1112,7 +1131,4 @@ CMakeFiles/legendary_boss.dir/main.cpp.obj: \
  C:/vcpkg/installed/x64-mingw-static/include/nlohmann/detail/macro_unscope.hpp \
  C:/vcpkg/installed/x64-mingw-static/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
  C:/Users/NAHLSY~1/DOCUME~1/MYKULI~1/Seminar/UNIFIE~1/./include/mqtt_handler.hpp \
- C:/vcpkg/installed/x64-mingw-static/include/mosquitto.h \
- C:/msys64/ucrt64/include/mosquitto_broker.h \
- C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.1.0/include/stdbool.h \
  C:/msys64/ucrt64/include/unistd.h C:/msys64/ucrt64/include/getopt.h

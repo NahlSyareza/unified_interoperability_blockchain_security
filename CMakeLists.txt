@@ -13,6 +13,7 @@ find_package(Crow CONFIG REQUIRED)
 find_package(nlohmann_json CONFIG REQUIRED)
 find_package(unofficial-mosquitto CONFIG REQUIRED)
 find_package(OpenSSL REQUIRED)
+find_package(spdlog CONFIG REQUIRED)
 
 add_executable(legendary_boss main.cpp)
 
@@ -20,6 +21,7 @@ target_link_libraries(legendary_boss PRIVATE
     Crow::Crow
     nlohmann_json::nlohmann_json
     unofficial::mosquitto::mosquitto
+    spdlog::spdlog
     # mosquitto
     OpenSSL::SSL
     OpenSSL::Crypto

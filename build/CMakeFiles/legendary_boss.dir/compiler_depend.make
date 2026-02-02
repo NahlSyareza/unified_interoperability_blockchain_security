@@ -990,6 +990,8 @@ CMakeFiles/legendary_boss.dir/main.cpp.obj: C:/Users/Nahl\ Syareza\ Rahidra/Docu
   C:/vcpkg/installed/x64-mingw-static/include/crow/utility.h \
   C:/vcpkg/installed/x64-mingw-static/include/crow/version.h \
   C:/vcpkg/installed/x64-mingw-static/include/crow/websocket.h \
+  C:/vcpkg/installed/x64-mingw-static/include/fmt/base.h \
+  C:/vcpkg/installed/x64-mingw-static/include/fmt/format.h \
   C:/vcpkg/installed/x64-mingw-static/include/mosquitto.h \
   C:/vcpkg/installed/x64-mingw-static/include/nlohmann/adl_serializer.hpp \
   C:/vcpkg/installed/x64-mingw-static/include/nlohmann/byte_container_with_subtype.hpp \
@@ -1036,7 +1038,21 @@ CMakeFiles/legendary_boss.dir/main.cpp.obj: C:/Users/Nahl\ Syareza\ Rahidra/Docu
   C:/vcpkg/installed/x64-mingw-static/include/nlohmann/json_fwd.hpp \
   C:/vcpkg/installed/x64-mingw-static/include/nlohmann/ordered_map.hpp \
   C:/vcpkg/installed/x64-mingw-static/include/nlohmann/thirdparty/hedley/hedley.hpp \
-  C:/vcpkg/installed/x64-mingw-static/include/nlohmann/thirdparty/hedley/hedley_undef.hpp
+  C:/vcpkg/installed/x64-mingw-static/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
+  C:/vcpkg/installed/x64-mingw-static/include/spdlog/common.h \
+  C:/vcpkg/installed/x64-mingw-static/include/spdlog/details/backtracer.h \
+  C:/vcpkg/installed/x64-mingw-static/include/spdlog/details/circular_q.h \
+  C:/vcpkg/installed/x64-mingw-static/include/spdlog/details/log_msg.h \
+  C:/vcpkg/installed/x64-mingw-static/include/spdlog/details/log_msg_buffer.h \
+  C:/vcpkg/installed/x64-mingw-static/include/spdlog/details/null_mutex.h \
+  C:/vcpkg/installed/x64-mingw-static/include/spdlog/details/periodic_worker.h \
+  C:/vcpkg/installed/x64-mingw-static/include/spdlog/details/registry.h \
+  C:/vcpkg/installed/x64-mingw-static/include/spdlog/details/synchronous_factory.h \
+  C:/vcpkg/installed/x64-mingw-static/include/spdlog/fmt/fmt.h \
+  C:/vcpkg/installed/x64-mingw-static/include/spdlog/logger.h \
+  C:/vcpkg/installed/x64-mingw-static/include/spdlog/spdlog.h \
+  C:/vcpkg/installed/x64-mingw-static/include/spdlog/tweakme.h \
+  C:/vcpkg/installed/x64-mingw-static/include/spdlog/version.h
 
 
 C:/vcpkg/installed/x64-mingw-static/include/nlohmann/detail/iterators/internal_iterator.hpp:
@@ -1567,6 +1583,8 @@ C:/msys64/ucrt64/include/c++/15.1.0/bits/stl_algo.h:
 
 C:/msys64/ucrt64/include/ws2def.h:
 
+C:/vcpkg/installed/x64-mingw-static/include/fmt/format.h:
+
 C:/msys64/ucrt64/include/c++/15.1.0/bits/stl_algobase.h:
 
 C:/msys64/ucrt64/include/c++/15.1.0/bits/streambuf_iterator.h:
@@ -1617,13 +1635,13 @@ C:/msys64/ucrt64/include/c++/15.1.0/bits/stl_iterator_base_types.h:
 
 C:/vcpkg/installed/x64-mingw-static/include/asio/execution/impl/bad_executor.ipp:
 
-C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.1.0/include/keylockerintrin.h:
-
-C:/msys64/ucrt64/include/namespaceapi.h:
+C:/msys64/ucrt64/include/c++/15.1.0/bits/utility.h:
 
 C:/vcpkg/installed/x64-mingw-static/include/nlohmann/detail/meta/void_t.hpp:
 
-C:/msys64/ucrt64/include/c++/15.1.0/bits/utility.h:
+C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.1.0/include/keylockerintrin.h:
+
+C:/msys64/ucrt64/include/namespaceapi.h:
 
 C:/msys64/ucrt64/include/sec_api/stdlib_s.h:
 
@@ -1799,6 +1817,8 @@ C:/vcpkg/installed/x64-mingw-static/include/asio/io_context.hpp:
 
 C:/msys64/ucrt64/include/c++/15.1.0/cstdint:
 
+C:/vcpkg/installed/x64-mingw-static/include/spdlog/details/log_msg.h:
+
 C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.1.0/include/immintrin.h:
 
 C:/msys64/ucrt64/include/threadpoolapiset.h:
@@ -1881,9 +1901,9 @@ C:/msys64/ucrt64/include/c++/15.1.0/iosfwd:
 
 C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.1.0/include/mwaitxintrin.h:
 
-C:/vcpkg/installed/x64-mingw-static/include/asio/detail/array_fwd.hpp:
-
 C:/vcpkg/installed/x64-mingw-static/include/nlohmann/detail/meta/type_traits.hpp:
+
+C:/vcpkg/installed/x64-mingw-static/include/asio/detail/array_fwd.hpp:
 
 C:/msys64/ucrt64/include/c++/15.1.0/iostream:
 
@@ -2075,6 +2095,8 @@ C:/vcpkg/installed/x64-mingw-static/include/asio/detail/concurrency_hint.hpp:
 
 C:/msys64/ucrt64/include/corecrt_wstdlib.h:
 
+C:/vcpkg/installed/x64-mingw-static/include/spdlog/details/backtracer.h:
+
 C:/msys64/ucrt64/include/crtdefs.h:
 
 C:/vcpkg/installed/x64-mingw-static/include/asio/detail/io_control.hpp:
@@ -2136,6 +2158,8 @@ C:/msys64/ucrt64/include/winuser.h:
 C:/msys64/ucrt64/include/mswsock.h:
 
 C:/msys64/ucrt64/include/namedpipeapi.h:
+
+C:/vcpkg/installed/x64-mingw-static/include/spdlog/details/periodic_worker.h:
 
 C:/msys64/ucrt64/include/wincontypes.h:
 
@@ -2463,6 +2487,8 @@ C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.1.0/include/sha512intrin.h:
 
 C:/vcpkg/installed/x64-mingw-static/include/asio/ip/icmp.hpp:
 
+C:/vcpkg/installed/x64-mingw-static/include/spdlog/tweakme.h:
+
 C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.1.0/include/shaintrin.h:
 
 C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.1.0/include/stddef.h:
@@ -2783,6 +2809,10 @@ C:/vcpkg/installed/x64-mingw-static/include/asio/detail/thread_context.hpp:
 
 C:/vcpkg/installed/x64-mingw-static/include/asio/detail/throw_error.hpp:
 
+C:/vcpkg/installed/x64-mingw-static/include/spdlog/fmt/fmt.h:
+
+C:/vcpkg/installed/x64-mingw-static/include/fmt/base.h:
+
 C:/vcpkg/installed/x64-mingw-static/include/asio/detail/throw_exception.hpp:
 
 C:/vcpkg/installed/x64-mingw-static/include/asio/impl/write_at.hpp:
@@ -2999,6 +3029,8 @@ C:/vcpkg/installed/x64-mingw-static/include/asio/serial_port.hpp:
 
 C:/vcpkg/installed/x64-mingw-static/include/asio/signal_set.hpp:
 
+C:/vcpkg/installed/x64-mingw-static/include/spdlog/details/null_mutex.h:
+
 C:/vcpkg/installed/x64-mingw-static/include/asio/socket_base.hpp:
 
 C:/vcpkg/installed/x64-mingw-static/include/asio/steady_timer.hpp:
@@ -3110,3 +3142,19 @@ C:/vcpkg/installed/x64-mingw-static/include/nlohmann/json_fwd.hpp:
 C:/vcpkg/installed/x64-mingw-static/include/nlohmann/ordered_map.hpp:
 
 C:/vcpkg/installed/x64-mingw-static/include/nlohmann/thirdparty/hedley/hedley.hpp:
+
+C:/vcpkg/installed/x64-mingw-static/include/spdlog/common.h:
+
+C:/vcpkg/installed/x64-mingw-static/include/spdlog/details/circular_q.h:
+
+C:/vcpkg/installed/x64-mingw-static/include/spdlog/details/log_msg_buffer.h:
+
+C:/vcpkg/installed/x64-mingw-static/include/spdlog/details/registry.h:
+
+C:/vcpkg/installed/x64-mingw-static/include/spdlog/details/synchronous_factory.h:
+
+C:/vcpkg/installed/x64-mingw-static/include/spdlog/logger.h:
+
+C:/vcpkg/installed/x64-mingw-static/include/spdlog/spdlog.h:
+
+C:/vcpkg/installed/x64-mingw-static/include/spdlog/version.h:

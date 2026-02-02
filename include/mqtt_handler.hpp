@@ -4,6 +4,7 @@
 #include <mosquitto.h>
 #include <mosquitto_broker.h>
 #include <nlohmann/json.hpp>
+#include <spdlog/spdlog.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -49,35 +50,25 @@ void on_publish(struct mosquitto *mosq, void *obj, int mid) { printf("Message wi
 void on_message(struct mosquitto *mosq, void *obj, const struct mosquitto_message *msg) {
   DataStructure *dstructure = (DataStructure *)obj;
 
-  printf("%s %d %s\n", msg->topic, msg->qos, (char *)msg->payload);
+  // printf("%s %d %s\n", msg->topic, msg->qos, (char *)msg->payload);
+  spdlog::info("{} {} {}", msg->topic, msg->qos, (char *)msg->payload);
 
   json payload;
   try {
     payload = json::parse((char *)msg->payload);
-  } catch (const nlohmann::json::parse_error &e) {
+  } catch (json::parse_error &e) {
+    // std::cerr << "JSON parsing error." << endl;
+    // spdlog::error("JSON parsing error.");
+    spdlog::error("{}", e.what());
     return;
   }
   /**
    * on_message also triggers when this code publishes message
    */
+
   if (payload["sender"] != "gate-control") {
+    // cout << "routing message..." << endl;
     de_ruyter(dstructure, msg->topic, (char *)msg->payload);
-  }
-}
-
-void do_publish(struct mosquitto *mosq, DataStructure *dstructure) {
-  while (true) {
-    int rc;
-
-    for (const auto &[k, v] : dstructure->mqtt_map) {
-      // cout << k << endl;
-      rc = mosquitto_publish(mosq, NULL, k.c_str(), strlen(v->payload.c_str()), v->payload.c_str(), 2, false);
-      if (rc != MOSQ_ERR_SUCCESS) {
-        fprintf(stderr, "Error publishing: %s\n", mosquitto_strerror(rc));
-      }
-    }
-
-    this_thread::sleep_for(chrono::seconds(5));
   }
 }
 
@@ -104,9 +95,6 @@ int mqtt_handler(DataStructure *dstructure) {
     fprintf(stderr, "Error: %s\n", mosquitto_strerror(rc));
     return 1;
   }
-
-  thread t1(do_publish, mosq, dstructure);
-  t1.detach();
 
   mosquitto_loop_forever(mosq, -1, 1);
 

@@ -96,8 +96,10 @@ legendary_boss_EXTERNAL_OBJECTS =
 legendary_boss.exe: CMakeFiles/legendary_boss.dir/main.cpp.obj
 legendary_boss.exe: CMakeFiles/legendary_boss.dir/build.make
 legendary_boss.exe: C:/vcpkg/installed/x64-mingw-static/debug/lib/libmosquitto_static.a
+legendary_boss.exe: C:/vcpkg/installed/x64-mingw-static/debug/lib/libspdlogd.a
 legendary_boss.exe: C:/vcpkg/installed/x64-mingw-static/debug/lib/libssl.a
 legendary_boss.exe: C:/vcpkg/installed/x64-mingw-static/debug/lib/libcrypto.a
+legendary_boss.exe: C:/vcpkg/installed/x64-mingw-static/debug/lib/libfmtd.a
 legendary_boss.exe: CMakeFiles/legendary_boss.dir/linkLibs.rsp
 legendary_boss.exe: CMakeFiles/legendary_boss.dir/objects1.rsp
 legendary_boss.exe: CMakeFiles/legendary_boss.dir/link.txt
