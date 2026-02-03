@@ -6,7 +6,7 @@
 #include <nlohmann/json.hpp>
 #include <thread>
 
-using namespace std;
+using string = std::string;
 using json = nlohmann::json;
 
 int http_handler(DataStructure *dstructure) {

@@ -1,0 +1,10 @@
+[
+  {
+    "source": "device-1/test",
+    "destination": "device-10/course"
+  },
+  {
+    "source": "device-12/sokom",
+    "destination": "device-67/stranger"
+  }
+]

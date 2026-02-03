@@ -11,7 +11,7 @@
 #include <thread>
 #include <unistd.h>
 
-using namespace std;
+using string = std::string;
 using json = nlohmann::json;
 
 void on_connect(struct mosquitto *mosq, void *obj, int reason_code) {
@@ -57,8 +57,6 @@ void on_message(struct mosquitto *mosq, void *obj, const struct mosquitto_messag
   try {
     payload = json::parse((char *)msg->payload);
   } catch (json::parse_error &e) {
-    // std::cerr << "JSON parsing error." << endl;
-    // spdlog::error("JSON parsing error.");
     spdlog::error("{}", e.what());
     return;
   }
@@ -67,7 +65,6 @@ void on_message(struct mosquitto *mosq, void *obj, const struct mosquitto_messag
    */
 
   if (payload["sender"] != "gate-control") {
-    // cout << "routing message..." << endl;
     de_ruyter(dstructure, msg->topic, (char *)msg->payload);
   }
 }
