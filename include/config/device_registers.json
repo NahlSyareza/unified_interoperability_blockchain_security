@@ -1,0 +1,18 @@
+[
+  {
+    "device": "device-1/test",
+    "profile": "dummy-1-device"
+  },
+  {
+    "device": "device-10/course",
+    "profile": "dummy-3-device"
+  },
+  {
+    "device": "device-12/sokom",
+    "profile": "dummy-2-device"
+  },
+  {
+    "device": "device-67/stranger",
+    "profile": "dummy-4-device"
+  }
+]

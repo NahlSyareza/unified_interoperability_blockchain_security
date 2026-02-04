@@ -16,14 +16,16 @@ using json = nlohmann::json;
 
 void on_connect(struct mosquitto *mosq, void *obj, int reason_code) {
   int rc;
-  printf("on_connect: %s\n", mosquitto_connack_string(reason_code));
+  // printf("on_connect: %s\n", mosquitto_connack_string(reason_code));
+  spdlog::info("on_connect: {}", mosquitto_connack_string(reason_code));
   if (reason_code != 0) {
     mosquitto_disconnect(mosq);
   }
 
   rc = mosquitto_subscribe(mosq, NULL, "#", 1);
   if (rc != MOSQ_ERR_SUCCESS) {
-    fprintf(stderr, "Error subscribing: %s\n", mosquitto_strerror(rc));
+    // fprintf(stderr, "Error subscribing: %s\n", mosquitto_strerror(rc));
+    spdlog::error("Error subscribing: {}", mosquitto_strerror(rc));
     mosquitto_disconnect(mosq);
   }
 }
@@ -33,7 +35,9 @@ void on_subscribe(struct mosquitto *mosq, void *obj, int mid, int qos_count, con
   bool have_subscription = false;
 
   for (i = 0; i < qos_count; i++) {
-    printf("on_subscribe: %d:granted qos = %d\n", i, granted_qos[i]);
+    // printf("on_subscribe: %d:granted qos = %d\n", i, granted_qos[i]);
+    spdlog::info("on_subscribe: {}", i);
+    spdlog::info("granted qos: {}", granted_qos[i]);
     if (granted_qos[i] <= 2) {
       have_subscription = true;
     }
@@ -41,11 +45,15 @@ void on_subscribe(struct mosquitto *mosq, void *obj, int mid, int qos_count, con
 
   if (have_subscription == false) {
     fprintf(stderr, "Error: All subscriptions rejected.\n");
+    spdlog::error("Error: All subscriptions rejected");
     mosquitto_disconnect(mosq);
   }
 }
 
-void on_publish(struct mosquitto *mosq, void *obj, int mid) { printf("Message with mid %d has been published.\n", mid); }
+void on_publish(struct mosquitto *mosq, void *obj, int mid) {
+  // printf("Message with mid %d has been published.\n", mid);
+  spdlog::info("Message with mid {} has been published", mid);
+}
 
 void on_message(struct mosquitto *mosq, void *obj, const struct mosquitto_message *msg) {
   DataStructure *dstructure = (DataStructure *)obj;
@@ -77,7 +85,8 @@ int mqtt_handler(DataStructure *dstructure) {
 
   mosq = mosquitto_new(NULL, true, dstructure);
   if (mosq == NULL) {
-    fprintf(stderr, "Error: Out of memory.\n");
+    // fprintf(stderr, "Error: Out of memory.\n");
+    spdlog::error("Error: Out of memory");
     return 1;
   }
 
@@ -89,7 +98,8 @@ int mqtt_handler(DataStructure *dstructure) {
   rc = mosquitto_connect(mosq, "127.0.0.1", 1883, 60);
   if (rc != MOSQ_ERR_SUCCESS) {
     mosquitto_destroy(mosq);
-    fprintf(stderr, "Error: %s\n", mosquitto_strerror(rc));
+    // fprintf(stderr, "Error: %s\n", mosquitto_strerror(rc));
+    spdlog::error("Error: {}", mosquitto_strerror(rc));
     return 1;
   }
 

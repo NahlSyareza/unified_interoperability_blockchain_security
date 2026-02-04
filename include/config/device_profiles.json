@@ -1,0 +1,30 @@
+[
+  {
+    "name": "dummy-1-device",
+    "type": "sensor",
+    "category": "dummy",
+    "connection": "wifi/http",
+    "format": "dummy-1-format"
+  },
+  {
+    "name": "dummy-2-device",
+    "type": "sensor",
+    "category": "dummy",
+    "connection": "wifi/mqtt",
+    "format": "dummy-2-format"
+  },
+  {
+    "name": "dummy-3-device",
+    "type": "actuator",
+    "category": "dummy",
+    "connection": "wifi/mqtt",
+    "format": "dummy-3-format"
+  },
+  {
+    "name": "dummy-4-device",
+    "type": "actuator",
+    "category": "dummy",
+    "connection": "wifi/http",
+    "format": "dummy-4-format"
+  }
+]

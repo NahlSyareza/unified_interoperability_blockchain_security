@@ -15,8 +15,6 @@ int http_handler(DataStructure *dstructure) {
   CROW_ROUTE(app, "/<path>").methods(crow::HTTPMethod::GET)([dstructure](const crow::request &req, string path) {
     crow::json::wvalue ret;
 
-    // DataStructure::Data *data = dstructure->http_map[path];
-
     if (dstructure->http_map.find(path) == dstructure->http_map.end()) {
       ret["state"] = false;
       ret["msg"] = "Key doesn't exist in record.";

@@ -11,8 +11,14 @@ int main() {
 
   DataStructure dstructure;
 
-  auto http_thread = async(launch::async, http_handler, &dstructure);
+  dstructure.fill_maps();
+
+  for (const auto &[k, v] : dstructure.format_profiles_m) {
+    spdlog::info("{}: {}", k, v.dump(2));
+  }
+
   auto mqtt_thread = async(launch::async, mqtt_handler, &dstructure);
+  auto http_thread = async(launch::async, http_handler, &dstructure);
 
   http_thread.wait();
   mqtt_thread.wait();

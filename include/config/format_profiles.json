@@ -1,0 +1,26 @@
+[
+  {
+    "name": "dummy-1-format",
+    "data": "string",
+    "syntax": "json",
+    "unit": ""
+  },
+  {
+    "name": "dummy-2-format",
+    "data": "string",
+    "syntax": "json",
+    "unit": ""
+  },
+  {
+    "name": "dummy-3-format",
+    "data": "string",
+    "syntax": "json",
+    "unit": ""
+  },
+  {
+    "name": "dummy-4-format",
+    "data": "string",
+    "syntax": "json",
+    "unit": ""
+  }
+]
