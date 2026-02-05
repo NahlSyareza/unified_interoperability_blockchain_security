@@ -4,26 +4,23 @@ project(legendary_boss)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+find_package(mosquitto REQUIRED)
+find_package(spdlog REQUIRED)
+find_package(fmt REQUIRED)
+find_package(OpenSSL REQUIRED)
+find_package(Threads REQUIRED)
+
 add_executable(legendary_boss main.cpp)
 
-target_include_directories(legendary_boss PRIVATE 
-    "${CMAKE_CURRENT_SOURCE_DIR}/include" # For Crow
-    "C:/msys64/ucrt64/include"                 # For Pacman-installed libs
+target_include_directories(legendary_boss PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/include")
+
+target_link_libraries(legendary_boss PRIVATE
+    mosquitto::mosquitto
+    spdlog::spdlog
+    fmt::fmt
+    OpenSSL::SSL
+    OpenSSL::Crypto
+    Threads::Threads
 )
 
-target_link_libraries(legendary_boss PRIVATE 
-    "C:/msys64/ucrt64/lib/libmosquitto.dll.a"
-    "C:/msys64/ucrt64/lib/libspdlog.dll.a"
-    "C:/msys64/ucrt64/lib/libfmt.a"
-    "C:/msys64/ucrt64/lib/libssl.dll.a"
-    "C:/msys64/ucrt64/lib/libcrypto.dll.a"
-    ws2_32 
-    mswsock
-    crypt32
-)
-
-target_link_options(legendary_boss PRIVATE 
-    "-static-libstdc++" 
-    "-static-libgcc" 
-    "-pthread"
-)
+target_link_options(legendary_boss PRIVATE "-pthread")

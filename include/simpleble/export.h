@@ -22,7 +22,7 @@
 #endif
 
 #ifndef SIMPLEBLE_DEPRECATED
-#  define SIMPLEBLE_DEPRECATED __declspec(deprecated)
+#  define SIMPLEBLE_DEPRECATED __attribute__ ((__deprecated__))
 #endif
 
 #ifndef SIMPLEBLE_DEPRECATED_EXPORT
