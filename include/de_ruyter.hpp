@@ -1,3 +1,5 @@
+#pragma once
+
 #include "spdlog/spdlog.h"
 #include <data_structure.hpp>
 #include <fstream>
@@ -37,7 +39,7 @@ int mqtt_processor(string topic, string payload, DataStructure *dstructure) {
     return 1;
   }
 
-  // rc = mosquitto_loop_start(mosq);
+  rc = mosquitto_loop_start(mosq);
   rc = mosquitto_loop(mosq, 1000, 5);
   if (rc != MOSQ_ERR_SUCCESS) {
     mosquitto_destroy(mosq);
@@ -61,7 +63,7 @@ int mqtt_processor(string topic, string payload, DataStructure *dstructure) {
   }
 
   mosquitto_disconnect(mosq);
-  // mosquitto_loop_stop(mosq, false);
+  mosquitto_loop_stop(mosq, false);
   mosquitto_destroy(mosq);
   mosquitto_lib_cleanup();
 

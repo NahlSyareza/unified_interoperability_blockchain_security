@@ -3,16 +3,23 @@
 #include <httplib.h>
 #include <iostream>
 #include <nlohmann/json.hpp>
-// #include <thread>
 
 using string = std::string;
 using json = nlohmann::json;
+using Server = httplib::Server;
+using Request = httplib::Request;
+using Response = httplib::Response;
 
 int http_handler(DataStructure *dstructure) {
-  crow::SimpleApp app;
+  Server svr;
 
-  CROW_ROUTE(app, "/<path>").methods(crow::HTTPMethod::GET)([dstructure](const crow::request &req, string path) {
-    crow::json::wvalue ret;
+  svr.Get("/dummy", [](const Request &req, Response &res) { res.set_content("Hello World!", "text/plain"); });
+
+  svr.Get(R"(/(.*))", [dstructure](const Request &req, Response &res) {
+    string path = req.matches[0];
+    path.erase(0, 1);
+
+    json ret;
 
     if (dstructure->http_map.find(path) == dstructure->http_map.end()) {
       ret["state"] = false;
@@ -20,7 +27,9 @@ int http_handler(DataStructure *dstructure) {
       ret["payload"] = "";
       ret["code"] = 400;
 
-      return ret;
+      res.set_content(ret.dump(), "application/json");
+
+      return;
     }
 
     string payload = dstructure->http_map[path]->payload;
@@ -30,14 +39,14 @@ int http_handler(DataStructure *dstructure) {
     ret["payload"] = payload;
     ret["code"] = 200;
 
-    return ret;
+    res.set_content(ret.dump(), "application/json");
   });
 
-  CROW_ROUTE(app, "/<path>").methods(crow::HTTPMethod::POST)([dstructure](const crow::request &req, string path) {
-    crow::json::wvalue ret;
-    string body = req.body;
-
+  svr.Post(R"(/(.*))", [dstructure](const Request &req, Response &res) {
+    json ret;
     json payload;
+
+    string body = req.body;
 
     try {
       payload = json::parse(body);
@@ -60,7 +69,7 @@ int http_handler(DataStructure *dstructure) {
     return ret;
   });
 
-  app.port(18080).bindaddr("0.0.0.0").multithreaded().run();
+  svr.listen("0.0.0.0", 18080);
 
   return 0;
 }

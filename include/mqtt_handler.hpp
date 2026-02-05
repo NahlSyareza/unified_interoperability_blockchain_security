@@ -1,5 +1,6 @@
 #include <chrono>
 #include <data_structure.hpp>
+#include <de_ruyter.hpp>
 #include <iostream>
 #include <mosquitto.h>
 #include <mosquitto_broker.h>
@@ -12,6 +13,7 @@
 #include <unistd.h>
 
 using string = std::string;
+
 using json = nlohmann::json;
 
 void on_connect(struct mosquitto *mosq, void *obj, int reason_code) {

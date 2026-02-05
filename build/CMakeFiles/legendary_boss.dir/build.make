@@ -95,7 +95,9 @@ legendary_boss_EXTERNAL_OBJECTS =
 
 legendary_boss.exe: CMakeFiles/legendary_boss.dir/main.cpp.obj
 legendary_boss.exe: CMakeFiles/legendary_boss.dir/build.make
-legendary_boss.exe: C:/Users/Nahl\ Syareza\ Rahidra/Documents/My\ Kuliah/Seminar/unified_interoperability_blockchain_security/lib/libmosquitto.dll.a
+legendary_boss.exe: C:/msys64/ucrt64/lib/libmosquitto.dll.a
+legendary_boss.exe: C:/msys64/ucrt64/lib/libspdlog.dll.a
+legendary_boss.exe: C:/msys64/ucrt64/lib/libfmt.a
 legendary_boss.exe: C:/msys64/ucrt64/lib/libssl.dll.a
 legendary_boss.exe: C:/msys64/ucrt64/lib/libcrypto.dll.a
 legendary_boss.exe: CMakeFiles/legendary_boss.dir/linkLibs.rsp
