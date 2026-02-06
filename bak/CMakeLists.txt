@@ -1,32 +1,26 @@
 cmake_minimum_required(VERSION 3.15)
 project(legendary_boss)
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-include_directories("./include")
-link_directories("./lib")
-# include_directories("C:/vcpkg/installed/x64-mingw-static/include")
-# link_directories("C:/vcpkg/installed/x64-mingw-static/lib")
-
-find_package(Crow CONFIG REQUIRED)
-find_package(nlohmann_json CONFIG REQUIRED)
-find_package(unofficial-mosquitto CONFIG REQUIRED)
+find_package(mosquitto REQUIRED)
+find_package(spdlog REQUIRED)
+find_package(fmt REQUIRED)
 find_package(OpenSSL REQUIRED)
-find_package(spdlog CONFIG REQUIRED)
+find_package(Threads REQUIRED)
 
 add_executable(legendary_boss main.cpp)
 
-target_link_libraries(legendary_boss PRIVATE 
-    Crow::Crow
-    nlohmann_json::nlohmann_json
-    unofficial::mosquitto::mosquitto
+target_include_directories(legendary_boss PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/include")
+
+target_link_libraries(legendary_boss PRIVATE
+    mosquitto::mosquitto
     spdlog::spdlog
-    # mosquitto
+    fmt::fmt
     OpenSSL::SSL
     OpenSSL::Crypto
-    ws2_32 
-    mswsock
-    crypt32
-    # -lpthread
+    Threads::Threads
 )
+
+target_link_options(legendary_boss PRIVATE "-pthread")
