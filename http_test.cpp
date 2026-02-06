@@ -8,11 +8,7 @@ using Response = httplib::Response;
 using string = std::string;
 
 int main() {
-  // HTTP
   httplib::Server svr;
-
-  // HTTPS
-  // httplib::SSLServer svr;
 
   svr.Get("/hi", [](const httplib::Request &req, httplib::Response &res) { res.set_content("Hello World!", "text/plain"); });
 
