@@ -1,3 +1,0 @@
-Device connects to Controller -> Detects Hostname -> Use the Hostname as a source to give to target devices as defined in Registration Profile
-
-cmake -G "MinGW Makefiles" -B build -S . -DCMAKE_TOOLCHAIN_FILE="C:/vcpkg/scripts/buildsystems/vcpkg.cmake" -DVCPKG_TARGET_TRIPLET=x64-mingw-static
