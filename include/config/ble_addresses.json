@@ -1,0 +1,12 @@
+[
+  {
+    "identifier": "14:2b:2f:c4:f3:6e",
+    "service_uuid": "4fafc201-1fb5-459e-8fcc-c5c9c331914b",
+    "characteristic_uuid": "beb5483e-36e1-4688-b7f5-ea07361b26a8"
+  },
+  {
+    "identifier": "ROG Phone 9 FE",
+    "service_uuid": "0000ff02-0000-1000-8000-00805f9b34fb",
+    "characteristic_uuid": "0000ff02-0000-1000-8000-00805f9b34fb"
+  }
+]
