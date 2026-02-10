@@ -17,21 +17,22 @@ project(legendary_boss)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+add_executable(legendary_boss main.cpp utils.cpp)
+
+find_package(OpenSSL REQUIRED)
+find_package(Threads REQUIRED)
+
 if(WIN32)
     find_package(unofficial-mosquitto CONFIG REQUIRED)
 else()
     find_package(mosquitto REQUIRED)
 endif()
+find_package(simpleble CONFIG REQUIRED)
 
-find_package(OpenSSL REQUIRED)
-find_package(Threads REQUIRED)
-
-find_library(SIMPLEBLE
-    NAMES simpleble libsimpleble
-    PATHS ${CMAKE_CURRENT_SOURCE_DIR}/lib
-)
-
-add_executable(legendary_boss main.cpp utils.cpp)
+# find_library(SIMPLEBLE
+#     NAMES simpleble libsimpleble
+#     PATHS ${CMAKE_CURRENT_SOURCE_DIR}/lib
+# )
 
 if(MSVC)
     target_compile_options(legendary_boss PRIVATE /utf-8)
@@ -45,9 +46,7 @@ endif()
 
 target_link_libraries(legendary_boss PRIVATE
     # mosquitto::mosquitto
-    ${SIMPLEBLE}
-    # spdlog::spdlog
-    # fmt::fmt
+    simpleble::simpleble
     OpenSSL::SSL
     OpenSSL::Crypto
     Threads::Threads
