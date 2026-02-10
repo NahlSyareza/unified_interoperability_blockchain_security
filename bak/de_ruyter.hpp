@@ -6,6 +6,7 @@
 #include <iostream>
 #include <map>
 #include <mosquitto.h>
+// #include <mosquitto_broker.h>
 #include <nlohmann/json.hpp>
 
 // using std::cout;
@@ -14,14 +15,7 @@ using string = std::string;
 using ifstream = std::ifstream;
 using json = nlohmann::json;
 
-void ble_processor(DataStructure *dstructure, std::string identifier, string payload) {
-  for (auto &p : dstructure->peripherals) {
-    if (p.identifier() == identifier)
-      p.write_request(dstructure->uuid_pair[identifier].first, dstructure->uuid_pair[identifier].second, payload);
-  }
-}
-
-void mqtt_processor(DataStructure *dstructure, string topic, string payload) {
+int mqtt_processor(string topic, string payload, DataStructure *dstructure) {
   json payload_json = json::parse(payload);
   payload_json["sender"] = "gate-control";
 
@@ -34,7 +28,7 @@ void mqtt_processor(DataStructure *dstructure, string topic, string payload) {
   if (mosq == NULL) {
     // fprintf(stderr, "Error: Out of memory.\n");
     spdlog::error("Error: Out of memory");
-    return;
+    return 1;
   }
 
   rc = mosquitto_connect(mosq, "127.0.0.1", 1883, 60);
@@ -42,7 +36,7 @@ void mqtt_processor(DataStructure *dstructure, string topic, string payload) {
     mosquitto_destroy(mosq);
     // fprintf(stderr, "Error: %s\n", mosquitto_strerror(rc));
     spdlog::error("Error: {}", mosquitto_strerror(rc));
-    return;
+    return 1;
   }
 
   rc = mosquitto_loop_start(mosq);
@@ -51,7 +45,7 @@ void mqtt_processor(DataStructure *dstructure, string topic, string payload) {
     mosquitto_destroy(mosq);
     // fprintf(stderr, "Error: %s\n", mosquitto_strerror(rc));
     spdlog::error("Error: {}", mosquitto_strerror(rc));
-    return;
+    return 1;
   }
 
   string final_payload = payload_json.dump();
@@ -73,7 +67,7 @@ void mqtt_processor(DataStructure *dstructure, string topic, string payload) {
   mosquitto_destroy(mosq);
   mosquitto_lib_cleanup();
 
-  // return 0;
+  return 0;
 }
 
 void http_processor(DataStructure *dstructure, string path, string payload) { dstructure->insert_map_key(&dstructure->http_map, path, payload); }
@@ -94,13 +88,35 @@ void comms_manager(DataStructure *dstructure, json *source_data, json *destinati
     // dstructure->insert_map_key(&dstructure->http_map, deref_destination["device"], payload);
     http_processor(dstructure, deref_destination["device"], payload);
   } else if (deref_destination_conn == "wifi/mqtt") {
-    mqtt_processor(dstructure, deref_destination["device"], payload);
-  } else if (deref_destination_conn == "ble") {
-    ble_processor(dstructure, deref_destination["device"], payload);
+    mqtt_processor(deref_destination["device"], payload, dstructure);
   }
 }
 
 int de_ruyter(DataStructure *dstructure, string source, string payload) {
+  // ifstream connection_registers_f("./include/connection_registers.json");
+  // std::map<string, json> connection_registers_m;
+  // json connection_registers_j = json::parse(connection_registers_f);
+
+  // ifstream device_profiles_f("./include/device_profiles.json");
+  // std::map<string, json> device_profiles_m;
+  // json device_profiles_j = json::parse(device_profiles_f);
+
+  // ifstream device_registers_f("./include/device_registers.json");
+  // std::map<string, json> device_registers_m;
+  // json device_registers_j = json::parse(device_registers_f);
+
+  // for (const auto &item : dstructure->connection_registers_j) {
+  //   connection_registers_m[item["source"]] = item;
+  // }
+
+  // for (const auto &item : device_profiles_j) {
+  //   device_profiles_m[item["name"]] = item;
+  // }
+
+  // for (const auto &item : device_registers_j) {
+  //   device_registers_m[item["device"]] = item;
+  // }
+
   json ametokaze = dstructure->connection_registers[source];
 
   // spdlog::info("\n{}", ametokaze.dump(2));
@@ -116,8 +132,6 @@ int de_ruyter(DataStructure *dstructure, string source, string payload) {
   bara["device"] = ametokaze["destination"];
 
   // spdlog::info("\n{}", bara.dump(2));
-
-  // spdlog::info("{}", payload);
 
   comms_manager(dstructure, &hosoi, &bara, payload);
 

@@ -16,7 +16,7 @@ int main() {
 
   dstructure.fill_maps();
 
-  // for (const auto &[k, v] : dstructure.format_profiles_m) {
+  // for (const auto &[k, v] : dstructure.ble_addresses) {
   //   spdlog::info("{}: {}", k, v.dump(2));
   // }
 

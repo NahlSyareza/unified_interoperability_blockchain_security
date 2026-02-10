@@ -3,7 +3,9 @@
 #include <fstream>
 #include <iostream>
 #include <map>
+// #include <mosquitto.h>
 #include <nlohmann/json.hpp>
+#include <simpleble/SimpleBLE.h>
 
 using string = std::string;
 using json = nlohmann::json;
@@ -17,6 +19,9 @@ public:
 
   std::map<string, Data *> http_map;
   std::map<string, Data *> mqtt_map;
+
+  std::vector<SimpleBLE::Peripheral> peripherals;
+  std::map<std::string, std::pair<SimpleBLE::BluetoothUUID, SimpleBLE::BluetoothUUID>> uuid_pair;
 
   void insert_map_key(std::map<string, Data *> *mp, string key, string payload) {
     if (mp->find(key) == mp->end()) {
@@ -36,17 +41,17 @@ public:
   std::map<string, json> ble_addresses;
 
   void fill_maps() {
-    ifstream connection_registers_f("./include/config/connection_registers.json");
-    ifstream device_profiles_f("./include/config/device_profiles.json");
-    ifstream device_registers_f("./include/config/device_registers.json");
-    ifstream format_profiles_f("./include/config/format_profiles.json");
-    ifstream ble_addresses_f("./include/config/ble_addresses.json");
+    ifstream connection_registers_stream("./include/config/connection_registers.json");
+    ifstream device_profiles_stream("./include/config/device_profiles.json");
+    ifstream device_registers_stream("./include/config/device_registers.json");
+    ifstream format_profiles_stream("./include/config/format_profiles.json");
+    ifstream ble_addresses_stream("./include/config/ble_addresses.json");
 
-    json parse_connection_registers = json::parse(connection_registers_f);
-    json parse_device_profiles = json::parse(device_profiles_f);
-    json parse_device_registers = json::parse(device_registers_f);
-    json parse_format_profiles = json::parse(format_profiles_f);
-    json parse_ble_addresses = json::parse(ble_addresses_f);
+    json parse_connection_registers = json::parse(connection_registers_stream);
+    json parse_device_profiles = json::parse(device_profiles_stream);
+    json parse_device_registers = json::parse(device_registers_stream);
+    json parse_format_profiles = json::parse(format_profiles_stream);
+    json parse_ble_addresses = json::parse(ble_addresses_stream);
 
     for (const auto &item : parse_connection_registers) {
       connection_registers[item["source"]] = item;

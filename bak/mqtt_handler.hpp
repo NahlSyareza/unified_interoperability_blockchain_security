@@ -25,11 +25,10 @@
 // using string = std::string;
 using json = nlohmann::json;
 
-// static struct mosquitto *mosq;
+static struct mosquitto *mosq;
 
 void on_connect(struct mosquitto *mosq, void *obj, int reason_code) {
   int rc;
-
   // printf("on_connect: %s\n", mosquitto_connack_string(reason_code));
   spdlog::info("on_connect: {}", mosquitto_connack_string(reason_code));
   if (reason_code != 0) {
@@ -58,7 +57,7 @@ void on_subscribe(struct mosquitto *mosq, void *obj, int mid, int qos_count, con
   }
 
   if (have_subscription == false) {
-    // fprintf(stderr, "Error: All subscriptions rejected.\n");
+    fprintf(stderr, "Error: All subscriptions rejected.\n");
     spdlog::error("Error: All subscriptions rejected");
     mosquitto_disconnect(mosq);
   }
@@ -91,9 +90,20 @@ void on_message(struct mosquitto *mosq, void *obj, const struct mosquitto_messag
   }
 }
 
+void mqtt_pub(std::string topic, std::string payload) {
+  int rc = mosquitto_publish(mosq, nullptr, topic.c_str(), payload.length(), payload.c_str(), 2, false);
+  if (rc != MOSQ_ERR_SUCCESS) {
+    // fprintf(stderr, "Error publishing: %s\n", mosquitto_strerror(rc));
+    spdlog::error("Error publishing: {}", mosquitto_strerror(rc));
+  }
+}
+
 int mqtt_handler(DataStructure *dstructure) {
-  struct mosquitto *mosq;
+  // struct mosquitto *mosq;
+  mosq = dstructure->mosq;
+
   int rc;
+  
 
   mosquitto_lib_init();
 

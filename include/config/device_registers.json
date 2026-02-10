@@ -14,5 +14,21 @@
   {
     "device": "device-67/stranger",
     "profile": "dummy-4-device"
+  },
+  {
+    "device": "ter_stegen",
+    "profile": "dummy-5-device"
+  },
+  {
+    "device": "Who is this",
+    "profile": "dummy-6-device"
+  },
+  {
+    "device": "l_martinez",
+    "profile": "dummy-7-device"
+  },
+  {
+    "device": "ROG Phone 9 FE",
+    "profile": "dummy-8-device"
   }
 ]

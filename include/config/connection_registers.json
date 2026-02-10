@@ -6,5 +6,13 @@
   {
     "source": "device-12/sokom",
     "destination": "device-67/stranger"
+  },
+  {
+    "source": "ter_stegen",
+    "destination": "Who is this"
+  },
+  {
+    "source": "l_martinez",
+    "destination": "ROG Phone 9 FE"
   }
 ]

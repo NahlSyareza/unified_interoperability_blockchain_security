@@ -1,5 +1,6 @@
 #pragma once
 
+#include <ble_handler.hpp>
 #include <data_structure.hpp>
 #include <de_ruyter.hpp>
 #include <httplib.h>
@@ -46,30 +47,31 @@ int http_handler(DataStructure *dstructure) {
 
   svr.Post(R"(/(.*))", [dstructure](const Request &req, Response &res) {
     json ret;
-    json payload;
+    json json_body;
 
     string body = req.body;
     string path = req.matches[0];
     path.erase(0, 1);
 
+    bool is_json = false;
+
     try {
-      payload = json::parse(body);
+      json_body = json::parse(body);
+      is_json = true;
+      spdlog::info("Retrieved body IS JSON");
     } catch (json::parse_error &e) {
-      ret["state"] = false;
-      ret["msg"] = "Value to be created is not a valid JSON format.";
-      ret["payload"] = "";
-      ret["code"] = 400;
-
-      res.set_content(ret.dump(), "application/json");
-
-      return;
+      spdlog::warn("Retrieved body IS NOT JSON");
     }
 
-    de_ruyter(dstructure, path, payload.dump());
+    de_ruyter(dstructure, path, body);
 
     ret["state"] = true;
     ret["msg"] = "Successfully created new value.";
-    ret["payload"] = payload.dump();
+    if (is_json) {
+      ret["payload"] = json_body.dump(2);
+    } else {
+      ret["payload"] = body;
+    }
     ret["code"] = 200;
 
     res.set_content(ret.dump(), "application/json");

@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include <map>
+#include <mosquitto.h>
 #include <sstream>
 
 using namespace std;

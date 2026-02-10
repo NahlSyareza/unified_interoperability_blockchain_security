@@ -22,5 +22,29 @@
     "data": "string",
     "syntax": "json",
     "unit": ""
+  },
+  {
+    "name": "dummy-5-format",
+    "data": "string",
+    "syntax": "string",
+    "unit": ""
+  },
+  {
+    "name": "dummy-6-format",
+    "data": "string",
+    "syntax": "text",
+    "unit": ""
+  },
+  {
+    "name": "generic-text",
+    "data": "string",
+    "syntax": "text",
+    "unit": ""
+  },
+  {
+    "name": "generic-json",
+    "data": "string",
+    "syntax": "json",
+    "unit": ""
   }
 ]

@@ -26,5 +26,33 @@
     "category": "dummy",
     "connection": "wifi/http",
     "format": "dummy-4-format"
+  },
+  {
+    "name": "dummy-5-device",
+    "type": "sensor",
+    "category": "dummy",
+    "connection": "wifi/http",
+    "format": "dummy-5-format"
+  },
+  {
+    "name": "dummy-6-device",
+    "type": "actuator",
+    "category": "dummy",
+    "connection": "ble",
+    "format": "dummy-6-format"
+  },
+  {
+    "name": "dummy-7-device",
+    "type": "sensor",
+    "category": "dummy",
+    "connection": "wifi/http",
+    "format": "generic-text"
+  },
+  {
+    "name": "dummy-8-device",
+    "type": "actuator",
+    "category": "dummy",
+    "connection": "ble",
+    "format": "generic-text"
   }
 ]
