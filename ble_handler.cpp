@@ -1,9 +1,4 @@
-// #define ESP32_ADDR "14:2b:2f:c4:f3:6e"
-// #define ESP32_SRV_UUID "4fafc201-1fb5-459e-8fcc-c5c9c331914b"
-// #define ESP32_CHR_UUID "beb5483e-36e1-4688-b7f5-ea07361b26a8"
-
-// #define PHONE_SRV_UUID "0000ff02-0000-1000-8000-00805f9b34fb"
-// #define PHONE_CHR_UUID "0000ff02-0000-1000-8000-00805f9b34fb"
+#pragma once
 
 #include <chrono>
 #include <data_structure.hpp>
@@ -20,8 +15,6 @@ using json = nlohmann::json;
 
 int main() {
   DataStructure dstructure;
-
-  dstructure.fill_maps();
 
   std::optional<SimpleBLE::Adapter> adapter_optional = Utils::getAdapter();
 
@@ -64,25 +57,12 @@ int main() {
     kyuukutsu[k] = std::make_pair(service, characteristic);
   }
 
-  // for (auto &p : peripherals) {
-  //   for (auto s : p.services()) {
-  //     for (auto c : s.characteristics()) {
-  //       if (s.uuid() == PHONE_SRV_UUID && c.uuid() == PHONE_CHR_UUID) {
-  //         kyuukutsu[p.identifier()] = std::make_pair(s.uuid(), c.uuid());
-  //       }
-  // } else if (p.identifier() == "Who is this" && s.uuid() == ESP32_SRV_UUID && c.uuid() == ESP32_CHR_UUID) {
-  //   kyuukutsu[p.identifier()] = std::make_pair(s.uuid(), c.uuid());
-  // }
-  //     }
-  //   }
-  // }
-
   for (const auto &[k, v] : kyuukutsu) {
     spdlog::info("{}: {} {}", k, v.first, v.second);
   }
 
-  SimpleBLE::ByteArray by1 = "The unenlightened masses";
-  SimpleBLE::ByteArray by2 = "They cannot make the judgement call";
+  SimpleBLE::ByteArray by1 = "Give up free will forever";
+  SimpleBLE::ByteArray by2 = "Their voices won't be heard at all";
 
   for (auto &p : peripherals) {
     std::string iden = p.identifier();

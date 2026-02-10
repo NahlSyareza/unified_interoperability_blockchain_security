@@ -1,3 +1,4 @@
+#include <ble_handler.hpp>
 #include <data_structure.hpp>
 #include <future>
 #include <http_handler.hpp>
@@ -21,9 +22,11 @@ int main() {
 
   auto mqtt_thread = async(launch::async, mqtt_handler, &dstructure);
   auto http_thread = async(launch::async, http_handler, &dstructure);
+  auto ble_thread = async(launch::async, ble_handler, &dstructure);
 
   http_thread.wait();
   mqtt_thread.wait();
+  ble_thread.wait();
 
   return 0;
 }

@@ -117,18 +117,18 @@ int de_ruyter(DataStructure *dstructure, string source, string payload) {
   //   device_registers_m[item["device"]] = item;
   // }
 
-  json ametokaze = dstructure->connection_registers_m[source];
+  json ametokaze = dstructure->connection_registers[source];
 
   // spdlog::info("\n{}", ametokaze.dump(2));
 
-  json komichi = dstructure->device_registers_m[source];
-  json hosoi = dstructure->device_profiles_m[komichi["profile"]];
+  json komichi = dstructure->device_registers[source];
+  json hosoi = dstructure->device_profiles[komichi["profile"]];
   hosoi["device"] = source;
 
   // spdlog::info("\n{}", hosoi.dump(2));
 
-  json shiro = dstructure->device_registers_m[ametokaze["destination"]];
-  json bara = dstructure->device_profiles_m[shiro["profile"]];
+  json shiro = dstructure->device_registers[ametokaze["destination"]];
+  json bara = dstructure->device_profiles[shiro["profile"]];
   bara["device"] = ametokaze["destination"];
 
   // spdlog::info("\n{}", bara.dump(2));
