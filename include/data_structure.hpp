@@ -41,11 +41,11 @@ public:
   std::map<string, json> ble_addresses;
 
   void fill_maps() {
-    ifstream connection_registers_stream("./include/config/connection_registers.json");
-    ifstream device_profiles_stream("./include/config/device_profiles.json");
-    ifstream device_registers_stream("./include/config/device_registers.json");
-    ifstream format_profiles_stream("./include/config/format_profiles.json");
-    ifstream ble_addresses_stream("./include/config/ble_addresses.json");
+    ifstream connection_registers_stream("./config/connection_registers.json");
+    ifstream device_profiles_stream("./config/device_profiles.json");
+    ifstream device_registers_stream("./config/device_registers.json");
+    ifstream format_profiles_stream("./config/format_profiles.json");
+    ifstream ble_addresses_stream("./config/ble_addresses.json");
 
     json parse_connection_registers = json::parse(connection_registers_stream);
     json parse_device_profiles = json::parse(device_profiles_stream);

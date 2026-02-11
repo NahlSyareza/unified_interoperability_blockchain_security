@@ -2,6 +2,7 @@
 
 #include <chrono>
 #include <data_structure.hpp>
+#include <de_ruyter.hpp>
 #include <fstream>
 #include <iostream>
 #include <nlohmann/json.hpp>
@@ -13,36 +14,7 @@
 
 using json = nlohmann::json;
 
-// static std::vector<SimpleBLE::Peripheral> peripherals;
-// static std::map<std::string, std::pair<SimpleBLE::BluetoothUUID, SimpleBLE::BluetoothUUID>> uuid_pair;
-
-// void ble_write_request(std::string identifier, std::string msg) {
-//   for (auto &p : peripherals) {
-//     if (p.identifier() == identifier)
-//       p.write_request(uuid_pair[identifier].first, uuid_pair[identifier].second, msg);
-//   }
-// }
-
-void dummy_write(DataStructure *dstructure) {
-  // std::map<std::string, std::pair<SimpleBLE::BluetoothUUID, SimpleBLE::BluetoothUUID>> uuid_pair;
-
-  SimpleBLE::ByteArray by1 = "Give up free will forever";
-  SimpleBLE::ByteArray by2 = "Their voices won't be heard at all";
-
-  for (auto &p : dstructure->peripherals) {
-    std::string iden = p.identifier();
-    if (p.identifier() == "ROG Phone 9 FE")
-      p.write_request(dstructure->uuid_pair[iden].first, dstructure->uuid_pair[iden].second, by1);
-    else if (p.identifier() == "Who is this")
-      p.write_request(dstructure->uuid_pair[iden].first, dstructure->uuid_pair[iden].second, by2);
-  }
-
-  spdlog::info("Hosoi komichi o aruki");
-
-  for (auto &p : dstructure->peripherals) {
-    p.disconnect();
-  }
-}
+void dummy_write(DataStructure *dstructure);
 
 int ble_handler(DataStructure *dstructure) {
   std::optional<SimpleBLE::Adapter> adapter_optional = Utils::getAdapter();
@@ -73,20 +45,45 @@ int ble_handler(DataStructure *dstructure) {
     p.connect();
   }
 
-  for (const auto &[k, v] : dstructure->ble_addresses) {
-    std::string service_string = v["service"];
-    std::string characteristic_string = v["characteristic"];
-    spdlog::info("Make pair for {}", k);
+  for (auto &p : dstructure->peripherals) {
+    json listed_peripherals = dstructure->ble_addresses[p.identifier()];
+    std::string service_string = listed_peripherals["service"];
+    std::string characteristic_string = listed_peripherals["characteristic"];
+    spdlog::info("Make pair for {} ({} {})", p.identifier(), service_string, characteristic_string);
     SimpleBLE::BluetoothUUID service(service_string);
     SimpleBLE::BluetoothUUID characteristic(characteristic_string);
-    dstructure->uuid_pair[k] = std::make_pair(service, characteristic);
+    dstructure->uuid_pair[p.identifier()] = std::make_pair(service, characteristic);
   }
 
-  // for (const auto &[k, v] : uuid_pair) {
-  //   spdlog::info("{}: {} {}", k, v.first, v.second);
-  // }
-
-  // dummy_write();
+  for (auto &p : dstructure->peripherals) {
+    spdlog::info("Creating BLE notifications");
+    const std::string identifier = p.identifier();
+    p.notify(dstructure->uuid_pair[identifier].first, dstructure->uuid_pair[identifier].second, [identifier, dstructure](SimpleBLE::ByteArray payload) {
+      std::string string_payload(payload.begin(), payload.end());
+      spdlog::info("BLE notification: {} ({})", string_payload, identifier);
+      de_ruyter(dstructure, identifier, string_payload);
+    });
+  }
 
   return EXIT_SUCCESS;
+}
+
+void dummy_write(DataStructure *dstructure) {
+
+  SimpleBLE::ByteArray by1 = "Give up free will forever";
+  SimpleBLE::ByteArray by2 = "Their voices won't be heard at all";
+
+  for (auto &p : dstructure->peripherals) {
+    std::string iden = p.identifier();
+    if (p.identifier() == "ROG Phone 9 FE")
+      p.write_request(dstructure->uuid_pair[iden].first, dstructure->uuid_pair[iden].second, by1);
+    else if (p.identifier() == "Who is this")
+      p.write_request(dstructure->uuid_pair[iden].first, dstructure->uuid_pair[iden].second, by2);
+  }
+
+  spdlog::info("Hosoi komichi o aruki");
+
+  for (auto &p : dstructure->peripherals) {
+    p.disconnect();
+  }
 }

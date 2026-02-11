@@ -60,21 +60,18 @@ int http_handler(DataStructure *dstructure) {
       is_json = true;
       spdlog::info("Retrieved body IS JSON");
     } catch (json::parse_error &e) {
-      spdlog::warn("Retrieved body IS NOT JSON");
+      spdlog::warn("Retrieved body is  JSON");
+      is_json = false;
     }
 
     de_ruyter(dstructure, path, body);
 
-    ret["state"] = true;
-    ret["msg"] = "Successfully created new value.";
-    if (is_json) {
-      ret["payload"] = json_body.dump(2);
-    } else {
-      ret["payload"] = body;
-    }
-    ret["code"] = 200;
+    res.status = 201;
 
-    res.set_content(ret.dump(), "application/json");
+    if (is_json)
+      res.set_content(body, "application/json");
+    else
+      res.set_content(body, "text/plain");
   });
 
   svr.listen("0.0.0.0", 18080);
