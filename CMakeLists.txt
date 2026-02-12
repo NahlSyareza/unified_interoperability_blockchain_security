@@ -24,7 +24,8 @@ find_package(Threads REQUIRED)
 if(WIN32)
     find_package(unofficial-mosquitto CONFIG REQUIRED)
 else()
-    find_package(mosquitto REQUIRED)
+    find_package(PkgConfig REQUIRED)
+    pkg_check_modules(mosquitto REQUIRED libmosquitto)
 endif()
 
 find_package(simpleble CONFIG REQUIRED)
@@ -49,7 +50,10 @@ target_link_libraries(legendary_boss PRIVATE
 if(WIN32)
     target_link_libraries(legendary_boss PRIVATE unofficial::mosquitto::mosquitto)
 else()
-    target_link_libraries(legendary_boss PRIVATE mosquitto)
+    target_link_libraries(legendary_boss PRIVATE ${mosquitto_LIBRARIES})
+    # Add this to tell the linker WHERE to find those libraries
+    target_link_directories(legendary_boss PRIVATE ${mosquitto_LIBRARY_DIRS}) 
+    target_include_directories(legendary_boss PRIVATE ${mosquitto_INCLUDE_DIRS})
 endif()
 
 if(NOT WIN32)
