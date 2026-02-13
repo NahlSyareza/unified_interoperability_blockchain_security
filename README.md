@@ -12,7 +12,8 @@ Required libraries:
 - openssl
 - crypto
 
-Provided libraries:
+Provided libraries (header only):
 - spdlog
 - nlohmann-json
 - cpp-httplib
+- simpleble utils
