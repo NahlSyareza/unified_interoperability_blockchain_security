@@ -19,6 +19,7 @@ Provided libraries (header only):
 - simpleble utils
 
 Recommended installation via vcpkg (for Windows OS).
+
 [vcpkg GitHub](https://github.com/microsoft/vcpkg)
 
 All libraries can be downloaded except mosquitto and simpleble for Linux-based OS.
