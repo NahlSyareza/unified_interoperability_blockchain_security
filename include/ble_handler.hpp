@@ -23,7 +23,8 @@ int ble_handler(DataStructure *dstructure) {
     return EXIT_FAILURE;
   }
 
-  auto adapter = adapter_optional.value();
+  // auto adapter = adapter_optional.value();
+  auto adapter = adapter_optional[0];
 
   adapter.set_callback_on_scan_found([&](SimpleBLE::Peripheral p) {
     if ((dstructure->ble_addresses.find(p.address()) != dstructure->ble_addresses.end() ||
