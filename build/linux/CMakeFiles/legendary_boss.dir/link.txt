@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG -pthread CMakeFiles/legendary_boss.dir/main.cpp.o CMakeFiles/legendary_boss.dir/utils.cpp.o -o legendary_boss   -L/usr/local/lib  -Wl,-rpath,/usr/local/lib /usr/local/lib/libsimpleble.a /usr/lib/x86_64-linux-gnu/libssl.so /usr/lib/x86_64-linux-gnu/libcrypto.so -lmosquitto -lpthread -ldbus-1 
