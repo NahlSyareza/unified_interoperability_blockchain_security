@@ -28,9 +28,9 @@ int main() {
   // mqtt_thread.wait();
   // ble_thread.wait();
 
-  http_thread.get();
-  mqtt_thread.get();
-  ble_thread.get();
+  // http_thread.get();
+  // mqtt_thread.get();
+  // ble_thread.get();
 
   return 0;
 }
