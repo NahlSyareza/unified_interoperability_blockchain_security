@@ -12,15 +12,6 @@
 #include <stdlib.h>
 #include <string.h>
 #include <thread>
-#ifdef _WIN32
-#include <io.h>
-#include <process.h>
-// If you were using unistd.h for sleep(), use this:
-#include <windows.h>
-#define sleep(x) Sleep(1000 * (x))
-#else
-#include <unistd.h>
-#endif
 
 // using string = std::string;
 using json = nlohmann::json;

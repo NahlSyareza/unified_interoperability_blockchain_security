@@ -11,6 +11,8 @@ if(WIN32)
     set(CMAKE_TOOLCHAIN_FILE "${VCPKG_PATH}/scripts/buildsystems/vcpkg.cmake")
 endif()
 
+set(CMAKE_BUILD_TYPE "Release")
+
 project(legendary_boss)
 
 set(CMAKE_CXX_STANDARD 20)
@@ -36,9 +38,9 @@ endif()
 
 target_include_directories(legendary_boss PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/include")
 
-if(WIN32)
-    target_include_directories(legendary_boss PRIVATE "${VCPKG_PATH}/installed/x64-windows/include")
-endif()
+# if(WIN32)
+#     target_include_directories(legendary_boss PRIVATE "${VCPKG_PATH}/installed/x64-windows/include")
+# endif()
 
 target_link_libraries(legendary_boss PRIVATE
     simpleble::simpleble
