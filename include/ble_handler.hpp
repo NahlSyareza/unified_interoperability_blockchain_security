@@ -17,14 +17,20 @@ using json = nlohmann::json;
 void dummy_write(DataStructure *dstructure);
 
 int ble_handler(DataStructure *dstructure) {
-  std::optional<SimpleBLE::Adapter> adapter_optional = Utils::getAdapter();
+  // std::optional<SimpleBLE::Adapter> adapter_optional = Utils::getAdapter();
+  auto adapters = SimpleBLE::Adapter::get_adapters();
 
-  if (!adapter_optional.has_value()) {
+  // if (!adapter_optional.has_value()) {
+  //   return EXIT_FAILURE;
+  // }
+
+  if (adapters.empty()) {
+    spdlog::error("No adapter was found");
     return EXIT_FAILURE;
   }
 
   // auto adapter = adapter_optional.value();
-  auto adapter = adapter_optional[0];
+  auto adapter = adapters.at(0);
 
   adapter.set_callback_on_scan_found([&](SimpleBLE::Peripheral p) {
     if ((dstructure->ble_addresses.find(p.address()) != dstructure->ble_addresses.end() ||
