@@ -198,7 +198,7 @@ CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 CMAKE_STRIP:FILEPATH=/usr/bin/aarch64-linux-gnu-strip
 
 //The CMake toolchain file
-CMAKE_TOOLCHAIN_FILE:FILEPATH=/home/nahl_syareza/raspi/raspi-toolchain.cmake
+CMAKE_TOOLCHAIN_FILE:FILEPATH=/home/nahl_syareza/unified_interoperability_blockchain_security/raspi-toolchain.cmake
 
 //If this value is on, makefiles will be generated without the
 // .SILENT directive, and all commands will be echoed to the console

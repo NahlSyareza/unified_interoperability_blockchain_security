@@ -7,11 +7,11 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
-  "/home/nahl_syareza/raspi/raspi-toolchain.cmake"
   "../../CMakeLists.txt"
   "CMakeFiles/3.22.1/CMakeCCompiler.cmake"
   "CMakeFiles/3.22.1/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.22.1/CMakeSystem.cmake"
+  "../../raspi-toolchain.cmake"
   "/usr/aarch64-linux-gnu/lib/cmake/simpleble/simpleble-config-release.cmake"
   "/usr/aarch64-linux-gnu/lib/cmake/simpleble/simpleble-config.cmake"
   "/usr/share/cmake-3.22/Modules/CMakeCCompiler.cmake.in"
