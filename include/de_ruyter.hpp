@@ -6,6 +6,7 @@
 #include <iostream>
 #include <map>
 #include <mosquitto.h>
+#include <mqtt_protocol.h>
 #include <nlohmann/json.hpp>
 
 // using std::cout;
@@ -22,8 +23,11 @@ void ble_processor(DataStructure *dstructure, std::string identifier, string pay
 }
 
 void mqtt_processor(DataStructure *dstructure, string topic, string payload) {
-  json payload_json = json::parse(payload);
-  payload_json["sender"] = "gate-control";
+  // json payload_json = json::parse(payload);
+  // payload_json["sender"] = "gate-control";
+
+  mosquitto_property *proplist = NULL;
+  mosquitto_property_add_string_pair(&proplist, MQTT_PROP_USER_PROPERTY, "origin", "external");
 
   struct mosquitto *mosq;
   int rc;
@@ -54,8 +58,13 @@ void mqtt_processor(DataStructure *dstructure, string topic, string payload) {
     return;
   }
 
-  string final_payload = payload_json.dump();
+  string final_payload = payload;
+  /**
+   * arr stands for already re routed
+   */
+  final_payload.insert(0, "arr");
   rc = mosquitto_publish(mosq, nullptr, topic.c_str(), final_payload.length(), final_payload.c_str(), 2, false);
+  // rc = mosquitto_publish_v5(mosq, nullptr, topic.c_str(), final_payload.length(), final_payload.c_str(), 2, false, proplist);
   if (rc != MOSQ_ERR_SUCCESS) {
     // fprintf(stderr, "Error publishing: %s\n", mosquitto_strerror(rc));
     spdlog::error("Error publishing: {}", mosquitto_strerror(rc));

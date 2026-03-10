@@ -59,10 +59,10 @@ int http_handler(DataStructure *dstructure) {
       json_body = json::parse(body);
       is_json = true;
       spdlog::info("Retrieved body IS JSON");
-      spdlog::info("HTTP Post: {}", json_body.dump());
+      spdlog::info("HTTP: POST body {}", json_body.dump());
     } catch (json::parse_error &e) {
       spdlog::warn("Retrieved body is RAW");
-      spdlog::info("HTTP Post: {}", body);
+      spdlog::info("HTTP: POST body {}", body);
       is_json = false;
     }
 
