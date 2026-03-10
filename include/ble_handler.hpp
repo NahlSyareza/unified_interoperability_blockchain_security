@@ -67,7 +67,7 @@ int ble_handler(DataStructure *dstructure) {
     const std::string identifier = p.identifier();
     p.notify(dstructure->uuid_pair[identifier].first, dstructure->uuid_pair[identifier].second, [identifier, dstructure](SimpleBLE::ByteArray payload) {
       std::string string_payload(payload.begin(), payload.end());
-      spdlog::info("BLE notification: {} ({})", string_payload, identifier);
+      spdlog::info("BLE Notify: {} ({})", string_payload, identifier);
       de_ruyter(dstructure, identifier, string_payload);
     });
   }

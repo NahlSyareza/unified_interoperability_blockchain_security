@@ -64,11 +64,13 @@ void on_message(struct mosquitto *mosq, void *obj, const struct mosquitto_messag
   DataStructure *dstructure = (DataStructure *)obj;
 
   // printf("%s %d %s\n", msg->topic, msg->qos, (char *)msg->payload);
-  spdlog::info("{} {} {}", msg->topic, msg->qos, (char *)msg->payload);
+  // spdlog::info("MQTT")
 
-  json payload;
+  char *payload = (char *)msg->payload;
+
+  json payload_json;
   try {
-    payload = json::parse((char *)msg->payload);
+    payload_json = json::parse((char *)msg->payload);
   } catch (json::parse_error &e) {
     spdlog::error("{}", e.what());
     return;
@@ -77,7 +79,9 @@ void on_message(struct mosquitto *mosq, void *obj, const struct mosquitto_messag
    * on_message also triggers when this code publishes message
    */
 
-  if (payload["sender"] != "gate-control") {
+  spdlog::info("{} {} {}", msg->topic, msg->qos, (char *)msg->payload);
+
+  if (payload_json["sender"] != "gate-control") {
     de_ruyter(dstructure, msg->topic, (char *)msg->payload);
   }
 }
