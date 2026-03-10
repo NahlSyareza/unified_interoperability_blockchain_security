@@ -62,46 +62,62 @@ void on_publish(struct mosquitto *mosq, void *obj, int mid) {
 }
 
 void on_message(struct mosquitto *mosq, void *obj, const struct mosquitto_message *msg) {
-  DataStructure *dstructure = (DataStructure *)obj;
+  // DataStructure *dstructure = (DataStructure *)obj;
 
-  bool should_reroute = true;
+  // bool should_reroute = true;
 
   // printf("%s %d %s\n", msg->topic, msg->qos, (char *)msg->payload);
   // spdlog::info("MQTT")
 
   // char *payload = (char *)msg->payload;
-  std::string payload((char *)msg->payload);
-  spdlog::info("MQTT: New message {} {} {}", msg->topic, msg->qos, payload);
+  // std::string payload((char *)msg->payload);
 
-  if (payload.substr(0, 3) == REROUTE_CODE) {
-    spdlog::warn("MQTT: dlv code detected! No reroute");
-    payload = payload.substr(3);
-    should_reroute = false;
-  } else {
-    spdlog::warn("MQTT: dlv code not detected! Reroute in progress...");
-  }
-
-  // json payload_json;
-  // try {
-  //   payload_json = json::parse((char *)msg->payload);
-  // } catch (json::parse_error &e) {
-  //   spdlog::error("{}", e.what());
-  //   return;
+  // if (payload.substr(0, 3) == REROUTE_CODE) {
+  //   spdlog::warn("MQTT v3.1.1: dlv code detected! No reroute");
+  //   payload = payload.substr(3);
+  //   should_reroute = false;
+  // } else {
+  //   spdlog::warn("MQTT v3.1.1: dlv code not detected! Reroute in progress...");
   // }
+
   /**
    * on_message also triggers when this code publishes message
    */
 
-  // spdlog::info("{} {} {}", msg->topic, msg->qos, (char *)msg->payload);
-
-  // if (payload_json["sender"] != "gate-control") {
-  if (should_reroute) {
-    // de_ruyter(dstructure, msg->topic, (char *)msg->payload);
-    de_ruyter(dstructure, msg->topic, payload);
-  }
+  // if (should_reroute) {
+  // de_ruyter(dstructure, msg->topic, payload);
+  // }
 }
 
-void on_message_v5(struct mosquitto *mosq, void *obj, const struct mosquitto_message *msg, const mosquitto_property *props) { spdlog::info("Winds of destruction"); }
+void on_message_v5(struct mosquitto *mosq, void *obj, const struct mosquitto_message *msg, const mosquitto_property *props) {
+  DataStructure *dstructure = (DataStructure *)obj;
+
+  std::string payload((char *)msg->payload);
+  char *n = nullptr;
+  char *v = nullptr;
+
+  mosquitto_property_read_string_pair(props, MQTT_PROP_USER_PROPERTY, &n, &v, false);
+
+  try {
+    json payload_json = json::parse(payload);
+    spdlog::warn("MQTT: Payload is JSON");
+
+    payload = payload_json.dump();
+  } catch (json::parse_error &e) {
+    spdlog::warn("MQTT: Payload is not JSON");
+  }
+
+  if (props == NULL) {
+    spdlog::info("MQTT: New message {} {} {}", msg->topic, msg->qos, payload);
+    de_ruyter(dstructure, msg->topic, payload);
+  } else {
+    if (n != nullptr && v != nullptr) {
+      std::string name(n), value(v);
+      spdlog::info("MQTT Props: {} {}", name, value);
+    }
+    spdlog::info("MQTT v5.0: New message {} {} {}", msg->topic, msg->qos, payload);
+  }
+}
 
 int mqtt_handler(DataStructure *dstructure) {
   struct mosquitto *mosq;
@@ -116,7 +132,9 @@ int mqtt_handler(DataStructure *dstructure) {
     return 1;
   }
 
-  mosquitto_message_callback_set(mosq, on_message);
+  mosquitto_int_option(mosq, MOSQ_OPT_PROTOCOL_VERSION, MQTT_PROTOCOL_V5);
+
+  // mosquitto_message_callback_set(mosq, on_message);
   mosquitto_connect_callback_set(mosq, on_connect);
   mosquitto_subscribe_callback_set(mosq, on_subscribe);
   mosquitto_publish_callback_set(mosq, on_publish);

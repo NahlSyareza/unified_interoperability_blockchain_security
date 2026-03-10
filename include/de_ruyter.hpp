@@ -23,11 +23,6 @@ void ble_processor(DataStructure *dstructure, std::string identifier, string pay
 }
 
 void mqtt_processor(DataStructure *dstructure, string topic, string payload) {
-  // json payload_json = json::parse(payload);
-  // payload_json["sender"] = "gate-control";
-
-  mosquitto_property *proplist = NULL;
-  mosquitto_property_add_string_pair(&proplist, MQTT_PROP_USER_PROPERTY, "origin", "external");
 
   struct mosquitto *mosq;
   int rc;
@@ -41,11 +36,13 @@ void mqtt_processor(DataStructure *dstructure, string topic, string payload) {
     return;
   }
 
+  mosquitto_int_option(mosq, MOSQ_OPT_PROTOCOL_VERSION, MQTT_PROTOCOL_V5);
+
   rc = mosquitto_connect(mosq, "127.0.0.1", 1883, 60);
   if (rc != MOSQ_ERR_SUCCESS) {
     mosquitto_destroy(mosq);
     // fprintf(stderr, "Error: %s\n", mosquitto_strerror(rc));
-    spdlog::error("Error: {}", mosquitto_strerror(rc));
+    spdlog::error("Error Connect: {}", mosquitto_strerror(rc));
     return;
   }
 
@@ -54,17 +51,23 @@ void mqtt_processor(DataStructure *dstructure, string topic, string payload) {
   if (rc != MOSQ_ERR_SUCCESS) {
     mosquitto_destroy(mosq);
     // fprintf(stderr, "Error: %s\n", mosquitto_strerror(rc));
-    spdlog::error("Error: {}", mosquitto_strerror(rc));
+    spdlog::error("Error Loop: {}", mosquitto_strerror(rc));
     return;
+  }
+
+  mosquitto_property *proplist = NULL;
+  rc = mosquitto_property_add_string_pair(&proplist, MQTT_PROP_USER_PROPERTY, "origin", "external");
+  if (rc != MOSQ_ERR_SUCCESS) {
+    spdlog::error("Something's wrong I can feel it");
   }
 
   string final_payload = payload;
   /**
    * arr stands for already re routed
    */
-  final_payload.insert(0, "arr");
-  rc = mosquitto_publish(mosq, nullptr, topic.c_str(), final_payload.length(), final_payload.c_str(), 2, false);
-  // rc = mosquitto_publish_v5(mosq, nullptr, topic.c_str(), final_payload.length(), final_payload.c_str(), 2, false, proplist);
+  // final_payload.insert(0, "arr");
+  // rc = mosquitto_publish(mosq, nullptr, topic.c_str(), final_payload.length(), final_payload.c_str(), 2, false);
+  rc = mosquitto_publish_v5(mosq, nullptr, topic.c_str(), final_payload.length(), final_payload.c_str(), 2, false, proplist);
   if (rc != MOSQ_ERR_SUCCESS) {
     // fprintf(stderr, "Error publishing: %s\n", mosquitto_strerror(rc));
     spdlog::error("Error publishing: {}", mosquitto_strerror(rc));
@@ -81,8 +84,6 @@ void mqtt_processor(DataStructure *dstructure, string topic, string payload) {
   mosquitto_loop_stop(mosq, false);
   mosquitto_destroy(mosq);
   mosquitto_lib_cleanup();
-
-  // return 0;
 }
 
 void http_processor(DataStructure *dstructure, string path, string payload) { dstructure->insert_map_key(&dstructure->http_map, path, payload); }
