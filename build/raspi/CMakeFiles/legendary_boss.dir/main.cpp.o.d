@@ -482,6 +482,7 @@ CMakeFiles/legendary_boss.dir/main.cpp.o: \
  /usr/aarch64-linux-gnu/include/mosquitto/broker.h \
  /usr/aarch64-linux-gnu/include/mosquitto/broker_control.h \
  /usr/aarch64-linux-gnu/include/mosquitto/broker_plugin.h \
+ /usr/aarch64-linux-gnu/include/mqtt_protocol.h \
  /home/nahl_syareza/unified_interoperability_blockchain_security/include/utils.hpp \
  /usr/aarch64-linux-gnu/include/c++/11/future \
  /usr/aarch64-linux-gnu/include/c++/11/bits/atomic_futex.h \
