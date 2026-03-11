@@ -484,6 +484,7 @@ CMakeFiles/legendary_boss.dir/main.cpp.o: ../../main.cpp \
   /usr/aarch64-linux-gnu/include/mosquitto/broker.h \
   /usr/aarch64-linux-gnu/include/mosquitto/broker_control.h \
   /usr/aarch64-linux-gnu/include/mosquitto/broker_plugin.h \
+  /usr/aarch64-linux-gnu/include/mqtt_protocol.h \
   ../../include/utils.hpp \
   /usr/aarch64-linux-gnu/include/c++/11/future \
   /usr/aarch64-linux-gnu/include/c++/11/bits/atomic_futex.h \
@@ -1711,6 +1712,14 @@ CMakeFiles/legendary_boss.dir/utils.cpp.o: ../../utils.cpp \
 
 /usr/aarch64-linux-gnu/include/bits/fp-logb.h:
 
+/usr/aarch64-linux-gnu/include/asm-generic/param.h:
+
+/usr/aarch64-linux-gnu/include/bits/fp-fast.h:
+
+/usr/aarch64-linux-gnu/include/c++/11/bits/cxxabi_forced.h:
+
+/usr/aarch64-linux-gnu/include/bits/mathcalls-helper-functions.h:
+
 /usr/aarch64-linux-gnu/include/bits/mathcalls.h:
 
 /usr/aarch64-linux-gnu/include/bits/mathcalls-narrow.h:
@@ -1991,6 +2000,8 @@ CMakeFiles/legendary_boss.dir/utils.cpp.o: ../../utils.cpp \
 
 /usr/aarch64-linux-gnu/include/mosquitto/libcommon_utf8.h:
 
+/usr/aarch64-linux-gnu/include/mqtt_protocol.h:
+
 /usr/aarch64-linux-gnu/include/c++/11/future:
 
 /usr/aarch64-linux-gnu/include/c++/11/aarch64-linux-gnu/bits/c++config.h:
@@ -2060,11 +2071,3 @@ CMakeFiles/legendary_boss.dir/utils.cpp.o: ../../utils.cpp \
 /usr/aarch64-linux-gnu/include/linux/param.h:
 
 /usr/aarch64-linux-gnu/include/asm/param.h:
-
-/usr/aarch64-linux-gnu/include/bits/fp-fast.h:
-
-/usr/aarch64-linux-gnu/include/c++/11/bits/cxxabi_forced.h:
-
-/usr/aarch64-linux-gnu/include/bits/mathcalls-helper-functions.h:
-
-/usr/aarch64-linux-gnu/include/asm-generic/param.h:
