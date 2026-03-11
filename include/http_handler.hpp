@@ -30,25 +30,40 @@ int http_handler(DataStructure *dstructure) {
       ret["payload"] = "";
       ret["code"] = 400;
 
+      res.status = 400;
+
       res.set_content(ret.dump(), "application/json");
 
       return;
     }
 
+    json json_payload;
+    bool is_json = false;
     string payload = dstructure->http_map[path]->payload;
+
+    try {
+      json_payload = json::parse(payload);
+      is_json = true;
+    } catch (json::parse_error &e) {
+    }
 
     ret["state"] = true;
     ret["msg"] = "Successfully retrieved value.";
-    ret["payload"] = payload;
+    if (is_json)
+      ret["payload"] = json_payload;
+    else
+      ret["payload"] = payload;
     ret["code"] = 200;
+
+    res.status = 200;
 
     res.set_content(ret.dump(), "application/json");
   });
 
   svr.Post(R"(/(.*))", [dstructure](const Request &req, Response &res) {
     json ret;
-    json json_body;
 
+    json json_body;
     string body = req.body;
     string path = req.matches[0];
     path.erase(0, 1);
@@ -68,12 +83,17 @@ int http_handler(DataStructure *dstructure) {
 
     de_ruyter(dstructure, path, body);
 
+    ret["state"] = true;
+    ret["msg"] = "Successfully posted new data";
+    if (is_json)
+      ret["payload"] = json_body;
+    else
+      ret["payload"] = body;
+    ret["code"] = 201;
+
     res.status = 201;
 
-    if (is_json)
-      res.set_content(body, "application/json");
-    else
-      res.set_content(body, "text/plain");
+    res.set_content(ret.dump(), "application/json");
   });
 
   svr.listen("0.0.0.0", 18080);

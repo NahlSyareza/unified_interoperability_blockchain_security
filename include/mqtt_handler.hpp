@@ -13,8 +13,6 @@
 #include <string.h>
 #include <thread>
 
-#define REROUTE_CODE "arr"
-
 using json = nlohmann::json;
 
 // static struct mosquitto *mosq;
@@ -98,6 +96,9 @@ void on_message_v5(struct mosquitto *mosq, void *obj, const struct mosquitto_mes
 
   mosquitto_property_read_string_pair(props, MQTT_PROP_USER_PROPERTY, &n, &v, false);
 
+  /**
+   * Fine without this, it's here to make the logs prettier
+   */
   try {
     json payload_json = json::parse(payload);
     spdlog::warn("MQTT: Payload is JSON");
@@ -114,6 +115,10 @@ void on_message_v5(struct mosquitto *mosq, void *obj, const struct mosquitto_mes
     if (n != nullptr && v != nullptr) {
       std::string name(n), value(v);
       spdlog::info("MQTT Props: {} {}", name, value);
+
+      if (name != "origin" && value != "external") {
+        de_ruyter(dstructure, msg->topic, payload);
+      }
     }
     spdlog::info("MQTT v5.0: New message {} {} {}", msg->topic, msg->qos, payload);
   }

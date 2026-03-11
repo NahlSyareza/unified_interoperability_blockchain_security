@@ -62,10 +62,6 @@ void mqtt_processor(DataStructure *dstructure, string topic, string payload) {
   }
 
   string final_payload = payload;
-  /**
-   * arr stands for already re routed
-   */
-  // final_payload.insert(0, "arr");
   // rc = mosquitto_publish(mosq, nullptr, topic.c_str(), final_payload.length(), final_payload.c_str(), 2, false);
   rc = mosquitto_publish_v5(mosq, nullptr, topic.c_str(), final_payload.length(), final_payload.c_str(), 2, false, proplist);
   if (rc != MOSQ_ERR_SUCCESS) {
@@ -92,16 +88,9 @@ void comms_manager(DataStructure *dstructure, json *source_data, json *destinati
   json deref_source = *source_data;
   json deref_destination = *destination_data;
 
-  // spdlog::info("Source:\n{}", deref_source.dump(2));
-  // spdlog::info("Destination:\n{}", deref_destination.dump(2));
-
   string deref_destination_conn = deref_destination["connection"];
 
-  // spdlog::info("Source format:\n{}", dstructure->format_profiles_m[deref_source["format"]].dump(2));
-  // spdlog::info("Destination format:\n{}", dstructure->format_profiles_m[deref_destination["format"]].dump(2));
-
   if (deref_destination_conn == "wifi/http") {
-    // dstructure->insert_map_key(&dstructure->http_map, deref_destination["device"], payload);
     http_processor(dstructure, deref_destination["device"], payload);
   } else if (deref_destination_conn == "wifi/mqtt") {
     mqtt_processor(dstructure, deref_destination["device"], payload);
