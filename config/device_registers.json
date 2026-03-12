@@ -30,5 +30,14 @@
   {
     "device": "ROG Phone 9 FE",
     "profile": "dummy-8-device"
+  },
+
+  {
+    "device": "rogue_ichi",
+    "profile": "rogue_ichi_profile"
+  },
+  {
+    "device": "rogue_ni",
+    "profile": "rogue_ni_profile"
   }
 ]

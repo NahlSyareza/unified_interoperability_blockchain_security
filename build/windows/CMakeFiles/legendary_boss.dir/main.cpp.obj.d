@@ -193,7 +193,6 @@ C:/vcpkg/installed/x64-windows/include/simpleble/Descriptor.h
 C:/vcpkg/installed/x64-windows/include/simpleble/AdapterSafe.h
 C:/vcpkg/installed/x64-windows/include/simpleble/PeripheralSafe.h
 C:/vcpkg/installed/x64-windows/include/simpleble/Utils.h
-C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/include/de_ruyter.hpp
 C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/include/spdlog/spdlog.h
 C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/include/spdlog/common.h
 C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/include/spdlog/details/null_mutex.h
@@ -355,6 +354,7 @@ C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperabili
 C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/include/spdlog/details/synchronous_factory.h
 C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/include/spdlog/version.h
 C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/include/spdlog/spdlog-inl.h
+C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/include/de_ruyter.hpp
 C:/vcpkg/installed/x64-windows/include/mosquitto.h
 C:/vcpkg/installed/x64-windows/include/mqtt_protocol.h
 C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/include/utils.hpp

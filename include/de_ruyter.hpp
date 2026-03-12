@@ -9,8 +9,6 @@
 #include <mqtt_protocol.h>
 #include <nlohmann/json.hpp>
 
-// using std::cout;
-// using std::endl;
 using string = std::string;
 using ifstream = std::ifstream;
 using json = nlohmann::json;
@@ -31,7 +29,6 @@ void mqtt_processor(DataStructure *dstructure, string topic, string payload) {
 
   mosq = mosquitto_new(NULL, true, dstructure);
   if (mosq == NULL) {
-    // fprintf(stderr, "Error: Out of memory.\n");
     spdlog::error("Error: Out of memory");
     return;
   }
@@ -41,7 +38,6 @@ void mqtt_processor(DataStructure *dstructure, string topic, string payload) {
   rc = mosquitto_connect(mosq, "127.0.0.1", 1883, 60);
   if (rc != MOSQ_ERR_SUCCESS) {
     mosquitto_destroy(mosq);
-    // fprintf(stderr, "Error: %s\n", mosquitto_strerror(rc));
     spdlog::error("Error Connect: {}", mosquitto_strerror(rc));
     return;
   }
@@ -50,7 +46,6 @@ void mqtt_processor(DataStructure *dstructure, string topic, string payload) {
   rc = mosquitto_loop(mosq, 1000, 5);
   if (rc != MOSQ_ERR_SUCCESS) {
     mosquitto_destroy(mosq);
-    // fprintf(stderr, "Error: %s\n", mosquitto_strerror(rc));
     spdlog::error("Error Loop: {}", mosquitto_strerror(rc));
     return;
   }
@@ -62,10 +57,8 @@ void mqtt_processor(DataStructure *dstructure, string topic, string payload) {
   }
 
   string final_payload = payload;
-  // rc = mosquitto_publish(mosq, nullptr, topic.c_str(), final_payload.length(), final_payload.c_str(), 2, false);
   rc = mosquitto_publish_v5(mosq, nullptr, topic.c_str(), final_payload.length(), final_payload.c_str(), 2, false, proplist);
   if (rc != MOSQ_ERR_SUCCESS) {
-    // fprintf(stderr, "Error publishing: %s\n", mosquitto_strerror(rc));
     spdlog::error("Error publishing: {}", mosquitto_strerror(rc));
   }
 
@@ -97,6 +90,13 @@ void comms_manager(DataStructure *dstructure, json *source_data, json *destinati
   } else if (deref_destination_conn == "ble") {
     ble_processor(dstructure, deref_destination["device"], payload);
   }
+}
+
+void mastermind(DataStructure *dstructure, string source, string payload) { 
+  json conn = dstructure->connection_registers[source]; 
+
+  json source_device = dstructure->device_registers[source];
+  // json source_profile = 
 }
 
 int de_ruyter(DataStructure *dstructure, string source, string payload) {
