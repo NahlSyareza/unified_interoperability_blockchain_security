@@ -1,23 +1,21 @@
 #pragma once
 
-#include <chrono>
+// #include <chrono>
 #include <data_structure.hpp>
 #include <de_ruyter.hpp>
-#include <iostream>
+// #include <iostream>
 #include <mosquitto.h>
-// #include <mosquitto_broker.h>
+#include <mqtt_protocol.h>
 #include <nlohmann/json.hpp>
 #include <spdlog/spdlog.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <thread>
+// #include <stdio.h>
+// #include <stdlib.h>
+// #include <string.h>
+// #include <thread>
 
 using json = nlohmann::json;
 
-// static struct mosquitto *mosq;
-
-void on_connect(struct mosquitto *mosq, void *obj, int reason_code) {
+void on_connect_v5(struct mosquitto *mosq, void *obj, int reason_code, int flags, const mosquitto_property *props) {
   int rc;
 
   // printf("on_connect: %s\n", mosquitto_connack_string(reason_code));
@@ -34,7 +32,7 @@ void on_connect(struct mosquitto *mosq, void *obj, int reason_code) {
   }
 }
 
-void on_subscribe(struct mosquitto *mosq, void *obj, int mid, int qos_count, const int *granted_qos) {
+void on_subscribe_v5(struct mosquitto *mosq, void *obj, int mid, int qos_count, const int *granted_qos, const mosquitto_property *props) {
   int i;
   bool have_subscription = false;
 
@@ -54,37 +52,9 @@ void on_subscribe(struct mosquitto *mosq, void *obj, int mid, int qos_count, con
   }
 }
 
-void on_publish(struct mosquitto *mosq, void *obj, int mid) {
+void on_publish_v5(struct mosquitto *mosq, void *obj, int mid, int reason_code, const mosquitto_property *props) {
   // printf("Message with mid %d has been published.\n", mid);
   spdlog::info("Message with mid {} has been published", mid);
-}
-
-void on_message(struct mosquitto *mosq, void *obj, const struct mosquitto_message *msg) {
-  // DataStructure *dstructure = (DataStructure *)obj;
-
-  // bool should_reroute = true;
-
-  // printf("%s %d %s\n", msg->topic, msg->qos, (char *)msg->payload);
-  // spdlog::info("MQTT")
-
-  // char *payload = (char *)msg->payload;
-  // std::string payload((char *)msg->payload);
-
-  // if (payload.substr(0, 3) == REROUTE_CODE) {
-  //   spdlog::warn("MQTT v3.1.1: dlv code detected! No reroute");
-  //   payload = payload.substr(3);
-  //   should_reroute = false;
-  // } else {
-  //   spdlog::warn("MQTT v3.1.1: dlv code not detected! Reroute in progress...");
-  // }
-
-  /**
-   * on_message also triggers when this code publishes message
-   */
-
-  // if (should_reroute) {
-  // de_ruyter(dstructure, msg->topic, payload);
-  // }
 }
 
 void on_message_v5(struct mosquitto *mosq, void *obj, const struct mosquitto_message *msg, const mosquitto_property *props) {
@@ -124,36 +94,51 @@ void on_message_v5(struct mosquitto *mosq, void *obj, const struct mosquitto_mes
   }
 }
 
+int publish_v5(struct mosquitto *mosq, string topic, string payload) {
+  return mosquitto_publish_v5(mosq, nullptr, topic.c_str(), payload.length(), payload.c_str(), 2, false, NULL);
+}
+
+int publish_v5(struct mosquitto *mosq, string topic, string payload, std::pair<string, string> prop_pair) {
+  int rc;
+  mosquitto_property *proplist = NULL;
+  rc = mosquitto_property_add_string_pair(&proplist, MQTT_PROP_USER_PROPERTY, prop_pair.first.c_str(), prop_pair.second.c_str());
+  if (rc != MOSQ_ERR_SUCCESS) {
+    spdlog::error("MQTT: Cannot instantiate the proplist");
+    return rc;
+  }
+
+  return mosquitto_publish_v5(mosq, nullptr, topic.c_str(), payload.length(), payload.c_str(), 2, false, proplist);
+}
+
 int mqtt_handler(DataStructure *dstructure) {
-  struct mosquitto *mosq;
+  // struct mosquitto *mosq;
   int rc;
 
   mosquitto_lib_init();
 
-  mosq = mosquitto_new(NULL, true, dstructure);
-  if (mosq == NULL) {
-    // fprintf(stderr, "Error: Out of memory.\n");
+  dstructure->mosq = mosquitto_new(NULL, true, dstructure);
+  if (dstructure->mosq == NULL) {
     spdlog::error("Error: Out of memory");
     return 1;
   }
 
-  mosquitto_int_option(mosq, MOSQ_OPT_PROTOCOL_VERSION, MQTT_PROTOCOL_V5);
+  mosquitto_int_option(dstructure->mosq, MOSQ_OPT_PROTOCOL_VERSION, MQTT_PROTOCOL_V5);
 
   // mosquitto_message_callback_set(mosq, on_message);
-  mosquitto_connect_callback_set(mosq, on_connect);
-  mosquitto_subscribe_callback_set(mosq, on_subscribe);
-  mosquitto_publish_callback_set(mosq, on_publish);
-  mosquitto_message_v5_callback_set(mosq, on_message_v5);
+  mosquitto_connect_v5_callback_set(dstructure->mosq, on_connect_v5);
+  mosquitto_subscribe_v5_callback_set(dstructure->mosq, on_subscribe_v5);
+  mosquitto_publish_v5_callback_set(dstructure->mosq, on_publish_v5);
+  mosquitto_message_v5_callback_set(dstructure->mosq, on_message_v5);
 
-  rc = mosquitto_connect(mosq, "127.0.0.1", 1883, 60);
+  rc = mosquitto_connect(dstructure->mosq, "127.0.0.1", 1883, 60);
   if (rc != MOSQ_ERR_SUCCESS) {
-    mosquitto_destroy(mosq);
+    mosquitto_destroy(dstructure->mosq);
     // fprintf(stderr, "Error: %s\n", mosquitto_strerror(rc));
     spdlog::error("Error: {}", mosquitto_strerror(rc));
     return 1;
   }
 
-  mosquitto_loop_forever(mosq, -1, 1);
+  mosquitto_loop_forever(dstructure->mosq, -1, 1);
 
   mosquitto_lib_cleanup();
 

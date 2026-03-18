@@ -18,6 +18,8 @@ public:
     string payload;
   };
 
+  struct mosquitto *mosq = NULL;
+
   std::map<string, Data *> http_map;
   std::map<string, Data *> mqtt_map;
 

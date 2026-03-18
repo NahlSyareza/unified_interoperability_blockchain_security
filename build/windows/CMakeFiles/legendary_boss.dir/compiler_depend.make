@@ -197,7 +197,6 @@ CMakeFiles\legendary_boss.dir\main.cpp.obj: C:\vcpkg\installed\x64-windows\inclu
 CMakeFiles\legendary_boss.dir\main.cpp.obj: C:\vcpkg\installed\x64-windows\include\simpleble\AdapterSafe.h
 CMakeFiles\legendary_boss.dir\main.cpp.obj: C:\vcpkg\installed\x64-windows\include\simpleble\PeripheralSafe.h
 CMakeFiles\legendary_boss.dir\main.cpp.obj: C:\vcpkg\installed\x64-windows\include\simpleble\Utils.h
-CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\include\de_ruyter.hpp"
 CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\include\spdlog\spdlog.h"
 CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\include\spdlog\common.h"
 CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\include\spdlog\details\null_mutex.h"
@@ -359,6 +358,7 @@ CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Users\Nahl Syareza Rahidra\Docum
 CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\include\spdlog\details\synchronous_factory.h"
 CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\include\spdlog\version.h"
 CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\include\spdlog\spdlog-inl.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\include\de_ruyter.hpp"
 CMakeFiles\legendary_boss.dir\main.cpp.obj: C:\vcpkg\installed\x64-windows\include\mosquitto.h
 CMakeFiles\legendary_boss.dir\main.cpp.obj: C:\vcpkg\installed\x64-windows\include\mqtt_protocol.h
 CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\include\utils.hpp"
@@ -1067,10 +1067,6 @@ C:\vcpkg\installed\x64-windows\include\simpleble\AdapterSafe.h:
 
 C:\vcpkg\installed\x64-windows\include\simpleble\Utils.h:
 
-"C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\shared\pshpack4.h":
-
-"C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\include\de_ruyter.hpp":
-
 "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\include\spdlog\spdlog.h":
 
 "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\include\spdlog\common.h":
@@ -1154,6 +1150,10 @@ C:\vcpkg\installed\x64-windows\include\simpleble\Utils.h:
 "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\basetsd.h":
 
 "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\guiddef.h":
+
+"C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\include\de_ruyter.hpp":
+
+"C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\shared\pshpack4.h":
 
 "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\shared\pshpack2.h":
 

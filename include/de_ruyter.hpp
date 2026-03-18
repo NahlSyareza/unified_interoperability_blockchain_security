@@ -2,15 +2,13 @@
 
 #include "spdlog/spdlog.h"
 #include <data_structure.hpp>
-#include <fstream>
-#include <iostream>
-#include <map>
+// #include <iostream>
+// #include <map>
 #include <mosquitto.h>
 #include <mqtt_protocol.h>
 #include <nlohmann/json.hpp>
 
 using string = std::string;
-using ifstream = std::ifstream;
 using json = nlohmann::json;
 
 void ble_processor(DataStructure *dstructure, std::string identifier, string payload) {
@@ -21,34 +19,12 @@ void ble_processor(DataStructure *dstructure, std::string identifier, string pay
 }
 
 void mqtt_processor(DataStructure *dstructure, string topic, string payload) {
-
-  struct mosquitto *mosq;
   int rc;
+  // int rc = publish_v5(dstructure->mosq, topic, payload, std::make_pair("origin", "external"));
 
-  mosquitto_lib_init();
-
-  mosq = mosquitto_new(NULL, true, dstructure);
-  if (mosq == NULL) {
-    spdlog::error("Error: Out of memory");
-    return;
-  }
-
-  mosquitto_int_option(mosq, MOSQ_OPT_PROTOCOL_VERSION, MQTT_PROTOCOL_V5);
-
-  rc = mosquitto_connect(mosq, "127.0.0.1", 1883, 60);
-  if (rc != MOSQ_ERR_SUCCESS) {
-    mosquitto_destroy(mosq);
-    spdlog::error("Error Connect: {}", mosquitto_strerror(rc));
-    return;
-  }
-
-  rc = mosquitto_loop_start(mosq);
-  rc = mosquitto_loop(mosq, 1000, 5);
-  if (rc != MOSQ_ERR_SUCCESS) {
-    mosquitto_destroy(mosq);
-    spdlog::error("Error Loop: {}", mosquitto_strerror(rc));
-    return;
-  }
+  // if (rc != MOSQ_ERR_SUCCESS) {
+  //   spdlog::error("Error publishing: {}", mosquitto_strerror(rc));
+  // }
 
   mosquitto_property *proplist = NULL;
   rc = mosquitto_property_add_string_pair(&proplist, MQTT_PROP_USER_PROPERTY, "origin", "external");
@@ -57,22 +33,10 @@ void mqtt_processor(DataStructure *dstructure, string topic, string payload) {
   }
 
   string final_payload = payload;
-  rc = mosquitto_publish_v5(mosq, nullptr, topic.c_str(), final_payload.length(), final_payload.c_str(), 2, false, proplist);
+  rc = mosquitto_publish_v5(dstructure->mosq, nullptr, topic.c_str(), final_payload.length(), final_payload.c_str(), 2, false, proplist);
   if (rc != MOSQ_ERR_SUCCESS) {
     spdlog::error("Error publishing: {}", mosquitto_strerror(rc));
   }
-
-  int timeout = 0;
-
-  while (timeout < 5) {
-    std::this_thread::sleep_for(std::chrono::milliseconds(100));
-    timeout++;
-  }
-
-  mosquitto_disconnect(mosq);
-  mosquitto_loop_stop(mosq, false);
-  mosquitto_destroy(mosq);
-  mosquitto_lib_cleanup();
 }
 
 void http_processor(DataStructure *dstructure, string path, string payload) { dstructure->insert_map_key(&dstructure->http_map, path, payload); }
@@ -92,11 +56,11 @@ void comms_manager(DataStructure *dstructure, json *source_data, json *destinati
   }
 }
 
-void mastermind(DataStructure *dstructure, string source, string payload) { 
-  json conn = dstructure->connection_registers[source]; 
+void mastermind(DataStructure *dstructure, string source, string payload) {
+  json conn = dstructure->connection_registers[source];
 
   json source_device = dstructure->device_registers[source];
-  // json source_profile = 
+  // json source_profile =
 }
 
 int de_ruyter(DataStructure *dstructure, string source, string payload) {
