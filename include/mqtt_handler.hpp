@@ -26,7 +26,6 @@ void on_connect_v5(struct mosquitto *mosq, void *obj, int reason_code, int flags
 
   rc = mosquitto_subscribe(mosq, NULL, "#", 1);
   if (rc != MOSQ_ERR_SUCCESS) {
-    // fprintf(stderr, "Error subscribing: %s\n", mosquitto_strerror(rc));
     spdlog::error("Error subscribing: {}", mosquitto_strerror(rc));
     mosquitto_disconnect(mosq);
   }
@@ -37,7 +36,6 @@ void on_subscribe_v5(struct mosquitto *mosq, void *obj, int mid, int qos_count, 
   bool have_subscription = false;
 
   for (i = 0; i < qos_count; i++) {
-    // printf("on_subscribe: %d:granted qos = %d\n", i, granted_qos[i]);
     spdlog::info("on_subscribe: {}", i);
     spdlog::info("granted qos: {}", granted_qos[i]);
     if (granted_qos[i] <= 2) {
@@ -46,14 +44,12 @@ void on_subscribe_v5(struct mosquitto *mosq, void *obj, int mid, int qos_count, 
   }
 
   if (have_subscription == false) {
-    // fprintf(stderr, "Error: All subscriptions rejected.\n");
     spdlog::error("Error: All subscriptions rejected");
     mosquitto_disconnect(mosq);
   }
 }
 
 void on_publish_v5(struct mosquitto *mosq, void *obj, int mid, int reason_code, const mosquitto_property *props) {
-  // printf("Message with mid %d has been published.\n", mid);
   spdlog::info("Message with mid {} has been published", mid);
 }
 
@@ -124,7 +120,6 @@ int mqtt_handler(DataStructure *dstructure) {
 
   mosquitto_int_option(dstructure->mosq, MOSQ_OPT_PROTOCOL_VERSION, MQTT_PROTOCOL_V5);
 
-  // mosquitto_message_callback_set(mosq, on_message);
   mosquitto_connect_v5_callback_set(dstructure->mosq, on_connect_v5);
   mosquitto_subscribe_v5_callback_set(dstructure->mosq, on_subscribe_v5);
   mosquitto_publish_v5_callback_set(dstructure->mosq, on_publish_v5);
@@ -133,7 +128,6 @@ int mqtt_handler(DataStructure *dstructure) {
   rc = mosquitto_connect(dstructure->mosq, "127.0.0.1", 1883, 60);
   if (rc != MOSQ_ERR_SUCCESS) {
     mosquitto_destroy(dstructure->mosq);
-    // fprintf(stderr, "Error: %s\n", mosquitto_strerror(rc));
     spdlog::error("Error: {}", mosquitto_strerror(rc));
     return 1;
   }

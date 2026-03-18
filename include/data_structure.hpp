@@ -14,33 +14,17 @@ using ifstream = std::ifstream;
 
 class DataStructure {
 public:
-  struct Data {
-    string payload;
-  };
-
   struct mosquitto *mosq = NULL;
 
-  std::map<string, Data *> http_map;
-  std::map<string, Data *> mqtt_map;
+  std::map<string, string> http_map;
 
   std::vector<SimpleBLE::Peripheral> peripherals;
   std::map<std::string, std::pair<SimpleBLE::BluetoothUUID, SimpleBLE::BluetoothUUID>> uuid_pair;
-
-  void insert_map_key(std::map<string, Data *> *mp, string key, string payload) {
-    if (mp->find(key) == mp->end()) {
-      // cout << "Do this once" << endl;
-      (*mp)[key] = (Data *)calloc(1, sizeof(Data));
-      new (&(*mp)[key]->payload) string();
-    }
-
-    (*mp)[key]->payload = payload;
-  }
 
   std::map<string, json> connection_registers;
   std::map<string, json> device_profiles;
   std::map<string, json> device_registers;
   std::map<string, json> format_profiles;
-
   std::map<string, json> ble_addresses;
 
   void fill_maps() {

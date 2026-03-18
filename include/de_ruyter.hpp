@@ -39,7 +39,10 @@ void mqtt_processor(DataStructure *dstructure, string topic, string payload) {
   }
 }
 
-void http_processor(DataStructure *dstructure, string path, string payload) { dstructure->insert_map_key(&dstructure->http_map, path, payload); }
+void http_processor(DataStructure *dstructure, string path, string payload) {
+  // dstructure->insert_map_key(&dstructure->http_map, path, payload);
+  dstructure->http_map[path] = payload;
+}
 
 void comms_manager(DataStructure *dstructure, json *source_data, json *destination_data, string payload) {
   json deref_source = *source_data;

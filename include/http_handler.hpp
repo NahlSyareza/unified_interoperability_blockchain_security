@@ -39,7 +39,7 @@ int http_handler(DataStructure *dstructure) {
 
     json json_payload;
     bool is_json = false;
-    string payload = dstructure->http_map[path]->payload;
+    string payload = dstructure->http_map.at(path);
 
     try {
       json_payload = json::parse(payload);
