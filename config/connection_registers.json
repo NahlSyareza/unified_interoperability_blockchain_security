@@ -5,11 +5,11 @@
   },
   {
     "source": "device-12/gen_mqtt",
-    "destination": "device-67/rec_data"
+    "destination": "device-67/req_data"
   },
   {
     "source": "ter_stegen",
-    "destination": "Who is this"
+    "destination": "BLE_DEV_0"
   },
   {
     "source": "ROG Phone 9 FE",

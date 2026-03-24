@@ -66,16 +66,17 @@ void on_message_v5(struct mosquitto *mosq, void *obj, const struct mosquitto_mes
    * Fine without this, it's here to make the logs prettier
    */
   try {
-    json payload_json = json::parse(payload);
+    std::string payload_str((char *)msg->payload);
+    json payload_json = json::parse(payload_str);
     spdlog::warn("MQTT: Payload is JSON");
 
-    payload = payload_json.dump();
+    payload_str = payload_json.dump();
   } catch (json::parse_error &e) {
     spdlog::warn("MQTT: Payload is not JSON");
   }
 
   if (props == NULL) {
-    spdlog::info("MQTT: New message {} {} {}", msg->topic, msg->qos, payload);
+    spdlog::info("MQTT: New message {} {} {}", msg->topic, msg->qos, (char *)msg->payload);
     de_ruyter(dstructure, msg->topic, payload);
   } else {
     if (n != nullptr && v != nullptr) {

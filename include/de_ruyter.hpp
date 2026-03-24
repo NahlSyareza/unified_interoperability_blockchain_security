@@ -20,7 +20,7 @@ void ble_processor(DataStructure *dstructure, std::string identifier, string pay
   }
 }
 
-void mqtt_processor(DataStructure *dstructure, string topic, string payload) {
+void mqtt_processor(DataStructure *dstructure, string topic, string payload, int payloadlen) {
   int rc;
   // int rc = publish_v5(dstructure->mosq, topic, payload, std::make_pair("origin", "external"));
 
@@ -35,7 +35,7 @@ void mqtt_processor(DataStructure *dstructure, string topic, string payload) {
   }
 
   string final_payload = payload;
-  rc = mosquitto_publish_v5(dstructure->mosq, nullptr, topic.c_str(), final_payload.length(), final_payload.c_str(), 2, false, proplist);
+  rc = mosquitto_publish_v5(dstructure->mosq, nullptr, topic.c_str(), payloadlen, payload.c_str(), 2, false, proplist);
   if (rc != MOSQ_ERR_SUCCESS) {
     spdlog::error("Error publishing: {}", mosquitto_strerror(rc));
   }
@@ -55,14 +55,17 @@ void comms_manager(DataStructure *dstructure, json *src, json *dest, string payl
   dest_device = dstructure->device_profiles[(*dest)["device"]];
   dest_format = dstructure->format_profiles[(*dest)["format"]];
 
+  string src_conn = src_device["connection"];
   string dest_conn = dest_device["connection"];
   string dest_name = (*dest)["name"];
 
   if (dest_conn == "wifi/http") {
+    // spdlog::warn("HTTP not yet supported");
     http_processor(dstructure, dest_name, payload);
   } else if (dest_conn == "wifi/mqtt") {
-    mqtt_processor(dstructure, dest_name, payload);
+    mqtt_processor(dstructure, dest_name, payload, payload.length());
   } else if (dest_conn == "ble") {
+    // spdlog::warn("BLE is not yet supported");
     ble_processor(dstructure, dest_name, payload);
   }
 }

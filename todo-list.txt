@@ -1,2 +1,18 @@
 1. Check for the utils.hpp and utils.cpp, analyze if they are still relevant or not
 2. Solve the mystery for syntactic interoperability, which includes not just changing formats, but DATA TYPES too
+
+24/03/2025
+Problemos:
+1. MQTT needs handling for the void* payload type
+2. Search on how to handle data type conversion on BLE
+
+Solutions:
+1. At the very least, MQTT and HTPP treats their "bodies" as string
+2. I don't know about BLE, or worse LoRa. And even serial tbh
+
+WELL GUESS WHAT BRO. THESE ACTUALLY DON'T MATTER LMAOOOO
+
+25/03/2025
+1. Think up a solution for dynamic payload JSON in HTTP, and MQTT perhaps
+2. Think about how to handle special scenarios involving writing custom rules (e.g. if sensor value is 1 then send "low",
+   if sensor value is 2 then send "med", and if sensor value is 3 then send "high")

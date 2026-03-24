@@ -15,19 +15,19 @@
     "format": "generic-raw-string"
   },
   {
-    "name": "device-67/rec_data",
-    "device": "generic-wifi/mqtt",
+    "name": "device-67/req_data",
+    "device": "generic-wifi/http",
     "format": "generic-json-string"
   },
   {
     "name": "ter_stegen",
     "device": "generic-wifi/mqtt",
-    "format": "generic-raw-string"
+    "format": "generic-raw-float"
   },
   {
-    "name": "Who is this",
+    "name": "BLE_DEV_0",
     "device": "generic-ble",
-    "format": "generic-raw-string"
+    "format": "generic-raw-int"
   },
   {
     "name": "l_martinez",
