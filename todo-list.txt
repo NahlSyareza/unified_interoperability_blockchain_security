@@ -1,0 +1,2 @@
+1. Check for the utils.hpp and utils.cpp, analyze if they are still relevant or not
+2. Solve the mystery for syntactic interoperability, which includes not just changing formats, but DATA TYPES too

@@ -1,0 +1,42 @@
+[
+  {
+    "name": "device-1/test",
+    "device": "generic-wifi/http",
+    "format": "generic-raw-float"
+  },
+  {
+    "name": "device-10/course",
+    "device": "generic-wifi/mqtt",
+    "format": "generic-raw-int"
+  },
+  {
+    "name": "device-12/gen_mqtt",
+    "device": "generic-wifi/mqtt",
+    "format": "generic-raw-string"
+  },
+  {
+    "name": "device-67/rec_data",
+    "device": "generic-wifi/mqtt",
+    "format": "generic-json-string"
+  },
+  {
+    "name": "ter_stegen",
+    "device": "generic-wifi/mqtt",
+    "format": "generic-raw-string"
+  },
+  {
+    "name": "Who is this",
+    "device": "generic-ble",
+    "format": "generic-raw-string"
+  },
+  {
+    "name": "l_martinez",
+    "device": "generic-wifi/http",
+    "format": "generic-raw-string"
+  },
+  {
+    "name": "ROG Phone 9 FE",
+    "device": "generic-ble",
+    "format": "generic-raw-string"
+  }
+]

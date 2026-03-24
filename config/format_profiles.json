@@ -1,50 +1,30 @@
 [
   {
-    "name": "dummy-1-format",
-    "data": "string",
+    "name": "generic-raw-string",
+    "syntax": "raw",
+    "type": "string",
+    "unit": ""
+  },
+  {
+    "name": "generic-raw-float",
+    "syntax": "raw",
+    "type": "float",
+    "unit": ""
+  },
+  {
+    "name": "generic-raw-int",
+    "syntax": "raw",
+    "type": "int",
+    "unit": ""
+  },
+  {
+    "name": "generic-json-string",
     "syntax": "json",
-    "unit": ""
-  },
-  {
-    "name": "dummy-2-format",
-    "data": "string",
-    "syntax": "json",
-    "unit": ""
-  },
-  {
-    "name": "dummy-3-format",
-    "data": "string",
-    "syntax": "json",
-    "unit": ""
-  },
-  {
-    "name": "dummy-4-format",
-    "data": "string",
-    "syntax": "json",
-    "unit": ""
-  },
-  {
-    "name": "dummy-5-format",
-    "data": "string",
-    "syntax": "string",
-    "unit": ""
-  },
-  {
-    "name": "dummy-6-format",
-    "data": "string",
-    "syntax": "text",
-    "unit": ""
-  },
-  {
-    "name": "generic-text",
-    "data": "string",
-    "syntax": "text",
-    "unit": ""
-  },
-  {
-    "name": "generic-json",
-    "data": "string",
-    "syntax": "json",
-    "unit": ""
+    "components": [
+      {
+        "key": "payload",
+        "type": "string"
+      }
+    ]
   }
 ]

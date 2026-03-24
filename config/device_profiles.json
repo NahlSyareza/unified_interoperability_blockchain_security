@@ -1,58 +1,17 @@
 [
   {
-    "name": "dummy-1-device",
-    "type": "sensor",
+    "name": "generic-wifi/http",
     "category": "dummy",
-    "connection": "wifi/http",
-    "format": "dummy-1-format"
+    "connection": "wifi/http"
   },
   {
-    "name": "dummy-2-device",
-    "type": "sensor",
+    "name": "generic-wifi/mqtt",
     "category": "dummy",
-    "connection": "wifi/mqtt",
-    "format": "dummy-2-format"
+    "connection": "wifi/mqtt"
   },
   {
-    "name": "dummy-3-device",
-    "type": "actuator",
+    "name": "generic-ble",
     "category": "dummy",
-    "connection": "wifi/mqtt",
-    "format": "dummy-3-format"
-  },
-  {
-    "name": "dummy-4-device",
-    "type": "actuator",
-    "category": "dummy",
-    "connection": "wifi/http",
-    "format": "dummy-4-format"
-  },
-  {
-    "name": "dummy-5-device",
-    "type": "sensor",
-    "category": "dummy",
-    "connection": "wifi/http",
-    "format": "dummy-5-format"
-  },
-  {
-    "name": "dummy-6-device",
-    "type": "actuator",
-    "category": "dummy",
-    "connection": "ble",
-    "format": "dummy-6-format"
-  },
-  {
-    "name": "dummy-7-device",
-    "type": "sensor",
-    "category": "dummy",
-    "connection": "wifi/http",
-    "format": "generic-text"
-  },
-  {
-    "name": "dummy-8-device",
-    "type": "actuator",
-    "category": "dummy",
-    "connection": "ble",
-    "format": "generic-text"
+    "connection": "ble"
   }
 ]

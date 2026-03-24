@@ -7,9 +7,11 @@
 #include <mosquitto.h>
 #include <mqtt_protocol.h>
 #include <nlohmann/json.hpp>
+#include <variant>
 
 using string = std::string;
 using json = nlohmann::json;
+using payload_t = std::variant<int, float, double, string, bool>;
 
 void ble_processor(DataStructure *dstructure, std::string identifier, string payload) {
   for (auto &p : dstructure->peripherals) {
@@ -44,48 +46,42 @@ void http_processor(DataStructure *dstructure, string path, string payload) {
   dstructure->http_map[path] = payload;
 }
 
-void comms_manager(DataStructure *dstructure, json *source_data, json *destination_data, string payload) {
-  json deref_source = *source_data;
-  json deref_destination = *destination_data;
+void comms_manager(DataStructure *dstructure, json *src, json *dest, string payload) {
+  json src_device, src_format, dest_device, dest_format;
 
-  string deref_destination_conn = deref_destination["connection"];
+  src_device = dstructure->device_profiles[(*src)["device"]];
+  src_format = dstructure->format_profiles[(*src)["format"]];
 
-  if (deref_destination_conn == "wifi/http") {
-    http_processor(dstructure, deref_destination["device"], payload);
-  } else if (deref_destination_conn == "wifi/mqtt") {
-    mqtt_processor(dstructure, deref_destination["device"], payload);
-  } else if (deref_destination_conn == "ble") {
-    ble_processor(dstructure, deref_destination["device"], payload);
+  dest_device = dstructure->device_profiles[(*dest)["device"]];
+  dest_format = dstructure->format_profiles[(*dest)["format"]];
+
+  string dest_conn = dest_device["connection"];
+  string dest_name = (*dest)["name"];
+
+  if (dest_conn == "wifi/http") {
+    http_processor(dstructure, dest_name, payload);
+  } else if (dest_conn == "wifi/mqtt") {
+    mqtt_processor(dstructure, dest_name, payload);
+  } else if (dest_conn == "ble") {
+    ble_processor(dstructure, dest_name, payload);
   }
 }
 
 void mastermind(DataStructure *dstructure, string source, string payload) {
   json conn = dstructure->connection_registers[source];
 
-  json source_device = dstructure->device_registers[source];
+  json source_device = dstructure->instance_registers[source];
   // json source_profile =
 }
 
 int de_ruyter(DataStructure *dstructure, string source, string payload) {
-  json ametokaze = dstructure->connection_registers[source];
+  json connection = dstructure->connection_registers[source];
 
-  // spdlog::info("\n{}", ametokaze.dump(2));
+  json src = dstructure->instance_registers[source];
 
-  json komichi = dstructure->device_registers[source];
-  json hosoi = dstructure->device_profiles[komichi["profile"]];
-  hosoi["device"] = source;
+  json dest = dstructure->instance_registers[connection["destination"]];
 
-  // spdlog::info("\n{}", hosoi.dump(2));
-
-  json shiro = dstructure->device_registers[ametokaze["destination"]];
-  json bara = dstructure->device_profiles[shiro["profile"]];
-  bara["device"] = ametokaze["destination"];
-
-  // spdlog::info("\n{}", bara.dump(2));
-
-  // spdlog::info("{}", payload);
-
-  comms_manager(dstructure, &hosoi, &bara, payload);
+  comms_manager(dstructure, &src, &dest, payload);
 
   return 0;
 }

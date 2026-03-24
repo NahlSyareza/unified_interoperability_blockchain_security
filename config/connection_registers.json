@@ -4,8 +4,8 @@
     "destination": "device-10/course"
   },
   {
-    "source": "device-12/sokom",
-    "destination": "device-67/stranger"
+    "source": "device-12/gen_mqtt",
+    "destination": "device-67/rec_data"
   },
   {
     "source": "ter_stegen",
