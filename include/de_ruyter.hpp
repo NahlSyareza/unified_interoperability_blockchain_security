@@ -46,27 +46,20 @@ void http_processor(DataStructure *dstructure, string path, string payload) {
   dstructure->http_map[path] = payload;
 }
 
-void comms_manager(DataStructure *dstructure, json *src, json *dest, string payload) {
-  json src_device, src_format, dest_device, dest_format;
+void comms_manager(DataStructure *dstructure, json *source, json *destination, string payload) {
+  string src_conn = (*source)["device"]["connection"];
+  string dest_conn = (*destination)["device"]["connection"];
 
-  src_device = dstructure->device_profiles[(*src)["device"]];
-  src_format = dstructure->format_profiles[(*src)["format"]];
-
-  dest_device = dstructure->device_profiles[(*dest)["device"]];
-  dest_format = dstructure->format_profiles[(*dest)["format"]];
-
-  string src_conn = src_device["connection"];
-  string dest_conn = dest_device["connection"];
-  string dest_name = (*dest)["name"];
+  string dst = (*destination)["name"];
 
   if (dest_conn == "wifi/http") {
     // spdlog::warn("HTTP not yet supported");
-    http_processor(dstructure, dest_name, payload);
+    http_processor(dstructure, dst, payload);
   } else if (dest_conn == "wifi/mqtt") {
-    mqtt_processor(dstructure, dest_name, payload, payload.length());
+    mqtt_processor(dstructure, dst, payload, payload.length());
   } else if (dest_conn == "ble") {
     // spdlog::warn("BLE is not yet supported");
-    ble_processor(dstructure, dest_name, payload);
+    ble_processor(dstructure, dst, payload);
   }
 }
 
@@ -80,11 +73,19 @@ void mastermind(DataStructure *dstructure, string source, string payload) {
 int de_ruyter(DataStructure *dstructure, string source, string payload) {
   json connection = dstructure->connection_registers[source];
 
-  json src = dstructure->instance_registers[source];
+  string destination = connection["destination"];
 
-  json dest = dstructure->instance_registers[connection["destination"]];
+  json test_src;
+  json test_dst;
 
-  comms_manager(dstructure, &src, &dest, payload);
+  dstructure->populate(&dstructure->instance_registers, source, &test_src, std::make_pair("device", &dstructure->device_profiles), std::make_pair("format", &dstructure->format_profiles));
+
+  dstructure->populate(&dstructure->instance_registers, destination, &test_dst, std::make_pair("device", &dstructure->device_profiles), std::make_pair("format", &dstructure->format_profiles));
+
+  // spdlog::info("Populated src JSON is {}", test_src.dump(2));
+  // spdlog::info("Populated dst JSON is {}", test_dst.dump(2));
+
+  comms_manager(dstructure, &test_src, &test_dst, payload);
 
   return 0;
 }

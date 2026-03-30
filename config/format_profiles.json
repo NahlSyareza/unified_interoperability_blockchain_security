@@ -1,30 +1,23 @@
-[
-  {
-    "name": "generic-raw-string",
+{
+  "generic-raw-string": {
     "syntax": "raw",
     "type": "string",
     "unit": ""
   },
-  {
-    "name": "generic-raw-float",
+  "generic-raw-float": {
     "syntax": "raw",
     "type": "float",
     "unit": ""
   },
-  {
-    "name": "generic-raw-int",
+  "generic-raw-int": {
     "syntax": "raw",
     "type": "int",
     "unit": ""
   },
-  {
-    "name": "generic-json-string",
+  "generic-json-string": {
     "syntax": "json",
-    "components": [
-      {
-        "key": "payload",
-        "type": "string"
-      }
-    ]
+    "pairs": {
+      "payload": "string"
+    }
   }
-]
+}

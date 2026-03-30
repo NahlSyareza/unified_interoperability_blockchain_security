@@ -1,18 +1,14 @@
-[
-  {
-    "source": "device-1/test",
+{
+  "device-1/test": {
     "destination": "device-10/course"
   },
-  {
-    "source": "device-12/gen_mqtt",
+  "device-12/gen_mqtt": {
     "destination": "device-67/req_data"
   },
-  {
-    "source": "ter_stegen",
+  "ter_stegen": {
     "destination": "BLE_DEV_0"
   },
-  {
-    "source": "ROG Phone 9 FE",
+  "ROG Phone 9 FE": {
     "destination": "l_martinez"
   }
-]
+}

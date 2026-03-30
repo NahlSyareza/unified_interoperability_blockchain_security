@@ -21,61 +21,81 @@ public:
   std::vector<SimpleBLE::Peripheral> peripherals;
   std::map<std::string, std::pair<SimpleBLE::BluetoothUUID, SimpleBLE::BluetoothUUID>> uuid_pair;
 
-  std::map<string, json> connection_registers;
-  std::map<string, json> device_profiles;
-  std::map<string, json> instance_registers;
-  std::map<string, json> format_profiles;
-  std::map<string, json> ble_addresses;
+  json connection_registers;
+  json device_profiles;
+  json instance_registers;
+  json format_profiles;
+  json ble_addresses;
+
+  // T is of std::pair<string, json*>
+  template <typename... T> void populate(json *base, string identifier, json *save, T... t) {
+    json obj = (*base)[identifier];
+
+    (*save)["name"] = identifier;
+
+    (
+        [&](auto &item) {
+          string first = t.first;
+          json second = *t.second;
+
+          string value = obj[first];
+
+          json ref_obj = second[value];
+
+          (*save)[first] = ref_obj;
+        }(t),
+        ...);
+  }
 
   void fill_maps() {
-    ifstream connection_registers_stream("./config/connection_registers.json");
-    ifstream device_profiles_stream("./config/device_profiles.json");
-    ifstream instance_registers_stream("./config/instance_registers.json");
-    ifstream format_profiles_stream("./config/format_profiles.json");
-    ifstream ble_addresses_stream("./config/ble_addresses.json");
+    ifstream _connection_registers("./config/connection_registers.json");
+    ifstream _device_profiles("./config/device_profiles.json");
+    ifstream _instance_registers("./config/instance_registers.json");
+    ifstream _format_profiles("./config/format_profiles.json");
+    ifstream _ble_addresses("./config/ble_addresses.json");
 
-    json parse_connection_registers = json::parse(connection_registers_stream);
-    json parse_device_profiles = json::parse(device_profiles_stream);
-    json parse_instance_registers = json::parse(instance_registers_stream);
-    json parse_format_profiles = json::parse(format_profiles_stream);
-    json parse_ble_addresses = json::parse(ble_addresses_stream);
+    connection_registers = json::parse(_connection_registers);
+    device_profiles = json::parse(_device_profiles);
+    instance_registers = json::parse(_instance_registers);
+    format_profiles = json::parse(_format_profiles);
+    ble_addresses = json::parse(_ble_addresses);
 
-    for (const auto &item : parse_format_profiles) {
-      format_profiles[item["name"]] = item;
-    }
+    // for (const auto &item : parse_format_profiles) {
+    //   format_profiles[item["name"]] = item;
+    // }
 
-    for (const auto &item : parse_device_profiles) {
-      device_profiles[item["name"]] = item;
-    }
+    // for (const auto &item : parse_device_profiles) {
+    //   device_profiles[item["name"]] = item;
+    // }
 
-    for (const auto &item : parse_ble_addresses) {
-      ble_addresses[item["identifier"]] = item;
-    }
+    // for (const auto &item : parse_ble_addresses) {
+    //   ble_addresses[item["identifier"]] = item;
+    // }
 
-    for (const auto &item : parse_instance_registers) {
-      // if (!device_profiles.count(item["profile"])) {
-      //   string profile = item["profile"];
-      //   spdlog::error("(Device Registers) Undetected profile: {}", profile);
-      //   continue;
-      // }
+    // for (const auto &item : parse_instance_registers) {
+    // if (!device_profiles.count(item["profile"])) {
+    //   string profile = item["profile"];
+    //   spdlog::error("(Device Registers) Undetected profile: {}", profile);
+    //   continue;
+    // }
 
-      instance_registers[item["name"]] = item;
-    }
+    //   instance_registers[item["name"]] = item;
+    // }
 
-    for (const auto &item : parse_connection_registers) {
-      if (!instance_registers.count(item["source"])) {
-        string source = item["source"];
-        spdlog::error("(Connection Registers) Undetected source device: {}", source);
-        continue;
-      }
+    // for (const auto &item : parse_connection_registers) {
+    //   if (!instance_registers.count(item["source"])) {
+    //     string source = item["source"];
+    //     spdlog::error("(Connection Registers) Undetected source device: {}", source);
+    //     continue;
+    //   }
 
-      if (!instance_registers.count(item["destination"])) {
-        string destination = item["destination"];
-        spdlog::error("(Connection Registers) Undetected destination device: {}", destination);
-        continue;
-      }
+    //   if (!instance_registers.count(item["destination"])) {
+    //     string destination = item["destination"];
+    //     spdlog::error("(Connection Registers) Undetected destination device: {}", destination);
+    //     continue;
+    //   }
 
-      connection_registers[item["source"]] = item;
-    }
+    //   connection_registers[item["source"]] = item;
+    // }
   }
 };

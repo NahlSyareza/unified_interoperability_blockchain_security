@@ -1,17 +1,14 @@
-[
-  {
-    "name": "generic-wifi/http",
+{
+  "generic-wifi/http": {
     "category": "dummy",
     "connection": "wifi/http"
   },
-  {
-    "name": "generic-wifi/mqtt",
+  "generic-wifi/mqtt": {
     "category": "dummy",
     "connection": "wifi/mqtt"
   },
-  {
-    "name": "generic-ble",
+  "generic-ble": {
     "category": "dummy",
     "connection": "ble"
   }
-]
+}

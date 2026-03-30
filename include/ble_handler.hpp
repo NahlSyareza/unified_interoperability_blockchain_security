@@ -33,9 +33,7 @@ int ble_handler(DataStructure *dstructure) {
   auto adapter = adapters.at(0);
 
   adapter.set_callback_on_scan_found([&](SimpleBLE::Peripheral p) {
-    if ((dstructure->ble_addresses.find(p.address()) != dstructure->ble_addresses.end() ||
-         dstructure->ble_addresses.find(p.identifier()) != dstructure->ble_addresses.end()) &&
-        p.is_connectable()) {
+    if ((dstructure->ble_addresses.find(p.address()) != dstructure->ble_addresses.end() || dstructure->ble_addresses.find(p.identifier()) != dstructure->ble_addresses.end()) && p.is_connectable()) {
       spdlog::info("Found device {} ({})", p.identifier(), p.address());
       dstructure->peripherals.push_back(p);
     }
@@ -84,7 +82,7 @@ void dummy_write(DataStructure *dstructure) {
     std::string iden = p.identifier();
     if (p.identifier() == "ROG Phone 9 FE")
       p.write_request(dstructure->uuid_pair[iden].first, dstructure->uuid_pair[iden].second, by1);
-    else if (p.identifier() == "Who is this")
+    else if (p.identifier() == "BLE_DEV_0")
       p.write_request(dstructure->uuid_pair[iden].first, dstructure->uuid_pair[iden].second, by2);
   }
 

@@ -361,6 +361,7 @@ CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Users\Nahl Syareza Rahidra\Docum
 CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\include\de_ruyter.hpp"
 CMakeFiles\legendary_boss.dir\main.cpp.obj: C:\vcpkg\installed\x64-windows\include\mosquitto.h
 CMakeFiles\legendary_boss.dir\main.cpp.obj: C:\vcpkg\installed\x64-windows\include\mqtt_protocol.h
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\variant"
 CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\include\utils.hpp"
 CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\future"
 CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\ppltasks.h"
@@ -1254,6 +1255,8 @@ C:\vcpkg\installed\x64-windows\include\simpleble\Utils.h:
 "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\include\spdlog\spdlog-inl.h":
 
 C:\vcpkg\installed\x64-windows\include\mqtt_protocol.h:
+
+"C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\variant":
 
 "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\include\utils.hpp":
 
