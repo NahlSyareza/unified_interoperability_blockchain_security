@@ -1,15 +1,15 @@
 #pragma once
 
+#include "data_structure.hpp"
+#include "de_ruyter.hpp"
+#include "nlohmann/json.hpp"
+#include "simpleble/SimpleBLE.h"
+#include "spdlog/spdlog.h"
+#include "utils.hpp"
 #include <chrono>
-#include <data_structure.hpp>
-#include <de_ruyter.hpp>
 #include <fstream>
 #include <iostream>
-#include <nlohmann/json.hpp>
-#include <simpleble/SimpleBLE.h>
-#include <spdlog/spdlog.h>
 #include <thread>
-#include <utils.hpp>
 #include <vector>
 
 using json = nlohmann::json;

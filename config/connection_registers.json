@@ -3,7 +3,8 @@
     "destination": "device-10/course"
   },
   "device-12/gen_mqtt": {
-    "destination": "device-67/req_data"
+    "destination": "device-67/req_data",
+    "rules": "consequences.txt"
   },
   "ter_stegen": {
     "destination": "BLE_DEV_0"

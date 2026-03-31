@@ -1,11 +1,11 @@
 #pragma once
 
-#include <ble_handler.hpp>
-#include <data_structure.hpp>
-#include <de_ruyter.hpp>
-#include <httplib.h>
+#include "ble_handler.hpp"
+#include "data_structure.hpp"
+#include "de_ruyter.hpp"
+#include "httplib/httplib.h"
+#include "nlohmann/json.hpp"
 #include <iostream>
-#include <nlohmann/json.hpp>
 
 using string = std::string;
 using json = nlohmann::json;

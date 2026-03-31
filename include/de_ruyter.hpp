@@ -1,17 +1,25 @@
 #pragma once
 
+#include "data_structure.hpp"
+#include "mosquitto.h"
+#include "mqtt_protocol.h"
+#include "nlohmann/json.hpp"
 #include "spdlog/spdlog.h"
-#include <data_structure.hpp>
-// #include <iostream>
-// #include <map>
-#include <mosquitto.h>
-#include <mqtt_protocol.h>
-#include <nlohmann/json.hpp>
-#include <variant>
+#include "spitarm.hpp"
+#include <fstream>
+#include <sstream>
 
 using string = std::string;
 using json = nlohmann::json;
-using payload_t = std::variant<int, float, double, string, bool>;
+
+int de_ruyter(DataStructure *dstructure, string src, string payload);
+void comms_manager(DataStructure *dstructure, json *src, json *dst, string payload);
+void mastermind(DataStructure *dstructure, json *src, json *dst, string payload, string *save);
+void process_instr(string instr, string act, string payload, OperationRegister *reg);
+void get_instr(string op, string data, OperationRegister *reg);
+void http_processor(DataStructure *dstructure, string path, string payload);
+void mqtt_processor(DataStructure *dstructure, string topic, string payload, int payloadlen);
+void ble_processor(DataStructure *dstructure, std::string identifier, string payload);
 
 void ble_processor(DataStructure *dstructure, std::string identifier, string payload) {
   for (auto &p : dstructure->peripherals) {
@@ -36,16 +44,11 @@ void mqtt_processor(DataStructure *dstructure, string topic, string payload, int
   }
 }
 
-void http_processor(DataStructure *dstructure, string path, string payload) {
-  // dstructure->insert_map_key(&dstructure->http_map, path, payload);
-  dstructure->http_map[path] = payload;
-}
+void http_processor(DataStructure *dstructure, string path, string payload) { dstructure->http_map[path] = payload; }
 
 void mastermind(DataStructure *dstructure, json *src, json *dst, string payload, string *save) {
   string src_syntax = (*src)["format"]["syntax"];
   string dst_syntax = (*dst)["format"]["syntax"];
-
-  // std::cout << dst_syntax << std::endl;
 
   /**
    * Type may be NULL, since you can't really infer what a JSON's type is, unlike raw.
@@ -94,26 +97,114 @@ void mastermind(DataStructure *dstructure, json *src, json *dst, string payload,
   }
 }
 
-void comms_manager(DataStructure *dstructure, json *src, json *dst, string payload) {
+void get_instr(string op, string payload, OperationRegister *reg) {
+  int ctrl;
+  string instr, act;
+
+  // Perhaps find a way to detect a non-space first character
+  if (op.at(0) == ';') {
+    return;
+  }
+
+  for (ctrl = 0; ctrl < op.length(); ctrl++) {
+    if (op.at(ctrl) == ' ' || op.at(ctrl) == '\n') {
+      break;
+    }
+  }
+
+  instr.assign(op, 0, ctrl);
+
+  if (ctrl + 1 < op.length()) {
+    act.assign(op, ctrl + 1, op.length() - ctrl + 1);
+  } else {
+    // std::cout << "Illegal operation attempted. Maybe caused by incomplete op." << std::endl;
+  }
+
+  // std::cout << "Instruction: " << instr << std::endl;
+  // std::cout << "Act: " << act << std::endl;
+
+  process_instr(instr, act, payload, reg);
+}
+
+void process_instr(string instr, string act, string payload, OperationRegister *reg) {
+  if (instr == "SLC") {
+    int detects = std::stoi(act);
+    reg->input_data = strslc(payload, detects);
+  } else if (instr == "TYPE") {
+    reg->type = act;
+  } else if (instr == "ASGN_TO") {
+    json json_obj;
+
+    try {
+      json_obj = json::parse(reg->output_data);
+      if (!json_obj.is_object()) {
+        throw json::parse_error::create(6767, 0, "Technically valid, but not an object dawg. Thus pizdec", nullptr);
+      }
+    } catch (const json::parse_error &e) {
+      // std::cout << e.what() << std::endl;
+      json_obj = json::parse("{}");
+    }
+
+    try {
+      if (reg->convert == "int") {
+        json_obj[act] = std::stoi(reg->input_data);
+      } else if (reg->convert == "double") {
+        json_obj[act] = std::stod(reg->input_data);
+      } else {
+        json_obj[act] = reg->input_data;
+      }
+    } catch (const std::invalid_argument &e) {
+      // std::cout << e.what() << std::endl;
+      json_obj[act] = reg->input_data;
+    }
+
+    reg->convert = "";
+    reg->output_data = json_obj.dump();
+  } else if (instr == "CONV_TO") {
+    reg->convert = act;
+  }
+
+  // std::cout << "Reg.type: " << reg->type << " Reg.input_data: " << reg->input_data << " Reg.output_data: " << reg->output_data << " Reg.convert: " << reg->convert << std::endl << std::endl;
+}
+
+void comms_manager(DataStructure *dstructure, json *src, json *dst, string payload, string rule_file_location) {
   string src_conn = (*src)["device"]["connection"];
   string dest_conn = (*dst)["device"]["connection"];
+  std::ifstream rule_file("./rules/" + rule_file_location);
+  std::stringstream ss;
 
   // spdlog::info("src: {}\ndst: {}", src->dump(2), dst->dump(2));
 
   string dst_name = (*dst)["name"];
-  string final_payload;
 
-  mastermind(dstructure, src, dst, payload, &final_payload);
+  OperationRegister op_reg;
+
+  string line;
+
+  if (rule_file) {
+    ss << rule_file.rdbuf();
+    rule_file.close();
+
+    while (std::getline(ss, line)) {
+      get_instr(line, payload, &op_reg);
+    }
+
+    spdlog::warn("(OperationRegister) {}", op_reg.output_data);
+  } else {
+    spdlog::error("(De Ruyter) Rule file location not found? Perhaps a typo? Or maybe deliberate.");
+  }
+
+  // mastermind(dstructure, src, dst, payload, &final_payload);
 
   // spdlog::warn("Final payload: {}", final_payload);
 
+  string final_payload = !op_reg.output_data.empty() ? op_reg.output_data : payload;
+
   if (dest_conn == "wifi/http") {
-    // spdlog::warn("HTTP not yet supported");
     http_processor(dstructure, dst_name, final_payload);
   } else if (dest_conn == "wifi/mqtt") {
     mqtt_processor(dstructure, dst_name, final_payload, final_payload.length());
   } else if (dest_conn == "ble") {
-    // spdlog::warn("BLE is not yet supported");
     ble_processor(dstructure, dst_name, final_payload);
   }
 }
@@ -123,6 +214,11 @@ int de_ruyter(DataStructure *dstructure, string src, string payload) {
 
   string dst = connection["destination"];
 
+  string rules = "";
+  if (connection.count("rules") > 0) {
+    rules = connection["rules"];
+  }
+
   json test_src;
   json test_dst;
 
@@ -130,10 +226,7 @@ int de_ruyter(DataStructure *dstructure, string src, string payload) {
 
   dstructure->populate(&dstructure->instance_registers, dst, &test_dst, std::make_pair("device", &dstructure->device_profiles), std::make_pair("format", &dstructure->format_profiles));
 
-  // spdlog::info("Populated src JSON is {}", test_src.dump(2));
-  // spdlog::info("Populated dst JSON is {}", test_dst.dump(2));
-
-  comms_manager(dstructure, &test_src, &test_dst, payload);
+  comms_manager(dstructure, &test_src, &test_dst, payload, rules);
 
   return 0;
 }

@@ -1,17 +1,11 @@
 #pragma once
 
-// #include <chrono>
-#include <data_structure.hpp>
-#include <de_ruyter.hpp>
-// #include <iostream>
-#include <mosquitto.h>
-#include <mqtt_protocol.h>
-#include <nlohmann/json.hpp>
-#include <spdlog/spdlog.h>
-// #include <stdio.h>
-// #include <stdlib.h>
-// #include <string.h>
-// #include <thread>
+#include "data_structure.hpp"
+#include "de_ruyter.hpp"
+#include "mosquitto.h"
+#include "mqtt_protocol.h"
+#include "nlohmann/json.hpp"
+#include "spdlog/spdlog.h"
 
 using json = nlohmann::json;
 
@@ -49,9 +43,7 @@ void on_subscribe_v5(struct mosquitto *mosq, void *obj, int mid, int qos_count, 
   }
 }
 
-void on_publish_v5(struct mosquitto *mosq, void *obj, int mid, int reason_code, const mosquitto_property *props) {
-  spdlog::info("Message with mid {} has been published", mid);
-}
+void on_publish_v5(struct mosquitto *mosq, void *obj, int mid, int reason_code, const mosquitto_property *props) { spdlog::info("Message with mid {} has been published", mid); }
 
 void on_message_v5(struct mosquitto *mosq, void *obj, const struct mosquitto_message *msg, const mosquitto_property *props) {
   DataStructure *dstructure = (DataStructure *)obj;
@@ -91,9 +83,7 @@ void on_message_v5(struct mosquitto *mosq, void *obj, const struct mosquitto_mes
   }
 }
 
-int publish_v5(struct mosquitto *mosq, string topic, string payload) {
-  return mosquitto_publish_v5(mosq, nullptr, topic.c_str(), payload.length(), payload.c_str(), 2, false, NULL);
-}
+int publish_v5(struct mosquitto *mosq, string topic, string payload) { return mosquitto_publish_v5(mosq, nullptr, topic.c_str(), payload.length(), payload.c_str(), 2, false, NULL); }
 
 int publish_v5(struct mosquitto *mosq, string topic, string payload, std::pair<string, string> prop_pair) {
   int rc;

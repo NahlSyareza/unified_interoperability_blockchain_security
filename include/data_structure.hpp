@@ -1,12 +1,12 @@
 #pragma once
 
+#include "mosquitto.h"
+#include "nlohmann/json.hpp"
+#include "simpleble/SimpleBLE.h"
+#include "spdlog/spdlog.h"
 #include <fstream>
 #include <iostream>
 #include <map>
-// #include <mosquitto.h>
-#include <nlohmann/json.hpp>
-#include <simpleble/SimpleBLE.h>
-#include <spdlog/spdlog.h>
 
 using string = std::string;
 using json = nlohmann::json;
