@@ -9,10 +9,19 @@ struct OperationRegister {
   string input_data;
   string output_data;
   string convert;
+  bool logic_comparison;
 };
 
+string strget(string base, int segment_count);
+void print_op_reg(OperationRegister *op_reg);
+
+void print_op_reg(OperationRegister *op_reg) {
+  spdlog::debug("\ntype: \"{}\"\ninput_data: \"{}\"\noutput_data: \"{}\"\nconvert: \"{}\"\nlogic_comparison: \"{}\"\n", op_reg->type, op_reg->input_data, op_reg->output_data, op_reg->convert,
+                op_reg->logic_comparison);
+}
+
 // If the segment is greater than the space count inside that string, then return the whole string dawg.
-string strslc(string base, int segment_count) {
+string strget(string base, int segment_count) {
   int internal_segment_counter, start_index, end_index;
 
   internal_segment_counter = 0;
@@ -37,10 +46,30 @@ string strslc(string base, int segment_count) {
     }
   }
 
-  std::cout << "start_index: " << start_index << " end_index: " << end_index << std::endl;
+  spdlog::debug("start_index: {} end_index: {}", start_index, end_index);
+  // std::cout << "start_index: " << start_index << " end_index: " << end_index << std::endl;
 
   string rtn = "";
   rtn.assign(base, start_index, end_index - start_index + 1);
 
   return rtn;
+}
+
+bool compare(string sign, int a, int b) {
+  // b is the one defined inside the instruction text
+
+  if (sign.at(1) == '=') {
+    if (sign.at(0) == '>') {
+      return a >= b;
+    } else if (sign.at(0) == '<') {
+      return a <= b;
+    }
+  } else if (sign.at(0) == '<') {
+    return a < b;
+  } else if(sign.at(0) == '>') {
+    return a > b;
+  }
+
+  spdlog::error("(Spitarm) Sign not recognized!");
+  return false;
 }

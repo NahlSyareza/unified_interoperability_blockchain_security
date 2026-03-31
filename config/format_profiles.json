@@ -1,33 +1,18 @@
 {
-  "generic-raw-string": {
-    "syntax": "raw",
-    "type": "string",
-    "unit": ""
-  },
-  "generic-raw-float": {
-    "syntax": "raw",
-    "type": "float",
-    "unit": ""
-  },
-  "generic-raw-int": {
-    "syntax": "raw",
-    "type": "int",
-    "unit": ""
-  },
   "generic-raw": {
     "syntax": "raw",
     "unit": ""
-  },
-  "generic-json-string": {
-    "syntax": "json",
-    "pairs": {
-      "data": "string"
-    }
   },
   "req-67-json": {
     "syntax": "json",
     "pairs": {
       "pyl": "int"
+    }
+  },
+  "test-json": {
+    "syntax": "json",
+    "pairs": {
+      "sensor_data": "int"
     }
   }
 }

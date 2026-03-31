@@ -1,0 +1,5 @@
+TYPE string
+GET_FROM sensor_data
+IF > 10
+THEN on
+OTHERWISE off

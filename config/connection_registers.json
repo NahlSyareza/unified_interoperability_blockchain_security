@@ -1,6 +1,7 @@
 {
   "device-1/test": {
-    "destination": "device-10/course"
+    "destination": "device-10/course",
+    "rules": "universal_collapse.txt"
   },
   "device-12/gen_mqtt": {
     "destination": "device-67/req_data",

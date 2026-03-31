@@ -14,7 +14,6 @@ using json = nlohmann::json;
 
 int de_ruyter(DataStructure *dstructure, string src, string payload);
 void comms_manager(DataStructure *dstructure, json *src, json *dst, string payload);
-void mastermind(DataStructure *dstructure, json *src, json *dst, string payload, string *save);
 void process_instr(string instr, string act, string payload, OperationRegister *reg);
 void get_instr(string op, string data, OperationRegister *reg);
 void http_processor(DataStructure *dstructure, string path, string payload);
@@ -46,57 +45,6 @@ void mqtt_processor(DataStructure *dstructure, string topic, string payload, int
 
 void http_processor(DataStructure *dstructure, string path, string payload) { dstructure->http_map[path] = payload; }
 
-void mastermind(DataStructure *dstructure, json *src, json *dst, string payload, string *save) {
-  string src_syntax = (*src)["format"]["syntax"];
-  string dst_syntax = (*dst)["format"]["syntax"];
-
-  /**
-   * Type may be NULL, since you can't really infer what a JSON's type is, unlike raw.
-   */
-  // string src_type = (*src)["format"]["type"];
-  // string dst_type = (*dst)["format"]["type"];
-
-  if (dst_syntax == "json") {
-    json obj, temp;
-
-    temp = (*dst)["format"];
-
-    std::cout << temp.dump(2) << std::endl;
-
-    if (temp.contains("pairs")) {
-      temp = temp["pairs"];
-      // Still extremely flawed
-      for (const auto &[k, v] : temp.items()) {
-
-        string k_v = k;
-        string v_v = v;
-        spdlog::warn("{} {}", k_v, v_v);
-
-        if (v_v == "int") {
-          obj[k] = std::stoi(payload);
-        } else if (v_v == "float") {
-          obj[k] = std::stof(payload);
-        } else if (v_v == "double") {
-          obj[k] = std::stod(payload);
-        } else {
-          obj[k] = payload;
-        }
-      }
-    } else {
-      spdlog::error("(De Ruyter) This JSON doesn't have any pairs listed!");
-    }
-
-    *save = obj.dump();
-
-    return;
-  } else {
-    // This is so BAD
-    *save = payload;
-
-    return;
-  }
-}
-
 void get_instr(string op, string payload, OperationRegister *reg) {
   int ctrl;
   string instr, act;
@@ -127,9 +75,25 @@ void get_instr(string op, string payload, OperationRegister *reg) {
 }
 
 void process_instr(string instr, string act, string payload, OperationRegister *reg) {
-  if (instr == "SLC") {
+  spdlog::debug("Running instruction: {}", instr);
+
+  if (instr == "GET") {
     int detects = std::stoi(act);
-    reg->input_data = strslc(payload, detects);
+    reg->input_data = strget(payload, detects);
+  } else if (instr == "GET_FROM") {
+    json json_obj;
+
+    try {
+      json_obj = json::parse(payload);
+      if (!json_obj.is_object()) {
+        // This shouldn't happen to be honest
+        throw json::parse_error::create(6767, 0, "Technically valid, but not an object dawg. Thus pizdec", nullptr);
+      }
+    } catch (const json::parse_error &e) {
+      spdlog::error("(De Ruyter) This is NOT supposed to happen");
+    }
+
+    reg->input_data = json_obj[act].dump();
   } else if (instr == "TYPE") {
     reg->type = act;
   } else if (instr == "ASGN_TO") {
@@ -160,10 +124,43 @@ void process_instr(string instr, string act, string payload, OperationRegister *
 
     reg->convert = "";
     reg->output_data = json_obj.dump();
+  } else if (instr == "CLCT_FROM") {
+    json json_obj;
+
+    try {
+      json_obj = json::parse(payload);
+      if (!json_obj.is_object()) {
+        // This shouldn't happen to be honest
+        throw json::parse_error::create(6767, 0, "Technically valid, but not an object dawg. Thus pizdec", nullptr);
+      }
+    } catch (const json::parse_error &e) {
+      spdlog::error("(De Ruyter) This is NOT supposed to happen");
+    }
+
+    string deref = json_obj[act];
+
+    reg->output_data = deref;
+  } else if (instr == "IF") {
+    // spdlog::debug("(Process Instr) Comparing {} with {}", act, reg->input_data);
+    string compared_value = strget(act, 1);
+
+    spdlog::debug("This is the actual value to be compared: {}", compared_value);
+    // reg->logic_comparison = act == reg->input_data;
+
+    reg->logic_comparison = compare(act, std::stoi(reg->input_data), std::stoi(compared_value));
   } else if (instr == "CONV_TO") {
     reg->convert = act;
+  } else if (instr == "THEN") {
+    if (reg->logic_comparison)
+      reg->output_data = act;
+  } else if (instr == "OTHERWISE") {
+    if (!reg->logic_comparison)
+      reg->output_data = act;
+  } else {
+    spdlog::error("(Process Instr) Unrecognized instruction {}", instr);
   }
 
+  // print_op_reg(reg);
   // std::cout << "Reg.type: " << reg->type << " Reg.input_data: " << reg->input_data << " Reg.output_data: " << reg->output_data << " Reg.convert: " << reg->convert << std::endl << std::endl;
 }
 

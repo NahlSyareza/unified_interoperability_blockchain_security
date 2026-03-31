@@ -15,6 +15,7 @@
 using json = nlohmann::json;
 
 void dummy_write(DataStructure *dstructure);
+int ble_handler(DataStructure *dstructure);
 
 int ble_handler(DataStructure *dstructure) {
   // std::optional<SimpleBLE::Adapter> adapter_optional = Utils::getAdapter();

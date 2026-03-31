@@ -13,6 +13,8 @@ using Server = httplib::Server;
 using Request = httplib::Request;
 using Response = httplib::Response;
 
+int http_handler(DataStructure *dstructure);
+
 int http_handler(DataStructure *dstructure) {
   Server svr;
 

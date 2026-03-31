@@ -1,0 +1,27 @@
+Okay so here's the commands so far:
+* TYPE <type> 
+  Used to declare a type of something. Unused for now
+  
+* GET <n>
+  Used to get a sliced string based after n amounts of spaces. Can be improved to also detect another delimiter (i.e. semicolon, colon, comma, etc.)
+
+* GET_FROM <key>
+  Same as GET, but for non-raw syntaxes.
+
+* CONV_TO <type>
+  Used to convert a type. Base type is always strirng. Using in non-raw data syntaxes. Raw data syntax isn't affected. (see "On Network Type Data Retrieval")
+
+* ASGN_TO <key>
+  Used to assign a value to a key. Again this is used for non-raw data syntaxes. Perhaps I need to also have a command for a csv raw data syntax.
+
+* CLCT_FROM <key>
+  Used to collect a value from a key. Should I mention how this is only useful for non-raw data syntaxes?
+
+* IF <condition>
+  Compare a value. Condition is always a string value for now
+
+* THEN <value>
+  If it's true, then update the value
+  
+* OTHERWISE <value>
+  If it isn't then update the value

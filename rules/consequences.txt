@@ -1,4 +1,4 @@
 TYPE raw
-SLC 0
+GET 0
 CONV_TO int
 ASGN_TO pyl

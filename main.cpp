@@ -16,6 +16,8 @@ int main() {
 
   dstructure.fill_maps();
 
+  spdlog::set_level(spdlog::level::debug);
+
   auto mqtt_thread = async(launch::async, mqtt_handler, &dstructure);
   auto http_thread = async(launch::async, http_handler, &dstructure);
   auto ble_thread = async(launch::async, ble_handler, &dstructure);
