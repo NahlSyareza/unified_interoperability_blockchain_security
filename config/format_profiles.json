@@ -14,10 +14,20 @@
     "type": "int",
     "unit": ""
   },
+  "generic-raw": {
+    "syntax": "raw",
+    "unit": ""
+  },
   "generic-json-string": {
     "syntax": "json",
     "pairs": {
-      "payload": "string"
+      "data": "string"
+    }
+  },
+  "req-67-json": {
+    "syntax": "json",
+    "pairs": {
+      "pyl": "int"
     }
   }
 }

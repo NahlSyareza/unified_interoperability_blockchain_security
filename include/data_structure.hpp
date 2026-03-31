@@ -40,6 +40,11 @@ public:
 
           string value = obj[first];
 
+          if (second.count(value) < 1) {
+            spdlog::error("(DataStructure) Illegal action: Given key is not valid populate method. Identifier: {}", identifier);
+            return;
+          }
+
           json ref_obj = second[value];
 
           (*save)[first] = ref_obj;

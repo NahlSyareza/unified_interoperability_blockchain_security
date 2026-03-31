@@ -28,7 +28,7 @@ int http_handler(DataStructure *dstructure) {
       ret["state"] = false;
       ret["msg"] = "Key doesn't exist in record.";
       ret["payload"] = "";
-      ret["code"] = 400;
+      // ret["code"] = 400;
 
       res.status = 400;
 
@@ -37,27 +37,42 @@ int http_handler(DataStructure *dstructure) {
       return;
     }
 
-    json json_payload;
+    // json json_payload;
     bool is_json = false;
     string payload = dstructure->http_map.at(path);
 
     try {
-      json_payload = json::parse(payload);
+      ret = json::parse(payload);
       is_json = true;
+      if (!ret.is_object()) {
+        is_json = false;
+      }
     } catch (json::parse_error &e) {
+      is_json = false;
     }
-
-    ret["state"] = true;
-    ret["msg"] = "Successfully retrieved value.";
-    if (is_json)
-      ret["payload"] = json_payload;
-    else
-      ret["payload"] = payload;
-    ret["code"] = 200;
 
     res.status = 200;
 
-    res.set_content(ret.dump(), "application/json");
+    if (is_json) {
+      ret["state"] = true;
+      ret["msg"] = "Successfully retrieved value";
+      res.set_content(ret.dump(), "application/json");
+    } else {
+      // spdlog::warn("Payload is {}", payload);
+      res.set_content(payload, "text/plain");
+    }
+
+    // ret["state"] = true;
+    // ret["msg"] = "Successfully retrieved value.";
+    // if (is_json)
+    //   ret["payload"] = json_payload;
+    // else
+    //   ret["payload"] = payload;
+    // ret["code"] = 200;
+
+    // res.status = 200;
+
+    // res.set_content(ret.dump(), "application/json");
   });
 
   svr.Post(R"(/(.*))", [dstructure](const Request &req, Response &res) {

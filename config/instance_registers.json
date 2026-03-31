@@ -1,34 +1,34 @@
 {
   "device-1/test": {
     "device": "generic-wifi/http",
-    "format": "generic-raw-float"
+    "format": "generic-raw"
   },
   "device-10/course": {
     "device": "generic-wifi/mqtt",
-    "format": "generic-raw-int"
+    "format": "generic-raw"
   },
   "device-12/gen_mqtt": {
     "device": "generic-wifi/mqtt",
-    "format": "generic-raw-string"
+    "format": "generic-raw"
   },
   "device-67/req_data": {
     "device": "generic-wifi/http",
-    "format": "generic-json-string"
+    "format": "req-67-json"
   },
   "ter_stegen": {
     "device": "generic-wifi/mqtt",
-    "format": "generic-raw-float"
+    "format": "generic-raw"
   },
   "BLE_DEV_0": {
     "device": "generic-ble",
-    "format": "generic-raw-int"
+    "format": "generic-raw"
   },
   "l_martinez": {
     "device": "generic-wifi/http",
-    "format": "generic-raw-string"
+    "format": "generic-raw"
   },
   "ROG Phone 9 FE": {
     "device": "generic-ble",
-    "format": "generic-raw-string"
+    "format": "generic-raw"
   }
 }
