@@ -18,7 +18,7 @@ project(legendary_boss)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-add_executable(legendary_boss main.cpp utils.cpp)
+add_executable(legendary_boss main.cpp utils.cpp ble_handler.cpp de_ruyter.cpp http_handler.cpp mqtt_handler.cpp spitarm.cpp)
 
 find_package(OpenSSL REQUIRED)
 find_package(Threads REQUIRED)

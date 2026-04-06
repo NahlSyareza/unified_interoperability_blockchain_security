@@ -20,3 +20,8 @@ WELL GUESS WHAT BRO. THESE ACTUALLY DON'T MATTER LMAOOOO
 31/03/2025
 1. Continue on the conditional logic of my current "compiler"
 2. Yes, I am working on a dynamic payload in JSON, using the NeedAction part of the Service Layer.
+
+05/04/2025
+1. Message is now protected by Private and Public Keys, this will at least prevent MitM attacks, and to a certain extent spoofing
+2. I need to work on how to "authenticate" a sensor/actuator device.
+3. I will learn about asymmetric encryption
