@@ -97,22 +97,105 @@ CMakeFiles/legendary_boss.dir/utils.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/legendary_boss.dir/utils.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nahl_syareza/unified_interoperability_blockchain_security/utils.cpp -o CMakeFiles/legendary_boss.dir/utils.cpp.s
 
+CMakeFiles/legendary_boss.dir/ble_handler.cpp.o: CMakeFiles/legendary_boss.dir/flags.make
+CMakeFiles/legendary_boss.dir/ble_handler.cpp.o: ../../ble_handler.cpp
+CMakeFiles/legendary_boss.dir/ble_handler.cpp.o: CMakeFiles/legendary_boss.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nahl_syareza/unified_interoperability_blockchain_security/build/linux/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/legendary_boss.dir/ble_handler.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/legendary_boss.dir/ble_handler.cpp.o -MF CMakeFiles/legendary_boss.dir/ble_handler.cpp.o.d -o CMakeFiles/legendary_boss.dir/ble_handler.cpp.o -c /home/nahl_syareza/unified_interoperability_blockchain_security/ble_handler.cpp
+
+CMakeFiles/legendary_boss.dir/ble_handler.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/legendary_boss.dir/ble_handler.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nahl_syareza/unified_interoperability_blockchain_security/ble_handler.cpp > CMakeFiles/legendary_boss.dir/ble_handler.cpp.i
+
+CMakeFiles/legendary_boss.dir/ble_handler.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/legendary_boss.dir/ble_handler.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nahl_syareza/unified_interoperability_blockchain_security/ble_handler.cpp -o CMakeFiles/legendary_boss.dir/ble_handler.cpp.s
+
+CMakeFiles/legendary_boss.dir/de_ruyter.cpp.o: CMakeFiles/legendary_boss.dir/flags.make
+CMakeFiles/legendary_boss.dir/de_ruyter.cpp.o: ../../de_ruyter.cpp
+CMakeFiles/legendary_boss.dir/de_ruyter.cpp.o: CMakeFiles/legendary_boss.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nahl_syareza/unified_interoperability_blockchain_security/build/linux/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/legendary_boss.dir/de_ruyter.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/legendary_boss.dir/de_ruyter.cpp.o -MF CMakeFiles/legendary_boss.dir/de_ruyter.cpp.o.d -o CMakeFiles/legendary_boss.dir/de_ruyter.cpp.o -c /home/nahl_syareza/unified_interoperability_blockchain_security/de_ruyter.cpp
+
+CMakeFiles/legendary_boss.dir/de_ruyter.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/legendary_boss.dir/de_ruyter.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nahl_syareza/unified_interoperability_blockchain_security/de_ruyter.cpp > CMakeFiles/legendary_boss.dir/de_ruyter.cpp.i
+
+CMakeFiles/legendary_boss.dir/de_ruyter.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/legendary_boss.dir/de_ruyter.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nahl_syareza/unified_interoperability_blockchain_security/de_ruyter.cpp -o CMakeFiles/legendary_boss.dir/de_ruyter.cpp.s
+
+CMakeFiles/legendary_boss.dir/http_handler.cpp.o: CMakeFiles/legendary_boss.dir/flags.make
+CMakeFiles/legendary_boss.dir/http_handler.cpp.o: ../../http_handler.cpp
+CMakeFiles/legendary_boss.dir/http_handler.cpp.o: CMakeFiles/legendary_boss.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nahl_syareza/unified_interoperability_blockchain_security/build/linux/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/legendary_boss.dir/http_handler.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/legendary_boss.dir/http_handler.cpp.o -MF CMakeFiles/legendary_boss.dir/http_handler.cpp.o.d -o CMakeFiles/legendary_boss.dir/http_handler.cpp.o -c /home/nahl_syareza/unified_interoperability_blockchain_security/http_handler.cpp
+
+CMakeFiles/legendary_boss.dir/http_handler.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/legendary_boss.dir/http_handler.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nahl_syareza/unified_interoperability_blockchain_security/http_handler.cpp > CMakeFiles/legendary_boss.dir/http_handler.cpp.i
+
+CMakeFiles/legendary_boss.dir/http_handler.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/legendary_boss.dir/http_handler.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nahl_syareza/unified_interoperability_blockchain_security/http_handler.cpp -o CMakeFiles/legendary_boss.dir/http_handler.cpp.s
+
+CMakeFiles/legendary_boss.dir/mqtt_handler.cpp.o: CMakeFiles/legendary_boss.dir/flags.make
+CMakeFiles/legendary_boss.dir/mqtt_handler.cpp.o: ../../mqtt_handler.cpp
+CMakeFiles/legendary_boss.dir/mqtt_handler.cpp.o: CMakeFiles/legendary_boss.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nahl_syareza/unified_interoperability_blockchain_security/build/linux/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/legendary_boss.dir/mqtt_handler.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/legendary_boss.dir/mqtt_handler.cpp.o -MF CMakeFiles/legendary_boss.dir/mqtt_handler.cpp.o.d -o CMakeFiles/legendary_boss.dir/mqtt_handler.cpp.o -c /home/nahl_syareza/unified_interoperability_blockchain_security/mqtt_handler.cpp
+
+CMakeFiles/legendary_boss.dir/mqtt_handler.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/legendary_boss.dir/mqtt_handler.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nahl_syareza/unified_interoperability_blockchain_security/mqtt_handler.cpp > CMakeFiles/legendary_boss.dir/mqtt_handler.cpp.i
+
+CMakeFiles/legendary_boss.dir/mqtt_handler.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/legendary_boss.dir/mqtt_handler.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nahl_syareza/unified_interoperability_blockchain_security/mqtt_handler.cpp -o CMakeFiles/legendary_boss.dir/mqtt_handler.cpp.s
+
+CMakeFiles/legendary_boss.dir/spitarm.cpp.o: CMakeFiles/legendary_boss.dir/flags.make
+CMakeFiles/legendary_boss.dir/spitarm.cpp.o: ../../spitarm.cpp
+CMakeFiles/legendary_boss.dir/spitarm.cpp.o: CMakeFiles/legendary_boss.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nahl_syareza/unified_interoperability_blockchain_security/build/linux/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/legendary_boss.dir/spitarm.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/legendary_boss.dir/spitarm.cpp.o -MF CMakeFiles/legendary_boss.dir/spitarm.cpp.o.d -o CMakeFiles/legendary_boss.dir/spitarm.cpp.o -c /home/nahl_syareza/unified_interoperability_blockchain_security/spitarm.cpp
+
+CMakeFiles/legendary_boss.dir/spitarm.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/legendary_boss.dir/spitarm.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nahl_syareza/unified_interoperability_blockchain_security/spitarm.cpp > CMakeFiles/legendary_boss.dir/spitarm.cpp.i
+
+CMakeFiles/legendary_boss.dir/spitarm.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/legendary_boss.dir/spitarm.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nahl_syareza/unified_interoperability_blockchain_security/spitarm.cpp -o CMakeFiles/legendary_boss.dir/spitarm.cpp.s
+
 # Object files for target legendary_boss
 legendary_boss_OBJECTS = \
 "CMakeFiles/legendary_boss.dir/main.cpp.o" \
-"CMakeFiles/legendary_boss.dir/utils.cpp.o"
+"CMakeFiles/legendary_boss.dir/utils.cpp.o" \
+"CMakeFiles/legendary_boss.dir/ble_handler.cpp.o" \
+"CMakeFiles/legendary_boss.dir/de_ruyter.cpp.o" \
+"CMakeFiles/legendary_boss.dir/http_handler.cpp.o" \
+"CMakeFiles/legendary_boss.dir/mqtt_handler.cpp.o" \
+"CMakeFiles/legendary_boss.dir/spitarm.cpp.o"
 
 # External object files for target legendary_boss
 legendary_boss_EXTERNAL_OBJECTS =
 
 legendary_boss: CMakeFiles/legendary_boss.dir/main.cpp.o
 legendary_boss: CMakeFiles/legendary_boss.dir/utils.cpp.o
+legendary_boss: CMakeFiles/legendary_boss.dir/ble_handler.cpp.o
+legendary_boss: CMakeFiles/legendary_boss.dir/de_ruyter.cpp.o
+legendary_boss: CMakeFiles/legendary_boss.dir/http_handler.cpp.o
+legendary_boss: CMakeFiles/legendary_boss.dir/mqtt_handler.cpp.o
+legendary_boss: CMakeFiles/legendary_boss.dir/spitarm.cpp.o
 legendary_boss: CMakeFiles/legendary_boss.dir/build.make
-legendary_boss: /usr/local/lib/libsimpleble.a
 legendary_boss: /usr/lib/x86_64-linux-gnu/libssl.so
+legendary_boss: /usr/lib/x86_64-linux-gnu/libspdlog.so.1.9.2
+legendary_boss: /usr/local/lib/libsimpleble.a
 legendary_boss: /usr/lib/x86_64-linux-gnu/libcrypto.so
+legendary_boss: /usr/lib/x86_64-linux-gnu/libfmt.so.8.1.1
+legendary_boss: /usr/lib/x86_64-linux-gnu/libcpp-httplib.so
 legendary_boss: CMakeFiles/legendary_boss.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/nahl_syareza/unified_interoperability_blockchain_security/build/linux/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable legendary_boss"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/nahl_syareza/unified_interoperability_blockchain_security/build/linux/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable legendary_boss"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/legendary_boss.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

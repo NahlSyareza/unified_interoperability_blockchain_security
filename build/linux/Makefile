@@ -129,6 +129,78 @@ legendary_boss/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/legendary_boss.dir/build.make CMakeFiles/legendary_boss.dir/build
 .PHONY : legendary_boss/fast
 
+ble_handler.o: ble_handler.cpp.o
+.PHONY : ble_handler.o
+
+# target to build an object file
+ble_handler.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/legendary_boss.dir/build.make CMakeFiles/legendary_boss.dir/ble_handler.cpp.o
+.PHONY : ble_handler.cpp.o
+
+ble_handler.i: ble_handler.cpp.i
+.PHONY : ble_handler.i
+
+# target to preprocess a source file
+ble_handler.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/legendary_boss.dir/build.make CMakeFiles/legendary_boss.dir/ble_handler.cpp.i
+.PHONY : ble_handler.cpp.i
+
+ble_handler.s: ble_handler.cpp.s
+.PHONY : ble_handler.s
+
+# target to generate assembly for a file
+ble_handler.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/legendary_boss.dir/build.make CMakeFiles/legendary_boss.dir/ble_handler.cpp.s
+.PHONY : ble_handler.cpp.s
+
+de_ruyter.o: de_ruyter.cpp.o
+.PHONY : de_ruyter.o
+
+# target to build an object file
+de_ruyter.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/legendary_boss.dir/build.make CMakeFiles/legendary_boss.dir/de_ruyter.cpp.o
+.PHONY : de_ruyter.cpp.o
+
+de_ruyter.i: de_ruyter.cpp.i
+.PHONY : de_ruyter.i
+
+# target to preprocess a source file
+de_ruyter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/legendary_boss.dir/build.make CMakeFiles/legendary_boss.dir/de_ruyter.cpp.i
+.PHONY : de_ruyter.cpp.i
+
+de_ruyter.s: de_ruyter.cpp.s
+.PHONY : de_ruyter.s
+
+# target to generate assembly for a file
+de_ruyter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/legendary_boss.dir/build.make CMakeFiles/legendary_boss.dir/de_ruyter.cpp.s
+.PHONY : de_ruyter.cpp.s
+
+http_handler.o: http_handler.cpp.o
+.PHONY : http_handler.o
+
+# target to build an object file
+http_handler.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/legendary_boss.dir/build.make CMakeFiles/legendary_boss.dir/http_handler.cpp.o
+.PHONY : http_handler.cpp.o
+
+http_handler.i: http_handler.cpp.i
+.PHONY : http_handler.i
+
+# target to preprocess a source file
+http_handler.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/legendary_boss.dir/build.make CMakeFiles/legendary_boss.dir/http_handler.cpp.i
+.PHONY : http_handler.cpp.i
+
+http_handler.s: http_handler.cpp.s
+.PHONY : http_handler.s
+
+# target to generate assembly for a file
+http_handler.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/legendary_boss.dir/build.make CMakeFiles/legendary_boss.dir/http_handler.cpp.s
+.PHONY : http_handler.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -152,6 +224,54 @@ main.s: main.cpp.s
 main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/legendary_boss.dir/build.make CMakeFiles/legendary_boss.dir/main.cpp.s
 .PHONY : main.cpp.s
+
+mqtt_handler.o: mqtt_handler.cpp.o
+.PHONY : mqtt_handler.o
+
+# target to build an object file
+mqtt_handler.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/legendary_boss.dir/build.make CMakeFiles/legendary_boss.dir/mqtt_handler.cpp.o
+.PHONY : mqtt_handler.cpp.o
+
+mqtt_handler.i: mqtt_handler.cpp.i
+.PHONY : mqtt_handler.i
+
+# target to preprocess a source file
+mqtt_handler.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/legendary_boss.dir/build.make CMakeFiles/legendary_boss.dir/mqtt_handler.cpp.i
+.PHONY : mqtt_handler.cpp.i
+
+mqtt_handler.s: mqtt_handler.cpp.s
+.PHONY : mqtt_handler.s
+
+# target to generate assembly for a file
+mqtt_handler.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/legendary_boss.dir/build.make CMakeFiles/legendary_boss.dir/mqtt_handler.cpp.s
+.PHONY : mqtt_handler.cpp.s
+
+spitarm.o: spitarm.cpp.o
+.PHONY : spitarm.o
+
+# target to build an object file
+spitarm.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/legendary_boss.dir/build.make CMakeFiles/legendary_boss.dir/spitarm.cpp.o
+.PHONY : spitarm.cpp.o
+
+spitarm.i: spitarm.cpp.i
+.PHONY : spitarm.i
+
+# target to preprocess a source file
+spitarm.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/legendary_boss.dir/build.make CMakeFiles/legendary_boss.dir/spitarm.cpp.i
+.PHONY : spitarm.cpp.i
+
+spitarm.s: spitarm.cpp.s
+.PHONY : spitarm.s
+
+# target to generate assembly for a file
+spitarm.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/legendary_boss.dir/build.make CMakeFiles/legendary_boss.dir/spitarm.cpp.s
+.PHONY : spitarm.cpp.s
 
 utils.o: utils.cpp.o
 .PHONY : utils.o
@@ -186,9 +306,24 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... legendary_boss"
+	@echo "... ble_handler.o"
+	@echo "... ble_handler.i"
+	@echo "... ble_handler.s"
+	@echo "... de_ruyter.o"
+	@echo "... de_ruyter.i"
+	@echo "... de_ruyter.s"
+	@echo "... http_handler.o"
+	@echo "... http_handler.i"
+	@echo "... http_handler.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... mqtt_handler.o"
+	@echo "... mqtt_handler.i"
+	@echo "... mqtt_handler.s"
+	@echo "... spitarm.o"
+	@echo "... spitarm.i"
+	@echo "... spitarm.s"
 	@echo "... utils.o"
 	@echo "... utils.i"
 	@echo "... utils.s"

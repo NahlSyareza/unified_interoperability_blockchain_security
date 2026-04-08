@@ -1,7 +1,7 @@
-CMakeFiles/legendary_boss.dir/main.cpp.o: \
- /home/nahl_syareza/unified_interoperability_blockchain_security/main.cpp \
+CMakeFiles/legendary_boss.dir/http_handler.cpp.o: \
+ /home/nahl_syareza/unified_interoperability_blockchain_security/http_handler.cpp \
  /usr/include/stdc-predef.h \
- /home/nahl_syareza/unified_interoperability_blockchain_security/include/ble_handler.hpp \
+ /home/nahl_syareza/unified_interoperability_blockchain_security/include/http_handler.hpp \
  /home/nahl_syareza/unified_interoperability_blockchain_security/include/data_structure.hpp \
  /usr/local/include/mosquitto.h \
  /usr/local/include/mosquitto/mqtt_protocol.h \
@@ -381,14 +381,134 @@ CMakeFiles/legendary_boss.dir/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
  /usr/include/c++/11/bits/fstream.tcc \
- /home/nahl_syareza/unified_interoperability_blockchain_security/include/http_handler.hpp \
- /home/nahl_syareza/unified_interoperability_blockchain_security/include/mqtt_handler.hpp \
- /usr/local/include/mqtt_protocol.h /usr/include/c++/11/future \
+ /home/nahl_syareza/unified_interoperability_blockchain_security/include/de_ruyter.hpp \
+ /home/nahl_syareza/unified_interoperability_blockchain_security/include/spitarm.hpp \
+ /usr/include/httplib.h /usr/include/arpa/inet.h \
+ /usr/include/netinet/in.h /usr/include/x86_64-linux-gnu/sys/socket.h \
+ /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
+ /usr/include/x86_64-linux-gnu/bits/socket.h \
+ /usr/include/x86_64-linux-gnu/bits/socket_type.h \
+ /usr/include/x86_64-linux-gnu/bits/sockaddr.h \
+ /usr/include/x86_64-linux-gnu/asm/socket.h \
+ /usr/include/asm-generic/socket.h /usr/include/linux/posix_types.h \
+ /usr/include/linux/stddef.h \
+ /usr/include/x86_64-linux-gnu/asm/posix_types.h \
+ /usr/include/x86_64-linux-gnu/asm/posix_types_64.h \
+ /usr/include/asm-generic/posix_types.h \
+ /usr/include/x86_64-linux-gnu/asm/bitsperlong.h \
+ /usr/include/asm-generic/bitsperlong.h \
+ /usr/include/x86_64-linux-gnu/asm/sockios.h \
+ /usr/include/asm-generic/sockios.h \
+ /usr/include/x86_64-linux-gnu/bits/types/struct_osockaddr.h \
+ /usr/include/x86_64-linux-gnu/bits/socket2.h \
+ /usr/include/x86_64-linux-gnu/bits/in.h /usr/include/ifaddrs.h \
+ /usr/include/netdb.h /usr/include/rpc/netdb.h \
+ /usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__sigval_t.h \
+ /usr/include/x86_64-linux-gnu/bits/netdb.h /usr/include/resolv.h \
+ /usr/include/x86_64-linux-gnu/sys/param.h /usr/include/signal.h \
+ /usr/include/x86_64-linux-gnu/bits/signum-generic.h \
+ /usr/include/x86_64-linux-gnu/bits/signum-arch.h \
+ /usr/include/x86_64-linux-gnu/bits/types/sig_atomic_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h \
+ /usr/include/x86_64-linux-gnu/bits/siginfo-arch.h \
+ /usr/include/x86_64-linux-gnu/bits/siginfo-consts.h \
+ /usr/include/x86_64-linux-gnu/bits/siginfo-consts-arch.h \
+ /usr/include/x86_64-linux-gnu/bits/types/sigval_t.h \
+ /usr/include/x86_64-linux-gnu/bits/sigevent-consts.h \
+ /usr/include/x86_64-linux-gnu/bits/sigaction.h \
+ /usr/include/x86_64-linux-gnu/bits/sigcontext.h \
+ /usr/include/x86_64-linux-gnu/bits/types/stack_t.h \
+ /usr/include/x86_64-linux-gnu/sys/ucontext.h \
+ /usr/include/x86_64-linux-gnu/bits/sigstack.h \
+ /usr/include/x86_64-linux-gnu/bits/sigstksz.h \
+ /usr/include/x86_64-linux-gnu/bits/ss_flags.h \
+ /usr/include/x86_64-linux-gnu/bits/types/struct_sigstack.h \
+ /usr/include/x86_64-linux-gnu/bits/sigthread.h \
+ /usr/include/x86_64-linux-gnu/bits/signal_ext.h \
+ /usr/include/x86_64-linux-gnu/bits/param.h /usr/include/linux/param.h \
+ /usr/include/x86_64-linux-gnu/asm/param.h \
+ /usr/include/asm-generic/param.h /usr/include/arpa/nameser.h \
+ /usr/include/arpa/nameser_compat.h \
+ /usr/include/x86_64-linux-gnu/bits/types/res_state.h \
+ /usr/include/netinet/tcp.h /usr/include/c++/11/csignal \
  /usr/include/c++/11/condition_variable /usr/include/c++/11/stop_token \
  /usr/include/c++/11/bits/std_thread.h /usr/include/c++/11/semaphore \
  /usr/include/c++/11/bits/semaphore_base.h \
  /usr/include/c++/11/bits/atomic_timed_wait.h \
  /usr/include/c++/11/bits/this_thread_sleep.h \
  /usr/include/x86_64-linux-gnu/sys/time.h /usr/include/semaphore.h \
- /usr/include/x86_64-linux-gnu/bits/semaphore.h \
- /usr/include/c++/11/bits/atomic_futex.h /usr/include/c++/11/thread
+ /usr/include/x86_64-linux-gnu/bits/semaphore.h /usr/include/fcntl.h \
+ /usr/include/x86_64-linux-gnu/bits/fcntl.h \
+ /usr/include/x86_64-linux-gnu/bits/fcntl-linux.h \
+ /usr/include/linux/falloc.h /usr/include/x86_64-linux-gnu/bits/stat.h \
+ /usr/include/x86_64-linux-gnu/bits/struct_stat.h \
+ /usr/include/x86_64-linux-gnu/bits/fcntl2.h /usr/include/c++/11/list \
+ /usr/include/c++/11/bits/stl_list.h /usr/include/c++/11/bits/list.tcc \
+ /usr/include/c++/11/random /usr/include/c++/11/bits/random.h \
+ /usr/include/x86_64-linux-gnu/c++/11/bits/opt_random.h \
+ /usr/include/c++/11/bits/random.tcc /usr/include/c++/11/regex \
+ /usr/include/c++/11/bitset /usr/include/c++/11/stack \
+ /usr/include/c++/11/deque /usr/include/c++/11/bits/stl_deque.h \
+ /usr/include/c++/11/bits/deque.tcc /usr/include/c++/11/bits/stl_stack.h \
+ /usr/include/c++/11/bits/regex_constants.h \
+ /usr/include/c++/11/bits/regex_error.h \
+ /usr/include/c++/11/bits/regex_automaton.h \
+ /usr/include/c++/11/bits/regex_automaton.tcc \
+ /usr/include/c++/11/bits/regex_scanner.h \
+ /usr/include/c++/11/bits/regex_scanner.tcc \
+ /usr/include/c++/11/bits/regex_compiler.h \
+ /usr/include/c++/11/bits/regex_compiler.tcc \
+ /usr/include/c++/11/bits/regex.h /usr/include/c++/11/bits/regex.tcc \
+ /usr/include/c++/11/bits/regex_executor.h \
+ /usr/include/c++/11/bits/regex_executor.tcc /usr/include/c++/11/set \
+ /usr/include/c++/11/bits/stl_set.h \
+ /usr/include/c++/11/bits/stl_multiset.h \
+ /usr/include/x86_64-linux-gnu/sys/stat.h \
+ /usr/include/x86_64-linux-gnu/bits/statx.h /usr/include/linux/stat.h \
+ /usr/include/linux/types.h /usr/include/x86_64-linux-gnu/asm/types.h \
+ /usr/include/asm-generic/types.h /usr/include/asm-generic/int-ll64.h \
+ /usr/include/x86_64-linux-gnu/bits/statx-generic.h \
+ /usr/include/x86_64-linux-gnu/bits/types/struct_statx_timestamp.h \
+ /usr/include/x86_64-linux-gnu/bits/types/struct_statx.h \
+ /usr/include/c++/11/thread /usr/include/openssl/err.h \
+ /usr/include/openssl/macros.h \
+ /usr/include/x86_64-linux-gnu/openssl/opensslconf.h \
+ /usr/include/x86_64-linux-gnu/openssl/configuration.h \
+ /usr/include/openssl/opensslv.h /usr/include/openssl/e_os2.h \
+ /usr/include/c++/11/stdlib.h /usr/include/openssl/types.h \
+ /usr/include/openssl/safestack.h /usr/include/openssl/stack.h \
+ /usr/include/openssl/bio.h /usr/include/openssl/crypto.h \
+ /usr/include/openssl/cryptoerr.h /usr/include/openssl/symhacks.h \
+ /usr/include/openssl/cryptoerr_legacy.h /usr/include/openssl/core.h \
+ /usr/include/openssl/bioerr.h /usr/include/openssl/lhash.h \
+ /usr/include/openssl/md5.h /usr/include/openssl/ssl.h \
+ /usr/include/openssl/comp.h /usr/include/openssl/comperr.h \
+ /usr/include/openssl/x509.h /usr/include/openssl/buffer.h \
+ /usr/include/openssl/buffererr.h /usr/include/openssl/evp.h \
+ /usr/include/openssl/core_dispatch.h /usr/include/openssl/evperr.h \
+ /usr/include/openssl/params.h /usr/include/openssl/bn.h \
+ /usr/include/openssl/bnerr.h /usr/include/openssl/objects.h \
+ /usr/include/openssl/obj_mac.h /usr/include/openssl/asn1.h \
+ /usr/include/openssl/asn1err.h /usr/include/openssl/objectserr.h \
+ /usr/include/openssl/ec.h /usr/include/openssl/ecerr.h \
+ /usr/include/openssl/rsa.h /usr/include/openssl/rsaerr.h \
+ /usr/include/openssl/dsa.h /usr/include/openssl/dh.h \
+ /usr/include/openssl/dherr.h /usr/include/openssl/dsaerr.h \
+ /usr/include/openssl/sha.h /usr/include/openssl/x509err.h \
+ /usr/include/openssl/x509_vfy.h /usr/include/openssl/pkcs7.h \
+ /usr/include/openssl/pkcs7err.h /usr/include/openssl/ocsp.h \
+ /usr/include/openssl/http.h /usr/include/openssl/conf.h \
+ /usr/include/openssl/conferr.h /usr/include/openssl/conftypes.h \
+ /usr/include/openssl/x509v3.h /usr/include/openssl/x509v3err.h \
+ /usr/include/openssl/ocsperr.h /usr/include/openssl/pem.h \
+ /usr/include/openssl/pemerr.h /usr/include/openssl/hmac.h \
+ /usr/include/openssl/async.h /usr/include/openssl/asyncerr.h \
+ /usr/include/openssl/ct.h /usr/include/openssl/cterr.h \
+ /usr/include/openssl/sslerr.h /usr/include/openssl/sslerr_legacy.h \
+ /usr/include/openssl/prov_ssl.h /usr/include/openssl/ssl2.h \
+ /usr/include/openssl/ssl3.h /usr/include/openssl/tls1.h \
+ /usr/include/openssl/dtls1.h /usr/include/openssl/srtp.h \
+ /usr/include/zlib.h /usr/include/zconf.h /usr/include/brotli/decode.h \
+ /usr/include/brotli/port.h /usr/include/brotli/types.h \
+ /usr/include/brotli/encode.h
