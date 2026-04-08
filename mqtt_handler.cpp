@@ -39,7 +39,9 @@ void on_subscribe_v5(struct mosquitto *mosq, void *obj, int mid, int qos_count, 
   }
 }
 
-void on_publish_v5(struct mosquitto *mosq, void *obj, int mid, int reason_code, const mosquitto_property *props) { spdlog::info("Message with mid {} has been published", mid); }
+void on_publish_v5(struct mosquitto *mosq, void *obj, int mid, int reason_code, const mosquitto_property *props) {
+  // spdlog::info("Message with mid {} has been published", mid);
+}
 
 void on_message_v5(struct mosquitto *mosq, void *obj, const struct mosquitto_message *msg, const mosquitto_property *props) {
   DataStructure *dstructure = (DataStructure *)obj;
@@ -56,26 +58,26 @@ void on_message_v5(struct mosquitto *mosq, void *obj, const struct mosquitto_mes
   try {
     std::string payload_str((char *)msg->payload);
     json payload_json = json::parse(payload_str);
-    spdlog::warn("MQTT: Payload is JSON");
+    // spdlog::warn("MQTT: Payload is JSON");
 
     payload_str = payload_json.dump();
   } catch (json::parse_error &e) {
-    spdlog::warn("MQTT: Payload is not JSON");
+    // spdlog::warn("MQTT: Payload is not JSON");
   }
 
+  spdlog::info("MQTT: {} {} {}", msg->topic, msg->qos, (char *)msg->payload);
+
   if (props == NULL) {
-    spdlog::info("MQTT: New message {} {} {}", msg->topic, msg->qos, (char *)msg->payload);
     de_ruyter(dstructure, msg->topic, payload);
   } else {
     if (n != nullptr && v != nullptr) {
       std::string name(n), value(v);
-      spdlog::info("MQTT Props: {} {}", name, value);
+      // spdlog::info("MQTT Props: {} {}", name, value);
 
       if (name != "origin" && value != "external") {
         de_ruyter(dstructure, msg->topic, payload);
       }
     }
-    spdlog::info("MQTT v5.0: New message {} {} {}", msg->topic, msg->qos, payload);
   }
 }
 

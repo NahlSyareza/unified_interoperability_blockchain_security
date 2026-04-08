@@ -212,6 +212,48 @@ OPENSSL_APPLINK_SOURCE:FILEPATH=C:/vcpkg/installed/x64-windows/include/openssl/a
 OPENSSL_INCLUDE_DIR:PATH=C:/vcpkg/installed/x64-windows/include
 
 //Path to a library.
+PThreads4W_CXXEXC_LIBRARY_DEBUG:FILEPATH=C:/vcpkg/installed/x64-windows/debug/lib/pthreadVCE3d.lib
+
+//Path to a file.
+PThreads4W_CXXEXC_LIBRARY_DEBUG_DLL:FILEPATH=C:/vcpkg/installed/x64-windows/debug/bin/pthreadVCE3d.dll
+
+//Path to a library.
+PThreads4W_CXXEXC_LIBRARY_RELEASE:FILEPATH=C:/vcpkg/installed/x64-windows/lib/pthreadVCE3.lib
+
+//Path to a file.
+PThreads4W_CXXEXC_LIBRARY_RELEASE_DLL:FILEPATH=C:/vcpkg/installed/x64-windows/bin/pthreadVCE3.dll
+
+//The directory containing a CMake configuration file for PThreads4W.
+PThreads4W_DIR:PATH=C:/vcpkg/installed/x64-windows/share/PThreads4W
+
+//Path to a file.
+PThreads4W_INCLUDE_DIR:PATH=C:/vcpkg/installed/x64-windows/include
+
+//Path to a library.
+PThreads4W_LIBRARY_DEBUG:FILEPATH=C:/vcpkg/installed/x64-windows/debug/lib/pthreadVC3d.lib
+
+//Path to a file.
+PThreads4W_LIBRARY_DEBUG_DLL:FILEPATH=C:/vcpkg/installed/x64-windows/debug/bin/pthreadVC3d.dll
+
+//Path to a library.
+PThreads4W_LIBRARY_RELEASE:FILEPATH=C:/vcpkg/installed/x64-windows/lib/pthreadVC3.lib
+
+//Path to a file.
+PThreads4W_LIBRARY_RELEASE_DLL:FILEPATH=C:/vcpkg/installed/x64-windows/bin/pthreadVC3.dll
+
+//Path to a library.
+PThreads4W_STRUCTEXC_LIBRARY_DEBUG:FILEPATH=C:/vcpkg/installed/x64-windows/debug/lib/pthreadVSE3d.lib
+
+//Path to a file.
+PThreads4W_STRUCTEXC_LIBRARY_DEBUG_DLL:FILEPATH=C:/vcpkg/installed/x64-windows/debug/bin/pthreadVSE3d.dll
+
+//Path to a library.
+PThreads4W_STRUCTEXC_LIBRARY_RELEASE:FILEPATH=C:/vcpkg/installed/x64-windows/lib/pthreadVSE3.lib
+
+//Path to a file.
+PThreads4W_STRUCTEXC_LIBRARY_RELEASE_DLL:FILEPATH=C:/vcpkg/installed/x64-windows/bin/pthreadVSE3.dll
+
+//Path to a library.
 SSL_EAY_DEBUG:FILEPATH=C:/vcpkg/installed/x64-windows/debug/lib/libssl.lib
 
 //Path to a library.
@@ -266,6 +308,12 @@ Z_VCPKG_PWSH_PATH:FILEPATH=C:/Program Files/PowerShell/7/pwsh.exe
 // triplet
 _VCPKG_INSTALLED_DIR:PATH=C:/vcpkg/installed
 
+//The directory containing a CMake configuration file for fmt.
+fmt_DIR:PATH=C:/vcpkg/installed/x64-windows/share/fmt
+
+//The directory containing a CMake configuration file for httplib.
+httplib_DIR:PATH=C:/vcpkg/installed/x64-windows/share/httplib
+
 //Value Computed by CMake
 legendary_boss_BINARY_DIR:STATIC=C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/build/windows
 
@@ -275,8 +323,17 @@ legendary_boss_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 legendary_boss_SOURCE_DIR:STATIC=C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security
 
+//The directory containing a CMake configuration file for nlohmann_json.
+nlohmann_json_DIR:PATH=C:/vcpkg/installed/x64-windows/share/nlohmann_json
+
 //The directory containing a CMake configuration file for simpleble.
 simpleble_DIR:PATH=C:/vcpkg/installed/x64-windows/share/simpleble
+
+//The directory containing a CMake configuration file for spdlog.
+spdlog_DIR:PATH=C:/vcpkg/installed/x64-windows/share/spdlog
+
+//The directory containing a CMake configuration file for unofficial-brotli.
+unofficial-brotli_DIR:PATH=C:/vcpkg/installed/x64-windows/share/unofficial-brotli
 
 //The directory containing a CMake configuration file for unofficial-mosquitto.
 unofficial-mosquitto_DIR:PATH=C:/vcpkg/installed/x64-windows/share/unofficial-mosquitto
@@ -432,10 +489,30 @@ CMAKE_TOOLCHAIN_FILE-ADVANCED:INTERNAL=1
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //Details about finding OpenSSL
 FIND_PACKAGE_MESSAGE_DETAILS_OpenSSL:INTERNAL=[optimized;C:/vcpkg/installed/x64-windows/lib/libcrypto.lib;debug;C:/vcpkg/installed/x64-windows/debug/lib/libcrypto.lib][C:/vcpkg/installed/x64-windows/include][c ][v3.6.1()]
+//Details about finding PThreads4W
+FIND_PACKAGE_MESSAGE_DETAILS_PThreads4W:INTERNAL=[optimized;C:/vcpkg/installed/x64-windows/lib/pthreadVC3.lib;debug;C:/vcpkg/installed/x64-windows/debug/lib/pthreadVC3d.lib][optimized;C:/vcpkg/installed/x64-windows/lib/pthreadVCE3.lib;debug;C:/vcpkg/installed/x64-windows/debug/lib/pthreadVCE3d.lib][optimized;C:/vcpkg/installed/x64-windows/lib/pthreadVSE3.lib;debug;C:/vcpkg/installed/x64-windows/debug/lib/pthreadVSE3d.lib][C:/vcpkg/installed/x64-windows/include][v()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
+//Details about finding httplib
+FIND_PACKAGE_MESSAGE_DETAILS_httplib:INTERNAL=[C:/vcpkg/installed/x64-windows/include/httplib.h]
+//Details about finding nlohmann_json
+FIND_PACKAGE_MESSAGE_DETAILS_nlohmann_json:INTERNAL=[C:/vcpkg/installed/x64-windows/share/nlohmann_json/nlohmann_jsonConfig.cmake][v3.12.0()]
 //ADVANCED property for variable: OPENSSL_INCLUDE_DIR
 OPENSSL_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PThreads4W_CXXEXC_LIBRARY_DEBUG
+PThreads4W_CXXEXC_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PThreads4W_CXXEXC_LIBRARY_RELEASE
+PThreads4W_CXXEXC_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PThreads4W_INCLUDE_DIR
+PThreads4W_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PThreads4W_LIBRARY_DEBUG
+PThreads4W_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PThreads4W_LIBRARY_RELEASE
+PThreads4W_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PThreads4W_STRUCTEXC_LIBRARY_DEBUG
+PThreads4W_STRUCTEXC_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PThreads4W_STRUCTEXC_LIBRARY_RELEASE
+PThreads4W_STRUCTEXC_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 //Install the dependencies listed in your manifest:
 //\n    If this is off, you will have to manually install your dependencies.
 //\n    See https://github.com/microsoft/vcpkg/tree/master/docs/specifications/manifests.md

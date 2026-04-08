@@ -20,8 +20,16 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_executable(legendary_boss main.cpp utils.cpp ble_handler.cpp de_ruyter.cpp http_handler.cpp mqtt_handler.cpp spitarm.cpp)
 
-find_package(OpenSSL REQUIRED)
-find_package(Threads REQUIRED)
+if(WIN32)
+    find_package(PThreads4W REQUIRED)
+    target_link_libraries(legendary_boss PRIVATE PThreads4W::PThreads4W)
+else()
+    find_package(Threads REQUIRED)
+    target_link_libraries(legendary_boss PRIVATE Threads::Threads)
+endif()
+
+# find_package(Threads REQUIRED)
+# target_link_libraries(legendary_boss PRIVATE Threads::Threads)
 
 if(WIN32)
     find_package(unofficial-mosquitto CONFIG REQUIRED)
@@ -30,7 +38,20 @@ else()
     pkg_check_modules(mosquitto REQUIRED libmosquitto)
 endif()
 
+find_package(OpenSSL REQUIRED)
+target_link_libraries(legendary_boss PRIVATE OpenSSL::SSL)
+
+find_package(spdlog CONFIG REQUIRED)
+target_link_libraries(legendary_boss PRIVATE spdlog::spdlog)
+
 find_package(simpleble CONFIG REQUIRED)
+target_link_libraries(legendary_boss PRIVATE simpleble::simpleble)
+
+find_package(httplib CONFIG REQUIRED)
+target_link_libraries(legendary_boss PRIVATE httplib::httplib)
+
+find_package(nlohmann_json CONFIG REQUIRED)
+target_link_libraries(legendary_boss PRIVATE nlohmann_json::nlohmann_json)
 
 if(MSVC)
     target_compile_options(legendary_boss PRIVATE /utf-8)
@@ -39,25 +60,19 @@ endif()
 target_include_directories(legendary_boss PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/include")
 
 # if(WIN32)
-#     target_include_directories(legendary_boss PRIVATE "${VCPKG_PATH}/installed/x64-windows/include")
+#     target_link_libraries(legendary_boss PRIVATE simpleble::simpleble OpenSSL::SSL OpenSSL::Crypto PThreads4W::PThreads4W)
+# else()
+#     target_link_libraries(legendary_boss PRIVATE simpleble::simpleble OpenSSL::SSL OpenSSL::Crypto Threads::Threads)
 # endif()
-
-target_link_libraries(legendary_boss PRIVATE
-    simpleble::simpleble
-    OpenSSL::SSL
-    OpenSSL::Crypto
-    Threads::Threads
-)
 
 if(WIN32)
     target_link_libraries(legendary_boss PRIVATE unofficial::mosquitto::mosquitto)
 else()
     target_link_libraries(legendary_boss PRIVATE ${mosquitto_LIBRARIES})
-    # Add this to tell the linker WHERE to find those libraries
-    target_link_directories(legendary_boss PRIVATE ${mosquitto_LIBRARY_DIRS}) 
+    # target_link_directories(legendary_boss PRIVATE ${mosquitto_LIBRARY_DIRS}) 
     target_include_directories(legendary_boss PRIVATE ${mosquitto_INCLUDE_DIRS})
 endif()
 
-if(NOT WIN32)
-    target_link_options(legendary_boss PRIVATE "-pthread")
-endif()
+# if(NOT WIN32)
+target_link_options(legendary_boss PRIVATE "-pthread")
+# endif()

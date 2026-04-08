@@ -109,8 +109,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/build/windows/CMakeFiles/CMakeScratch/TryCompile-ole8th"
-      binary: "C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/build/windows/CMakeFiles/CMakeScratch/TryCompile-ole8th"
+      source: "C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/build/windows/CMakeFiles/CMakeScratch/TryCompile-ff47gw"
+      binary: "C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/build/windows/CMakeFiles/CMakeScratch/TryCompile-ff47gw"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -124,28 +124,28 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/build/windows/CMakeFiles/CMakeScratch/TryCompile-ole8th'
+        Change Dir: 'C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/build/windows/CMakeFiles/CMakeScratch/TryCompile-ff47gw'
         
-        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 nmake -f Makefile /nologo cmTC_dbe87\\fast
-        	"C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\nmake.exe"  -f CMakeFiles\\cmTC_dbe87.dir\\build.make /nologo -L                  CMakeFiles\\cmTC_dbe87.dir\\build
-        Building C object CMakeFiles/cmTC_dbe87.dir/CMakeCCompilerABI.c.obj
-        	"C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_cl_compile_depends --dep-file=CMakeFiles\\cmTC_dbe87.dir\\CMakeCCompilerABI.c.obj.d --working-dir="C:\\Users\\Nahl Syareza Rahidra\\Documents\\My Kuliah\\Seminar\\unified_interoperability_blockchain_security\\build\\windows\\CMakeFiles\\CMakeScratch\\TryCompile-ole8th" --filter-prefix="Note: including file: " -- C:\\PROGRA~1\\MIB055~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\cl.exe @C:\\Users\\NAHLSY~1\\AppData\\Local\\Temp\\nm141E.tmp
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 nmake -f Makefile /nologo cmTC_39deb\\fast
+        	"C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\nmake.exe"  -f CMakeFiles\\cmTC_39deb.dir\\build.make /nologo -L                  CMakeFiles\\cmTC_39deb.dir\\build
+        Building C object CMakeFiles/cmTC_39deb.dir/CMakeCCompilerABI.c.obj
+        	"C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_cl_compile_depends --dep-file=CMakeFiles\\cmTC_39deb.dir\\CMakeCCompilerABI.c.obj.d --working-dir="C:\\Users\\Nahl Syareza Rahidra\\Documents\\My Kuliah\\Seminar\\unified_interoperability_blockchain_security\\build\\windows\\CMakeFiles\\CMakeScratch\\TryCompile-ff47gw" --filter-prefix="Note: including file: " -- C:\\PROGRA~1\\MIB055~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\cl.exe @C:\\Users\\NAHLSY~1\\AppData\\Local\\Temp\\nmF25F.tmp
         CMakeCCompilerABI.c
-        Linking C executable cmTC_dbe87.exe
-        	"C:\\Program Files\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1950 --intdir=CMakeFiles\\cmTC_dbe87.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests -- C:\\PROGRA~1\\MIB055~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\link.exe /nologo @CMakeFiles\\cmTC_dbe87.dir\\objects1.rsp @C:\\Users\\NAHLSY~1\\AppData\\Local\\Temp\\nm1586.tmp
+        Linking C executable cmTC_39deb.exe
+        	"C:\\Program Files\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1950 --intdir=CMakeFiles\\cmTC_39deb.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests -- C:\\PROGRA~1\\MIB055~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\link.exe /nologo @CMakeFiles\\cmTC_39deb.dir\\objects1.rsp @C:\\Users\\NAHLSY~1\\AppData\\Local\\Temp\\nmF2BE.tmp
         Visual Studio Incremental Link with embedded manifests
-        Create CMakeFiles\\cmTC_dbe87.dir/manifest.rc
-        Create empty: CMakeFiles\\cmTC_dbe87.dir/embed.manifest
+        Create CMakeFiles\\cmTC_39deb.dir/manifest.rc
+        Create empty: CMakeFiles\\cmTC_39deb.dir/embed.manifest
         RC Pass 1:
-        C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe /fo CMakeFiles\\cmTC_dbe87.dir/manifest.res CMakeFiles\\cmTC_dbe87.dir/manifest.rc
+        C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe /fo CMakeFiles\\cmTC_39deb.dir/manifest.res CMakeFiles\\cmTC_39deb.dir/manifest.rc
         LINK Pass 1:
-        C:\\PROGRA~1\\MIB055~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\link.exe /nologo @CMakeFiles\\cmTC_dbe87.dir\\objects1.rsp /out:cmTC_dbe87.exe /implib:cmTC_dbe87.lib /pdb:C:\\Users\\Nahl Syareza Rahidra\\Documents\\My Kuliah\\Seminar\\unified_interoperability_blockchain_security\\build\\windows\\CMakeFiles\\CMakeScratch\\TryCompile-ole8th\\cmTC_dbe87.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_dbe87.dir/intermediate.manifest CMakeFiles\\cmTC_dbe87.dir/manifest.res
+        C:\\PROGRA~1\\MIB055~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\link.exe /nologo @CMakeFiles\\cmTC_39deb.dir\\objects1.rsp /out:cmTC_39deb.exe /implib:cmTC_39deb.lib /pdb:C:\\Users\\Nahl Syareza Rahidra\\Documents\\My Kuliah\\Seminar\\unified_interoperability_blockchain_security\\build\\windows\\CMakeFiles\\CMakeScratch\\TryCompile-ff47gw\\cmTC_39deb.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_39deb.dir/intermediate.manifest CMakeFiles\\cmTC_39deb.dir/manifest.res
         MT:
-        C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe /nologo /manifest CMakeFiles\\cmTC_dbe87.dir/intermediate.manifest /out:CMakeFiles\\cmTC_dbe87.dir/embed.manifest /notify_update
+        C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe /nologo /manifest CMakeFiles\\cmTC_39deb.dir/intermediate.manifest /out:CMakeFiles\\cmTC_39deb.dir/embed.manifest /notify_update
         RC Pass 2:
-        C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe /fo CMakeFiles\\cmTC_dbe87.dir/manifest.res CMakeFiles\\cmTC_dbe87.dir/manifest.rc
+        C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe /fo CMakeFiles\\cmTC_39deb.dir/manifest.res CMakeFiles\\cmTC_39deb.dir/manifest.rc
         FINAL LINK:
-        C:\\PROGRA~1\\MIB055~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\link.exe /nologo @CMakeFiles\\cmTC_dbe87.dir\\objects1.rsp /out:cmTC_dbe87.exe /implib:cmTC_dbe87.lib /pdb:C:\\Users\\Nahl Syareza Rahidra\\Documents\\My Kuliah\\Seminar\\unified_interoperability_blockchain_security\\build\\windows\\CMakeFiles\\CMakeScratch\\TryCompile-ole8th\\cmTC_dbe87.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_dbe87.dir/intermediate.manifest CMakeFiles\\cmTC_dbe87.dir/manifest.res
+        C:\\PROGRA~1\\MIB055~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\link.exe /nologo @CMakeFiles\\cmTC_39deb.dir\\objects1.rsp /out:cmTC_39deb.exe /implib:cmTC_39deb.lib /pdb:C:\\Users\\Nahl Syareza Rahidra\\Documents\\My Kuliah\\Seminar\\unified_interoperability_blockchain_security\\build\\windows\\CMakeFiles\\CMakeScratch\\TryCompile-ff47gw\\cmTC_39deb.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_39deb.dir/intermediate.manifest CMakeFiles\\cmTC_39deb.dir/manifest.res
         
       exitCode: 0
   -
@@ -185,8 +185,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/build/windows/CMakeFiles/CMakeScratch/TryCompile-4sx52y"
-      binary: "C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/build/windows/CMakeFiles/CMakeScratch/TryCompile-4sx52y"
+      source: "C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/build/windows/CMakeFiles/CMakeScratch/TryCompile-t8xkh4"
+      binary: "C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/build/windows/CMakeFiles/CMakeScratch/TryCompile-t8xkh4"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /GR /EHsc"
       CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -201,28 +201,28 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/build/windows/CMakeFiles/CMakeScratch/TryCompile-4sx52y'
+        Change Dir: 'C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/build/windows/CMakeFiles/CMakeScratch/TryCompile-t8xkh4'
         
-        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 nmake -f Makefile /nologo cmTC_3f5b8\\fast
-        	"C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\nmake.exe"  -f CMakeFiles\\cmTC_3f5b8.dir\\build.make /nologo -L                  CMakeFiles\\cmTC_3f5b8.dir\\build
-        Building CXX object CMakeFiles/cmTC_3f5b8.dir/CMakeCXXCompilerABI.cpp.obj
-        	"C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_cl_compile_depends --dep-file=CMakeFiles\\cmTC_3f5b8.dir\\CMakeCXXCompilerABI.cpp.obj.d --working-dir="C:\\Users\\Nahl Syareza Rahidra\\Documents\\My Kuliah\\Seminar\\unified_interoperability_blockchain_security\\build\\windows\\CMakeFiles\\CMakeScratch\\TryCompile-4sx52y" --filter-prefix="Note: including file: " -- C:\\PROGRA~1\\MIB055~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\cl.exe @C:\\Users\\NAHLSY~1\\AppData\\Local\\Temp\\nm17F6.tmp
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 nmake -f Makefile /nologo cmTC_95fbe\\fast
+        	"C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\nmake.exe"  -f CMakeFiles\\cmTC_95fbe.dir\\build.make /nologo -L                  CMakeFiles\\cmTC_95fbe.dir\\build
+        Building CXX object CMakeFiles/cmTC_95fbe.dir/CMakeCXXCompilerABI.cpp.obj
+        	"C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_cl_compile_depends --dep-file=CMakeFiles\\cmTC_95fbe.dir\\CMakeCXXCompilerABI.cpp.obj.d --working-dir="C:\\Users\\Nahl Syareza Rahidra\\Documents\\My Kuliah\\Seminar\\unified_interoperability_blockchain_security\\build\\windows\\CMakeFiles\\CMakeScratch\\TryCompile-t8xkh4" --filter-prefix="Note: including file: " -- C:\\PROGRA~1\\MIB055~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\cl.exe @C:\\Users\\NAHLSY~1\\AppData\\Local\\Temp\\nmF4B1.tmp
         CMakeCXXCompilerABI.cpp
-        Linking CXX executable cmTC_3f5b8.exe
-        	"C:\\Program Files\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1950 --intdir=CMakeFiles\\cmTC_3f5b8.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests -- C:\\PROGRA~1\\MIB055~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\link.exe /nologo @CMakeFiles\\cmTC_3f5b8.dir\\objects1.rsp @C:\\Users\\NAHLSY~1\\AppData\\Local\\Temp\\nm1865.tmp
+        Linking CXX executable cmTC_95fbe.exe
+        	"C:\\Program Files\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1950 --intdir=CMakeFiles\\cmTC_95fbe.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests -- C:\\PROGRA~1\\MIB055~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\link.exe /nologo @CMakeFiles\\cmTC_95fbe.dir\\objects1.rsp @C:\\Users\\NAHLSY~1\\AppData\\Local\\Temp\\nmF510.tmp
         Visual Studio Incremental Link with embedded manifests
-        Create CMakeFiles\\cmTC_3f5b8.dir/manifest.rc
-        Create empty: CMakeFiles\\cmTC_3f5b8.dir/embed.manifest
+        Create CMakeFiles\\cmTC_95fbe.dir/manifest.rc
+        Create empty: CMakeFiles\\cmTC_95fbe.dir/embed.manifest
         RC Pass 1:
-        C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe /fo CMakeFiles\\cmTC_3f5b8.dir/manifest.res CMakeFiles\\cmTC_3f5b8.dir/manifest.rc
+        C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe /fo CMakeFiles\\cmTC_95fbe.dir/manifest.res CMakeFiles\\cmTC_95fbe.dir/manifest.rc
         LINK Pass 1:
-        C:\\PROGRA~1\\MIB055~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\link.exe /nologo @CMakeFiles\\cmTC_3f5b8.dir\\objects1.rsp /out:cmTC_3f5b8.exe /implib:cmTC_3f5b8.lib /pdb:C:\\Users\\Nahl Syareza Rahidra\\Documents\\My Kuliah\\Seminar\\unified_interoperability_blockchain_security\\build\\windows\\CMakeFiles\\CMakeScratch\\TryCompile-4sx52y\\cmTC_3f5b8.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_3f5b8.dir/intermediate.manifest CMakeFiles\\cmTC_3f5b8.dir/manifest.res
+        C:\\PROGRA~1\\MIB055~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\link.exe /nologo @CMakeFiles\\cmTC_95fbe.dir\\objects1.rsp /out:cmTC_95fbe.exe /implib:cmTC_95fbe.lib /pdb:C:\\Users\\Nahl Syareza Rahidra\\Documents\\My Kuliah\\Seminar\\unified_interoperability_blockchain_security\\build\\windows\\CMakeFiles\\CMakeScratch\\TryCompile-t8xkh4\\cmTC_95fbe.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_95fbe.dir/intermediate.manifest CMakeFiles\\cmTC_95fbe.dir/manifest.res
         MT:
-        C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe /nologo /manifest CMakeFiles\\cmTC_3f5b8.dir/intermediate.manifest /out:CMakeFiles\\cmTC_3f5b8.dir/embed.manifest /notify_update
+        C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe /nologo /manifest CMakeFiles\\cmTC_95fbe.dir/intermediate.manifest /out:CMakeFiles\\cmTC_95fbe.dir/embed.manifest /notify_update
         RC Pass 2:
-        C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe /fo CMakeFiles\\cmTC_3f5b8.dir/manifest.res CMakeFiles\\cmTC_3f5b8.dir/manifest.rc
+        C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe /fo CMakeFiles\\cmTC_95fbe.dir/manifest.res CMakeFiles\\cmTC_95fbe.dir/manifest.rc
         FINAL LINK:
-        C:\\PROGRA~1\\MIB055~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\link.exe /nologo @CMakeFiles\\cmTC_3f5b8.dir\\objects1.rsp /out:cmTC_3f5b8.exe /implib:cmTC_3f5b8.lib /pdb:C:\\Users\\Nahl Syareza Rahidra\\Documents\\My Kuliah\\Seminar\\unified_interoperability_blockchain_security\\build\\windows\\CMakeFiles\\CMakeScratch\\TryCompile-4sx52y\\cmTC_3f5b8.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_3f5b8.dir/intermediate.manifest CMakeFiles\\cmTC_3f5b8.dir/manifest.res
+        C:\\PROGRA~1\\MIB055~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\link.exe /nologo @CMakeFiles\\cmTC_95fbe.dir\\objects1.rsp /out:cmTC_95fbe.exe /implib:cmTC_95fbe.lib /pdb:C:\\Users\\Nahl Syareza Rahidra\\Documents\\My Kuliah\\Seminar\\unified_interoperability_blockchain_security\\build\\windows\\CMakeFiles\\CMakeScratch\\TryCompile-t8xkh4\\cmTC_95fbe.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_95fbe.dir/intermediate.manifest CMakeFiles\\cmTC_95fbe.dir/manifest.res
         
       exitCode: 0
   -
@@ -261,12 +261,14 @@ events:
       - "C:/Program Files/CMake/share/cmake-3.31/Modules/FindThreads.cmake:97 (CHECK_C_SOURCE_COMPILES)"
       - "C:/Program Files/CMake/share/cmake-3.31/Modules/FindThreads.cmake:163 (_threads_check_libc)"
       - "C:/vcpkg/scripts/buildsystems/vcpkg.cmake:908 (_find_package)"
-      - "CMakeLists.txt:24 (find_package)"
+      - "C:/vcpkg/installed/x64-windows/share/spdlog/spdlogConfig.cmake:30 (find_package)"
+      - "C:/vcpkg/scripts/buildsystems/vcpkg.cmake:908 (_find_package)"
+      - "CMakeLists.txt:44 (find_package)"
     checks:
       - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
     directories:
-      source: "C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/build/windows/CMakeFiles/CMakeScratch/TryCompile-inw5t6"
-      binary: "C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/build/windows/CMakeFiles/CMakeScratch/TryCompile-inw5t6"
+      source: "C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/build/windows/CMakeFiles/CMakeScratch/TryCompile-k7pfoz"
+      binary: "C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/build/windows/CMakeFiles/CMakeScratch/TryCompile-k7pfoz"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -280,17 +282,17 @@ events:
       variable: "CMAKE_HAVE_LIBC_PTHREAD"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/build/windows/CMakeFiles/CMakeScratch/TryCompile-inw5t6'
+        Change Dir: 'C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/build/windows/CMakeFiles/CMakeScratch/TryCompile-k7pfoz'
         
-        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 nmake -f Makefile /nologo cmTC_d0bca\\fast
-        	"C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\nmake.exe"  -f CMakeFiles\\cmTC_d0bca.dir\\build.make /nologo -L                  CMakeFiles\\cmTC_d0bca.dir\\build
-        Building C object CMakeFiles/cmTC_d0bca.dir/src.c.obj
-        	"C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_cl_compile_depends --dep-file=CMakeFiles\\cmTC_d0bca.dir\\src.c.obj.d --working-dir="C:\\Users\\Nahl Syareza Rahidra\\Documents\\My Kuliah\\Seminar\\unified_interoperability_blockchain_security\\build\\windows\\CMakeFiles\\CMakeScratch\\TryCompile-inw5t6" --filter-prefix="Note: including file: " -- C:\\PROGRA~1\\MIB055~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\cl.exe @C:\\Users\\NAHLSY~1\\AppData\\Local\\Temp\\nm1AE4.tmp
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 nmake -f Makefile /nologo cmTC_05350\\fast
+        	"C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\nmake.exe"  -f CMakeFiles\\cmTC_05350.dir\\build.make /nologo -L                  CMakeFiles\\cmTC_05350.dir\\build
+        Building C object CMakeFiles/cmTC_05350.dir/src.c.obj
+        	"C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_cl_compile_depends --dep-file=CMakeFiles\\cmTC_05350.dir\\src.c.obj.d --working-dir="C:\\Users\\Nahl Syareza Rahidra\\Documents\\My Kuliah\\Seminar\\unified_interoperability_blockchain_security\\build\\windows\\CMakeFiles\\CMakeScratch\\TryCompile-k7pfoz" --filter-prefix="Note: including file: " -- C:\\PROGRA~1\\MIB055~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\cl.exe @C:\\Users\\NAHLSY~1\\AppData\\Local\\Temp\\nmF770.tmp
         src.c
-        C:\\Users\\Nahl Syareza Rahidra\\Documents\\My Kuliah\\Seminar\\unified_interoperability_blockchain_security\\build\\windows\\CMakeFiles\\CMakeScratch\\TryCompile-inw5t6\\src.c(1): fatal error C1083: Cannot open include file: 'pthread.h': No such file or directory
-        NMAKE : fatal error U1077: '"C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_cl_compile_depends --dep-file=CMakeFiles\\cmTC_d0bca.dir\\src.c.obj.d --working-dir="C:\\Users\\Nahl Syareza Rahidra\\Documents\\My Kuliah\\Seminar\\unified_interoperability_blockchain_security\\build\\windows\\CMakeFiles\\CMakeScratch\\TryCompile-inw5t6" --filter-prefix="Note: including file: " -- C:\\PROGRA~1\\MIB055~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\cl.exe @C:\\Users\\NAHLSY~1\\AppData\\Local\\Temp\\nm1AE4.tmp' : return code '0x2'
+        C:\\Users\\Nahl Syareza Rahidra\\Documents\\My Kuliah\\Seminar\\unified_interoperability_blockchain_security\\build\\windows\\CMakeFiles\\CMakeScratch\\TryCompile-k7pfoz\\src.c(1): fatal error C1083: Cannot open include file: 'pthread.h': No such file or directory
+        NMAKE : fatal error U1077: '"C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_cl_compile_depends --dep-file=CMakeFiles\\cmTC_05350.dir\\src.c.obj.d --working-dir="C:\\Users\\Nahl Syareza Rahidra\\Documents\\My Kuliah\\Seminar\\unified_interoperability_blockchain_security\\build\\windows\\CMakeFiles\\CMakeScratch\\TryCompile-k7pfoz" --filter-prefix="Note: including file: " -- C:\\PROGRA~1\\MIB055~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\cl.exe @C:\\Users\\NAHLSY~1\\AppData\\Local\\Temp\\nmF770.tmp' : return code '0x2'
         Stop.
-        NMAKE : fatal error U1077: '"C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\nmake.exe"  -f CMakeFiles\\cmTC_d0bca.dir\\build.make /nologo -L                  CMakeFiles\\cmTC_d0bca.dir\\build' : return code '0x2'
+        NMAKE : fatal error U1077: '"C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\nmake.exe"  -f CMakeFiles\\cmTC_05350.dir\\build.make /nologo -L                  CMakeFiles\\cmTC_05350.dir\\build' : return code '0x2'
         Stop.
         
       exitCode: 2
@@ -301,12 +303,14 @@ events:
       - "C:/Program Files/CMake/share/cmake-3.31/Modules/FindThreads.cmake:112 (CHECK_LIBRARY_EXISTS)"
       - "C:/Program Files/CMake/share/cmake-3.31/Modules/FindThreads.cmake:175 (_threads_check_lib)"
       - "C:/vcpkg/scripts/buildsystems/vcpkg.cmake:908 (_find_package)"
-      - "CMakeLists.txt:24 (find_package)"
+      - "C:/vcpkg/installed/x64-windows/share/spdlog/spdlogConfig.cmake:30 (find_package)"
+      - "C:/vcpkg/scripts/buildsystems/vcpkg.cmake:908 (_find_package)"
+      - "CMakeLists.txt:44 (find_package)"
     checks:
       - "Looking for pthread_create in pthreads"
     directories:
-      source: "C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/build/windows/CMakeFiles/CMakeScratch/TryCompile-hiyllz"
-      binary: "C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/build/windows/CMakeFiles/CMakeScratch/TryCompile-hiyllz"
+      source: "C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/build/windows/CMakeFiles/CMakeScratch/TryCompile-1mrlhs"
+      binary: "C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/build/windows/CMakeFiles/CMakeScratch/TryCompile-1mrlhs"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -320,27 +324,27 @@ events:
       variable: "CMAKE_HAVE_PTHREADS_CREATE"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/build/windows/CMakeFiles/CMakeScratch/TryCompile-hiyllz'
+        Change Dir: 'C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/build/windows/CMakeFiles/CMakeScratch/TryCompile-1mrlhs'
         
-        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 nmake -f Makefile /nologo cmTC_c4b3a\\fast
-        	"C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\nmake.exe"  -f CMakeFiles\\cmTC_c4b3a.dir\\build.make /nologo -L                  CMakeFiles\\cmTC_c4b3a.dir\\build
-        Building C object CMakeFiles/cmTC_c4b3a.dir/CheckFunctionExists.c.obj
-        	"C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_cl_compile_depends --dep-file=CMakeFiles\\cmTC_c4b3a.dir\\CheckFunctionExists.c.obj.d --working-dir="C:\\Users\\Nahl Syareza Rahidra\\Documents\\My Kuliah\\Seminar\\unified_interoperability_blockchain_security\\build\\windows\\CMakeFiles\\CMakeScratch\\TryCompile-hiyllz" --filter-prefix="Note: including file: " -- C:\\PROGRA~1\\MIB055~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\cl.exe @C:\\Users\\NAHLSY~1\\AppData\\Local\\Temp\\nm1BCF.tmp
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 nmake -f Makefile /nologo cmTC_59799\\fast
+        	"C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\nmake.exe"  -f CMakeFiles\\cmTC_59799.dir\\build.make /nologo -L                  CMakeFiles\\cmTC_59799.dir\\build
+        Building C object CMakeFiles/cmTC_59799.dir/CheckFunctionExists.c.obj
+        	"C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_cl_compile_depends --dep-file=CMakeFiles\\cmTC_59799.dir\\CheckFunctionExists.c.obj.d --working-dir="C:\\Users\\Nahl Syareza Rahidra\\Documents\\My Kuliah\\Seminar\\unified_interoperability_blockchain_security\\build\\windows\\CMakeFiles\\CMakeScratch\\TryCompile-1mrlhs" --filter-prefix="Note: including file: " -- C:\\PROGRA~1\\MIB055~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\cl.exe @C:\\Users\\NAHLSY~1\\AppData\\Local\\Temp\\nmF85A.tmp
         CheckFunctionExists.c
-        Linking C executable cmTC_c4b3a.exe
-        	"C:\\Program Files\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1950 --intdir=CMakeFiles\\cmTC_c4b3a.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests -- C:\\PROGRA~1\\MIB055~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\link.exe /nologo @CMakeFiles\\cmTC_c4b3a.dir\\objects1.rsp @C:\\Users\\NAHLSY~1\\AppData\\Local\\Temp\\nm1C2D.tmp
+        Linking C executable cmTC_59799.exe
+        	"C:\\Program Files\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1950 --intdir=CMakeFiles\\cmTC_59799.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests -- C:\\PROGRA~1\\MIB055~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\link.exe /nologo @CMakeFiles\\cmTC_59799.dir\\objects1.rsp @C:\\Users\\NAHLSY~1\\AppData\\Local\\Temp\\nmF8A9.tmp
         Visual Studio Incremental Link with embedded manifests
-        Create CMakeFiles\\cmTC_c4b3a.dir/manifest.rc
-        Create empty: CMakeFiles\\cmTC_c4b3a.dir/embed.manifest
+        Create CMakeFiles\\cmTC_59799.dir/manifest.rc
+        Create empty: CMakeFiles\\cmTC_59799.dir/embed.manifest
         RC Pass 1:
-        C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe /fo CMakeFiles\\cmTC_c4b3a.dir/manifest.res CMakeFiles\\cmTC_c4b3a.dir/manifest.rc
+        C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe /fo CMakeFiles\\cmTC_59799.dir/manifest.res CMakeFiles\\cmTC_59799.dir/manifest.rc
         LINK Pass 1:
-        C:\\PROGRA~1\\MIB055~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\link.exe /nologo @CMakeFiles\\cmTC_c4b3a.dir\\objects1.rsp /out:cmTC_c4b3a.exe /implib:cmTC_c4b3a.lib /pdb:C:\\Users\\Nahl Syareza Rahidra\\Documents\\My Kuliah\\Seminar\\unified_interoperability_blockchain_security\\build\\windows\\CMakeFiles\\CMakeScratch\\TryCompile-hiyllz\\cmTC_c4b3a.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_c4b3a.dir/intermediate.manifest CMakeFiles\\cmTC_c4b3a.dir/manifest.res
-        LINK Pass 1: command "C:\\PROGRA~1\\MIB055~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\link.exe /nologo @CMakeFiles\\cmTC_c4b3a.dir\\objects1.rsp /out:cmTC_c4b3a.exe /implib:cmTC_c4b3a.lib /pdb:C:\\Users\\Nahl Syareza Rahidra\\Documents\\My Kuliah\\Seminar\\unified_interoperability_blockchain_security\\build\\windows\\CMakeFiles\\CMakeScratch\\TryCompile-hiyllz\\cmTC_c4b3a.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_c4b3a.dir/intermediate.manifest CMakeFiles\\cmTC_c4b3a.dir/manifest.res" failed (exit code 1104) with the following output:
+        C:\\PROGRA~1\\MIB055~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\link.exe /nologo @CMakeFiles\\cmTC_59799.dir\\objects1.rsp /out:cmTC_59799.exe /implib:cmTC_59799.lib /pdb:C:\\Users\\Nahl Syareza Rahidra\\Documents\\My Kuliah\\Seminar\\unified_interoperability_blockchain_security\\build\\windows\\CMakeFiles\\CMakeScratch\\TryCompile-1mrlhs\\cmTC_59799.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_59799.dir/intermediate.manifest CMakeFiles\\cmTC_59799.dir/manifest.res
+        LINK Pass 1: command "C:\\PROGRA~1\\MIB055~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\link.exe /nologo @CMakeFiles\\cmTC_59799.dir\\objects1.rsp /out:cmTC_59799.exe /implib:cmTC_59799.lib /pdb:C:\\Users\\Nahl Syareza Rahidra\\Documents\\My Kuliah\\Seminar\\unified_interoperability_blockchain_security\\build\\windows\\CMakeFiles\\CMakeScratch\\TryCompile-1mrlhs\\cmTC_59799.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_59799.dir/intermediate.manifest CMakeFiles\\cmTC_59799.dir/manifest.res" failed (exit code 1104) with the following output:
         LINK : fatal error LNK1104: cannot open file 'pthreads.lib'
-        NMAKE : fatal error U1077: '"C:\\Program Files\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1950 --intdir=CMakeFiles\\cmTC_c4b3a.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests -- C:\\PROGRA~1\\MIB055~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\link.exe /nologo @CMakeFiles\\cmTC_c4b3a.dir\\objects1.rsp @C:\\Users\\NAHLSY~1\\AppData\\Local\\Temp\\nm1C2D.tmp' : return code '0xffffffff'
+        NMAKE : fatal error U1077: '"C:\\Program Files\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1950 --intdir=CMakeFiles\\cmTC_59799.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests -- C:\\PROGRA~1\\MIB055~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\link.exe /nologo @CMakeFiles\\cmTC_59799.dir\\objects1.rsp @C:\\Users\\NAHLSY~1\\AppData\\Local\\Temp\\nmF8A9.tmp' : return code '0xffffffff'
         Stop.
-        NMAKE : fatal error U1077: '"C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\nmake.exe"  -f CMakeFiles\\cmTC_c4b3a.dir\\build.make /nologo -L                  CMakeFiles\\cmTC_c4b3a.dir\\build' : return code '0x2'
+        NMAKE : fatal error U1077: '"C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\nmake.exe"  -f CMakeFiles\\cmTC_59799.dir\\build.make /nologo -L                  CMakeFiles\\cmTC_59799.dir\\build' : return code '0x2'
         Stop.
         
       exitCode: 2
@@ -351,12 +355,14 @@ events:
       - "C:/Program Files/CMake/share/cmake-3.31/Modules/FindThreads.cmake:112 (CHECK_LIBRARY_EXISTS)"
       - "C:/Program Files/CMake/share/cmake-3.31/Modules/FindThreads.cmake:176 (_threads_check_lib)"
       - "C:/vcpkg/scripts/buildsystems/vcpkg.cmake:908 (_find_package)"
-      - "CMakeLists.txt:24 (find_package)"
+      - "C:/vcpkg/installed/x64-windows/share/spdlog/spdlogConfig.cmake:30 (find_package)"
+      - "C:/vcpkg/scripts/buildsystems/vcpkg.cmake:908 (_find_package)"
+      - "CMakeLists.txt:44 (find_package)"
     checks:
       - "Looking for pthread_create in pthread"
     directories:
-      source: "C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/build/windows/CMakeFiles/CMakeScratch/TryCompile-81a7ug"
-      binary: "C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/build/windows/CMakeFiles/CMakeScratch/TryCompile-81a7ug"
+      source: "C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/build/windows/CMakeFiles/CMakeScratch/TryCompile-fnjfvo"
+      binary: "C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/build/windows/CMakeFiles/CMakeScratch/TryCompile-fnjfvo"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -370,27 +376,27 @@ events:
       variable: "CMAKE_HAVE_PTHREAD_CREATE"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/build/windows/CMakeFiles/CMakeScratch/TryCompile-81a7ug'
+        Change Dir: 'C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/build/windows/CMakeFiles/CMakeScratch/TryCompile-fnjfvo'
         
-        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 nmake -f Makefile /nologo cmTC_fdd89\\fast
-        	"C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\nmake.exe"  -f CMakeFiles\\cmTC_fdd89.dir\\build.make /nologo -L                  CMakeFiles\\cmTC_fdd89.dir\\build
-        Building C object CMakeFiles/cmTC_fdd89.dir/CheckFunctionExists.c.obj
-        	"C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_cl_compile_depends --dep-file=CMakeFiles\\cmTC_fdd89.dir\\CheckFunctionExists.c.obj.d --working-dir="C:\\Users\\Nahl Syareza Rahidra\\Documents\\My Kuliah\\Seminar\\unified_interoperability_blockchain_security\\build\\windows\\CMakeFiles\\CMakeScratch\\TryCompile-81a7ug" --filter-prefix="Note: including file: " -- C:\\PROGRA~1\\MIB055~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\cl.exe @C:\\Users\\NAHLSY~1\\AppData\\Local\\Temp\\nm1D07.tmp
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 nmake -f Makefile /nologo cmTC_d98ac\\fast
+        	"C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\nmake.exe"  -f CMakeFiles\\cmTC_d98ac.dir\\build.make /nologo -L                  CMakeFiles\\cmTC_d98ac.dir\\build
+        Building C object CMakeFiles/cmTC_d98ac.dir/CheckFunctionExists.c.obj
+        	"C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_cl_compile_depends --dep-file=CMakeFiles\\cmTC_d98ac.dir\\CheckFunctionExists.c.obj.d --working-dir="C:\\Users\\Nahl Syareza Rahidra\\Documents\\My Kuliah\\Seminar\\unified_interoperability_blockchain_security\\build\\windows\\CMakeFiles\\CMakeScratch\\TryCompile-fnjfvo" --filter-prefix="Note: including file: " -- C:\\PROGRA~1\\MIB055~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\cl.exe @C:\\Users\\NAHLSY~1\\AppData\\Local\\Temp\\nmF9A2.tmp
         CheckFunctionExists.c
-        Linking C executable cmTC_fdd89.exe
-        	"C:\\Program Files\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1950 --intdir=CMakeFiles\\cmTC_fdd89.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests -- C:\\PROGRA~1\\MIB055~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\link.exe /nologo @CMakeFiles\\cmTC_fdd89.dir\\objects1.rsp @C:\\Users\\NAHLSY~1\\AppData\\Local\\Temp\\nm1D66.tmp
+        Linking C executable cmTC_d98ac.exe
+        	"C:\\Program Files\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1950 --intdir=CMakeFiles\\cmTC_d98ac.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests -- C:\\PROGRA~1\\MIB055~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\link.exe /nologo @CMakeFiles\\cmTC_d98ac.dir\\objects1.rsp @C:\\Users\\NAHLSY~1\\AppData\\Local\\Temp\\nmF9F2.tmp
         Visual Studio Incremental Link with embedded manifests
-        Create CMakeFiles\\cmTC_fdd89.dir/manifest.rc
-        Create empty: CMakeFiles\\cmTC_fdd89.dir/embed.manifest
+        Create CMakeFiles\\cmTC_d98ac.dir/manifest.rc
+        Create empty: CMakeFiles\\cmTC_d98ac.dir/embed.manifest
         RC Pass 1:
-        C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe /fo CMakeFiles\\cmTC_fdd89.dir/manifest.res CMakeFiles\\cmTC_fdd89.dir/manifest.rc
+        C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe /fo CMakeFiles\\cmTC_d98ac.dir/manifest.res CMakeFiles\\cmTC_d98ac.dir/manifest.rc
         LINK Pass 1:
-        C:\\PROGRA~1\\MIB055~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\link.exe /nologo @CMakeFiles\\cmTC_fdd89.dir\\objects1.rsp /out:cmTC_fdd89.exe /implib:cmTC_fdd89.lib /pdb:C:\\Users\\Nahl Syareza Rahidra\\Documents\\My Kuliah\\Seminar\\unified_interoperability_blockchain_security\\build\\windows\\CMakeFiles\\CMakeScratch\\TryCompile-81a7ug\\cmTC_fdd89.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_fdd89.dir/intermediate.manifest CMakeFiles\\cmTC_fdd89.dir/manifest.res
-        LINK Pass 1: command "C:\\PROGRA~1\\MIB055~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\link.exe /nologo @CMakeFiles\\cmTC_fdd89.dir\\objects1.rsp /out:cmTC_fdd89.exe /implib:cmTC_fdd89.lib /pdb:C:\\Users\\Nahl Syareza Rahidra\\Documents\\My Kuliah\\Seminar\\unified_interoperability_blockchain_security\\build\\windows\\CMakeFiles\\CMakeScratch\\TryCompile-81a7ug\\cmTC_fdd89.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_fdd89.dir/intermediate.manifest CMakeFiles\\cmTC_fdd89.dir/manifest.res" failed (exit code 1104) with the following output:
+        C:\\PROGRA~1\\MIB055~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\link.exe /nologo @CMakeFiles\\cmTC_d98ac.dir\\objects1.rsp /out:cmTC_d98ac.exe /implib:cmTC_d98ac.lib /pdb:C:\\Users\\Nahl Syareza Rahidra\\Documents\\My Kuliah\\Seminar\\unified_interoperability_blockchain_security\\build\\windows\\CMakeFiles\\CMakeScratch\\TryCompile-fnjfvo\\cmTC_d98ac.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_d98ac.dir/intermediate.manifest CMakeFiles\\cmTC_d98ac.dir/manifest.res
+        LINK Pass 1: command "C:\\PROGRA~1\\MIB055~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\link.exe /nologo @CMakeFiles\\cmTC_d98ac.dir\\objects1.rsp /out:cmTC_d98ac.exe /implib:cmTC_d98ac.lib /pdb:C:\\Users\\Nahl Syareza Rahidra\\Documents\\My Kuliah\\Seminar\\unified_interoperability_blockchain_security\\build\\windows\\CMakeFiles\\CMakeScratch\\TryCompile-fnjfvo\\cmTC_d98ac.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_d98ac.dir/intermediate.manifest CMakeFiles\\cmTC_d98ac.dir/manifest.res" failed (exit code 1104) with the following output:
         LINK : fatal error LNK1104: cannot open file 'pthread.lib'
-        NMAKE : fatal error U1077: '"C:\\Program Files\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1950 --intdir=CMakeFiles\\cmTC_fdd89.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests -- C:\\PROGRA~1\\MIB055~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\link.exe /nologo @CMakeFiles\\cmTC_fdd89.dir\\objects1.rsp @C:\\Users\\NAHLSY~1\\AppData\\Local\\Temp\\nm1D66.tmp' : return code '0xffffffff'
+        NMAKE : fatal error U1077: '"C:\\Program Files\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1950 --intdir=CMakeFiles\\cmTC_d98ac.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests -- C:\\PROGRA~1\\MIB055~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\link.exe /nologo @CMakeFiles\\cmTC_d98ac.dir\\objects1.rsp @C:\\Users\\NAHLSY~1\\AppData\\Local\\Temp\\nmF9F2.tmp' : return code '0xffffffff'
         Stop.
-        NMAKE : fatal error U1077: '"C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\nmake.exe"  -f CMakeFiles\\cmTC_fdd89.dir\\build.make /nologo -L                  CMakeFiles\\cmTC_fdd89.dir\\build' : return code '0x2'
+        NMAKE : fatal error U1077: '"C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\nmake.exe"  -f CMakeFiles\\cmTC_d98ac.dir\\build.make /nologo -L                  CMakeFiles\\cmTC_d98ac.dir\\build' : return code '0x2'
         Stop.
         
       exitCode: 2

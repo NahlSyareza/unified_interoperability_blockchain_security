@@ -222,14 +222,20 @@ legendary_boss.exe: CMakeFiles\legendary_boss.dir\http_handler.cpp.obj
 legendary_boss.exe: CMakeFiles\legendary_boss.dir\mqtt_handler.cpp.obj
 legendary_boss.exe: CMakeFiles\legendary_boss.dir\spitarm.cpp.obj
 legendary_boss.exe: CMakeFiles\legendary_boss.dir\build.make
-legendary_boss.exe: C:\vcpkg\installed\x64-windows\lib\simpleble.lib
 legendary_boss.exe: C:\vcpkg\installed\x64-windows\lib\libssl.lib
-legendary_boss.exe: C:\vcpkg\installed\x64-windows\lib\libcrypto.lib
+legendary_boss.exe: C:\vcpkg\installed\x64-windows\lib\spdlog.lib
+legendary_boss.exe: C:\vcpkg\installed\x64-windows\lib\simpleble.lib
 legendary_boss.exe: C:\vcpkg\installed\x64-windows\lib\mosquitto.lib
+legendary_boss.exe: C:\vcpkg\installed\x64-windows\lib\libcrypto.lib
+legendary_boss.exe: C:\vcpkg\installed\x64-windows\lib\fmt.lib
+legendary_boss.exe: C:\vcpkg\installed\x64-windows\lib\brotlienc.lib
+legendary_boss.exe: C:\vcpkg\installed\x64-windows\lib\brotlidec.lib
+legendary_boss.exe: C:\vcpkg\installed\x64-windows\lib\brotlicommon.lib
+legendary_boss.exe: C:\vcpkg\installed\x64-windows\lib\pthreadVC3.lib
 legendary_boss.exe: CMakeFiles\legendary_boss.dir\objects1.rsp
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\build\windows\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable legendary_boss.exe"
 	"C:\Program Files\CMake\bin\cmake.exe" -E vs_link_exe --msvc-ver=1950 --intdir=CMakeFiles\legendary_boss.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100261~1.0\x64\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100261~1.0\x64\mt.exe --manifests -- C:\PROGRA~1\MIB055~1\18\COMMUN~1\VC\Tools\MSVC\1450~1.357\bin\Hostx64\x64\link.exe /nologo @CMakeFiles\legendary_boss.dir\objects1.rsp @<<
- /out:legendary_boss.exe /implib:legendary_boss.lib /pdb:"C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\build\windows\legendary_boss.pdb" /version:0.0 /machine:x64 /INCREMENTAL:NO /subsystem:console  C:\vcpkg\installed\x64-windows\lib\simpleble.lib C:\vcpkg\installed\x64-windows\lib\libssl.lib C:\vcpkg\installed\x64-windows\lib\libcrypto.lib C:\vcpkg\installed\x64-windows\lib\mosquitto.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 
+ /out:legendary_boss.exe /implib:legendary_boss.lib /pdb:"C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\build\windows\legendary_boss.pdb" /version:0.0 /machine:x64 /INCREMENTAL:NO /subsystem:console -pthread  C:\vcpkg\installed\x64-windows\lib\libssl.lib C:\vcpkg\installed\x64-windows\lib\spdlog.lib C:\vcpkg\installed\x64-windows\lib\simpleble.lib C:\vcpkg\installed\x64-windows\lib\mosquitto.lib C:\vcpkg\installed\x64-windows\lib\libcrypto.lib C:\vcpkg\installed\x64-windows\lib\fmt.lib ws2_32.lib crypt32.lib C:\vcpkg\installed\x64-windows\lib\brotlienc.lib C:\vcpkg\installed\x64-windows\lib\brotlidec.lib C:\vcpkg\installed\x64-windows\lib\brotlicommon.lib C:\vcpkg\installed\x64-windows\lib\pthreadVC3.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 
 <<
 	echo >nul && "C:\Program Files\PowerShell\7\pwsh.exe" -noprofile -executionpolicy Bypass -file C:/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary "C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/build/windows/legendary_boss.exe" -installedDir C:/vcpkg/installed/x64-windows/bin -OutVariable out
 

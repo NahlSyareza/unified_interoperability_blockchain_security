@@ -122,10 +122,10 @@ C:/Program Files (x86)/Windows Kits/10/include/10.0.26100.0/ucrt/ctype.h
 C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/clocale
 C:/Program Files (x86)/Windows Kits/10/include/10.0.26100.0/ucrt/locale.h
 C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/ostream
-C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/include/spdlog/spdlog.h
-C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/include/spdlog/common.h
-C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/include/spdlog/details/null_mutex.h
-C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/include/spdlog/tweakme.h
+C:/vcpkg/installed/x64-windows/include/spdlog/spdlog.h
+C:/vcpkg/installed/x64-windows/include/spdlog/common.h
+C:/vcpkg/installed/x64-windows/include/spdlog/details/null_mutex.h
+C:/vcpkg/installed/x64-windows/include/spdlog/tweakme.h
 C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/chrono
 C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/__msvc_chrono.hpp
 C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/ratio
@@ -161,21 +161,12 @@ C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/
 C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xhash
 C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/list
 C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xnode_handle.h
-C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/include/spdlog/fmt/fmt.h
-C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/include/spdlog/fmt/bundled/format.h
-C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/include/spdlog/fmt/bundled/base.h
-C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/include/spdlog/fmt/bundled/format.h
+C:/vcpkg/installed/x64-windows/include/spdlog/fmt/fmt.h
+C:/vcpkg/installed/x64-windows/include/fmt/format.h
+C:/vcpkg/installed/x64-windows/include/fmt/base.h
 C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/string_view
-C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/include/spdlog/fmt/bundled/format-inl.h
-C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/algorithm
-C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/__msvc_heap_algorithms.hpp
-C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/__msvc_minmax.hpp
-C:/Program Files (x86)/Windows Kits/10/include/10.0.26100.0/ucrt/io.h
-C:/Program Files (x86)/Windows Kits/10/include/10.0.26100.0/ucrt/corecrt_io.h
-C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/include/spdlog/fmt/bundled/format.h
-C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/include/spdlog/common-inl.h
-C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/include/spdlog/details/registry.h
-C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/include/spdlog/details/periodic_worker.h
+C:/vcpkg/installed/x64-windows/include/spdlog/details/registry.h
+C:/vcpkg/installed/x64-windows/include/spdlog/details/periodic_worker.h
 C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/condition_variable
 C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/mutex
 C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/thread
@@ -184,144 +175,12 @@ C:/Program Files (x86)/Windows Kits/10/include/10.0.26100.0/ucrt/corecrt_startup
 C:/Program Files (x86)/Windows Kits/10/include/10.0.26100.0/ucrt/math.h
 C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/vcruntime_startup.h
 C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/stop_token
-C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/include/spdlog/details/periodic_worker-inl.h
-C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/include/spdlog/details/registry-inl.h
-C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/include/spdlog/logger.h
-C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/include/spdlog/details/backtracer.h
-C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/include/spdlog/details/circular_q.h
+C:/vcpkg/installed/x64-windows/include/spdlog/details/synchronous_factory.h
+C:/vcpkg/installed/x64-windows/include/spdlog/logger.h
+C:/vcpkg/installed/x64-windows/include/spdlog/details/backtracer.h
+C:/vcpkg/installed/x64-windows/include/spdlog/details/circular_q.h
 C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/cassert
 C:/Program Files (x86)/Windows Kits/10/include/10.0.26100.0/ucrt/assert.h
-C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/include/spdlog/details/log_msg_buffer.h
-C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/include/spdlog/details/log_msg.h
-C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/include/spdlog/details/log_msg-inl.h
-C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/include/spdlog/details/os.h
-C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/include/spdlog/details/os-inl.h
-C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/array
-C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/include/spdlog/details/windows_include.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//um/windows.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//shared/winapifamily.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//shared/winpackagefamily.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//shared/sdkddkver.h
-C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/excpt.h
-C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/stdarg.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//shared/windef.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//shared/minwindef.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//shared/specstrings.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//shared/specstrings_strict.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//shared/specstrings_undef.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//shared/driverspecs.h
-C:/Program Files (x86)/Windows Kits/10/include/10.0.26100.0/shared/sdv_driverspecs.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//um/winnt.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//shared/kernelspecs.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//shared/basetsd.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//shared/guiddef.h
-C:/Program Files (x86)/Windows Kits/10/include/10.0.26100.0/shared/pshpack4.h
-C:/Program Files (x86)/Windows Kits/10/include/10.0.26100.0/shared/poppack.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//shared/pshpack4.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//shared/poppack.h
-C:/Program Files (x86)/Windows Kits/10/include/10.0.26100.0/shared/pshpack4.h
-C:/Program Files (x86)/Windows Kits/10/include/10.0.26100.0/shared/pshpack2.h
-C:/Program Files (x86)/Windows Kits/10/include/10.0.26100.0/shared/poppack.h
-C:/Program Files (x86)/Windows Kits/10/include/10.0.26100.0/shared/pshpack2.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//shared/pshpack2.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//shared/poppack.h
-C:/Program Files (x86)/Windows Kits/10/include/10.0.26100.0/shared/poppack.h
-C:/Program Files (x86)/Windows Kits/10/include/10.0.26100.0/shared/pshpack8.h
-C:/Program Files (x86)/Windows Kits/10/include/10.0.26100.0/shared/poppack.h
-C:/Program Files (x86)/Windows Kits/10/include/10.0.26100.0/shared/pshpack1.h
-C:/Program Files (x86)/Windows Kits/10/include/10.0.26100.0/shared/poppack.h
-C:/Program Files (x86)/Windows Kits/10/include/10.0.26100.0/shared/pshpack1.h
-C:/Program Files (x86)/Windows Kits/10/include/10.0.26100.0/shared/poppack.h
-C:/Program Files (x86)/Windows Kits/10/include/10.0.26100.0/shared/poppack.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//shared/apiset.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//shared/ktmtypes.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//um/winbase.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//shared/apisetcconv.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//um/minwinbase.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//um/apiquery2.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//um/processenv.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//um/fileapifromapp.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//um/fileapi.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//um/debugapi.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//um/utilapiset.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//um/handleapi.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//um/errhandlingapi.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//um/fibersapi.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//um/namedpipeapi.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//um/profileapi.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//um/heapapi.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//um/ioapiset.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//um/synchapi.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//um/interlockedapi.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//um/processthreadsapi.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//um/sysinfoapi.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//um/memoryapi.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//um/enclaveapi.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//um/threadpoollegacyapiset.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//um/threadpoolapiset.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//um/jobapi.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//um/jobapi2.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//um/wow64apiset.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//um/libloaderapi.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//um/securitybaseapi.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//um/namespaceapi.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//um/systemtopologyapi.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//um/processtopologyapi.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//um/securityappcontainer.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//um/realtimeapiset.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//shared/winerror.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//um/timezoneapi.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//um/wingdi.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//shared/pshpack1.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//shared/poppack.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//shared/pshpack2.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//shared/poppack.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//shared/pshpack2.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//shared/poppack.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//shared/pshpack4.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//shared/poppack.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//shared/pshpack4.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//shared/poppack.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//um/winuser.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//shared/pshpack2.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//shared/poppack.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//shared/tvout.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//um/winnls.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//um/datetimeapi.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//um/stringapiset.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//um/winnls.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//um/wincon.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//um/wincontypes.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//um/consoleapi.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//um/consoleapi2.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//um/consoleapi3.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//um/winver.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//um/verrsrc.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//um/winreg.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//um/reason.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//um/winnetwk.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//shared/wnnc.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//shared/stralign.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//um/winsvc.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//um/mcx.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//um/imm.h
-C:/Program Files (x86)/Windows Kits/10//include/10.0.26100.0//um/ime_cmodes.h
-C:/Program Files (x86)/Windows Kits/10/include/10.0.26100.0/ucrt/direct.h
-C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/include/spdlog/details/log_msg_buffer-inl.h
-C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/include/spdlog/details/backtracer-inl.h
-C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/include/spdlog/logger-inl.h
-C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/include/spdlog/pattern_formatter.h
-C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/include/spdlog/formatter.h
-C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/include/spdlog/pattern_formatter-inl.h
-C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/include/spdlog/details/fmt_helper.h
-C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/include/spdlog/mdc.h
-C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/map
-C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/xtree
-C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/include/spdlog/sinks/sink.h
-C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/include/spdlog/sinks/sink-inl.h
-C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/include/spdlog/sinks/wincolor_sink.h
-C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/include/spdlog/details/console_globals.h
-C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/include/spdlog/sinks/wincolor_sink-inl.h
-C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/include/spdlog/details/synchronous_factory.h
-C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/include/spdlog/version.h
-C:/Users/Nahl Syareza Rahidra/Documents/My Kuliah/Seminar/unified_interoperability_blockchain_security/include/spdlog/spdlog-inl.h
+C:/vcpkg/installed/x64-windows/include/spdlog/details/log_msg_buffer.h
+C:/vcpkg/installed/x64-windows/include/spdlog/details/log_msg.h
+C:/vcpkg/installed/x64-windows/include/spdlog/version.h

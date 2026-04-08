@@ -19,14 +19,13 @@ void mqtt_processor(DataStructure *dstructure, string topic, string payload, int
   int rc;
 
   mosquitto_property *proplist = NULL;
-  #include "http_handler.hpp"
   rc = mosquitto_property_add_string_pair(&proplist, MQTT_PROP_USER_PROPERTY, "origin", "external");
   if (rc != MOSQ_ERR_SUCCESS) {
     spdlog::error("Something's wrong I can feel it");
   }
 
   string final_payload = payload;
-  rc = mosquitto_publish_v5(dstructure->mosq, nullptr, topic.c_str(), payloadlen, payload.c_str(), 2, false, proplist);
+  rc = mosquitto_publish_v5(dstructure->mosq, nullptr, topic.c_str(), payloadlen, payload.c_str(), 2, false, NULL);
   if (rc != MOSQ_ERR_SUCCESS) {
     spdlog::error("Error publishing: {}", mosquitto_strerror(rc));
   }
@@ -64,7 +63,7 @@ void get_instr(string op, string payload, OperationRegister *reg) {
 }
 
 void process_instr(string instr, string act, string payload, OperationRegister *reg) {
-  spdlog::debug("Running instruction: {}", instr);
+  // spdlog::debug("Running instruction: {}", instr);
 
   if (instr == "GET") {
     int detects = std::stoi(act);
@@ -133,7 +132,7 @@ void process_instr(string instr, string act, string payload, OperationRegister *
     // spdlog::debug("(Process Instr) Comparing {} with {}", act, reg->input_data);
     string compared_value = strget(act, 1);
 
-    spdlog::debug("This is the actual value to be compared: {}", compared_value);
+    // spdlog::debug("This is the actual value to be compared: {}", compared_value);
     // reg->logic_comparison = act == reg->input_data;
 
     reg->logic_comparison = compare(act, std::stoi(reg->input_data), std::stoi(compared_value));
@@ -196,6 +195,10 @@ void comms_manager(DataStructure *dstructure, json *src, json *dst, string paylo
 }
 
 int de_ruyter(DataStructure *dstructure, string src, string payload) {
+  if (!dstructure->connection_registers.contains(src)) {
+    spdlog::error("This source isn't listed: {}", src);
+    return 1;
+  }
   json connection = dstructure->connection_registers[src];
 
   string dst = connection["destination"];

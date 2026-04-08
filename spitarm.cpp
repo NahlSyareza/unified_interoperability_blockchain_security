@@ -2,8 +2,7 @@
 #include "spdlog/spdlog.h"
 
 void print_op_reg(OperationRegister *op_reg) {
-  spdlog::debug("\ntype: \"{}\"\ninput_data: \"{}\"\noutput_data: \"{}\"\nconvert: \"{}\"\nlogic_comparison: \"{}\"\n", op_reg->type, op_reg->input_data, op_reg->output_data, op_reg->convert,
-                op_reg->logic_comparison);
+  spdlog::debug("\ntype: \"{}\"\ninput_data: \"{}\"\noutput_data: \"{}\"\nconvert: \"{}\"\nlogic_comparison: \"{}\"\n", op_reg->type, op_reg->input_data, op_reg->output_data, op_reg->convert, op_reg->logic_comparison);
 }
 
 // If the segment is greater than the space count inside that string, then return the whole string dawg.
@@ -32,7 +31,7 @@ string strget(string base, int segment_count) {
     }
   }
 
-  spdlog::debug("start_index: {} end_index: {}", start_index, end_index);
+  // spdlog::debug("start_index: {} end_index: {}", start_index, end_index);
   // std::cout << "start_index: " << start_index << " end_index: " << end_index << std::endl;
 
   string rtn = "";
