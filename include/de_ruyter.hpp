@@ -9,5 +9,5 @@ void comms_manager(DataStructure *dstructure, json *src, json *dst, string paylo
 void process_instr(string instr, string act, string payload, OperationRegister *reg);
 void get_instr(string op, string data, OperationRegister *reg);
 void http_processor(DataStructure *dstructure, string path, string payload);
-void mqtt_processor(DataStructure *dstructure, string topic, string payload, int payloadlen);
+void mqtt_processor(DataStructure *dstructure, string topic, string payload);
 void ble_processor(DataStructure *dstructure, string identifier, string payload);

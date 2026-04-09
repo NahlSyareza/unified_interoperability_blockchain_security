@@ -6,5 +6,5 @@ CXX_DEFINES = -DBROTLI_SHARED_COMPILATION -DCPPHTTPLIB_BROTLI_SUPPORT -DCPPHTTPL
 
 CXX_INCLUDES = -IC:\Users\NAHLSY~1\DOCUME~1\MYKULI~1\Seminar\UNIFIE~1\include -external:IC:\vcpkg\installed\x64-windows\include -external:W0
 
-CXX_FLAGS = /DWIN32 /D_WINDOWS /GR /EHsc /O2 /Ob2 /DNDEBUG -std:c++20 -MD /utf-8 /wd4251 /wd4275
+CXX_FLAGS = /DWIN32 /D_WINDOWS /GR /EHsc /O2 /Ob2 /DNDEBUG -std:c++20 -MD /W4 /WX /utf-8 /wd4251 /wd4275
 

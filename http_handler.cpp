@@ -13,7 +13,7 @@ using Response = httplib::Response;
 int http_handler(DataStructure *dstructure) {
   Server svr;
 
-  svr.Get("/dummy", [](const Request &req, Response &res) { res.set_content("Hello World!", "text/plain"); });
+  svr.Get("/dummy", [](const Request &req [[maybe_unused]], Response &res) { res.set_content("Hello World!", "text/plain"); });
 
   svr.Get(R"(/(.*))", [dstructure](const Request &req, Response &res) {
     string path = req.matches[0];
@@ -44,7 +44,7 @@ int http_handler(DataStructure *dstructure) {
       if (!ret.is_object()) {
         is_json = false;
       }
-    } catch (json::parse_error &e) {
+    } catch (json::parse_error &e [[maybe_unused]]) {
       is_json = false;
     }
 
@@ -87,7 +87,7 @@ int http_handler(DataStructure *dstructure) {
       is_json = true;
       // spdlog::info("Retrieved body IS JSON");
       spdlog::info("HTTP: POST body {}", json_body.dump());
-    } catch (json::parse_error &e) {
+    } catch (json::parse_error &e [[maybe_unused]]) {
       // spdlog::warn("Retrieved body is RAW");
       spdlog::info("HTTP: POST body {}", body);
       is_json = false;

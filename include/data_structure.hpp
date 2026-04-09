@@ -14,7 +14,7 @@ using ifstream = std::ifstream;
 
 class DataStructure {
 public:
-  struct mosquitto *mosq = NULL;
+  struct mosquitto *mosq = nullptr;
 
   std::map<string, string> http_map;
 
@@ -26,6 +26,7 @@ public:
   json instance_registers;
   json format_profiles;
   json ble_addresses;
+  json mqtt_topics;
 
   // T is of std::pair<string, json*>
   template <typename... T> void populate(json *base, string identifier, json *save, T... t) {
@@ -34,7 +35,7 @@ public:
     (*save)["name"] = identifier;
 
     (
-        [&](auto &item) {
+        [&](auto &item [[maybe_unused]]) {
           string first = t.first;
           json second = *t.second;
 
@@ -58,11 +59,13 @@ public:
     ifstream _instance_registers("./config/instance_registers.json");
     ifstream _format_profiles("./config/format_profiles.json");
     ifstream _ble_addresses("./config/ble_addresses.json");
+    ifstream _mqtt_topics("./config/mqtt_topics.json");
 
     connection_registers = json::parse(_connection_registers);
     device_profiles = json::parse(_device_profiles);
     instance_registers = json::parse(_instance_registers);
     format_profiles = json::parse(_format_profiles);
     ble_addresses = json::parse(_ble_addresses);
+    mqtt_topics = json::parse(_mqtt_topics);
   }
 };

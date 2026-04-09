@@ -15,7 +15,7 @@ void ble_processor(DataStructure *dstructure, std::string identifier, string pay
   }
 }
 
-void mqtt_processor(DataStructure *dstructure, string topic, string payload, int payloadlen) {
+void mqtt_processor(DataStructure *dstructure, string topic, string payload) {
   int rc;
 
   mosquitto_property *proplist = NULL;
@@ -25,7 +25,7 @@ void mqtt_processor(DataStructure *dstructure, string topic, string payload, int
   }
 
   string final_payload = payload;
-  rc = mosquitto_publish_v5(dstructure->mosq, nullptr, topic.c_str(), payloadlen, payload.c_str(), 2, false, NULL);
+  rc = mosquitto_publish_v5(dstructure->mosq, nullptr, topic.c_str(), (int)payload.length(), payload.c_str(), 2, false, NULL);
   if (rc != MOSQ_ERR_SUCCESS) {
     spdlog::error("Error publishing: {}", mosquitto_strerror(rc));
   }
@@ -77,7 +77,7 @@ void process_instr(string instr, string act, string payload, OperationRegister *
         // This shouldn't happen to be honest
         throw json::parse_error::create(6767, 0, "Technically valid, but not an object dawg. Thus pizdec", nullptr);
       }
-    } catch (const json::parse_error &e) {
+    } catch (const json::parse_error &e [[maybe_unused]]) {
       spdlog::error("(De Ruyter) This is NOT supposed to happen");
     }
 
@@ -92,7 +92,7 @@ void process_instr(string instr, string act, string payload, OperationRegister *
       if (!json_obj.is_object()) {
         throw json::parse_error::create(6767, 0, "Technically valid, but not an object dawg. Thus pizdec", nullptr);
       }
-    } catch (const json::parse_error &e) {
+    } catch (const json::parse_error &e [[maybe_unused]]) {
       // std::cout << e.what() << std::endl;
       json_obj = json::parse("{}");
     }
@@ -105,7 +105,7 @@ void process_instr(string instr, string act, string payload, OperationRegister *
       } else {
         json_obj[act] = reg->input_data;
       }
-    } catch (const std::invalid_argument &e) {
+    } catch (const std::invalid_argument &e [[maybe_unused]]) {
       // std::cout << e.what() << std::endl;
       json_obj[act] = reg->input_data;
     }
@@ -121,7 +121,7 @@ void process_instr(string instr, string act, string payload, OperationRegister *
         // This shouldn't happen to be honest
         throw json::parse_error::create(6767, 0, "Technically valid, but not an object dawg. Thus pizdec", nullptr);
       }
-    } catch (const json::parse_error &e) {
+    } catch (const json::parse_error &e [[maybe_unused]]) {
       spdlog::error("(De Ruyter) This is NOT supposed to happen");
     }
 
@@ -174,7 +174,7 @@ void comms_manager(DataStructure *dstructure, json *src, json *dst, string paylo
       get_instr(line, payload, &op_reg);
     }
 
-    spdlog::warn("(OperationRegister) {}", op_reg.output_data);
+    // spdlog::warn("(OperationRegister) {}", op_reg.output_data);
   } else {
     spdlog::error("(De Ruyter) Rule file location not found? Perhaps a typo? Or maybe deliberate.");
   }
@@ -188,7 +188,7 @@ void comms_manager(DataStructure *dstructure, json *src, json *dst, string paylo
   if (dest_conn == "wifi/http") {
     http_processor(dstructure, dst_name, final_payload);
   } else if (dest_conn == "wifi/mqtt") {
-    mqtt_processor(dstructure, dst_name, final_payload, final_payload.length());
+    mqtt_processor(dstructure, dst_name, final_payload);
   } else if (dest_conn == "ble") {
     ble_processor(dstructure, dst_name, final_payload);
   }
