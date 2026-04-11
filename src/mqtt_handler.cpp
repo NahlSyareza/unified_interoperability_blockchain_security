@@ -52,12 +52,11 @@ void on_message(struct mosquitto *mosq [[maybe_unused]], void *obj, const struct
   std::string payload((char *)msg->payload);
 
   if (topic == "handshake") {
-    create_task_detached(ds, "MQTT new task", payload, 750);
+    // create_task_detached(ds, "MQTT new task", payload, 750);
   } else {
-    de_ruyter(ds, msg->topic, payload);
+    // ds->mqtt_map[topic] = payload;
+    de_ruyter(ds, topic, payload);
   }
-
-  spdlog::debug("This is a non-blocking checkpoint");
 }
 
 int mqtt_handler(DataStructure *ds) {

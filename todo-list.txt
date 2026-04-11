@@ -25,3 +25,9 @@ WELL GUESS WHAT BRO. THESE ACTUALLY DON'T MATTER LMAOOOO
 1. Message is now protected by Private and Public Keys, this will at least prevent MitM attacks, and to a certain extent spoofing
 2. I need to work on how to "authenticate" a sensor/actuator device.
 3. I will learn about asymmetric encryption
+
+11/04/2025
+1. I start to implement schedulers
+2. I want to implement error handlings for VARIOUS processes
+3. I want to review the NeedAction compiler
+4. Rn I am working on implementing a dynamic bluetooth

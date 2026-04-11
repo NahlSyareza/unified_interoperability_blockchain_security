@@ -6,7 +6,7 @@
 #include "utils.hpp"
 #include <iostream>
 
-int ble_handler(DataStructure *dstructure) {
+int ble_handler(DataStructure *ds) {
   // std::optional<SimpleBLE::Adapter> adapter_optional = Utils::getAdapter();
   auto adapters = SimpleBLE::Adapter::get_adapters();
 
@@ -22,63 +22,54 @@ int ble_handler(DataStructure *dstructure) {
   // auto adapter = adapter_optional.value();
   auto adapter = adapters.at(0);
 
+  std::vector<SimpleBLE::Peripheral> scanned_peripherals;
+  std::vector<SimpleBLE::Peripheral> connected_peripherals;
+
   adapter.set_callback_on_scan_found([&](SimpleBLE::Peripheral p) {
-    if ((dstructure->ble_addresses.find(p.address()) != dstructure->ble_addresses.end() || dstructure->ble_addresses.find(p.identifier()) != dstructure->ble_addresses.end()) && p.is_connectable()) {
+    if (ds->ble_addresses.count(p.identifier()) > 0 && p.is_connectable()) {
       spdlog::info("Found device {} ({})", p.identifier(), p.address());
-      dstructure->peripherals.push_back(p);
+      ds->peripherals.push_back(p);
+      scanned_peripherals.push_back(p);
     }
   });
 
-  adapter.scan_for(3000);
+  adapter.set_callback_on_scan_start([]() { std::cout << "Scan started." << std::endl; });
+  adapter.set_callback_on_scan_stop([]() { std::cout << "Scan stopped." << std::endl; });
 
-  std::cout << "The following devices were found:" << std::endl;
-  for (size_t i = 0; i < dstructure->peripherals.size(); i++) {
-    std::cout << "[" << i << "] " << dstructure->peripherals[i].identifier() << " [" << dstructure->peripherals[i].address() << "]" << std::endl;
-  }
+  // adapter.scan_for(3000);
+  adapter.scan_start();
 
-  for (auto &p : dstructure->peripherals) {
-    p.connect();
-  }
+  while (adapter.scan_is_active()) {
+    if (!scanned_peripherals.empty()) {
+      for (auto &scanned_peripheral : scanned_peripherals) {
+        scanned_peripheral.connect();
+        spdlog::info("(BLE) Connected to {}", scanned_peripheral.identifier());
+        connected_peripherals.push_back(scanned_peripheral);
+        scanned_peripherals.pop_back();
+      }
+    }
 
-  for (auto &p : dstructure->peripherals) {
-    nlohmann::json listed_peripherals = dstructure->ble_addresses[p.identifier()];
-    std::string service_string = listed_peripherals["service"];
-    std::string characteristic_string = listed_peripherals["characteristic"];
-    spdlog::info("Make pair for {} ({} {})", p.identifier(), service_string, characteristic_string);
-    SimpleBLE::BluetoothUUID service(service_string);
-    SimpleBLE::BluetoothUUID characteristic(characteristic_string);
-    dstructure->uuid_pair[p.identifier()] = std::make_pair(service, characteristic);
-  }
+    if (!connected_peripherals.empty()) {
+      for (auto &connected_peripheral : connected_peripherals) {
+        spdlog::debug("(BLE) Registering pairs");
+        nlohmann::json ble_address = ds->ble_addresses[connected_peripheral.identifier()];
+        std::string identifier = connected_peripheral.identifier();
+        std::string service = ble_address["service"];
+        std::string characteristic = ble_address["characteristic"];
+        SimpleBLE::BluetoothUUID service_uuid(service);
+        SimpleBLE::BluetoothAddress characteristic_uuid(characteristic);
+        ds->uuid_pair[identifier] = std::make_pair(service_uuid, characteristic_uuid);
 
-  for (auto &p : dstructure->peripherals) {
-    spdlog::info("Creating BLE notifications");
-    const std::string identifier = p.identifier();
-    p.notify(dstructure->uuid_pair[identifier].first, dstructure->uuid_pair[identifier].second, [identifier, dstructure](SimpleBLE::ByteArray payload) {
-      std::string string_payload(payload.begin(), payload.end());
-      spdlog::info("BLE Notify: {} ({})", string_payload, identifier);
-      de_ruyter(dstructure, identifier, string_payload);
-    });
+        spdlog::debug("(BLE) Defining notifications");
+        connected_peripheral.notify(service_uuid, characteristic_uuid, [identifier, ds](SimpleBLE::ByteArray rx) {
+          std::string payload(rx.begin(), rx.end());
+          spdlog::info("(BLE) From {}: {}", payload, identifier);
+          de_ruyter(ds, identifier, payload);
+        });
+        connected_peripherals.pop_back();
+      }
+    }
   }
 
   return EXIT_SUCCESS;
-}
-
-void dummy_write(DataStructure *dstructure) {
-
-  SimpleBLE::ByteArray by1 = "Give up free will forever";
-  SimpleBLE::ByteArray by2 = "Their voices won't be heard at all";
-
-  for (auto &p : dstructure->peripherals) {
-    std::string iden = p.identifier();
-    if (p.identifier() == "ROG Phone 9 FE")
-      p.write_request(dstructure->uuid_pair[iden].first, dstructure->uuid_pair[iden].second, by1);
-    else if (p.identifier() == "BLE_DEV_0")
-      p.write_request(dstructure->uuid_pair[iden].first, dstructure->uuid_pair[iden].second, by2);
-  }
-
-  spdlog::info("Hosoi komichi o aruki");
-
-  for (auto &p : dstructure->peripherals) {
-    p.disconnect();
-  }
 }

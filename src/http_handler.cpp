@@ -4,18 +4,18 @@
 #include "nlohmann/json.hpp"
 #include <iostream>
 
-int http_handler(DataStructure *dstructure) {
+int http_handler(DataStructure *ds) {
   httplib::Server svr;
 
   svr.Get("/dummy", [](const httplib::Request &req [[maybe_unused]], httplib::Response &res) { res.set_content("Hello World!", "text/plain"); });
 
-  svr.Get(R"(/(.*))", [dstructure](const httplib::Request &req, httplib::Response &res) {
+  svr.Get(R"(/(.*))", [ds](const httplib::Request &req, httplib::Response &res) {
     std::string path = req.matches[0];
     path.erase(0, 1);
 
     nlohmann::json ret;
 
-    if (dstructure->http_map.find(path) == dstructure->http_map.end()) {
+    if (ds->http_map.find(path) == ds->http_map.end()) {
       ret["state"] = false;
       ret["msg"] = "Key doesn't exist in record.";
       ret["payload"] = "";
@@ -27,9 +27,8 @@ int http_handler(DataStructure *dstructure) {
       return;
     }
 
-    // json json_payload;
     bool is_json = false;
-    std::string payload = dstructure->http_map.at(path);
+    std::string payload = ds->http_map.at(path);
 
     try {
       ret = nlohmann::json::parse(payload);
@@ -48,12 +47,11 @@ int http_handler(DataStructure *dstructure) {
       ret["msg"] = "Successfully retrieved value";
       res.set_content(ret.dump(), "application/json");
     } else {
-      // spdlog::warn("Payload is {}", payload);
       res.set_content(payload, "text/plain");
     }
   });
 
-  svr.Post(R"(/(.*))", [dstructure](const httplib::Request &req, httplib::Response &res) {
+  svr.Post(R"(/(.*))", [ds](const httplib::Request &req, httplib::Response &res) {
     nlohmann::json ret;
 
     nlohmann::json json_body;
@@ -66,15 +64,13 @@ int http_handler(DataStructure *dstructure) {
     try {
       json_body = nlohmann::json::parse(body);
       is_json = true;
-      // spdlog::info("Retrieved body IS JSON");
       spdlog::info("HTTP: POST body {}", json_body.dump());
     } catch (nlohmann::json::parse_error &e [[maybe_unused]]) {
-      // spdlog::warn("Retrieved body is RAW");
       spdlog::info("HTTP: POST body {}", body);
       is_json = false;
     }
 
-    de_ruyter(dstructure, path, body);
+    de_ruyter(ds, path, body);
 
     ret["state"] = true;
     ret["msg"] = "Successfully posted new data";
