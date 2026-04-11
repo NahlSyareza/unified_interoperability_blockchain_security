@@ -4,8 +4,7 @@
 #include "mosquitto.h"
 #include "mqtt_protocol.h"
 
-void on_connect_v5(struct mosquitto *mosq, void *obj, int reason_code, int flags, const mosquitto_property *props);
-void on_subscribe_v5(struct mosquitto *mosq, void *obj, int mid, int qos_count, const int *granted_qos, const mosquitto_property *props);
-void on_publish_v5(struct mosquitto *mosq, void *obj, int mid, int reason_code, const mosquitto_property *props);
-void on_message_v5(struct mosquitto *mosq, void *obj, const struct mosquitto_message *msg, const mosquitto_property *props);
+void on_connect(struct mosquitto *mosq, void *obj, int reason_code);
+void on_subscribe(struct mosquitto *mosq, void *obj, int mid, int qos_count, const int *granted_qos);
+void on_message(struct mosquitto *mosq [[maybe_unused]], void *obj, const struct mosquitto_message *msg);
 int mqtt_handler(DataStructure *dstructure);

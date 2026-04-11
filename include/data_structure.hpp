@@ -8,45 +8,44 @@
 #include <iostream>
 #include <map>
 
-using string = std::string;
-using json = nlohmann::json;
-using ifstream = std::ifstream;
-
 class DataStructure {
 public:
   struct mosquitto *mosq = nullptr;
 
-  std::map<string, string> http_map;
+  std::map<std::string, std::string> http_map;
+  std::map<std::string, std::string> mqtt_map;
+
+  std::map<std::string, std::thread *> active_registers;
 
   std::vector<SimpleBLE::Peripheral> peripherals;
   std::map<std::string, std::pair<SimpleBLE::BluetoothUUID, SimpleBLE::BluetoothUUID>> uuid_pair;
 
-  json connection_registers;
-  json device_profiles;
-  json instance_registers;
-  json format_profiles;
-  json ble_addresses;
-  json mqtt_topics;
+  nlohmann::json connection_registers;
+  nlohmann::json device_profiles;
+  nlohmann::json instance_registers;
+  nlohmann::json format_profiles;
+  nlohmann::json ble_addresses;
+  nlohmann::json mqtt_topics;
 
   // T is of std::pair<string, json*>
-  template <typename... T> void populate(json *base, string identifier, json *save, T... t) {
-    json obj = (*base)[identifier];
+  template <typename... T> void populate(nlohmann::json *base, std::string identifier, nlohmann::json *save, T... t) {
+    nlohmann::json obj = (*base)[identifier];
 
     (*save)["name"] = identifier;
 
     (
         [&](auto &item [[maybe_unused]]) {
-          string first = t.first;
-          json second = *t.second;
+          std::string first = t.first;
+          nlohmann::json second = *t.second;
 
-          string value = obj[first];
+          std::string value = obj[first];
 
           if (second.count(value) < 1) {
             spdlog::error("(DataStructure) Illegal action: Given key is not valid populate method. Identifier: {}", identifier);
             return;
           }
 
-          json ref_obj = second[value];
+          nlohmann::json ref_obj = second[value];
 
           (*save)[first] = ref_obj;
         }(t),
@@ -54,18 +53,18 @@ public:
   }
 
   void fill_maps() {
-    ifstream _connection_registers("./config/connection_registers.json");
-    ifstream _device_profiles("./config/device_profiles.json");
-    ifstream _instance_registers("./config/instance_registers.json");
-    ifstream _format_profiles("./config/format_profiles.json");
-    ifstream _ble_addresses("./config/ble_addresses.json");
-    ifstream _mqtt_topics("./config/mqtt_topics.json");
+    std::ifstream _connection_registers("./config/connection_registers.json");
+    std::ifstream _device_profiles("./config/device_profiles.json");
+    std::ifstream _instance_registers("./config/instance_registers.json");
+    std::ifstream _format_profiles("./config/format_profiles.json");
+    std::ifstream _ble_addresses("./config/ble_addresses.json");
+    std::ifstream _mqtt_topics("./config/mqtt_topics.json");
 
-    connection_registers = json::parse(_connection_registers);
-    device_profiles = json::parse(_device_profiles);
-    instance_registers = json::parse(_instance_registers);
-    format_profiles = json::parse(_format_profiles);
-    ble_addresses = json::parse(_ble_addresses);
-    mqtt_topics = json::parse(_mqtt_topics);
+    connection_registers = nlohmann::json::parse(_connection_registers);
+    device_profiles = nlohmann::json::parse(_device_profiles);
+    instance_registers = nlohmann::json::parse(_instance_registers);
+    format_profiles = nlohmann::json::parse(_format_profiles);
+    ble_addresses = nlohmann::json::parse(_ble_addresses);
+    mqtt_topics = nlohmann::json::parse(_mqtt_topics);
   }
 };

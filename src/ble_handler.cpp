@@ -4,13 +4,7 @@
 #include "simpleble/SimpleBLE.h"
 #include "spdlog/spdlog.h"
 #include "utils.hpp"
-#include <chrono>
-#include <fstream>
 #include <iostream>
-#include <thread>
-#include <vector>
-
-using json = nlohmann::json;
 
 int ble_handler(DataStructure *dstructure) {
   // std::optional<SimpleBLE::Adapter> adapter_optional = Utils::getAdapter();
@@ -47,7 +41,7 @@ int ble_handler(DataStructure *dstructure) {
   }
 
   for (auto &p : dstructure->peripherals) {
-    json listed_peripherals = dstructure->ble_addresses[p.identifier()];
+    nlohmann::json listed_peripherals = dstructure->ble_addresses[p.identifier()];
     std::string service_string = listed_peripherals["service"];
     std::string characteristic_string = listed_peripherals["characteristic"];
     spdlog::info("Make pair for {} ({} {})", p.identifier(), service_string, characteristic_string);

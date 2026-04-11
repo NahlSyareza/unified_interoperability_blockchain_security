@@ -5,17 +5,14 @@
 #include <fstream>
 #include <sstream>
 
-using string = std::string;
-using json = nlohmann::json;
-
-void ble_processor(DataStructure *dstructure, std::string identifier, string payload) {
+void ble_processor(DataStructure *dstructure, std::string identifier, std::string payload) {
   for (auto &p : dstructure->peripherals) {
     if (p.identifier() == identifier)
       p.write_request(dstructure->uuid_pair[identifier].first, dstructure->uuid_pair[identifier].second, payload);
   }
 }
 
-void mqtt_processor(DataStructure *dstructure, string topic, string payload) {
+void mqtt_processor(DataStructure *dstructure, std::string topic, std::string payload) {
   int rc;
 
   mosquitto_property *proplist = NULL;
@@ -24,18 +21,17 @@ void mqtt_processor(DataStructure *dstructure, string topic, string payload) {
     spdlog::error("Something's wrong I can feel it");
   }
 
-  string final_payload = payload;
-  rc = mosquitto_publish_v5(dstructure->mosq, nullptr, topic.c_str(), (int)payload.length(), payload.c_str(), 2, false, NULL);
+  rc = mosquitto_publish(dstructure->mosq, nullptr, topic.c_str(), (int)payload.length(), payload.c_str(), 2, false);
   if (rc != MOSQ_ERR_SUCCESS) {
     spdlog::error("Error publishing: {}", mosquitto_strerror(rc));
   }
 }
 
-void http_processor(DataStructure *dstructure, string path, string payload) { dstructure->http_map[path] = payload; }
+void http_processor(DataStructure *dstructure, std::string path, std::string payload) { dstructure->http_map[path] = payload; }
 
-void get_instr(string op, string payload, OperationRegister *reg) {
+void get_instr(std::string op, std::string payload, OperationRegister *reg) {
   int ctrl;
-  string instr, act;
+  std::string instr, act;
 
   // Perhaps find a way to detect a non-space first character
   if (op.at(0) == ';') {
@@ -62,39 +58,39 @@ void get_instr(string op, string payload, OperationRegister *reg) {
   process_instr(instr, act, payload, reg);
 }
 
-void process_instr(string instr, string act, string payload, OperationRegister *reg) {
-  // spdlog::debug("Running instruction: {}", instr);
+void process_instr(std::string instr, std::string act, std::string payload, OperationRegister *reg) {
+  spdlog::debug("Running instruction: {}", instr);
 
   if (instr == "GET") {
     int detects = std::stoi(act);
     reg->input_data = strget(payload, detects);
   } else if (instr == "GET_FROM") {
-    json json_obj;
+    nlohmann::json json_obj;
 
     try {
-      json_obj = json::parse(payload);
+      json_obj = nlohmann::json::parse(payload);
       if (!json_obj.is_object()) {
         // This shouldn't happen to be honest
-        throw json::parse_error::create(6767, 0, "Technically valid, but not an object dawg. Thus pizdec", nullptr);
+        throw nlohmann::json::parse_error::create(6767, 0, "Technically valid, but not an object dawg. Thus pizdec", nullptr);
       }
-    } catch (const json::parse_error &e [[maybe_unused]]) {
-      spdlog::error("(De Ruyter) This is NOT supposed to happen");
+    } catch (const nlohmann::json::parse_error &e) {
+      spdlog::error("(De Ruyter) {}", e.what());
     }
 
     reg->input_data = json_obj[act].dump();
   } else if (instr == "TYPE") {
     reg->type = act;
   } else if (instr == "ASGN_TO") {
-    json json_obj;
+    nlohmann::json json_obj;
 
     try {
-      json_obj = json::parse(reg->output_data);
+      json_obj = nlohmann::json::parse(reg->output_data);
       if (!json_obj.is_object()) {
-        throw json::parse_error::create(6767, 0, "Technically valid, but not an object dawg. Thus pizdec", nullptr);
+        throw nlohmann::json::parse_error::create(6767, 0, "Technically valid, but not an object dawg. Thus pizdec", nullptr);
       }
-    } catch (const json::parse_error &e [[maybe_unused]]) {
-      // std::cout << e.what() << std::endl;
-      json_obj = json::parse("{}");
+    } catch (const nlohmann::json::parse_error &e) {
+      spdlog::error("(De Ruyter) {}", e.what());
+      json_obj = nlohmann::json::parse("{}");
     }
 
     try {
@@ -105,36 +101,32 @@ void process_instr(string instr, string act, string payload, OperationRegister *
       } else {
         json_obj[act] = reg->input_data;
       }
-    } catch (const std::invalid_argument &e [[maybe_unused]]) {
+    } catch (const std::invalid_argument &e) {
       // std::cout << e.what() << std::endl;
+      spdlog::error("(De Ruyter) {}", e.what());
       json_obj[act] = reg->input_data;
     }
 
     reg->convert = "";
     reg->output_data = json_obj.dump();
   } else if (instr == "CLCT_FROM") {
-    json json_obj;
+    nlohmann::json json_obj;
 
     try {
-      json_obj = json::parse(payload);
+      json_obj = nlohmann::json::parse(payload);
       if (!json_obj.is_object()) {
         // This shouldn't happen to be honest
-        throw json::parse_error::create(6767, 0, "Technically valid, but not an object dawg. Thus pizdec", nullptr);
+        throw nlohmann::json::parse_error::create(6767, 0, "Technically valid, but not an object dawg. Thus pizdec", nullptr);
       }
-    } catch (const json::parse_error &e [[maybe_unused]]) {
-      spdlog::error("(De Ruyter) This is NOT supposed to happen");
+    } catch (const nlohmann::json::parse_error &e) {
+      spdlog::error("(De Ruyter) {}", e.what());
     }
 
-    string deref = json_obj[act];
+    std::string deref = json_obj[act];
 
     reg->output_data = deref;
   } else if (instr == "IF") {
-    // spdlog::debug("(Process Instr) Comparing {} with {}", act, reg->input_data);
-    string compared_value = strget(act, 1);
-
-    // spdlog::debug("This is the actual value to be compared: {}", compared_value);
-    // reg->logic_comparison = act == reg->input_data;
-
+    std::string compared_value = strget(act, 1);
     reg->logic_comparison = compare(act, std::stoi(reg->input_data), std::stoi(compared_value));
   } else if (instr == "CONV_TO") {
     reg->convert = act;
@@ -147,24 +139,19 @@ void process_instr(string instr, string act, string payload, OperationRegister *
   } else {
     spdlog::error("(Process Instr) Unrecognized instruction {}", instr);
   }
-
-  // print_op_reg(reg);
-  // std::cout << "Reg.type: " << reg->type << " Reg.input_data: " << reg->input_data << " Reg.output_data: " << reg->output_data << " Reg.convert: " << reg->convert << std::endl << std::endl;
 }
 
-void comms_manager(DataStructure *dstructure, json *src, json *dst, string payload, string rule_file_location) {
-  string src_conn = (*src)["device"]["connection"];
-  string dest_conn = (*dst)["device"]["connection"];
+void comms_manager(DataStructure *dstructure, nlohmann::json *src, nlohmann::json *dst, std::string payload, std::string rule_file_location) {
+  std::string src_conn = (*src)["device"]["connection"];
+  std::string dest_conn = (*dst)["device"]["connection"];
   std::ifstream rule_file("./rules/" + rule_file_location);
   std::stringstream ss;
 
-  // spdlog::info("src: {}\ndst: {}", src->dump(2), dst->dump(2));
-
-  string dst_name = (*dst)["name"];
+  std::string dst_name = (*dst)["name"];
 
   OperationRegister op_reg;
 
-  string line;
+  std::string line;
 
   if (rule_file) {
     ss << rule_file.rdbuf();
@@ -174,16 +161,11 @@ void comms_manager(DataStructure *dstructure, json *src, json *dst, string paylo
       get_instr(line, payload, &op_reg);
     }
 
-    // spdlog::warn("(OperationRegister) {}", op_reg.output_data);
   } else {
     spdlog::error("(De Ruyter) Rule file location not found? Perhaps a typo? Or maybe deliberate.");
   }
 
-  // mastermind(dstructure, src, dst, payload, &final_payload);
-
-  // spdlog::warn("Final payload: {}", final_payload);
-
-  string final_payload = !op_reg.output_data.empty() ? op_reg.output_data : payload;
+  std::string final_payload = !op_reg.output_data.empty() ? op_reg.output_data : payload;
 
   if (dest_conn == "wifi/http") {
     http_processor(dstructure, dst_name, final_payload);
@@ -194,22 +176,23 @@ void comms_manager(DataStructure *dstructure, json *src, json *dst, string paylo
   }
 }
 
-int de_ruyter(DataStructure *dstructure, string src, string payload) {
+int de_ruyter(DataStructure *dstructure, std::string src, std::string payload) {
   if (!dstructure->connection_registers.contains(src)) {
     spdlog::error("This source isn't listed: {}", src);
     return 1;
   }
-  json connection = dstructure->connection_registers[src];
+  nlohmann::json connection = dstructure->connection_registers[src];
 
-  string dst = connection["destination"];
+  std::string dst = connection["destination"];
 
-  string rules = "";
+  std::string rules = "";
+
   if (connection.count("rules") > 0) {
     rules = connection["rules"];
   }
 
-  json test_src;
-  json test_dst;
+  nlohmann::json test_src;
+  nlohmann::json test_dst;
 
   dstructure->populate(&dstructure->instance_registers, src, &test_src, std::make_pair("device", &dstructure->device_profiles), std::make_pair("format", &dstructure->format_profiles));
 

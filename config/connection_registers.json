@@ -1,16 +1,20 @@
 {
   "device-1/test": {
     "destination": "device-10/course",
+    "interval": 200,
     "rules": "universal_collapse.txt"
   },
   "device-12/gen_mqtt": {
     "destination": "device-67/req_data",
+    "interval": 200,
     "rules": "consequences.txt"
   },
   "ter_stegen": {
-    "destination": "BLE_DEV_0"
+    "destination": "BLE_DEV_0",
+    "interval": 400
   },
   "ROG Phone 9 FE": {
-    "destination": "l_martinez"
+    "destination": "l_martinez",
+    "interval": 300
   }
 }

@@ -81,146 +81,168 @@ CMakeFiles\legendary_boss.dir\main.cpp.s: cmake_force
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\legendary_boss.dir\main.cpp.s /c "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\main.cpp"
 <<
 
-CMakeFiles\legendary_boss.dir\utils.cpp.obj: CMakeFiles\legendary_boss.dir\flags.make
-CMakeFiles\legendary_boss.dir\utils.cpp.obj: "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\utils.cpp"
-CMakeFiles\legendary_boss.dir\utils.cpp.obj: CMakeFiles\legendary_boss.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\build\windows\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/legendary_boss.dir/utils.cpp.obj"
-	$(CMAKE_COMMAND) -E cmake_cl_compile_depends --dep-file=CMakeFiles\legendary_boss.dir\utils.cpp.obj.d --working-dir="C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\build\windows" --filter-prefix="Note: including file: " -- C:\PROGRA~1\MIB055~1\18\COMMUN~1\VC\Tools\MSVC\1450~1.357\bin\Hostx64\x64\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /showIncludes /FoCMakeFiles\legendary_boss.dir\utils.cpp.obj /FdCMakeFiles\legendary_boss.dir\ /FS -c "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\utils.cpp"
+CMakeFiles\legendary_boss.dir\src\utils.cpp.obj: CMakeFiles\legendary_boss.dir\flags.make
+CMakeFiles\legendary_boss.dir\src\utils.cpp.obj: "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\src\utils.cpp"
+CMakeFiles\legendary_boss.dir\src\utils.cpp.obj: CMakeFiles\legendary_boss.dir\compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\build\windows\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/legendary_boss.dir/src/utils.cpp.obj"
+	$(CMAKE_COMMAND) -E cmake_cl_compile_depends --dep-file=CMakeFiles\legendary_boss.dir\src\utils.cpp.obj.d --working-dir="C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\build\windows" --filter-prefix="Note: including file: " -- C:\PROGRA~1\MIB055~1\18\COMMUN~1\VC\Tools\MSVC\1450~1.357\bin\Hostx64\x64\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /showIncludes /FoCMakeFiles\legendary_boss.dir\src\utils.cpp.obj /FdCMakeFiles\legendary_boss.dir\ /FS -c "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\src\utils.cpp"
 <<
 
-CMakeFiles\legendary_boss.dir\utils.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/legendary_boss.dir/utils.cpp.i"
-	C:\PROGRA~1\MIB055~1\18\COMMUN~1\VC\Tools\MSVC\1450~1.357\bin\Hostx64\x64\cl.exe > CMakeFiles\legendary_boss.dir\utils.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\utils.cpp"
+CMakeFiles\legendary_boss.dir\src\utils.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/legendary_boss.dir/src/utils.cpp.i"
+	C:\PROGRA~1\MIB055~1\18\COMMUN~1\VC\Tools\MSVC\1450~1.357\bin\Hostx64\x64\cl.exe > CMakeFiles\legendary_boss.dir\src\utils.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\src\utils.cpp"
 <<
 
-CMakeFiles\legendary_boss.dir\utils.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/legendary_boss.dir/utils.cpp.s"
+CMakeFiles\legendary_boss.dir\src\utils.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/legendary_boss.dir/src/utils.cpp.s"
 	C:\PROGRA~1\MIB055~1\18\COMMUN~1\VC\Tools\MSVC\1450~1.357\bin\Hostx64\x64\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\legendary_boss.dir\utils.cpp.s /c "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\utils.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\legendary_boss.dir\src\utils.cpp.s /c "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\src\utils.cpp"
 <<
 
-CMakeFiles\legendary_boss.dir\ble_handler.cpp.obj: CMakeFiles\legendary_boss.dir\flags.make
-CMakeFiles\legendary_boss.dir\ble_handler.cpp.obj: "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\ble_handler.cpp"
-CMakeFiles\legendary_boss.dir\ble_handler.cpp.obj: CMakeFiles\legendary_boss.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\build\windows\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/legendary_boss.dir/ble_handler.cpp.obj"
-	$(CMAKE_COMMAND) -E cmake_cl_compile_depends --dep-file=CMakeFiles\legendary_boss.dir\ble_handler.cpp.obj.d --working-dir="C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\build\windows" --filter-prefix="Note: including file: " -- C:\PROGRA~1\MIB055~1\18\COMMUN~1\VC\Tools\MSVC\1450~1.357\bin\Hostx64\x64\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /showIncludes /FoCMakeFiles\legendary_boss.dir\ble_handler.cpp.obj /FdCMakeFiles\legendary_boss.dir\ /FS -c "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\ble_handler.cpp"
+CMakeFiles\legendary_boss.dir\src\ble_handler.cpp.obj: CMakeFiles\legendary_boss.dir\flags.make
+CMakeFiles\legendary_boss.dir\src\ble_handler.cpp.obj: "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\src\ble_handler.cpp"
+CMakeFiles\legendary_boss.dir\src\ble_handler.cpp.obj: CMakeFiles\legendary_boss.dir\compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\build\windows\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/legendary_boss.dir/src/ble_handler.cpp.obj"
+	$(CMAKE_COMMAND) -E cmake_cl_compile_depends --dep-file=CMakeFiles\legendary_boss.dir\src\ble_handler.cpp.obj.d --working-dir="C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\build\windows" --filter-prefix="Note: including file: " -- C:\PROGRA~1\MIB055~1\18\COMMUN~1\VC\Tools\MSVC\1450~1.357\bin\Hostx64\x64\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /showIncludes /FoCMakeFiles\legendary_boss.dir\src\ble_handler.cpp.obj /FdCMakeFiles\legendary_boss.dir\ /FS -c "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\src\ble_handler.cpp"
 <<
 
-CMakeFiles\legendary_boss.dir\ble_handler.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/legendary_boss.dir/ble_handler.cpp.i"
-	C:\PROGRA~1\MIB055~1\18\COMMUN~1\VC\Tools\MSVC\1450~1.357\bin\Hostx64\x64\cl.exe > CMakeFiles\legendary_boss.dir\ble_handler.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\ble_handler.cpp"
+CMakeFiles\legendary_boss.dir\src\ble_handler.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/legendary_boss.dir/src/ble_handler.cpp.i"
+	C:\PROGRA~1\MIB055~1\18\COMMUN~1\VC\Tools\MSVC\1450~1.357\bin\Hostx64\x64\cl.exe > CMakeFiles\legendary_boss.dir\src\ble_handler.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\src\ble_handler.cpp"
 <<
 
-CMakeFiles\legendary_boss.dir\ble_handler.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/legendary_boss.dir/ble_handler.cpp.s"
+CMakeFiles\legendary_boss.dir\src\ble_handler.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/legendary_boss.dir/src/ble_handler.cpp.s"
 	C:\PROGRA~1\MIB055~1\18\COMMUN~1\VC\Tools\MSVC\1450~1.357\bin\Hostx64\x64\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\legendary_boss.dir\ble_handler.cpp.s /c "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\ble_handler.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\legendary_boss.dir\src\ble_handler.cpp.s /c "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\src\ble_handler.cpp"
 <<
 
-CMakeFiles\legendary_boss.dir\de_ruyter.cpp.obj: CMakeFiles\legendary_boss.dir\flags.make
-CMakeFiles\legendary_boss.dir\de_ruyter.cpp.obj: "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\de_ruyter.cpp"
-CMakeFiles\legendary_boss.dir\de_ruyter.cpp.obj: CMakeFiles\legendary_boss.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\build\windows\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/legendary_boss.dir/de_ruyter.cpp.obj"
-	$(CMAKE_COMMAND) -E cmake_cl_compile_depends --dep-file=CMakeFiles\legendary_boss.dir\de_ruyter.cpp.obj.d --working-dir="C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\build\windows" --filter-prefix="Note: including file: " -- C:\PROGRA~1\MIB055~1\18\COMMUN~1\VC\Tools\MSVC\1450~1.357\bin\Hostx64\x64\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /showIncludes /FoCMakeFiles\legendary_boss.dir\de_ruyter.cpp.obj /FdCMakeFiles\legendary_boss.dir\ /FS -c "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\de_ruyter.cpp"
+CMakeFiles\legendary_boss.dir\src\de_ruyter.cpp.obj: CMakeFiles\legendary_boss.dir\flags.make
+CMakeFiles\legendary_boss.dir\src\de_ruyter.cpp.obj: "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\src\de_ruyter.cpp"
+CMakeFiles\legendary_boss.dir\src\de_ruyter.cpp.obj: CMakeFiles\legendary_boss.dir\compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\build\windows\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/legendary_boss.dir/src/de_ruyter.cpp.obj"
+	$(CMAKE_COMMAND) -E cmake_cl_compile_depends --dep-file=CMakeFiles\legendary_boss.dir\src\de_ruyter.cpp.obj.d --working-dir="C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\build\windows" --filter-prefix="Note: including file: " -- C:\PROGRA~1\MIB055~1\18\COMMUN~1\VC\Tools\MSVC\1450~1.357\bin\Hostx64\x64\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /showIncludes /FoCMakeFiles\legendary_boss.dir\src\de_ruyter.cpp.obj /FdCMakeFiles\legendary_boss.dir\ /FS -c "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\src\de_ruyter.cpp"
 <<
 
-CMakeFiles\legendary_boss.dir\de_ruyter.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/legendary_boss.dir/de_ruyter.cpp.i"
-	C:\PROGRA~1\MIB055~1\18\COMMUN~1\VC\Tools\MSVC\1450~1.357\bin\Hostx64\x64\cl.exe > CMakeFiles\legendary_boss.dir\de_ruyter.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\de_ruyter.cpp"
+CMakeFiles\legendary_boss.dir\src\de_ruyter.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/legendary_boss.dir/src/de_ruyter.cpp.i"
+	C:\PROGRA~1\MIB055~1\18\COMMUN~1\VC\Tools\MSVC\1450~1.357\bin\Hostx64\x64\cl.exe > CMakeFiles\legendary_boss.dir\src\de_ruyter.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\src\de_ruyter.cpp"
 <<
 
-CMakeFiles\legendary_boss.dir\de_ruyter.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/legendary_boss.dir/de_ruyter.cpp.s"
+CMakeFiles\legendary_boss.dir\src\de_ruyter.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/legendary_boss.dir/src/de_ruyter.cpp.s"
 	C:\PROGRA~1\MIB055~1\18\COMMUN~1\VC\Tools\MSVC\1450~1.357\bin\Hostx64\x64\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\legendary_boss.dir\de_ruyter.cpp.s /c "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\de_ruyter.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\legendary_boss.dir\src\de_ruyter.cpp.s /c "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\src\de_ruyter.cpp"
 <<
 
-CMakeFiles\legendary_boss.dir\http_handler.cpp.obj: CMakeFiles\legendary_boss.dir\flags.make
-CMakeFiles\legendary_boss.dir\http_handler.cpp.obj: "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\http_handler.cpp"
-CMakeFiles\legendary_boss.dir\http_handler.cpp.obj: CMakeFiles\legendary_boss.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\build\windows\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/legendary_boss.dir/http_handler.cpp.obj"
-	$(CMAKE_COMMAND) -E cmake_cl_compile_depends --dep-file=CMakeFiles\legendary_boss.dir\http_handler.cpp.obj.d --working-dir="C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\build\windows" --filter-prefix="Note: including file: " -- C:\PROGRA~1\MIB055~1\18\COMMUN~1\VC\Tools\MSVC\1450~1.357\bin\Hostx64\x64\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /showIncludes /FoCMakeFiles\legendary_boss.dir\http_handler.cpp.obj /FdCMakeFiles\legendary_boss.dir\ /FS -c "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\http_handler.cpp"
+CMakeFiles\legendary_boss.dir\src\http_handler.cpp.obj: CMakeFiles\legendary_boss.dir\flags.make
+CMakeFiles\legendary_boss.dir\src\http_handler.cpp.obj: "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\src\http_handler.cpp"
+CMakeFiles\legendary_boss.dir\src\http_handler.cpp.obj: CMakeFiles\legendary_boss.dir\compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\build\windows\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/legendary_boss.dir/src/http_handler.cpp.obj"
+	$(CMAKE_COMMAND) -E cmake_cl_compile_depends --dep-file=CMakeFiles\legendary_boss.dir\src\http_handler.cpp.obj.d --working-dir="C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\build\windows" --filter-prefix="Note: including file: " -- C:\PROGRA~1\MIB055~1\18\COMMUN~1\VC\Tools\MSVC\1450~1.357\bin\Hostx64\x64\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /showIncludes /FoCMakeFiles\legendary_boss.dir\src\http_handler.cpp.obj /FdCMakeFiles\legendary_boss.dir\ /FS -c "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\src\http_handler.cpp"
 <<
 
-CMakeFiles\legendary_boss.dir\http_handler.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/legendary_boss.dir/http_handler.cpp.i"
-	C:\PROGRA~1\MIB055~1\18\COMMUN~1\VC\Tools\MSVC\1450~1.357\bin\Hostx64\x64\cl.exe > CMakeFiles\legendary_boss.dir\http_handler.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\http_handler.cpp"
+CMakeFiles\legendary_boss.dir\src\http_handler.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/legendary_boss.dir/src/http_handler.cpp.i"
+	C:\PROGRA~1\MIB055~1\18\COMMUN~1\VC\Tools\MSVC\1450~1.357\bin\Hostx64\x64\cl.exe > CMakeFiles\legendary_boss.dir\src\http_handler.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\src\http_handler.cpp"
 <<
 
-CMakeFiles\legendary_boss.dir\http_handler.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/legendary_boss.dir/http_handler.cpp.s"
+CMakeFiles\legendary_boss.dir\src\http_handler.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/legendary_boss.dir/src/http_handler.cpp.s"
 	C:\PROGRA~1\MIB055~1\18\COMMUN~1\VC\Tools\MSVC\1450~1.357\bin\Hostx64\x64\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\legendary_boss.dir\http_handler.cpp.s /c "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\http_handler.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\legendary_boss.dir\src\http_handler.cpp.s /c "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\src\http_handler.cpp"
 <<
 
-CMakeFiles\legendary_boss.dir\mqtt_handler.cpp.obj: CMakeFiles\legendary_boss.dir\flags.make
-CMakeFiles\legendary_boss.dir\mqtt_handler.cpp.obj: "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\mqtt_handler.cpp"
-CMakeFiles\legendary_boss.dir\mqtt_handler.cpp.obj: CMakeFiles\legendary_boss.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\build\windows\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/legendary_boss.dir/mqtt_handler.cpp.obj"
-	$(CMAKE_COMMAND) -E cmake_cl_compile_depends --dep-file=CMakeFiles\legendary_boss.dir\mqtt_handler.cpp.obj.d --working-dir="C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\build\windows" --filter-prefix="Note: including file: " -- C:\PROGRA~1\MIB055~1\18\COMMUN~1\VC\Tools\MSVC\1450~1.357\bin\Hostx64\x64\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /showIncludes /FoCMakeFiles\legendary_boss.dir\mqtt_handler.cpp.obj /FdCMakeFiles\legendary_boss.dir\ /FS -c "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\mqtt_handler.cpp"
+CMakeFiles\legendary_boss.dir\src\mqtt_handler.cpp.obj: CMakeFiles\legendary_boss.dir\flags.make
+CMakeFiles\legendary_boss.dir\src\mqtt_handler.cpp.obj: "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\src\mqtt_handler.cpp"
+CMakeFiles\legendary_boss.dir\src\mqtt_handler.cpp.obj: CMakeFiles\legendary_boss.dir\compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\build\windows\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/legendary_boss.dir/src/mqtt_handler.cpp.obj"
+	$(CMAKE_COMMAND) -E cmake_cl_compile_depends --dep-file=CMakeFiles\legendary_boss.dir\src\mqtt_handler.cpp.obj.d --working-dir="C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\build\windows" --filter-prefix="Note: including file: " -- C:\PROGRA~1\MIB055~1\18\COMMUN~1\VC\Tools\MSVC\1450~1.357\bin\Hostx64\x64\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /showIncludes /FoCMakeFiles\legendary_boss.dir\src\mqtt_handler.cpp.obj /FdCMakeFiles\legendary_boss.dir\ /FS -c "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\src\mqtt_handler.cpp"
 <<
 
-CMakeFiles\legendary_boss.dir\mqtt_handler.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/legendary_boss.dir/mqtt_handler.cpp.i"
-	C:\PROGRA~1\MIB055~1\18\COMMUN~1\VC\Tools\MSVC\1450~1.357\bin\Hostx64\x64\cl.exe > CMakeFiles\legendary_boss.dir\mqtt_handler.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\mqtt_handler.cpp"
+CMakeFiles\legendary_boss.dir\src\mqtt_handler.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/legendary_boss.dir/src/mqtt_handler.cpp.i"
+	C:\PROGRA~1\MIB055~1\18\COMMUN~1\VC\Tools\MSVC\1450~1.357\bin\Hostx64\x64\cl.exe > CMakeFiles\legendary_boss.dir\src\mqtt_handler.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\src\mqtt_handler.cpp"
 <<
 
-CMakeFiles\legendary_boss.dir\mqtt_handler.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/legendary_boss.dir/mqtt_handler.cpp.s"
+CMakeFiles\legendary_boss.dir\src\mqtt_handler.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/legendary_boss.dir/src/mqtt_handler.cpp.s"
 	C:\PROGRA~1\MIB055~1\18\COMMUN~1\VC\Tools\MSVC\1450~1.357\bin\Hostx64\x64\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\legendary_boss.dir\mqtt_handler.cpp.s /c "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\mqtt_handler.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\legendary_boss.dir\src\mqtt_handler.cpp.s /c "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\src\mqtt_handler.cpp"
 <<
 
-CMakeFiles\legendary_boss.dir\spitarm.cpp.obj: CMakeFiles\legendary_boss.dir\flags.make
-CMakeFiles\legendary_boss.dir\spitarm.cpp.obj: "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\spitarm.cpp"
-CMakeFiles\legendary_boss.dir\spitarm.cpp.obj: CMakeFiles\legendary_boss.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\build\windows\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/legendary_boss.dir/spitarm.cpp.obj"
-	$(CMAKE_COMMAND) -E cmake_cl_compile_depends --dep-file=CMakeFiles\legendary_boss.dir\spitarm.cpp.obj.d --working-dir="C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\build\windows" --filter-prefix="Note: including file: " -- C:\PROGRA~1\MIB055~1\18\COMMUN~1\VC\Tools\MSVC\1450~1.357\bin\Hostx64\x64\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /showIncludes /FoCMakeFiles\legendary_boss.dir\spitarm.cpp.obj /FdCMakeFiles\legendary_boss.dir\ /FS -c "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\spitarm.cpp"
+CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: CMakeFiles\legendary_boss.dir\flags.make
+CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\src\spitarm.cpp"
+CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: CMakeFiles\legendary_boss.dir\compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\build\windows\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/legendary_boss.dir/src/spitarm.cpp.obj"
+	$(CMAKE_COMMAND) -E cmake_cl_compile_depends --dep-file=CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj.d --working-dir="C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\build\windows" --filter-prefix="Note: including file: " -- C:\PROGRA~1\MIB055~1\18\COMMUN~1\VC\Tools\MSVC\1450~1.357\bin\Hostx64\x64\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /showIncludes /FoCMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj /FdCMakeFiles\legendary_boss.dir\ /FS -c "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\src\spitarm.cpp"
 <<
 
-CMakeFiles\legendary_boss.dir\spitarm.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/legendary_boss.dir/spitarm.cpp.i"
-	C:\PROGRA~1\MIB055~1\18\COMMUN~1\VC\Tools\MSVC\1450~1.357\bin\Hostx64\x64\cl.exe > CMakeFiles\legendary_boss.dir\spitarm.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\spitarm.cpp"
+CMakeFiles\legendary_boss.dir\src\spitarm.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/legendary_boss.dir/src/spitarm.cpp.i"
+	C:\PROGRA~1\MIB055~1\18\COMMUN~1\VC\Tools\MSVC\1450~1.357\bin\Hostx64\x64\cl.exe > CMakeFiles\legendary_boss.dir\src\spitarm.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\src\spitarm.cpp"
 <<
 
-CMakeFiles\legendary_boss.dir\spitarm.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/legendary_boss.dir/spitarm.cpp.s"
+CMakeFiles\legendary_boss.dir\src\spitarm.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/legendary_boss.dir/src/spitarm.cpp.s"
 	C:\PROGRA~1\MIB055~1\18\COMMUN~1\VC\Tools\MSVC\1450~1.357\bin\Hostx64\x64\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\legendary_boss.dir\spitarm.cpp.s /c "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\spitarm.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\legendary_boss.dir\src\spitarm.cpp.s /c "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\src\spitarm.cpp"
+<<
+
+CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: CMakeFiles\legendary_boss.dir\flags.make
+CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\src\service_scheduler.cpp"
+CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: CMakeFiles\legendary_boss.dir\compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\build\windows\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/legendary_boss.dir/src/service_scheduler.cpp.obj"
+	$(CMAKE_COMMAND) -E cmake_cl_compile_depends --dep-file=CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj.d --working-dir="C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\build\windows" --filter-prefix="Note: including file: " -- C:\PROGRA~1\MIB055~1\18\COMMUN~1\VC\Tools\MSVC\1450~1.357\bin\Hostx64\x64\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /showIncludes /FoCMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj /FdCMakeFiles\legendary_boss.dir\ /FS -c "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\src\service_scheduler.cpp"
+<<
+
+CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/legendary_boss.dir/src/service_scheduler.cpp.i"
+	C:\PROGRA~1\MIB055~1\18\COMMUN~1\VC\Tools\MSVC\1450~1.357\bin\Hostx64\x64\cl.exe > CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\src\service_scheduler.cpp"
+<<
+
+CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/legendary_boss.dir/src/service_scheduler.cpp.s"
+	C:\PROGRA~1\MIB055~1\18\COMMUN~1\VC\Tools\MSVC\1450~1.357\bin\Hostx64\x64\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.s /c "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\src\service_scheduler.cpp"
 <<
 
 # Object files for target legendary_boss
 legendary_boss_OBJECTS = \
 "CMakeFiles\legendary_boss.dir\main.cpp.obj" \
-"CMakeFiles\legendary_boss.dir\utils.cpp.obj" \
-"CMakeFiles\legendary_boss.dir\ble_handler.cpp.obj" \
-"CMakeFiles\legendary_boss.dir\de_ruyter.cpp.obj" \
-"CMakeFiles\legendary_boss.dir\http_handler.cpp.obj" \
-"CMakeFiles\legendary_boss.dir\mqtt_handler.cpp.obj" \
-"CMakeFiles\legendary_boss.dir\spitarm.cpp.obj"
+"CMakeFiles\legendary_boss.dir\src\utils.cpp.obj" \
+"CMakeFiles\legendary_boss.dir\src\ble_handler.cpp.obj" \
+"CMakeFiles\legendary_boss.dir\src\de_ruyter.cpp.obj" \
+"CMakeFiles\legendary_boss.dir\src\http_handler.cpp.obj" \
+"CMakeFiles\legendary_boss.dir\src\mqtt_handler.cpp.obj" \
+"CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj" \
+"CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj"
 
 # External object files for target legendary_boss
 legendary_boss_EXTERNAL_OBJECTS =
 
 legendary_boss.exe: CMakeFiles\legendary_boss.dir\main.cpp.obj
-legendary_boss.exe: CMakeFiles\legendary_boss.dir\utils.cpp.obj
-legendary_boss.exe: CMakeFiles\legendary_boss.dir\ble_handler.cpp.obj
-legendary_boss.exe: CMakeFiles\legendary_boss.dir\de_ruyter.cpp.obj
-legendary_boss.exe: CMakeFiles\legendary_boss.dir\http_handler.cpp.obj
-legendary_boss.exe: CMakeFiles\legendary_boss.dir\mqtt_handler.cpp.obj
-legendary_boss.exe: CMakeFiles\legendary_boss.dir\spitarm.cpp.obj
+legendary_boss.exe: CMakeFiles\legendary_boss.dir\src\utils.cpp.obj
+legendary_boss.exe: CMakeFiles\legendary_boss.dir\src\ble_handler.cpp.obj
+legendary_boss.exe: CMakeFiles\legendary_boss.dir\src\de_ruyter.cpp.obj
+legendary_boss.exe: CMakeFiles\legendary_boss.dir\src\http_handler.cpp.obj
+legendary_boss.exe: CMakeFiles\legendary_boss.dir\src\mqtt_handler.cpp.obj
+legendary_boss.exe: CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj
+legendary_boss.exe: CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj
 legendary_boss.exe: CMakeFiles\legendary_boss.dir\build.make
 legendary_boss.exe: C:\vcpkg\installed\x64-windows\lib\mosquitto.lib
 legendary_boss.exe: C:\vcpkg\installed\x64-windows\lib\libssl.lib
@@ -233,7 +255,7 @@ legendary_boss.exe: C:\vcpkg\installed\x64-windows\lib\brotlienc.lib
 legendary_boss.exe: C:\vcpkg\installed\x64-windows\lib\brotlidec.lib
 legendary_boss.exe: C:\vcpkg\installed\x64-windows\lib\brotlicommon.lib
 legendary_boss.exe: CMakeFiles\legendary_boss.dir\objects1.rsp
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\build\windows\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable legendary_boss.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\build\windows\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable legendary_boss.exe"
 	"C:\Program Files\CMake\bin\cmake.exe" -E vs_link_exe --msvc-ver=1950 --intdir=CMakeFiles\legendary_boss.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100261~1.0\x64\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100261~1.0\x64\mt.exe --manifests -- C:\PROGRA~1\MIB055~1\18\COMMUN~1\VC\Tools\MSVC\1450~1.357\bin\Hostx64\x64\link.exe /nologo @CMakeFiles\legendary_boss.dir\objects1.rsp @<<
  /out:legendary_boss.exe /implib:legendary_boss.lib /pdb:"C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\build\windows\legendary_boss.pdb" /version:0.0 /machine:x64 /INCREMENTAL:NO /subsystem:console -pthread  C:\vcpkg\installed\x64-windows\lib\mosquitto.lib C:\vcpkg\installed\x64-windows\lib\libssl.lib C:\vcpkg\installed\x64-windows\lib\spdlog.lib C:\vcpkg\installed\x64-windows\lib\simpleble.lib C:\vcpkg\installed\x64-windows\lib\pthreadVC3.lib C:\vcpkg\installed\x64-windows\lib\libcrypto.lib C:\vcpkg\installed\x64-windows\lib\fmt.lib ws2_32.lib crypt32.lib C:\vcpkg\installed\x64-windows\lib\brotlienc.lib C:\vcpkg\installed\x64-windows\lib\brotlidec.lib C:\vcpkg\installed\x64-windows\lib\brotlicommon.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 
 <<

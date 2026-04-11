@@ -7,10 +7,8 @@
 #include <map>
 #include <thread>
 
-using namespace std;
-
 int main() {
-  cout << "Walking by the wall" << endl;
+  spdlog::info("Walking by the wall");
 
   DataStructure dstructure;
 
@@ -18,17 +16,13 @@ int main() {
 
   spdlog::set_level(spdlog::level::debug);
 
-  auto mqtt_thread = async(launch::async, mqtt_handler, &dstructure);
-  auto http_thread = async(launch::async, http_handler, &dstructure);
-  auto ble_thread = async(launch::async, ble_handler, &dstructure);
+  std::thread mqtt_thread(mqtt_handler, &dstructure);
+  std::thread http_thread(http_handler, &dstructure);
+  std::thread ble_thread(ble_handler, &dstructure);
 
-  // http_thread.wait();
-  // mqtt_thread.wait();
-  // ble_thread.wait();
-
-  // http_thread.get();
-  // mqtt_thread.get();
-  // ble_thread.get();
+  mqtt_thread.join();
+  http_thread.join();
+  ble_thread.join();
 
   return 0;
 }

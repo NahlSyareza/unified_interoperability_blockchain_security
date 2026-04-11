@@ -118,78 +118,6 @@ legendary_boss\fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\legendary_boss.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\legendary_boss.dir\build
 .PHONY : legendary_boss\fast
 
-ble_handler.obj: ble_handler.cpp.obj
-.PHONY : ble_handler.obj
-
-# target to build an object file
-ble_handler.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\legendary_boss.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\legendary_boss.dir\ble_handler.cpp.obj
-.PHONY : ble_handler.cpp.obj
-
-ble_handler.i: ble_handler.cpp.i
-.PHONY : ble_handler.i
-
-# target to preprocess a source file
-ble_handler.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\legendary_boss.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\legendary_boss.dir\ble_handler.cpp.i
-.PHONY : ble_handler.cpp.i
-
-ble_handler.s: ble_handler.cpp.s
-.PHONY : ble_handler.s
-
-# target to generate assembly for a file
-ble_handler.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\legendary_boss.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\legendary_boss.dir\ble_handler.cpp.s
-.PHONY : ble_handler.cpp.s
-
-de_ruyter.obj: de_ruyter.cpp.obj
-.PHONY : de_ruyter.obj
-
-# target to build an object file
-de_ruyter.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\legendary_boss.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\legendary_boss.dir\de_ruyter.cpp.obj
-.PHONY : de_ruyter.cpp.obj
-
-de_ruyter.i: de_ruyter.cpp.i
-.PHONY : de_ruyter.i
-
-# target to preprocess a source file
-de_ruyter.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\legendary_boss.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\legendary_boss.dir\de_ruyter.cpp.i
-.PHONY : de_ruyter.cpp.i
-
-de_ruyter.s: de_ruyter.cpp.s
-.PHONY : de_ruyter.s
-
-# target to generate assembly for a file
-de_ruyter.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\legendary_boss.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\legendary_boss.dir\de_ruyter.cpp.s
-.PHONY : de_ruyter.cpp.s
-
-http_handler.obj: http_handler.cpp.obj
-.PHONY : http_handler.obj
-
-# target to build an object file
-http_handler.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\legendary_boss.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\legendary_boss.dir\http_handler.cpp.obj
-.PHONY : http_handler.cpp.obj
-
-http_handler.i: http_handler.cpp.i
-.PHONY : http_handler.i
-
-# target to preprocess a source file
-http_handler.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\legendary_boss.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\legendary_boss.dir\http_handler.cpp.i
-.PHONY : http_handler.cpp.i
-
-http_handler.s: http_handler.cpp.s
-.PHONY : http_handler.s
-
-# target to generate assembly for a file
-http_handler.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\legendary_boss.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\legendary_boss.dir\http_handler.cpp.s
-.PHONY : http_handler.cpp.s
-
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -214,77 +142,173 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\legendary_boss.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\legendary_boss.dir\main.cpp.s
 .PHONY : main.cpp.s
 
-mqtt_handler.obj: mqtt_handler.cpp.obj
-.PHONY : mqtt_handler.obj
+src\ble_handler.obj: src\ble_handler.cpp.obj
+.PHONY : src\ble_handler.obj
 
 # target to build an object file
-mqtt_handler.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\legendary_boss.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\legendary_boss.dir\mqtt_handler.cpp.obj
-.PHONY : mqtt_handler.cpp.obj
+src\ble_handler.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\legendary_boss.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\legendary_boss.dir\src\ble_handler.cpp.obj
+.PHONY : src\ble_handler.cpp.obj
 
-mqtt_handler.i: mqtt_handler.cpp.i
-.PHONY : mqtt_handler.i
+src\ble_handler.i: src\ble_handler.cpp.i
+.PHONY : src\ble_handler.i
 
 # target to preprocess a source file
-mqtt_handler.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\legendary_boss.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\legendary_boss.dir\mqtt_handler.cpp.i
-.PHONY : mqtt_handler.cpp.i
+src\ble_handler.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\legendary_boss.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\legendary_boss.dir\src\ble_handler.cpp.i
+.PHONY : src\ble_handler.cpp.i
 
-mqtt_handler.s: mqtt_handler.cpp.s
-.PHONY : mqtt_handler.s
+src\ble_handler.s: src\ble_handler.cpp.s
+.PHONY : src\ble_handler.s
 
 # target to generate assembly for a file
-mqtt_handler.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\legendary_boss.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\legendary_boss.dir\mqtt_handler.cpp.s
-.PHONY : mqtt_handler.cpp.s
+src\ble_handler.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\legendary_boss.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\legendary_boss.dir\src\ble_handler.cpp.s
+.PHONY : src\ble_handler.cpp.s
 
-spitarm.obj: spitarm.cpp.obj
-.PHONY : spitarm.obj
+src\de_ruyter.obj: src\de_ruyter.cpp.obj
+.PHONY : src\de_ruyter.obj
 
 # target to build an object file
-spitarm.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\legendary_boss.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\legendary_boss.dir\spitarm.cpp.obj
-.PHONY : spitarm.cpp.obj
+src\de_ruyter.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\legendary_boss.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\legendary_boss.dir\src\de_ruyter.cpp.obj
+.PHONY : src\de_ruyter.cpp.obj
 
-spitarm.i: spitarm.cpp.i
-.PHONY : spitarm.i
+src\de_ruyter.i: src\de_ruyter.cpp.i
+.PHONY : src\de_ruyter.i
 
 # target to preprocess a source file
-spitarm.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\legendary_boss.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\legendary_boss.dir\spitarm.cpp.i
-.PHONY : spitarm.cpp.i
+src\de_ruyter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\legendary_boss.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\legendary_boss.dir\src\de_ruyter.cpp.i
+.PHONY : src\de_ruyter.cpp.i
 
-spitarm.s: spitarm.cpp.s
-.PHONY : spitarm.s
+src\de_ruyter.s: src\de_ruyter.cpp.s
+.PHONY : src\de_ruyter.s
 
 # target to generate assembly for a file
-spitarm.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\legendary_boss.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\legendary_boss.dir\spitarm.cpp.s
-.PHONY : spitarm.cpp.s
+src\de_ruyter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\legendary_boss.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\legendary_boss.dir\src\de_ruyter.cpp.s
+.PHONY : src\de_ruyter.cpp.s
 
-utils.obj: utils.cpp.obj
-.PHONY : utils.obj
+src\http_handler.obj: src\http_handler.cpp.obj
+.PHONY : src\http_handler.obj
 
 # target to build an object file
-utils.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\legendary_boss.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\legendary_boss.dir\utils.cpp.obj
-.PHONY : utils.cpp.obj
+src\http_handler.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\legendary_boss.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\legendary_boss.dir\src\http_handler.cpp.obj
+.PHONY : src\http_handler.cpp.obj
 
-utils.i: utils.cpp.i
-.PHONY : utils.i
+src\http_handler.i: src\http_handler.cpp.i
+.PHONY : src\http_handler.i
 
 # target to preprocess a source file
-utils.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\legendary_boss.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\legendary_boss.dir\utils.cpp.i
-.PHONY : utils.cpp.i
+src\http_handler.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\legendary_boss.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\legendary_boss.dir\src\http_handler.cpp.i
+.PHONY : src\http_handler.cpp.i
 
-utils.s: utils.cpp.s
-.PHONY : utils.s
+src\http_handler.s: src\http_handler.cpp.s
+.PHONY : src\http_handler.s
 
 # target to generate assembly for a file
-utils.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\legendary_boss.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\legendary_boss.dir\utils.cpp.s
-.PHONY : utils.cpp.s
+src\http_handler.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\legendary_boss.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\legendary_boss.dir\src\http_handler.cpp.s
+.PHONY : src\http_handler.cpp.s
+
+src\mqtt_handler.obj: src\mqtt_handler.cpp.obj
+.PHONY : src\mqtt_handler.obj
+
+# target to build an object file
+src\mqtt_handler.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\legendary_boss.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\legendary_boss.dir\src\mqtt_handler.cpp.obj
+.PHONY : src\mqtt_handler.cpp.obj
+
+src\mqtt_handler.i: src\mqtt_handler.cpp.i
+.PHONY : src\mqtt_handler.i
+
+# target to preprocess a source file
+src\mqtt_handler.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\legendary_boss.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\legendary_boss.dir\src\mqtt_handler.cpp.i
+.PHONY : src\mqtt_handler.cpp.i
+
+src\mqtt_handler.s: src\mqtt_handler.cpp.s
+.PHONY : src\mqtt_handler.s
+
+# target to generate assembly for a file
+src\mqtt_handler.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\legendary_boss.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\legendary_boss.dir\src\mqtt_handler.cpp.s
+.PHONY : src\mqtt_handler.cpp.s
+
+src\service_scheduler.obj: src\service_scheduler.cpp.obj
+.PHONY : src\service_scheduler.obj
+
+# target to build an object file
+src\service_scheduler.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\legendary_boss.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj
+.PHONY : src\service_scheduler.cpp.obj
+
+src\service_scheduler.i: src\service_scheduler.cpp.i
+.PHONY : src\service_scheduler.i
+
+# target to preprocess a source file
+src\service_scheduler.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\legendary_boss.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.i
+.PHONY : src\service_scheduler.cpp.i
+
+src\service_scheduler.s: src\service_scheduler.cpp.s
+.PHONY : src\service_scheduler.s
+
+# target to generate assembly for a file
+src\service_scheduler.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\legendary_boss.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.s
+.PHONY : src\service_scheduler.cpp.s
+
+src\spitarm.obj: src\spitarm.cpp.obj
+.PHONY : src\spitarm.obj
+
+# target to build an object file
+src\spitarm.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\legendary_boss.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj
+.PHONY : src\spitarm.cpp.obj
+
+src\spitarm.i: src\spitarm.cpp.i
+.PHONY : src\spitarm.i
+
+# target to preprocess a source file
+src\spitarm.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\legendary_boss.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\legendary_boss.dir\src\spitarm.cpp.i
+.PHONY : src\spitarm.cpp.i
+
+src\spitarm.s: src\spitarm.cpp.s
+.PHONY : src\spitarm.s
+
+# target to generate assembly for a file
+src\spitarm.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\legendary_boss.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\legendary_boss.dir\src\spitarm.cpp.s
+.PHONY : src\spitarm.cpp.s
+
+src\utils.obj: src\utils.cpp.obj
+.PHONY : src\utils.obj
+
+# target to build an object file
+src\utils.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\legendary_boss.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\legendary_boss.dir\src\utils.cpp.obj
+.PHONY : src\utils.cpp.obj
+
+src\utils.i: src\utils.cpp.i
+.PHONY : src\utils.i
+
+# target to preprocess a source file
+src\utils.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\legendary_boss.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\legendary_boss.dir\src\utils.cpp.i
+.PHONY : src\utils.cpp.i
+
+src\utils.s: src\utils.cpp.s
+.PHONY : src\utils.s
+
+# target to generate assembly for a file
+src\utils.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\legendary_boss.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\legendary_boss.dir\src\utils.cpp.s
+.PHONY : src\utils.cpp.s
 
 # Help Target
 help:
@@ -295,27 +319,30 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... legendary_boss
-	@echo ... ble_handler.obj
-	@echo ... ble_handler.i
-	@echo ... ble_handler.s
-	@echo ... de_ruyter.obj
-	@echo ... de_ruyter.i
-	@echo ... de_ruyter.s
-	@echo ... http_handler.obj
-	@echo ... http_handler.i
-	@echo ... http_handler.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
-	@echo ... mqtt_handler.obj
-	@echo ... mqtt_handler.i
-	@echo ... mqtt_handler.s
-	@echo ... spitarm.obj
-	@echo ... spitarm.i
-	@echo ... spitarm.s
-	@echo ... utils.obj
-	@echo ... utils.i
-	@echo ... utils.s
+	@echo ... src/ble_handler.obj
+	@echo ... src/ble_handler.i
+	@echo ... src/ble_handler.s
+	@echo ... src/de_ruyter.obj
+	@echo ... src/de_ruyter.i
+	@echo ... src/de_ruyter.s
+	@echo ... src/http_handler.obj
+	@echo ... src/http_handler.i
+	@echo ... src/http_handler.s
+	@echo ... src/mqtt_handler.obj
+	@echo ... src/mqtt_handler.i
+	@echo ... src/mqtt_handler.s
+	@echo ... src/service_scheduler.obj
+	@echo ... src/service_scheduler.i
+	@echo ... src/service_scheduler.s
+	@echo ... src/spitarm.obj
+	@echo ... src/spitarm.i
+	@echo ... src/spitarm.s
+	@echo ... src/utils.obj
+	@echo ... src/utils.i
+	@echo ... src/utils.s
 .PHONY : help
 
 

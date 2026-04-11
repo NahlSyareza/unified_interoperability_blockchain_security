@@ -4,28 +4,21 @@
 #include "nlohmann/json.hpp"
 #include <iostream>
 
-using string = std::string;
-using json = nlohmann::json;
-using Server = httplib::Server;
-using Request = httplib::Request;
-using Response = httplib::Response;
-
 int http_handler(DataStructure *dstructure) {
-  Server svr;
+  httplib::Server svr;
 
-  svr.Get("/dummy", [](const Request &req [[maybe_unused]], Response &res) { res.set_content("Hello World!", "text/plain"); });
+  svr.Get("/dummy", [](const httplib::Request &req [[maybe_unused]], httplib::Response &res) { res.set_content("Hello World!", "text/plain"); });
 
-  svr.Get(R"(/(.*))", [dstructure](const Request &req, Response &res) {
-    string path = req.matches[0];
+  svr.Get(R"(/(.*))", [dstructure](const httplib::Request &req, httplib::Response &res) {
+    std::string path = req.matches[0];
     path.erase(0, 1);
 
-    json ret;
+    nlohmann::json ret;
 
     if (dstructure->http_map.find(path) == dstructure->http_map.end()) {
       ret["state"] = false;
       ret["msg"] = "Key doesn't exist in record.";
       ret["payload"] = "";
-      // ret["code"] = 400;
 
       res.status = 400;
 
@@ -36,15 +29,15 @@ int http_handler(DataStructure *dstructure) {
 
     // json json_payload;
     bool is_json = false;
-    string payload = dstructure->http_map.at(path);
+    std::string payload = dstructure->http_map.at(path);
 
     try {
-      ret = json::parse(payload);
+      ret = nlohmann::json::parse(payload);
       is_json = true;
       if (!ret.is_object()) {
         is_json = false;
       }
-    } catch (json::parse_error &e [[maybe_unused]]) {
+    } catch (nlohmann::json::parse_error &e [[maybe_unused]]) {
       is_json = false;
     }
 
@@ -58,36 +51,24 @@ int http_handler(DataStructure *dstructure) {
       // spdlog::warn("Payload is {}", payload);
       res.set_content(payload, "text/plain");
     }
-
-    // ret["state"] = true;
-    // ret["msg"] = "Successfully retrieved value.";
-    // if (is_json)
-    //   ret["payload"] = json_payload;
-    // else
-    //   ret["payload"] = payload;
-    // ret["code"] = 200;
-
-    // res.status = 200;
-
-    // res.set_content(ret.dump(), "application/json");
   });
 
-  svr.Post(R"(/(.*))", [dstructure](const Request &req, Response &res) {
-    json ret;
+  svr.Post(R"(/(.*))", [dstructure](const httplib::Request &req, httplib::Response &res) {
+    nlohmann::json ret;
 
-    json json_body;
-    string body = req.body;
-    string path = req.matches[0];
+    nlohmann::json json_body;
+    std::string body = req.body;
+    std::string path = req.matches[0];
     path.erase(0, 1);
 
     bool is_json = false;
 
     try {
-      json_body = json::parse(body);
+      json_body = nlohmann::json::parse(body);
       is_json = true;
       // spdlog::info("Retrieved body IS JSON");
       spdlog::info("HTTP: POST body {}", json_body.dump());
-    } catch (json::parse_error &e [[maybe_unused]]) {
+    } catch (nlohmann::json::parse_error &e [[maybe_unused]]) {
       // spdlog::warn("Retrieved body is RAW");
       spdlog::info("HTTP: POST body {}", body);
       is_json = false;
