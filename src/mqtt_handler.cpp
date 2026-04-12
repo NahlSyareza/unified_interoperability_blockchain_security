@@ -55,7 +55,7 @@ void on_message(struct mosquitto *mosq [[maybe_unused]], void *obj, const struct
     // create_task_detached(ds, "MQTT new task", payload, 750);
   } else {
     // ds->mqtt_map[topic] = payload;
-    de_ruyter(ds, topic, payload);
+    // de_ruyter(ds, topic, payload);
   }
 }
 

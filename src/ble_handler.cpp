@@ -60,12 +60,16 @@ int ble_handler(DataStructure *ds) {
         SimpleBLE::BluetoothAddress characteristic_uuid(characteristic);
         ds->uuid_pair[identifier] = std::make_pair(service_uuid, characteristic_uuid);
 
-        spdlog::debug("(BLE) Defining notifications");
-        connected_peripheral.notify(service_uuid, characteristic_uuid, [identifier, ds](SimpleBLE::ByteArray rx) {
-          std::string payload(rx.begin(), rx.end());
-          spdlog::info("(BLE) From {}: {}", payload, identifier);
-          de_ruyter(ds, identifier, payload);
-        });
+        spdlog::debug("(BLE) Defining notifications {} {}", service, characteristic);
+        try {
+          connected_peripheral.notify(service_uuid, characteristic_uuid, [identifier, ds](SimpleBLE::ByteArray payload [[maybe_unused]]) {
+            std::string payload_str(payload.begin(), payload.end());
+            spdlog::info("(BLE) From {}: {}", payload_str, identifier);
+            // de_ruyter(ds, identifier, payload_str);
+          });
+        } catch (const std::exception &e) {
+          spdlog::error("(BLE) Error: {}", e.what());
+        }
         connected_peripherals.pop_back();
       }
     }

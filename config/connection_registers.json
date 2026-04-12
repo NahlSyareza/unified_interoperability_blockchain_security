@@ -16,5 +16,9 @@
   "ROG Phone 9 FE": {
     "destination": "l_martinez",
     "interval": 300
+  },
+  "ble_sensor_x": {
+    "destination": "l_martinez",
+    "interval": 100
   }
 }

@@ -55,7 +55,7 @@ find_package(spdlog CONFIG REQUIRED)
 target_link_libraries(legendary_boss PRIVATE spdlog::spdlog)
 
 find_package(simpleble CONFIG REQUIRED)
-target_link_libraries(legendary_boss PRIVATE simpleble::simpleble)
+target_link_libraries(legendary_boss PRIVATE simpleble::simpleble simpleble::simpleble-c)
 
 if(WIN32)
     find_package(httplib CONFIG REQUIRED)

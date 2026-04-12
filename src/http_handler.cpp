@@ -70,7 +70,7 @@ int http_handler(DataStructure *ds) {
       is_json = false;
     }
 
-    de_ruyter(ds, path, body);
+    // de_ruyter(ds, path, body);
 
     ret["state"] = true;
     ret["msg"] = "Successfully posted new data";
