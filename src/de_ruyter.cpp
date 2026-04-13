@@ -1,9 +1,5 @@
 #include "de_ruyter.hpp"
-#include "mosquitto.h"
-#include "mqtt_protocol.h"
-#include "spdlog/spdlog.h"
-#include <fstream>
-#include <sstream>
+
 
 void ble_processor(DataStructure *dstructure, std::string identifier, std::string payload) {
   for (auto &p : dstructure->peripherals) {
@@ -59,7 +55,7 @@ void get_instr(std::string op, std::string payload, OperationRegister *reg) {
 }
 
 void process_instr(std::string instr, std::string act, std::string payload, OperationRegister *reg) {
-  spdlog::debug("Running instruction: {}", instr);
+  // spdlog::debug("Running instruction: {}", instr);
 
   if (instr == "GET") {
     int detects = std::stoi(act);
@@ -177,10 +173,11 @@ void comms_manager(DataStructure *dstructure, nlohmann::json *src, nlohmann::jso
 }
 
 int de_ruyter(DataStructure *dstructure, std::string src, std::string payload) {
-  if (!dstructure->connection_registers.contains(src)) {
-    spdlog::error("This source isn't listed: {}", src);
+  if (!dstructure->connection_registers.count(src)) {
+    spdlog::error("(DeRuyter) This source isn't listed: {}", src);
     return 1;
   }
+
   nlohmann::json connection = dstructure->connection_registers[src];
 
   std::string dst = connection["destination"];

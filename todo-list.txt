@@ -31,3 +31,9 @@ WELL GUESS WHAT BRO. THESE ACTUALLY DON'T MATTER LMAOOOO
 2. I want to implement error handlings for VARIOUS processes
 3. I want to review the NeedAction compiler
 4. Rn I am working on implementing a dynamic bluetooth
+
+12/04/2025
+1. I have implemented interoperability using tasks
+2. I have yet to implement error handlings for VARIOUS processes
+3. I need to review the NeedAction compiler
+4. I believe the dynamic bluetooth has worked

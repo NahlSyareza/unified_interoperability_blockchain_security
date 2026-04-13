@@ -1,8 +1,4 @@
 #include "mqtt_handler.hpp"
-#include "de_ruyter.hpp"
-#include "nlohmann/json.hpp"
-#include "service_scheduler.hpp"
-#include "spdlog/spdlog.h"
 
 void on_connect(struct mosquitto *mosq, void *obj, int reason_code) {
   int rc;
@@ -52,9 +48,9 @@ void on_message(struct mosquitto *mosq [[maybe_unused]], void *obj, const struct
   std::string payload((char *)msg->payload);
 
   if (topic == "handshake") {
-    // create_task_detached(ds, "MQTT new task", payload, 750);
+    create_task_detached(ds, payload, payload, 750);
   } else {
-    // ds->mqtt_map[topic] = payload;
+    ds->mqtt_map[topic] = payload;
     // de_ruyter(ds, topic, payload);
   }
 }

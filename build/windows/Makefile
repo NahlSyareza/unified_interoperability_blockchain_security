@@ -238,30 +238,6 @@ src\mqtt_handler.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\legendary_boss.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\legendary_boss.dir\src\mqtt_handler.cpp.s
 .PHONY : src\mqtt_handler.cpp.s
 
-src\service_scheduler.obj: src\service_scheduler.cpp.obj
-.PHONY : src\service_scheduler.obj
-
-# target to build an object file
-src\service_scheduler.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\legendary_boss.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj
-.PHONY : src\service_scheduler.cpp.obj
-
-src\service_scheduler.i: src\service_scheduler.cpp.i
-.PHONY : src\service_scheduler.i
-
-# target to preprocess a source file
-src\service_scheduler.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\legendary_boss.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.i
-.PHONY : src\service_scheduler.cpp.i
-
-src\service_scheduler.s: src\service_scheduler.cpp.s
-.PHONY : src\service_scheduler.s
-
-# target to generate assembly for a file
-src\service_scheduler.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\legendary_boss.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.s
-.PHONY : src\service_scheduler.cpp.s
-
 src\spitarm.obj: src\spitarm.cpp.obj
 .PHONY : src\spitarm.obj
 
@@ -285,6 +261,30 @@ src\spitarm.s: src\spitarm.cpp.s
 src\spitarm.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\legendary_boss.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\legendary_boss.dir\src\spitarm.cpp.s
 .PHONY : src\spitarm.cpp.s
+
+src\tour_de_scheduler.obj: src\tour_de_scheduler.cpp.obj
+.PHONY : src\tour_de_scheduler.obj
+
+# target to build an object file
+src\tour_de_scheduler.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\legendary_boss.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj
+.PHONY : src\tour_de_scheduler.cpp.obj
+
+src\tour_de_scheduler.i: src\tour_de_scheduler.cpp.i
+.PHONY : src\tour_de_scheduler.i
+
+# target to preprocess a source file
+src\tour_de_scheduler.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\legendary_boss.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.i
+.PHONY : src\tour_de_scheduler.cpp.i
+
+src\tour_de_scheduler.s: src\tour_de_scheduler.cpp.s
+.PHONY : src\tour_de_scheduler.s
+
+# target to generate assembly for a file
+src\tour_de_scheduler.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\legendary_boss.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.s
+.PHONY : src\tour_de_scheduler.cpp.s
 
 src\utils.obj: src\utils.cpp.obj
 .PHONY : src\utils.obj
@@ -334,12 +334,12 @@ help:
 	@echo ... src/mqtt_handler.obj
 	@echo ... src/mqtt_handler.i
 	@echo ... src/mqtt_handler.s
-	@echo ... src/service_scheduler.obj
-	@echo ... src/service_scheduler.i
-	@echo ... src/service_scheduler.s
 	@echo ... src/spitarm.obj
 	@echo ... src/spitarm.i
 	@echo ... src/spitarm.s
+	@echo ... src/tour_de_scheduler.obj
+	@echo ... src/tour_de_scheduler.i
+	@echo ... src/tour_de_scheduler.s
 	@echo ... src/utils.obj
 	@echo ... src/utils.i
 	@echo ... src/utils.s

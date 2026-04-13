@@ -4,7 +4,7 @@
     "interval": 200,
     "rules": "universal_collapse.txt"
   },
-  "device-12/gen_mqtt": {
+  "gen_mqtt": {
     "destination": "device-67/req_data",
     "interval": 200,
     "rules": "consequences.txt"

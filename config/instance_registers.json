@@ -7,7 +7,7 @@
     "device": "generic-wifi/mqtt",
     "format": "generic-raw"
   },
-  "device-12/gen_mqtt": {
+  "gen_mqtt": {
     "device": "generic-wifi/mqtt",
     "format": "generic-raw"
   },

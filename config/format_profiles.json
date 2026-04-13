@@ -3,6 +3,12 @@
     "syntax": "raw",
     "unit": ""
   },
+  "generic-json": {
+    "syntax": "json",
+    "pairs": {
+      "payload": "string"
+    }
+  },
   "req-67-json": {
     "syntax": "json",
     "pairs": {

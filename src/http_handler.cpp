@@ -1,21 +1,38 @@
 #include "http_handler.hpp"
-#include "de_ruyter.hpp"
-#include "httplib.h"
-#include "nlohmann/json.hpp"
-#include <iostream>
 
 int http_handler(DataStructure *ds) {
   httplib::Server svr;
 
   svr.Get("/dummy", [](const httplib::Request &req [[maybe_unused]], httplib::Response &res) { res.set_content("Hello World!", "text/plain"); });
 
+  svr.Post(R"(/handshake/(.*))", [ds](const httplib::Request &req [[maybe_unused]], httplib::Response &res) {
+    std::string path = req.matches[1];
+    nlohmann::json ret;
+
+    // res.set_content(path, "text/plain");
+
+    bool task_created = create_task_detached(ds, path, path, 3000);
+
+    ret["state"] = task_created;
+    if (task_created) {
+      ret["msg"] = "Task successfully created";
+      res.status = 200;
+    } else {
+      ret["msg"] = "Task with this name has already been created!";
+      res.status = 400;
+    }
+
+    res.set_content(ret.dump(), "application/json");
+  });
+
   svr.Get(R"(/(.*))", [ds](const httplib::Request &req, httplib::Response &res) {
-    std::string path = req.matches[0];
-    path.erase(0, 1);
+    std::string path = req.matches[1];
+    // path.erase(0, 1);
 
     nlohmann::json ret;
 
-    if (ds->http_map.find(path) == ds->http_map.end()) {
+    // if (ds->http_map.find(path) == ds->http_map.end()) {
+    if (!ds->http_map.count(path)) {
       ret["state"] = false;
       ret["msg"] = "Key doesn't exist in record.";
       ret["payload"] = "";
@@ -56,8 +73,8 @@ int http_handler(DataStructure *ds) {
 
     nlohmann::json json_body;
     std::string body = req.body;
-    std::string path = req.matches[0];
-    path.erase(0, 1);
+    std::string path = req.matches[1];
+    // path.erase(0, 1);
 
     bool is_json = false;
 
@@ -71,6 +88,7 @@ int http_handler(DataStructure *ds) {
     }
 
     // de_ruyter(ds, path, body);
+    ds->http_map[path] = body;
 
     ret["state"] = true;
     ret["msg"] = "Successfully posted new data";

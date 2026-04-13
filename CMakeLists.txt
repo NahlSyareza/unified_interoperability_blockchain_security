@@ -18,7 +18,7 @@ project(legendary_boss)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-add_executable(legendary_boss main.cpp src/utils.cpp src/ble_handler.cpp src/de_ruyter.cpp src/http_handler.cpp src/mqtt_handler.cpp src/spitarm.cpp src/service_scheduler.cpp)
+add_executable(legendary_boss main.cpp src/utils.cpp src/ble_handler.cpp src/de_ruyter.cpp src/http_handler.cpp src/mqtt_handler.cpp src/spitarm.cpp src/tour_de_scheduler.cpp)
 
 if(WIN32)
     find_package(PThreads4W REQUIRED)

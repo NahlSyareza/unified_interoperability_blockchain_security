@@ -270,8 +270,245 @@ CMakeFiles\legendary_boss.dir\main.cpp.obj: C:\vcpkg\installed\x64-windows\inclu
 CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\fstream"
 CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\__msvc_filebuf.hpp"
 CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\include\http_handler.hpp"
-CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\include\mqtt_handler.hpp"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\include\de_ruyter.hpp"
 CMakeFiles\legendary_boss.dir\main.cpp.obj: C:\vcpkg\installed\x64-windows\include\mqtt_protocol.h
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\include\spitarm.hpp"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: C:\vcpkg\installed\x64-windows\include\httplib.h
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\io.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_io.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\winsock2.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\winapifamily.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\winpackagefamily.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\windows.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\sdkddkver.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\excpt.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\stdarg.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\windef.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\minwindef.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\specstrings.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\specstrings_strict.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\specstrings_undef.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\driverspecs.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\shared\sdv_driverspecs.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\winnt.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\kernelspecs.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\basetsd.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\guiddef.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\shared\pshpack4.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\shared\poppack.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\pshpack4.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\poppack.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\shared\pshpack4.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\shared\pshpack2.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\shared\poppack.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\shared\pshpack2.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\pshpack2.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\poppack.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\shared\poppack.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\shared\pshpack8.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\shared\poppack.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\shared\pshpack1.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\shared\poppack.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\shared\pshpack1.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\shared\poppack.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\shared\poppack.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\apiset.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\ktmtypes.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\winbase.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\apisetcconv.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\minwinbase.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\apiquery2.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\processenv.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\fileapifromapp.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\fileapi.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\debugapi.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\utilapiset.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\handleapi.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\errhandlingapi.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\fibersapi.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\namedpipeapi.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\profileapi.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\heapapi.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\ioapiset.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\synchapi.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\interlockedapi.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\processthreadsapi.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\sysinfoapi.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\memoryapi.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\enclaveapi.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\threadpoollegacyapiset.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\threadpoolapiset.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\jobapi.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\jobapi2.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\wow64apiset.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\libloaderapi.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\securitybaseapi.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\namespaceapi.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\systemtopologyapi.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\processtopologyapi.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\securityappcontainer.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\realtimeapiset.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\winerror.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\timezoneapi.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\wingdi.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\pshpack1.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\poppack.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\pshpack2.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\poppack.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\pshpack2.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\poppack.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\pshpack4.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\poppack.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\pshpack4.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\poppack.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\winuser.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\pshpack2.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\poppack.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\tvout.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\winnls.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\datetimeapi.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\stringapiset.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\winnls.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\wincon.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\wincontypes.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\consoleapi.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\consoleapi2.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\consoleapi3.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\winver.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\verrsrc.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\winreg.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\reason.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\winnetwk.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\wnnc.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\cderr.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\dde.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\ddeml.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\dlgs.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\lzexpand.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\mmsystem.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\mmsyscom.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\pshpack1.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\poppack.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\pshpack1.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\mciapi.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\mmsyscom.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\mmiscapi.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\mmsyscom.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\mmiscapi2.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\mmsyscom.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\playsoundapi.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\mmsyscom.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\mmeapi.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\mmsyscom.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\timeapi.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\mmsyscom.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\joystickapi.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\mmsyscom.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\poppack.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\nb30.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\rpc.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\pshpack8.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\rpcdce.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\rpcdcep.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\rpcnsi.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\rpcnterr.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\rpcasync.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\pshpack8.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\poppack.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\poppack.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\shellapi.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\winperf.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\pshpack8.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\poppack.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\winsock.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\wincrypt.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\bcrypt.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\ncrypt.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\dpapi.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\winefs.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\winscard.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\wtypes.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\shared\rpcndr.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\pshpack8.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\rpcnsip.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\rpcsal.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\poppack.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\shared\wtypesbase.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\shared\guiddef.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\winioctl.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\pshpack1.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\poppack.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\pshpack1.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\poppack.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\pshpack1.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\poppack.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\pshpack1.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\poppack.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\pshpack1.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\poppack.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\pshpack1.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\poppack.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\pshpack1.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\poppack.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\winsmcrd.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\winspool.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\pshpack8.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\poppack.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\ole2.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\pshpack8.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\objbase.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\pshpack8.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\combaseapi.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\pshpack8.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\unknwnbase.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\objidlbase.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\guiddef.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\cguid.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\poppack.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\coml2api.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\objidl.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\um\unknwn.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\propidlbase.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\um\oaidl.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\urlmon.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\um\oleidl.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\um\servprov.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\um\msxml.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\propidl.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\poppack.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\oleauto.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\pshpack8.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\poppack.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\poppack.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\commdlg.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\stralign.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\winsvc.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\mcx.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\imm.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\ime_cmodes.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\ws2def.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\inaddr.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\qos.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\ws2tcpip.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\ws2ipdef.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\in6addr.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\afunix.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\cassert"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\assert.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\fcntl.h"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\random"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\regex"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\set"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\unordered_set"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: C:\vcpkg\installed\x64-windows\include\brotli\decode.h
+CMakeFiles\legendary_boss.dir\main.cpp.obj: C:\vcpkg\installed\x64-windows\include\brotli\port.h
+CMakeFiles\legendary_boss.dir\main.cpp.obj: C:\vcpkg\installed\x64-windows\include\brotli\shared_dictionary.h
+CMakeFiles\legendary_boss.dir\main.cpp.obj: C:\vcpkg\installed\x64-windows\include\brotli\types.h
+CMakeFiles\legendary_boss.dir\main.cpp.obj: C:\vcpkg\installed\x64-windows\include\brotli\encode.h
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\include\tour_de_scheduler.hpp"
+CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\include\mqtt_handler.hpp"
 CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\future"
 CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\ppltasks.h"
 CMakeFiles\legendary_boss.dir\main.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\pplwin.h"
@@ -549,9 +786,6 @@ CMakeFiles\legendary_boss.dir\src\ble_handler.cpp.obj: C:\vcpkg\installed\x64-wi
 CMakeFiles\legendary_boss.dir\src\ble_handler.cpp.obj: C:\vcpkg\installed\x64-windows\include\spdlog\version.h
 CMakeFiles\legendary_boss.dir\src\ble_handler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\fstream"
 CMakeFiles\legendary_boss.dir\src\ble_handler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\__msvc_filebuf.hpp"
-CMakeFiles\legendary_boss.dir\src\ble_handler.cpp.obj: "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\include\de_ruyter.hpp"
-CMakeFiles\legendary_boss.dir\src\ble_handler.cpp.obj: "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\include\spitarm.hpp"
-CMakeFiles\legendary_boss.dir\src\ble_handler.cpp.obj: "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\include\utils.hpp"
 
 
 CMakeFiles\legendary_boss.dir\src\de_ruyter.cpp.obj: "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\src\de_ruyter.cpp"
@@ -822,8 +1056,8 @@ CMakeFiles\legendary_boss.dir\src\de_ruyter.cpp.obj: C:\vcpkg\installed\x64-wind
 CMakeFiles\legendary_boss.dir\src\de_ruyter.cpp.obj: C:\vcpkg\installed\x64-windows\include\spdlog\version.h
 CMakeFiles\legendary_boss.dir\src\de_ruyter.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\fstream"
 CMakeFiles\legendary_boss.dir\src\de_ruyter.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\__msvc_filebuf.hpp"
-CMakeFiles\legendary_boss.dir\src\de_ruyter.cpp.obj: "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\include\spitarm.hpp"
 CMakeFiles\legendary_boss.dir\src\de_ruyter.cpp.obj: C:\vcpkg\installed\x64-windows\include\mqtt_protocol.h
+CMakeFiles\legendary_boss.dir\src\de_ruyter.cpp.obj: "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\include\spitarm.hpp"
 
 
 CMakeFiles\legendary_boss.dir\src\http_handler.cpp.obj: "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\src\http_handler.cpp"
@@ -1095,6 +1329,7 @@ CMakeFiles\legendary_boss.dir\src\http_handler.cpp.obj: C:\vcpkg\installed\x64-w
 CMakeFiles\legendary_boss.dir\src\http_handler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\fstream"
 CMakeFiles\legendary_boss.dir\src\http_handler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\__msvc_filebuf.hpp"
 CMakeFiles\legendary_boss.dir\src\http_handler.cpp.obj: "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\include\de_ruyter.hpp"
+CMakeFiles\legendary_boss.dir\src\http_handler.cpp.obj: C:\vcpkg\installed\x64-windows\include\mqtt_protocol.h
 CMakeFiles\legendary_boss.dir\src\http_handler.cpp.obj: "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\include\spitarm.hpp"
 CMakeFiles\legendary_boss.dir\src\http_handler.cpp.obj: C:\vcpkg\installed\x64-windows\include\httplib.h
 CMakeFiles\legendary_boss.dir\src\http_handler.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\io.h"
@@ -1330,6 +1565,7 @@ CMakeFiles\legendary_boss.dir\src\http_handler.cpp.obj: C:\vcpkg\installed\x64-w
 CMakeFiles\legendary_boss.dir\src\http_handler.cpp.obj: C:\vcpkg\installed\x64-windows\include\brotli\shared_dictionary.h
 CMakeFiles\legendary_boss.dir\src\http_handler.cpp.obj: C:\vcpkg\installed\x64-windows\include\brotli\types.h
 CMakeFiles\legendary_boss.dir\src\http_handler.cpp.obj: C:\vcpkg\installed\x64-windows\include\brotli\encode.h
+CMakeFiles\legendary_boss.dir\src\http_handler.cpp.obj: "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\include\tour_de_scheduler.hpp"
 
 
 CMakeFiles\legendary_boss.dir\src\mqtt_handler.cpp.obj: "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\src\mqtt_handler.cpp"
@@ -1600,328 +1836,36 @@ CMakeFiles\legendary_boss.dir\src\mqtt_handler.cpp.obj: C:\vcpkg\installed\x64-w
 CMakeFiles\legendary_boss.dir\src\mqtt_handler.cpp.obj: C:\vcpkg\installed\x64-windows\include\spdlog\version.h
 CMakeFiles\legendary_boss.dir\src\mqtt_handler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\fstream"
 CMakeFiles\legendary_boss.dir\src\mqtt_handler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\__msvc_filebuf.hpp"
-CMakeFiles\legendary_boss.dir\src\mqtt_handler.cpp.obj: C:\vcpkg\installed\x64-windows\include\mqtt_protocol.h
 CMakeFiles\legendary_boss.dir\src\mqtt_handler.cpp.obj: "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\include\de_ruyter.hpp"
+CMakeFiles\legendary_boss.dir\src\mqtt_handler.cpp.obj: C:\vcpkg\installed\x64-windows\include\mqtt_protocol.h
 CMakeFiles\legendary_boss.dir\src\mqtt_handler.cpp.obj: "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\include\spitarm.hpp"
-CMakeFiles\legendary_boss.dir\src\mqtt_handler.cpp.obj: "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\include\service_scheduler.hpp"
-
-
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\src\service_scheduler.cpp"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\include\service_scheduler.hpp"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\include\data_structure.hpp"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\mosquitto.h
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stddef.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\vcruntime.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\sal.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\concurrencysal.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\vadefs.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\stdint.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\json.hpp
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\algorithm"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\yvals_core.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xkeycheck.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\__msvc_heap_algorithms.hpp"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xutility"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\yvals.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\crtdbg.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\vcruntime_new_debug.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\vcruntime_new.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\crtdefs.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\use_ansi.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\__msvc_iter_core.hpp"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\utility"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\initializer_list"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\cstddef"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xtr1common"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\type_traits"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\cstdint"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\compare"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\concepts"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\climits"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\limits.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\cstdlib"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\math.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_math.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdlib.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_malloc.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_search.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wstdlib.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\cstring"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\string.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_memory.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_memcpy_s.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\errno.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\vcruntime_string.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wstring.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\cwchar"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\cstdio"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdio.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wstdio.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_stdio_config.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\wchar.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wconio.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wctype.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wdirect.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wio.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_share.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wprocess.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wtime.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\sys\stat.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\sys\types.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\intrin.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\intrin0.inl.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\setjmp.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\immintrin.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\wmmintrin.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\nmmintrin.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\smmintrin.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\tmmintrin.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\pmmintrin.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\emmintrin.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xmmintrin.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\mmintrin.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\malloc.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\zmmintrin.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\ammintrin.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\__msvc_minmax.hpp"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xmemory"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\limits"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\cfloat"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\float.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\intrin0.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\new"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\exception"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\vcruntime_exception.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\eh.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_terminate.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xatomic.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\tuple"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\functional"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\typeinfo"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\vcruntime_typeinfo.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\unordered_map"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xhash"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\cmath"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\list"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xpolymorphic_allocator.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\vector"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\__msvc_bit_utils.hpp"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\__msvc_sanitizer_annotate_container.hpp"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xbit_ops.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xnode_handle.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\iosfwd"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\iterator"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\memory"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\atomic"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xatomic_wait.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xthreads.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\__msvc_threads_core.hpp"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xtimec.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\ctime"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\time.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\string"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xstring"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\__msvc_string_view.hpp"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\cctype"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\ctype.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\adl_serializer.hpp
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\detail\abi_macros.hpp
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\detail\conversions\from_json.hpp
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\array"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\forward_list"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\map"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xtree"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\valarray"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\detail\exceptions.hpp
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\stdexcept"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\detail\value_t.hpp
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\detail\macro_scope.hpp
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\detail\meta\detected.hpp
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\detail\meta\void_t.hpp
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\thirdparty\hedley\hedley.hpp
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\version"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\cassert"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\assert.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\detail\string_escape.hpp
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\detail\input\position_t.hpp
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\detail\meta\cpp_future.hpp
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\detail\meta\type_traits.hpp
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\detail\iterators\iterator_traits.hpp
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\detail\meta\call_std\begin.hpp
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\detail\meta\call_std\end.hpp
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\json_fwd.hpp
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\detail\string_concat.hpp
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\detail\meta\identity_tag.hpp
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\detail\meta\std_fs.hpp
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\filesystem"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\chrono"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\__msvc_chrono.hpp"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\ratio"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\system_error"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\__msvc_system_error_abi.hpp"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\cerrno"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xcall_once.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xerrc.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xfilesystem_abi.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\__msvc_tzdb.hpp"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\format"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\__msvc_format_ucd_tables.hpp"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\__msvc_formatter.hpp"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\__msvc_print.hpp"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\__msvc_ranges_tuple_formatter.hpp"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\bit"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xlocale"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xfacet"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xlocinfo"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\__msvc_xlocinfo_types.hpp"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\clocale"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\locale.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\charconv"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xcharconv.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xcharconv_ryu.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xcharconv_ryu_tables.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xcharconv_tables.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\locale"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xlocbuf"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\streambuf"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xiosbase"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\share.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xlocmes"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xlocmon"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xlocnum"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xloctime"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\iomanip"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\istream"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\__msvc_ostream.hpp"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\ios"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\optional"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xsmf_control.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\sstream"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\detail\conversions\to_json.hpp
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\detail\iterators\iteration_proxy.hpp
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\ranges"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\__msvc_int128.hpp"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\__msvc_ranges_to.hpp"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\span"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\string_view"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\detail\string_utils.hpp
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\byte_container_with_subtype.hpp
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\detail\hash.hpp
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\detail\input\binary_reader.hpp
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\detail\input\input_adapters.hpp
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\numeric"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\detail\input\json_sax.hpp
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\detail\input\lexer.hpp
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\detail\meta\is_sax.hpp
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\detail\input\parser.hpp
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\detail\iterators\internal_iterator.hpp
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\detail\iterators\primitive_iterator.hpp
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\detail\iterators\iter_impl.hpp
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\detail\iterators\json_reverse_iterator.hpp
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\detail\json_custom_base_class.hpp
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\detail\json_pointer.hpp
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\detail\json_ref.hpp
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\detail\output\binary_writer.hpp
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\detail\output\output_adapters.hpp
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\ostream"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\detail\output\serializer.hpp
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\detail\conversions\to_chars.hpp
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\ordered_map.hpp
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\any"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\detail\macro_unscope.hpp
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\thirdparty\hedley\hedley_undef.hpp
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\simpleble\SimpleBLE.h
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\simpleble\Config.h
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\simpleble\Adapter.h
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\simpleble\export.h
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\simpleble\Exceptions.h
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\simpleble\Types.h
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\simpleble\kvn\kvn_bytearray.h
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\iostream"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\simpleble\Peripheral.h
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\simpleble\Service.h
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\simpleble\Characteristic.h
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\simpleble\Descriptor.h
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\simpleble\AdapterSafe.h
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\simpleble\PeripheralSafe.h
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\simpleble\Utils.h
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\spdlog\spdlog.h
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\spdlog\common.h
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\spdlog\details\null_mutex.h
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\spdlog\tweakme.h
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\spdlog\fmt\fmt.h
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\fmt\format.h
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\fmt\base.h
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\spdlog\details\registry.h
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\spdlog\details\periodic_worker.h
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\condition_variable"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\mutex"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\thread"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\process.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_startup.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\math.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\vcruntime_startup.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\stop_token"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\spdlog\details\synchronous_factory.h
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\spdlog\logger.h
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\spdlog\details\backtracer.h
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\spdlog\details\circular_q.h
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\cassert"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\assert.h"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\spdlog\details\log_msg_buffer.h
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\spdlog\details\log_msg.h
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\spdlog\version.h
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\fstream"
-CMakeFiles\legendary_boss.dir\src\service_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\__msvc_filebuf.hpp"
+CMakeFiles\legendary_boss.dir\src\mqtt_handler.cpp.obj: "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\include\tour_de_scheduler.hpp"
 
 
 CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\src\spitarm.cpp"
 CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\include\spitarm.hpp"
-CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\iostream"
+CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: C:\vcpkg\installed\x64-windows\include\spdlog\spdlog.h
+CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: C:\vcpkg\installed\x64-windows\include\spdlog\common.h
+CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: C:\vcpkg\installed\x64-windows\include\spdlog\details\null_mutex.h
+CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\atomic"
+CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\yvals.h"
 CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\yvals_core.h"
 CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\vcruntime.h"
 CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\sal.h"
 CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\concurrencysal.h"
 CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\vadefs.h"
 CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xkeycheck.h"
-CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\istream"
-CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\__msvc_ostream.hpp"
-CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\ios"
-CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xlocnum"
-CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\cfloat"
-CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\float.h"
-CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt.h"
-CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\climits"
-CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\limits.h"
-CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\cmath"
-CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\yvals.h"
 CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\crtdbg.h"
+CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt.h"
 CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\vcruntime_new_debug.h"
 CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\vcruntime_new.h"
 CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\crtdefs.h"
 CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\use_ansi.h"
-CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\cstdlib"
-CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\math.h"
-CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_math.h"
-CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdlib.h"
-CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_malloc.h"
-CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_search.h"
-CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stddef.h"
-CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wstdlib.h"
-CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xtr1common"
-CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\intrin0.h"
-CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\intrin0.inl.h"
-CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\type_traits"
 CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\cstddef"
+CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stddef.h"
+CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xtr1common"
 CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\cstdint"
 CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\stdint.h"
-CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\cstdio"
-CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdio.h"
-CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wstdio.h"
-CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_stdio_config.h"
-CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\iterator"
-CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\iosfwd"
 CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\cstring"
 CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\string.h"
 CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_memory.h"
@@ -1929,7 +1873,41 @@ CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files (x86)\Windo
 CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\errno.h"
 CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\vcruntime_string.h"
 CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wstring.h"
+CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xatomic.h"
+CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\type_traits"
+CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\intrin0.h"
+CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\intrin0.inl.h"
+CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xatomic_wait.h"
+CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\cstdlib"
+CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\math.h"
+CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_math.h"
+CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdlib.h"
+CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_malloc.h"
+CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_search.h"
+CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wstdlib.h"
+CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\limits.h"
+CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xthreads.h"
+CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\__msvc_threads_core.hpp"
+CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\climits"
+CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xtimec.h"
+CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\ctime"
+CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\time.h"
+CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wtime.h"
+CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\utility"
+CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\initializer_list"
+CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\compare"
+CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\concepts"
+CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: C:\vcpkg\installed\x64-windows\include\spdlog\tweakme.h
+CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\chrono"
+CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\__msvc_chrono.hpp"
+CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\limits"
+CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\cfloat"
+CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\float.h"
 CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\cwchar"
+CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\cstdio"
+CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdio.h"
+CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wstdio.h"
+CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_stdio_config.h"
 CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\wchar.h"
 CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wconio.h"
 CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wctype.h"
@@ -1937,7 +1915,6 @@ CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files (x86)\Windo
 CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wio.h"
 CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_share.h"
 CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wprocess.h"
-CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wtime.h"
 CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\sys\stat.h"
 CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\sys\types.h"
 CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\intrin.h"
@@ -1954,15 +1931,7 @@ CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft V
 CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\malloc.h"
 CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\zmmintrin.h"
 CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\ammintrin.h"
-CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xutility"
-CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\__msvc_iter_core.hpp"
-CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\utility"
-CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\initializer_list"
-CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\compare"
-CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\concepts"
-CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\streambuf"
-CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xiosbase"
-CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\share.h"
+CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\ratio"
 CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\system_error"
 CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\__msvc_system_error_abi.hpp"
 CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\cerrno"
@@ -1974,21 +1943,26 @@ CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files (x86)\Windo
 CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xstring"
 CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\__msvc_sanitizer_annotate_container.hpp"
 CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\__msvc_string_view.hpp"
+CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\iosfwd"
+CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xutility"
+CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\__msvc_iter_core.hpp"
 CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xmemory"
-CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\limits"
 CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\new"
-CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xatomic.h"
 CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\tuple"
 CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xpolymorphic_allocator.h"
 CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xcall_once.h"
 CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xerrc.h"
-CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\atomic"
-CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xatomic_wait.h"
-CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xthreads.h"
-CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\__msvc_threads_core.hpp"
-CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xtimec.h"
-CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\ctime"
-CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\time.h"
+CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xfilesystem_abi.h"
+CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\__msvc_tzdb.hpp"
+CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\cmath"
+CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\format"
+CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\__msvc_format_ucd_tables.hpp"
+CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\__msvc_formatter.hpp"
+CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\__msvc_print.hpp"
+CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\__msvc_ranges_tuple_formatter.hpp"
+CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\bit"
+CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\__msvc_bit_utils.hpp"
+CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\iterator"
 CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xlocale"
 CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\memory"
 CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\typeinfo"
@@ -2000,23 +1974,6 @@ CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft V
 CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\ctype.h"
 CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\clocale"
 CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\locale.h"
-CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\ostream"
-CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: C:\vcpkg\installed\x64-windows\include\spdlog\spdlog.h
-CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: C:\vcpkg\installed\x64-windows\include\spdlog\common.h
-CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: C:\vcpkg\installed\x64-windows\include\spdlog\details\null_mutex.h
-CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: C:\vcpkg\installed\x64-windows\include\spdlog\tweakme.h
-CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\chrono"
-CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\__msvc_chrono.hpp"
-CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\ratio"
-CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xfilesystem_abi.h"
-CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\__msvc_tzdb.hpp"
-CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\format"
-CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\__msvc_format_ucd_tables.hpp"
-CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\__msvc_formatter.hpp"
-CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\__msvc_print.hpp"
-CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\__msvc_ranges_tuple_formatter.hpp"
-CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\bit"
-CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\__msvc_bit_utils.hpp"
 CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\charconv"
 CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xbit_ops.h"
 CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xcharconv.h"
@@ -2025,11 +1982,18 @@ CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft V
 CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xcharconv_tables.h"
 CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\locale"
 CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xlocbuf"
+CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\streambuf"
+CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xiosbase"
+CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\share.h"
 CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xlocmes"
 CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xlocmon"
+CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xlocnum"
 CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xloctime"
 CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\forward_list"
 CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\iomanip"
+CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\istream"
+CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\__msvc_ostream.hpp"
+CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\ios"
 CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\optional"
 CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xsmf_control.h"
 CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\sstream"
@@ -2063,6 +2027,281 @@ CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files (x86)\Windo
 CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: C:\vcpkg\installed\x64-windows\include\spdlog\details\log_msg_buffer.h
 CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: C:\vcpkg\installed\x64-windows\include\spdlog\details\log_msg.h
 CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: C:\vcpkg\installed\x64-windows\include\spdlog\version.h
+CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\iostream"
+CMakeFiles\legendary_boss.dir\src\spitarm.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\ostream"
+
+
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\src\tour_de_scheduler.cpp"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\include\tour_de_scheduler.hpp"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\include\data_structure.hpp"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\mosquitto.h
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stddef.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\vcruntime.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\sal.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\concurrencysal.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\vadefs.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\stdint.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\json.hpp
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\algorithm"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\yvals_core.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xkeycheck.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\__msvc_heap_algorithms.hpp"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xutility"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\yvals.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\crtdbg.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\vcruntime_new_debug.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\vcruntime_new.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\crtdefs.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\use_ansi.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\__msvc_iter_core.hpp"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\utility"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\initializer_list"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\cstddef"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xtr1common"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\type_traits"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\cstdint"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\compare"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\concepts"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\climits"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\limits.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\cstdlib"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\math.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_math.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdlib.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_malloc.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_search.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wstdlib.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\cstring"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\string.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_memory.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_memcpy_s.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\errno.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\vcruntime_string.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wstring.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\cwchar"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\cstdio"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdio.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wstdio.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_stdio_config.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\wchar.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wconio.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wctype.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wdirect.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wio.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_share.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wprocess.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wtime.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\sys\stat.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\sys\types.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\intrin.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\intrin0.inl.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\setjmp.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\immintrin.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\wmmintrin.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\nmmintrin.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\smmintrin.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\tmmintrin.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\pmmintrin.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\emmintrin.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xmmintrin.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\mmintrin.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\malloc.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\zmmintrin.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\ammintrin.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\__msvc_minmax.hpp"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xmemory"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\limits"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\cfloat"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\float.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\intrin0.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\new"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\exception"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\vcruntime_exception.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\eh.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_terminate.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xatomic.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\tuple"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\functional"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\typeinfo"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\vcruntime_typeinfo.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\unordered_map"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xhash"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\cmath"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\list"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xpolymorphic_allocator.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\vector"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\__msvc_bit_utils.hpp"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\__msvc_sanitizer_annotate_container.hpp"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xbit_ops.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xnode_handle.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\iosfwd"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\iterator"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\memory"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\atomic"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xatomic_wait.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xthreads.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\__msvc_threads_core.hpp"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xtimec.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\ctime"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\time.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\string"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xstring"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\__msvc_string_view.hpp"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\cctype"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\ctype.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\adl_serializer.hpp
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\detail\abi_macros.hpp
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\detail\conversions\from_json.hpp
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\array"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\forward_list"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\map"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xtree"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\valarray"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\detail\exceptions.hpp
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\stdexcept"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\detail\value_t.hpp
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\detail\macro_scope.hpp
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\detail\meta\detected.hpp
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\detail\meta\void_t.hpp
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\thirdparty\hedley\hedley.hpp
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\version"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\cassert"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\assert.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\detail\string_escape.hpp
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\detail\input\position_t.hpp
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\detail\meta\cpp_future.hpp
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\detail\meta\type_traits.hpp
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\detail\iterators\iterator_traits.hpp
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\detail\meta\call_std\begin.hpp
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\detail\meta\call_std\end.hpp
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\json_fwd.hpp
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\detail\string_concat.hpp
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\detail\meta\identity_tag.hpp
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\detail\meta\std_fs.hpp
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\filesystem"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\chrono"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\__msvc_chrono.hpp"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\ratio"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\system_error"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\__msvc_system_error_abi.hpp"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\cerrno"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xcall_once.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xerrc.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xfilesystem_abi.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\__msvc_tzdb.hpp"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\format"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\__msvc_format_ucd_tables.hpp"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\__msvc_formatter.hpp"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\__msvc_print.hpp"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\__msvc_ranges_tuple_formatter.hpp"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\bit"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xlocale"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xfacet"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xlocinfo"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\__msvc_xlocinfo_types.hpp"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\clocale"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\locale.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\charconv"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xcharconv.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xcharconv_ryu.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xcharconv_ryu_tables.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xcharconv_tables.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\locale"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xlocbuf"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\streambuf"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xiosbase"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\share.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xlocmes"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xlocmon"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xlocnum"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xloctime"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\iomanip"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\istream"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\__msvc_ostream.hpp"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\ios"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\optional"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xsmf_control.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\sstream"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\detail\conversions\to_json.hpp
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\detail\iterators\iteration_proxy.hpp
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\ranges"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\__msvc_int128.hpp"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\__msvc_ranges_to.hpp"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\span"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\string_view"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\detail\string_utils.hpp
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\byte_container_with_subtype.hpp
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\detail\hash.hpp
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\detail\input\binary_reader.hpp
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\detail\input\input_adapters.hpp
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\numeric"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\detail\input\json_sax.hpp
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\detail\input\lexer.hpp
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\detail\meta\is_sax.hpp
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\detail\input\parser.hpp
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\detail\iterators\internal_iterator.hpp
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\detail\iterators\primitive_iterator.hpp
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\detail\iterators\iter_impl.hpp
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\detail\iterators\json_reverse_iterator.hpp
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\detail\json_custom_base_class.hpp
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\detail\json_pointer.hpp
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\detail\json_ref.hpp
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\detail\output\binary_writer.hpp
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\detail\output\output_adapters.hpp
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\ostream"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\detail\output\serializer.hpp
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\detail\conversions\to_chars.hpp
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\ordered_map.hpp
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\any"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\detail\macro_unscope.hpp
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\nlohmann\thirdparty\hedley\hedley_undef.hpp
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\simpleble\SimpleBLE.h
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\simpleble\Config.h
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\simpleble\Adapter.h
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\simpleble\export.h
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\simpleble\Exceptions.h
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\simpleble\Types.h
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\simpleble\kvn\kvn_bytearray.h
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\iostream"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\simpleble\Peripheral.h
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\simpleble\Service.h
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\simpleble\Characteristic.h
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\simpleble\Descriptor.h
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\simpleble\AdapterSafe.h
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\simpleble\PeripheralSafe.h
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\simpleble\Utils.h
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\spdlog\spdlog.h
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\spdlog\common.h
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\spdlog\details\null_mutex.h
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\spdlog\tweakme.h
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\spdlog\fmt\fmt.h
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\fmt\format.h
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\fmt\base.h
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\spdlog\details\registry.h
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\spdlog\details\periodic_worker.h
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\condition_variable"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\mutex"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\thread"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\process.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_startup.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\math.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\vcruntime_startup.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\stop_token"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\spdlog\details\synchronous_factory.h
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\spdlog\logger.h
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\spdlog\details\backtracer.h
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\spdlog\details\circular_q.h
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\cassert"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\assert.h"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\spdlog\details\log_msg_buffer.h
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\spdlog\details\log_msg.h
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\spdlog\version.h
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\fstream"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\__msvc_filebuf.hpp"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\include\de_ruyter.hpp"
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: C:\vcpkg\installed\x64-windows\include\mqtt_protocol.h
+CMakeFiles\legendary_boss.dir\src\tour_de_scheduler.cpp.obj: "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\include\spitarm.hpp"
 
 
 CMakeFiles\legendary_boss.dir\src\utils.cpp.obj: "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\src\utils.cpp"
@@ -2247,6 +2486,8 @@ CMakeFiles\legendary_boss.dir\src\utils.cpp.obj: C:\vcpkg\installed\x64-windows\
 "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\sal.h":
 
 "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\main.cpp":
+
+"C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\include\tour_de_scheduler.hpp":
 
 "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\threadpoolapiset.h":
 
@@ -2580,9 +2821,9 @@ C:\vcpkg\installed\x64-windows\include\nlohmann\detail\meta\call_std\end.hpp:
 
 "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\typeinfo":
 
-"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\wincon.h":
-
 "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\ppltaskscheduler.h":
+
+"C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\wincon.h":
 
 "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\xlocale":
 
@@ -2615,8 +2856,6 @@ C:\vcpkg\installed\x64-windows\include\nlohmann\detail\meta\std_fs.hpp:
 C:\vcpkg\installed\x64-windows\include\nlohmann\detail\macro_unscope.hpp:
 
 "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\iosfwd":
-
-"C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\include\service_scheduler.hpp":
 
 "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared\pshpack2.h":
 
@@ -2934,25 +3173,11 @@ C:\vcpkg\installed\x64-windows\include\spdlog\version.h:
 
 "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\include\http_handler.hpp":
 
-"C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\include\mqtt_handler.hpp":
-
-C:\vcpkg\installed\x64-windows\include\mqtt_protocol.h:
-
-"C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\ppltasks.h":
-
-"C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\pplcancellation_token.h":
-
-"C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\src\ble_handler.cpp":
-
 "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\shared\pshpack4.h":
 
 "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\include\de_ruyter.hpp":
 
-"C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\include\utils.hpp":
-
-"C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\src\de_ruyter.cpp":
-
-"C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\src\http_handler.cpp":
+C:\vcpkg\installed\x64-windows\include\mqtt_protocol.h:
 
 "C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\apiquery2.h":
 
@@ -3142,6 +3367,20 @@ C:\vcpkg\installed\x64-windows\include\mqtt_protocol.h:
 
 C:\vcpkg\installed\x64-windows\include\brotli\encode.h:
 
+"C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\include\mqtt_handler.hpp":
+
+"C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\ppltasks.h":
+
+"C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include\pplcancellation_token.h":
+
+"C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\src\ble_handler.cpp":
+
+"C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\src\de_ruyter.cpp":
+
+"C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\src\http_handler.cpp":
+
 "C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\src\mqtt_handler.cpp":
 
-"C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\src\service_scheduler.cpp":
+"C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\src\tour_de_scheduler.cpp":
+
+"C:\Users\Nahl Syareza Rahidra\Documents\My Kuliah\Seminar\unified_interoperability_blockchain_security\include\utils.hpp":

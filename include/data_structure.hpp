@@ -8,12 +8,18 @@
 #include <iostream>
 #include <map>
 
+namespace DataStructureConstants {
+const std::string BLE_CONFIG = "./config/ble_addresses.json";
+};
+
 class DataStructure {
 public:
   struct mosquitto *mosq = nullptr;
 
   std::map<std::string, std::string> http_map;
   std::map<std::string, std::string> mqtt_map;
+  std::map<std::string, std::string> ble_map;
+  std::map<std::string, std::string> lora_map;
 
   std::map<std::string, std::thread *> active_registers;
 
@@ -29,6 +35,11 @@ public:
 
   // T is of std::pair<string, json*>
   template <typename... T> void populate(nlohmann::json *base, std::string identifier, nlohmann::json *save, T... t) {
+    if (!base->count(identifier)) {
+      spdlog::error("(DataStructure) Identifier not found. Perhaps your device name is wrong?");
+      return;
+    }
+
     nlohmann::json obj = (*base)[identifier];
 
     (*save)["name"] = identifier;
@@ -40,8 +51,8 @@ public:
 
           std::string value = obj[first];
 
-          if (second.count(value) < 1) {
-            spdlog::error("(DataStructure) Illegal action: Given key is not valid populate method. Identifier: {}", identifier);
+          if (!second.count(value)) {
+            spdlog::error("(DataStructure) Illegal action: Given key is not valid populate method. Identifier: {} Key: {}", identifier, value);
             return;
           }
 

@@ -4,6 +4,8 @@
 #define UTILS_HPP
 
 #include "simpleble/SimpleBLE.h"
+#include <iomanip>
+#include <iostream>
 #include <optional>
 
 namespace Utils {

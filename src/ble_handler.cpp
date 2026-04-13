@@ -1,10 +1,4 @@
 #include "ble_handler.hpp"
-#include "de_ruyter.hpp"
-#include "nlohmann/json.hpp"
-#include "simpleble/SimpleBLE.h"
-#include "spdlog/spdlog.h"
-#include "utils.hpp"
-#include <iostream>
 
 int ble_handler(DataStructure *ds) {
   // std::optional<SimpleBLE::Adapter> adapter_optional = Utils::getAdapter();
@@ -62,9 +56,10 @@ int ble_handler(DataStructure *ds) {
 
         spdlog::debug("(BLE) Defining notifications {} {}", service, characteristic);
         try {
-          connected_peripheral.notify(service_uuid, characteristic_uuid, [identifier, ds](SimpleBLE::ByteArray payload [[maybe_unused]]) {
-            std::string payload_str(payload.begin(), payload.end());
-            spdlog::info("(BLE) From {}: {}", payload_str, identifier);
+          connected_peripheral.notify(service_uuid, characteristic_uuid, [identifier, ds](SimpleBLE::ByteArray rx) {
+            std::string payload(rx.begin(), rx.end());
+            spdlog::info("(BLE) From {}: {}", identifier, payload);
+            ds->ble_map[identifier] = payload;
             // de_ruyter(ds, identifier, payload_str);
           });
         } catch (const std::exception &e) {
