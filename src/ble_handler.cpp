@@ -1,6 +1,6 @@
 #include "ble_handler.hpp"
 
-int ble_handler(DataStructure *ds) {
+int ble_handler(DataStructure::Instance *ds) {
   // std::optional<SimpleBLE::Adapter> adapter_optional = Utils::getAdapter();
   auto adapters = SimpleBLE::Adapter::get_adapters();
 

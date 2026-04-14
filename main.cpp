@@ -10,15 +10,22 @@
 int main() {
   spdlog::info("Walking by the wall");
 
-  DataStructure dstructure;
+  DataStructure::Instance ds;
 
-  dstructure.fill_maps();
+  // dstructure.fill_maps();
 
   spdlog::set_level(spdlog::level::debug);
 
-  std::thread mqtt_thread(mqtt_handler, &dstructure);
-  std::thread http_thread(http_handler, &dstructure);
-  std::thread ble_thread(ble_handler, &dstructure);
+  // nlohmann::json json_obj;
+  // TourDeScheduler::create_task_register("device-1/test", &json_obj);
+
+  // spdlog::debug("{}", json_obj.dump(1));
+
+  // return 0;
+
+  std::thread mqtt_thread(mqtt_handler, &ds);
+  std::thread http_thread(http_handler, &ds);
+  std::thread ble_thread(ble_handler, &ds);
 
   mqtt_thread.join();
   http_thread.join();

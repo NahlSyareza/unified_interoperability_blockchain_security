@@ -37,3 +37,7 @@ WELL GUESS WHAT BRO. THESE ACTUALLY DON'T MATTER LMAOOOO
 2. I have yet to implement error handlings for VARIOUS processes
 3. I need to review the NeedAction compiler
 4. I believe the dynamic bluetooth has worked
+
+14/04/2024
+1. I used Gemini for: TaskData struct and Instance class "race condition", asking about threads declared on a function and what happens when it ends
+2. 

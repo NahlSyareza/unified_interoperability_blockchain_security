@@ -14,9 +14,6 @@ Okay so here's the commands so far:
 * ASGN_TO <key>
   Used to assign a value to a key. Again this is used for non-raw data syntaxes. Perhaps I need to also have a command for a csv raw data syntax.
 
-* CLCT_FROM <key>
-  Used to collect a value from a key. Should I mention how this is only useful for non-raw data syntaxes?
-
 * IF <condition>
   Compare a value. Condition is always a string value for now
 

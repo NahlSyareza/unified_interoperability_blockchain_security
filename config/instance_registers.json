@@ -11,7 +11,7 @@
     "device": "generic-wifi/mqtt",
     "format": "generic-raw"
   },
-  "device-67/req_data": {
+  "led_req_data": {
     "device": "generic-wifi/http",
     "format": "req-67-json"
   },

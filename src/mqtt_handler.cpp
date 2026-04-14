@@ -3,7 +3,7 @@
 void on_connect(struct mosquitto *mosq, void *obj, int reason_code) {
   int rc;
 
-  DataStructure *ds = (DataStructure *)obj;
+  DataStructure::Instance *ds = (DataStructure::Instance *)obj;
 
   spdlog::info("on_connect: {}", mosquitto_connack_string(reason_code));
   if (reason_code != 0) {
@@ -40,7 +40,7 @@ void on_subscribe(struct mosquitto *mosq, void *obj [[maybe_unused]], int mid, i
 }
 
 void on_message(struct mosquitto *mosq [[maybe_unused]], void *obj, const struct mosquitto_message *msg) {
-  DataStructure *ds = (DataStructure *)obj;
+  DataStructure::Instance *ds = (DataStructure::Instance *)obj;
 
   spdlog::info("MQTT: {} {} {}", msg->topic, msg->qos, (char *)msg->payload);
 
@@ -48,14 +48,20 @@ void on_message(struct mosquitto *mosq [[maybe_unused]], void *obj, const struct
   std::string payload((char *)msg->payload);
 
   if (topic == "handshake") {
-    create_task_detached(ds, payload, payload, 750);
+    create_task_detached(ds, payload, payload);
+  } else if (topic == "unhandshake") {
+    if (ds->active_registers.count(payload)) {
+      ds->active_registers[payload]->active = false;
+    } else {
+      spdlog::error("(MQTT) The task in which you request unfortunately cannot be performed");
+    }
   } else {
     ds->mqtt_map[topic] = payload;
     // de_ruyter(ds, topic, payload);
   }
 }
 
-int mqtt_handler(DataStructure *ds) {
+int mqtt_handler(DataStructure::Instance *ds) {
   int rc;
 
   mosquitto_lib_init();

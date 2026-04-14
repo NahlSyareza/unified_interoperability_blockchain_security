@@ -5,7 +5,7 @@
     "rules": "universal_collapse.txt"
   },
   "gen_mqtt": {
-    "destination": "device-67/req_data",
+    "destination": "led_req_data",
     "interval": 200,
     "rules": "consequences.txt"
   },

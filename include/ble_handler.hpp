@@ -2,4 +2,4 @@
 
 #include "data_structure.hpp"
 
-int ble_handler(DataStructure *dstructure);
+int ble_handler(DataStructure::Instance *dstructure);

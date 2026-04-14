@@ -1,29 +1,18 @@
 #include "tour_de_scheduler.hpp"
 
-void generic_task_function(TaskData *td) {
-  int internal_counter = 0;
+void generic_task_function(DataStructure::TaskData *td) {
+  nlohmann::json interop_data;
+  TourDeScheduler::create_task_register(td->source, &interop_data);
 
-  nlohmann::json src, dst;
+  // spdlog::debug("Interop Data:\n{}", interop_data.dump(2));
 
-  td->ds->populate(&td->ds->instance_registers, td->source, &src, std::make_pair("device", &td->ds->device_profiles), std::make_pair("format", &td->ds->format_profiles));
+  while (!interop_data.empty() && td->active) {
+    de_ruyter(td->ds, &interop_data, interop_data["rules"]);
 
-  spdlog::debug("Source instance:\n{}", src.dump(1));
-
-  while (internal_counter < td->dummy_counter) {
-    spdlog::debug("Source: {}", td->source);
-
-    // Lazy debil way
-    if (td->ds->http_map.count(td->source)) {
-      de_ruyter(td->ds, td->source, td->ds->http_map[td->source]);
-    } else if (td->ds->mqtt_map.count(td->source)) {
-      de_ruyter(td->ds, td->source, td->ds->mqtt_map[td->source]);
-    } else if (td->ds->ble_map.count(td->source)) {
-      de_ruyter(td->ds, td->source, td->ds->ble_map[td->source]);
-    }
-
-    internal_counter++;
-    std::this_thread::sleep_for(std::chrono::milliseconds(td->interval));
+    std::this_thread::sleep_for(std::chrono::milliseconds((int)interop_data["interval"]));
   }
+
+  spdlog::info("Task {} is done", td->task_name);
 
   if (td->ds != nullptr) {
     td->ds->active_registers.erase(td->task_name);
@@ -34,71 +23,24 @@ void generic_task_function(TaskData *td) {
   delete td;
 }
 
-bool create_task(DataStructure *ds, std::string task_name, std::string source, int interval, std::thread **ret_thr) {
+bool create_task_detached(DataStructure::Instance *ds, std::string task_name, std::string source) {
   if (ds->active_registers.count(task_name)) {
     spdlog::error("Task with this name has already been created");
     return false;
   }
 
-  TaskData *td = new TaskData();
+  DataStructure::TaskData *td = new DataStructure::TaskData();
   td->task_name = task_name;
   td->source = source;
-  td->interval = interval;
-  td->dummy_counter = 5;
   td->ds = ds;
+  td->active = true;
 
-  std::thread *thr = new std::thread(generic_task_function, td);
-  td->current_thread = thr;
+  ds->active_registers[task_name] = td;
 
-  ds->active_registers[task_name] = thr;
+  std::thread thr(generic_task_function, td);
+  thr.detach();
 
-  if (ret_thr != nullptr) {
-    *ret_thr = thr;
-  }
-
-  return true;
-}
-
-std::thread *create_task(DataStructure *ds, std::string task_name, std::string source, int interval) {
-  if (ds->active_registers.count(task_name)) {
-    spdlog::error("Task with this name has already been created");
-    return nullptr;
-  }
-
-  TaskData *td = new TaskData();
-  td->task_name = task_name;
-  td->source = source;
-  td->interval = interval;
-  td->dummy_counter = 5;
-  td->ds = ds;
-
-  std::thread *thr = new std::thread(generic_task_function, td);
-  td->current_thread = thr;
-
-  ds->active_registers[task_name] = thr;
-
-  return thr;
-}
-
-bool create_task_detached(DataStructure *ds, std::string task_name, std::string source, int interval) {
-  if (ds->active_registers.count(task_name)) {
-    spdlog::error("Task with this name has already been created");
-    return false;
-  }
-
-  TaskData *td = new TaskData();
-  td->task_name = task_name;
-  td->source = source;
-  td->interval = interval;
-  td->dummy_counter = 5;
-  td->ds = ds;
-
-  std::thread *thr = new std::thread(generic_task_function, td);
-  td->current_thread = thr;
-
-  ds->active_registers[task_name] = thr;
-
-  thr->detach();
+  spdlog::info("Task {} is starting...", task_name);
 
   return true;
 }

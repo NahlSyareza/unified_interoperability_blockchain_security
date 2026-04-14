@@ -1,17 +1,17 @@
 #include "http_handler.hpp"
 
-int http_handler(DataStructure *ds) {
+int http_handler(DataStructure::Instance *ds) {
   httplib::Server svr;
 
   svr.Get("/dummy", [](const httplib::Request &req [[maybe_unused]], httplib::Response &res) { res.set_content("Hello World!", "text/plain"); });
 
-  svr.Post(R"(/handshake/(.*))", [ds](const httplib::Request &req [[maybe_unused]], httplib::Response &res) {
+  svr.Get(R"(/handshake/(.*))", [ds](const httplib::Request &req [[maybe_unused]], httplib::Response &res) {
     std::string path = req.matches[1];
     nlohmann::json ret;
 
     // res.set_content(path, "text/plain");
 
-    bool task_created = create_task_detached(ds, path, path, 3000);
+    bool task_created = create_task_detached(ds, path, path);
 
     ret["state"] = task_created;
     if (task_created) {
@@ -19,6 +19,31 @@ int http_handler(DataStructure *ds) {
       res.status = 200;
     } else {
       ret["msg"] = "Task with this name has already been created!";
+      res.status = 400;
+    }
+
+    res.set_content(ret.dump(), "application/json");
+  });
+
+  svr.Get(R"(/unhandshake/(.*))", [ds](const httplib::Request &req [[maybe_unused]], httplib::Response &res) {
+    std::string path = req.matches[1];
+    nlohmann::json ret;
+
+    // res.set_content(path, "text/plain");
+
+    bool delete_success = false;
+
+    if (ds->active_registers.count(path)) {
+      ds->active_registers[path]->active = false;
+      delete_success = true;
+    }
+
+    ret["state"] = delete_success;
+    if (delete_success) {
+      ret["msg"] = "Task successfully deleted";
+      res.status = 200;
+    } else {
+      ret["msg"] = "Task with this name does not exist!";
       res.status = 400;
     }
 
