@@ -1,6 +1,6 @@
 {
-  "device-1/test": {
-    "destination": "device-10/course",
+  "temp_wifi_sen": {
+    "destination": "mqtt_led",
     "interval": 200,
     "rules": "universal_collapse.txt"
   },

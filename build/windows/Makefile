@@ -166,6 +166,30 @@ src\ble_handler.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\legendary_boss.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\legendary_boss.dir\src\ble_handler.cpp.s
 .PHONY : src\ble_handler.cpp.s
 
+src\data_structure.obj: src\data_structure.cpp.obj
+.PHONY : src\data_structure.obj
+
+# target to build an object file
+src\data_structure.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\legendary_boss.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\legendary_boss.dir\src\data_structure.cpp.obj
+.PHONY : src\data_structure.cpp.obj
+
+src\data_structure.i: src\data_structure.cpp.i
+.PHONY : src\data_structure.i
+
+# target to preprocess a source file
+src\data_structure.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\legendary_boss.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\legendary_boss.dir\src\data_structure.cpp.i
+.PHONY : src\data_structure.cpp.i
+
+src\data_structure.s: src\data_structure.cpp.s
+.PHONY : src\data_structure.s
+
+# target to generate assembly for a file
+src\data_structure.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\legendary_boss.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\legendary_boss.dir\src\data_structure.cpp.s
+.PHONY : src\data_structure.cpp.s
+
 src\de_ruyter.obj: src\de_ruyter.cpp.obj
 .PHONY : src\de_ruyter.obj
 
@@ -325,6 +349,9 @@ help:
 	@echo ... src/ble_handler.obj
 	@echo ... src/ble_handler.i
 	@echo ... src/ble_handler.s
+	@echo ... src/data_structure.obj
+	@echo ... src/data_structure.i
+	@echo ... src/data_structure.s
 	@echo ... src/de_ruyter.obj
 	@echo ... src/de_ruyter.i
 	@echo ... src/de_ruyter.s

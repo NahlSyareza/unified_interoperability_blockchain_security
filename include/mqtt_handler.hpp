@@ -3,7 +3,6 @@
 #include "data_structure.hpp"
 #include "mosquitto.h"
 #include "mqtt_protocol.h"
-// #include "nlohmann/json.hpp"
 #include "tour_de_scheduler.hpp"
 #include "spdlog/spdlog.h"
 

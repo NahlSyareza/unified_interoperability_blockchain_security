@@ -42,22 +42,15 @@ void on_subscribe(struct mosquitto *mosq, void *obj [[maybe_unused]], int mid, i
 void on_message(struct mosquitto *mosq [[maybe_unused]], void *obj, const struct mosquitto_message *msg) {
   DataStructure::Instance *ds = (DataStructure::Instance *)obj;
 
-  spdlog::info("MQTT: {} {} {}", msg->topic, msg->qos, (char *)msg->payload);
+  spdlog::debug("MQTT: {} {} {}", msg->topic, msg->qos, (char *)msg->payload);
 
   std::string topic((char *)msg->topic);
   std::string payload((char *)msg->payload);
 
-  if (topic == "handshake") {
-    create_task_detached(ds, payload, payload);
-  } else if (topic == "unhandshake") {
-    if (ds->active_registers.count(payload)) {
-      ds->active_registers[payload]->active = false;
-    } else {
-      spdlog::error("(MQTT) The task in which you request unfortunately cannot be performed");
-    }
-  } else {
-    ds->mqtt_map[topic] = payload;
-    // de_ruyter(ds, topic, payload);
+  ds->mqtt_map[topic] = payload;
+
+  if (!ds->active_registers.count(topic)) {
+    create_task_detached(ds, payload);
   }
 }
 

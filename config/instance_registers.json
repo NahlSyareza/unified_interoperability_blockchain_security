@@ -1,9 +1,9 @@
 {
-  "device-1/test": {
+  "temp_wifi_sen": {
     "device": "generic-wifi/http",
     "format": "generic-raw"
   },
-  "device-10/course": {
+  "mqtt_led": {
     "device": "generic-wifi/mqtt",
     "format": "generic-raw"
   },

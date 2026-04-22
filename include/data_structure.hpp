@@ -13,7 +13,6 @@ class Instance;
 
 struct TaskData {
   Instance *ds;
-  std::string task_name;
   std::string source;
   bool active;
 };
@@ -37,42 +36,6 @@ public:
 
   Instance() { fill_maps(); }
 
-  // T is of std::pair<string, json*>
-  // template <typename... T> void populate(nlohmann::json *base, std::string identifier, nlohmann::json *save, T... t) {
-  //   if (!base->count(identifier)) {
-  //     spdlog::error("(DataStructure) Identifier not found. Perhaps your device name is wrong?");
-  //     return;
-  //   }
-
-  //   nlohmann::json obj = (*base)[identifier];
-
-  //   (*save)["name"] = identifier;
-
-  //   (
-  //       [&](auto &item [[maybe_unused]]) {
-  //         std::string first = t.first;
-  //         nlohmann::json second = *t.second;
-
-  //         std::string value = obj[first];
-
-  //         if (!second.count(value)) {
-  //           spdlog::error("(DataStructure) Illegal action: Given key is not valid populate method. Identifier: {} Key: {}", identifier, value);
-  //           return;
-  //         }
-
-  //         nlohmann::json ref_obj = second[value];
-
-  //         (*save)[first] = ref_obj;
-  //       }(t),
-  //       ...);
-  // }
-
-  void fill_maps() {
-    std::ifstream _ble_addresses("./config/ble_addresses.json");
-    std::ifstream _mqtt_topics("./config/mqtt_topics.json");
-
-    ble_addresses = nlohmann::json::parse(_ble_addresses);
-    mqtt_topics = nlohmann::json::parse(_mqtt_topics);
-  }
+  void fill_maps();
 };
 } // namespace DataStructure

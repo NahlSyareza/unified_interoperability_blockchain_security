@@ -5,51 +5,6 @@ int http_handler(DataStructure::Instance *ds) {
 
   svr.Get("/dummy", [](const httplib::Request &req [[maybe_unused]], httplib::Response &res) { res.set_content("Hello World!", "text/plain"); });
 
-  svr.Get(R"(/handshake/(.*))", [ds](const httplib::Request &req [[maybe_unused]], httplib::Response &res) {
-    std::string path = req.matches[1];
-    nlohmann::json ret;
-
-    // res.set_content(path, "text/plain");
-
-    bool task_created = create_task_detached(ds, path, path);
-
-    ret["state"] = task_created;
-    if (task_created) {
-      ret["msg"] = "Task successfully created";
-      res.status = 200;
-    } else {
-      ret["msg"] = "Task with this name has already been created!";
-      res.status = 400;
-    }
-
-    res.set_content(ret.dump(), "application/json");
-  });
-
-  svr.Get(R"(/unhandshake/(.*))", [ds](const httplib::Request &req [[maybe_unused]], httplib::Response &res) {
-    std::string path = req.matches[1];
-    nlohmann::json ret;
-
-    // res.set_content(path, "text/plain");
-
-    bool delete_success = false;
-
-    if (ds->active_registers.count(path)) {
-      ds->active_registers[path]->active = false;
-      delete_success = true;
-    }
-
-    ret["state"] = delete_success;
-    if (delete_success) {
-      ret["msg"] = "Task successfully deleted";
-      res.status = 200;
-    } else {
-      ret["msg"] = "Task with this name does not exist!";
-      res.status = 400;
-    }
-
-    res.set_content(ret.dump(), "application/json");
-  });
-
   svr.Get(R"(/(.*))", [ds](const httplib::Request &req, httplib::Response &res) {
     std::string path = req.matches[1];
     // path.erase(0, 1);
@@ -106,14 +61,18 @@ int http_handler(DataStructure::Instance *ds) {
     try {
       json_body = nlohmann::json::parse(body);
       is_json = true;
-      spdlog::info("HTTP: POST body {}", json_body.dump());
+      spdlog::debug("HTTP: POST body {}", json_body.dump());
     } catch (nlohmann::json::parse_error &e [[maybe_unused]]) {
-      spdlog::info("HTTP: POST body {}", body);
+      spdlog::debug("HTTP: POST body {}", body);
       is_json = false;
     }
 
     // de_ruyter(ds, path, body);
     ds->http_map[path] = body;
+
+    if (!ds->active_registers.count(path)) {
+      create_task_detached(ds, path);
+    }
 
     ret["state"] = true;
     ret["msg"] = "Successfully posted new data";

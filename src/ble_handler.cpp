@@ -2,7 +2,7 @@
 
 int ble_handler(DataStructure::Instance *ds) {
   // std::optional<SimpleBLE::Adapter> adapter_optional = Utils::getAdapter();
-  auto adapters = SimpleBLE::Adapter::get_adapters();
+  std::vector<SimpleBLE::Adapter> adapters = SimpleBLE::Adapter::get_adapters();
 
   // if (!adapter_optional.has_value()) {
   //   return EXIT_FAILURE;
@@ -14,7 +14,7 @@ int ble_handler(DataStructure::Instance *ds) {
   }
 
   // auto adapter = adapter_optional.value();
-  auto adapter = adapters.at(0);
+  SimpleBLE::Adapter adapter = adapters.at(0);
 
   std::vector<SimpleBLE::Peripheral> scanned_peripherals;
   std::vector<SimpleBLE::Peripheral> connected_peripherals;
@@ -58,8 +58,12 @@ int ble_handler(DataStructure::Instance *ds) {
         try {
           connected_peripheral.notify(service_uuid, characteristic_uuid, [identifier, ds](SimpleBLE::ByteArray rx) {
             std::string payload(rx.begin(), rx.end());
-            spdlog::info("(BLE) From {}: {}", identifier, payload);
+            spdlog::debug("(BLE) From {}: {}", identifier, payload);
             ds->ble_map[identifier] = payload;
+
+            if (!ds->active_registers.count(identifier)) {
+              create_task_detached(ds, identifier);
+            }
             // de_ruyter(ds, identifier, payload_str);
           });
         } catch (const std::exception &e) {

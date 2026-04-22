@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/legendary_boss.dir/main.cpp.obj.d"
   "CMakeFiles/legendary_boss.dir/src/ble_handler.cpp.obj"
   "CMakeFiles/legendary_boss.dir/src/ble_handler.cpp.obj.d"
+  "CMakeFiles/legendary_boss.dir/src/data_structure.cpp.obj"
+  "CMakeFiles/legendary_boss.dir/src/data_structure.cpp.obj.d"
   "CMakeFiles/legendary_boss.dir/src/de_ruyter.cpp.obj"
   "CMakeFiles/legendary_boss.dir/src/de_ruyter.cpp.obj.d"
   "CMakeFiles/legendary_boss.dir/src/http_handler.cpp.obj"
