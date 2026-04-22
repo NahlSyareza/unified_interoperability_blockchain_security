@@ -25,7 +25,7 @@ void mqtt_processor(DataStructure::Instance *ds, std::string topic, std::string 
 void http_processor(DataStructure::Instance *ds, std::string path, std::string payload) { ds->http_map[path] = payload; }
 
 void get_instr(std::string op, std::string payload, OperationRegister *reg) {
-  int ctrl;
+  size_t ctrl;
   std::string instr, act;
 
   // Perhaps find a way to detect a non-space first character

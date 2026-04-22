@@ -13,7 +13,7 @@ string strget(string base, int segment_count) {
   start_index = 0;
   end_index = -1;
 
-  for (int i = 0; i < base.length(); i++) {
+  for (size_t i = 0; i < base.length(); i++) {
     if (base.at(i) == ' ') {
       if (segment_count == internal_segment_counter) {
         end_index = i - 1;

@@ -1,7 +1,7 @@
-CMakeFiles/legendary_boss.dir/main.cpp.o: \
- /home/gate-control-1/unified_interoperability_blockchain_security/main.cpp \
+CMakeFiles/legendary_boss.dir/src/http_handler.cpp.o: \
+ /home/gate-control-1/unified_interoperability_blockchain_security/src/http_handler.cpp \
  /usr/include/stdc-predef.h \
- /home/gate-control-1/unified_interoperability_blockchain_security/include/ble_handler.hpp \
+ /home/gate-control-1/unified_interoperability_blockchain_security/include/http_handler.hpp \
  /home/gate-control-1/unified_interoperability_blockchain_security/include/data_structure.hpp \
  /usr/include/mosquitto.h \
  /usr/lib/gcc/aarch64-linux-gnu/14/include/stddef.h \
@@ -373,14 +373,9 @@ CMakeFiles/legendary_boss.dir/main.cpp.o: \
  /usr/include/c++/14/fstream \
  /usr/include/aarch64-linux-gnu/c++/14/bits/basic_file.h \
  /usr/include/aarch64-linux-gnu/c++/14/bits/c++io.h \
- /usr/include/c++/14/bits/fstream.tcc \
- /home/gate-control-1/unified_interoperability_blockchain_security/include/tour_de_scheduler.hpp \
- /home/gate-control-1/unified_interoperability_blockchain_security/include/de_ruyter.hpp \
- /usr/include/mqtt_protocol.h \
- /home/gate-control-1/unified_interoperability_blockchain_security/include/spitarm.hpp \
- /home/gate-control-1/unified_interoperability_blockchain_security/include/http_handler.hpp \
- /usr/include/httplib.h /usr/include/arpa/inet.h \
- /usr/include/netinet/in.h /usr/include/aarch64-linux-gnu/sys/socket.h \
+ /usr/include/c++/14/bits/fstream.tcc /usr/include/httplib.h \
+ /usr/include/arpa/inet.h /usr/include/netinet/in.h \
+ /usr/include/aarch64-linux-gnu/sys/socket.h \
  /usr/include/aarch64-linux-gnu/bits/types/struct_iovec.h \
  /usr/include/aarch64-linux-gnu/bits/socket.h \
  /usr/include/aarch64-linux-gnu/bits/socket_type.h \
@@ -506,5 +501,7 @@ CMakeFiles/legendary_boss.dir/main.cpp.o: \
  /usr/include/zlib.h /usr/include/zconf.h /usr/include/brotli/decode.h \
  /usr/include/brotli/port.h /usr/include/brotli/shared_dictionary.h \
  /usr/include/brotli/types.h /usr/include/brotli/encode.h \
- /home/gate-control-1/unified_interoperability_blockchain_security/include/mqtt_handler.hpp \
- /usr/include/c++/14/future /usr/include/c++/14/bits/atomic_futex.h
+ /home/gate-control-1/unified_interoperability_blockchain_security/include/tour_de_scheduler.hpp \
+ /home/gate-control-1/unified_interoperability_blockchain_security/include/de_ruyter.hpp \
+ /usr/include/mqtt_protocol.h \
+ /home/gate-control-1/unified_interoperability_blockchain_security/include/spitarm.hpp

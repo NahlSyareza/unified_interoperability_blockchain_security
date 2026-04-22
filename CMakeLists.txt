@@ -39,7 +39,7 @@ endif()
 
 if(WIN32)
     find_package(unofficial-mosquitto CONFIG REQUIRED)
-    target_link_libraries(legendary_boss PRIVATE unofficial::mosquitto::mosquitto)
+    target_link_libraries(legendary_boss PRIVATE unofficial::mosquitto::mosquittopp)
 else()
     find_package(PkgConfig REQUIRED)
     pkg_check_modules(mosquitto REQUIRED libmosquitto)
@@ -55,7 +55,7 @@ find_package(spdlog CONFIG REQUIRED)
 target_link_libraries(legendary_boss PRIVATE spdlog::spdlog)
 
 find_package(simpleble CONFIG REQUIRED)
-target_link_libraries(legendary_boss PRIVATE simpleble::simpleble simpleble::simpleble-c)
+target_link_libraries(legendary_boss PRIVATE simpleble::simpleble)
 
 if(WIN32)
     find_package(httplib CONFIG REQUIRED)
