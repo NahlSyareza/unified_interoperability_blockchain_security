@@ -1,7 +1,9 @@
 #include "ble_handler.hpp"
+#include "simpleble/Backend.h"
 
 int ble_handler(DataStructure::Instance *ds) {
   // std::optional<SimpleBLE::Adapter> adapter_optional = Utils::getAdapter();
+
   std::vector<SimpleBLE::Adapter> adapters = SimpleBLE::Adapter::get_adapters();
 
   // if (!adapter_optional.has_value()) {

@@ -377,4 +377,5 @@ CMakeFiles/legendary_boss.dir/src/ble_handler.cpp.o: \
  /home/gate-control-1/unified_interoperability_blockchain_security/include/tour_de_scheduler.hpp \
  /home/gate-control-1/unified_interoperability_blockchain_security/include/de_ruyter.hpp \
  /usr/include/mqtt_protocol.h \
- /home/gate-control-1/unified_interoperability_blockchain_security/include/spitarm.hpp
+ /home/gate-control-1/unified_interoperability_blockchain_security/include/spitarm.hpp \
+ /usr/local/include/simpleble/Backend.h

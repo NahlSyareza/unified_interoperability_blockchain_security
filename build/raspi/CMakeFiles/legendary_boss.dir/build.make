@@ -226,7 +226,7 @@ legendary_boss: CMakeFiles/legendary_boss.dir/build.make
 legendary_boss: CMakeFiles/legendary_boss.dir/compiler_depend.ts
 legendary_boss: /usr/lib/aarch64-linux-gnu/libssl.so
 legendary_boss: /usr/lib/aarch64-linux-gnu/libspdlog.so.1.15.2
-legendary_boss: /usr/local/lib/libsimpleble.a
+legendary_boss: /usr/local/lib/libsimpleble.so.0.12.2
 legendary_boss: /usr/lib/aarch64-linux-gnu/libcrypto.so
 legendary_boss: /usr/lib/aarch64-linux-gnu/libfmt.so.10.1.0
 legendary_boss: /usr/lib/aarch64-linux-gnu/libcpp-httplib.so
