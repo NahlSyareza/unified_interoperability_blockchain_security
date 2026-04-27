@@ -19,7 +19,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/lib/aarch64-linux-gnu/cmake/spdlog/spdlogConfigTargets-none.cmake"
   "/usr/lib/aarch64-linux-gnu/cmake/spdlog/spdlogConfigTargets.cmake"
   "/usr/lib/aarch64-linux-gnu/cmake/spdlog/spdlogConfigVersion.cmake"
-  "/usr/local/lib/cmake/simpleble/simpleble-config-release.cmake"
+  "/usr/local/lib/cmake/simpleble/simpleble-config-noconfig.cmake"
   "/usr/local/lib/cmake/simpleble/simpleble-config.cmake"
   "/usr/local/share/cmake/nlohmann_json/nlohmann_jsonConfig.cmake"
   "/usr/local/share/cmake/nlohmann_json/nlohmann_jsonConfigVersion.cmake"

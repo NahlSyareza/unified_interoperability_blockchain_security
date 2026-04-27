@@ -56,7 +56,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /home/gate-control-1/unified_interoperability_blockchain_security
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gate-control-1/unified_interoperability_blockchain_security/build/raspi
+CMAKE_BINARY_DIR = /home/gate-control-1/unified_interoperability_blockchain_security/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/legendary_boss.dir/depend.make
@@ -75,7 +75,7 @@ CMakeFiles/legendary_boss.dir/codegen:
 CMakeFiles/legendary_boss.dir/main.cpp.o: CMakeFiles/legendary_boss.dir/flags.make
 CMakeFiles/legendary_boss.dir/main.cpp.o: /home/gate-control-1/unified_interoperability_blockchain_security/main.cpp
 CMakeFiles/legendary_boss.dir/main.cpp.o: CMakeFiles/legendary_boss.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gate-control-1/unified_interoperability_blockchain_security/build/raspi/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/legendary_boss.dir/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gate-control-1/unified_interoperability_blockchain_security/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/legendary_boss.dir/main.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/legendary_boss.dir/main.cpp.o -MF CMakeFiles/legendary_boss.dir/main.cpp.o.d -o CMakeFiles/legendary_boss.dir/main.cpp.o -c /home/gate-control-1/unified_interoperability_blockchain_security/main.cpp
 
 CMakeFiles/legendary_boss.dir/main.cpp.i: cmake_force
@@ -89,7 +89,7 @@ CMakeFiles/legendary_boss.dir/main.cpp.s: cmake_force
 CMakeFiles/legendary_boss.dir/src/utils.cpp.o: CMakeFiles/legendary_boss.dir/flags.make
 CMakeFiles/legendary_boss.dir/src/utils.cpp.o: /home/gate-control-1/unified_interoperability_blockchain_security/src/utils.cpp
 CMakeFiles/legendary_boss.dir/src/utils.cpp.o: CMakeFiles/legendary_boss.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gate-control-1/unified_interoperability_blockchain_security/build/raspi/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/legendary_boss.dir/src/utils.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gate-control-1/unified_interoperability_blockchain_security/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/legendary_boss.dir/src/utils.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/legendary_boss.dir/src/utils.cpp.o -MF CMakeFiles/legendary_boss.dir/src/utils.cpp.o.d -o CMakeFiles/legendary_boss.dir/src/utils.cpp.o -c /home/gate-control-1/unified_interoperability_blockchain_security/src/utils.cpp
 
 CMakeFiles/legendary_boss.dir/src/utils.cpp.i: cmake_force
@@ -103,7 +103,7 @@ CMakeFiles/legendary_boss.dir/src/utils.cpp.s: cmake_force
 CMakeFiles/legendary_boss.dir/src/ble_handler.cpp.o: CMakeFiles/legendary_boss.dir/flags.make
 CMakeFiles/legendary_boss.dir/src/ble_handler.cpp.o: /home/gate-control-1/unified_interoperability_blockchain_security/src/ble_handler.cpp
 CMakeFiles/legendary_boss.dir/src/ble_handler.cpp.o: CMakeFiles/legendary_boss.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gate-control-1/unified_interoperability_blockchain_security/build/raspi/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/legendary_boss.dir/src/ble_handler.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gate-control-1/unified_interoperability_blockchain_security/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/legendary_boss.dir/src/ble_handler.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/legendary_boss.dir/src/ble_handler.cpp.o -MF CMakeFiles/legendary_boss.dir/src/ble_handler.cpp.o.d -o CMakeFiles/legendary_boss.dir/src/ble_handler.cpp.o -c /home/gate-control-1/unified_interoperability_blockchain_security/src/ble_handler.cpp
 
 CMakeFiles/legendary_boss.dir/src/ble_handler.cpp.i: cmake_force
@@ -117,7 +117,7 @@ CMakeFiles/legendary_boss.dir/src/ble_handler.cpp.s: cmake_force
 CMakeFiles/legendary_boss.dir/src/de_ruyter.cpp.o: CMakeFiles/legendary_boss.dir/flags.make
 CMakeFiles/legendary_boss.dir/src/de_ruyter.cpp.o: /home/gate-control-1/unified_interoperability_blockchain_security/src/de_ruyter.cpp
 CMakeFiles/legendary_boss.dir/src/de_ruyter.cpp.o: CMakeFiles/legendary_boss.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gate-control-1/unified_interoperability_blockchain_security/build/raspi/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/legendary_boss.dir/src/de_ruyter.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gate-control-1/unified_interoperability_blockchain_security/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/legendary_boss.dir/src/de_ruyter.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/legendary_boss.dir/src/de_ruyter.cpp.o -MF CMakeFiles/legendary_boss.dir/src/de_ruyter.cpp.o.d -o CMakeFiles/legendary_boss.dir/src/de_ruyter.cpp.o -c /home/gate-control-1/unified_interoperability_blockchain_security/src/de_ruyter.cpp
 
 CMakeFiles/legendary_boss.dir/src/de_ruyter.cpp.i: cmake_force
@@ -131,7 +131,7 @@ CMakeFiles/legendary_boss.dir/src/de_ruyter.cpp.s: cmake_force
 CMakeFiles/legendary_boss.dir/src/http_handler.cpp.o: CMakeFiles/legendary_boss.dir/flags.make
 CMakeFiles/legendary_boss.dir/src/http_handler.cpp.o: /home/gate-control-1/unified_interoperability_blockchain_security/src/http_handler.cpp
 CMakeFiles/legendary_boss.dir/src/http_handler.cpp.o: CMakeFiles/legendary_boss.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gate-control-1/unified_interoperability_blockchain_security/build/raspi/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/legendary_boss.dir/src/http_handler.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gate-control-1/unified_interoperability_blockchain_security/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/legendary_boss.dir/src/http_handler.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/legendary_boss.dir/src/http_handler.cpp.o -MF CMakeFiles/legendary_boss.dir/src/http_handler.cpp.o.d -o CMakeFiles/legendary_boss.dir/src/http_handler.cpp.o -c /home/gate-control-1/unified_interoperability_blockchain_security/src/http_handler.cpp
 
 CMakeFiles/legendary_boss.dir/src/http_handler.cpp.i: cmake_force
@@ -145,7 +145,7 @@ CMakeFiles/legendary_boss.dir/src/http_handler.cpp.s: cmake_force
 CMakeFiles/legendary_boss.dir/src/mqtt_handler.cpp.o: CMakeFiles/legendary_boss.dir/flags.make
 CMakeFiles/legendary_boss.dir/src/mqtt_handler.cpp.o: /home/gate-control-1/unified_interoperability_blockchain_security/src/mqtt_handler.cpp
 CMakeFiles/legendary_boss.dir/src/mqtt_handler.cpp.o: CMakeFiles/legendary_boss.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gate-control-1/unified_interoperability_blockchain_security/build/raspi/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/legendary_boss.dir/src/mqtt_handler.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gate-control-1/unified_interoperability_blockchain_security/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/legendary_boss.dir/src/mqtt_handler.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/legendary_boss.dir/src/mqtt_handler.cpp.o -MF CMakeFiles/legendary_boss.dir/src/mqtt_handler.cpp.o.d -o CMakeFiles/legendary_boss.dir/src/mqtt_handler.cpp.o -c /home/gate-control-1/unified_interoperability_blockchain_security/src/mqtt_handler.cpp
 
 CMakeFiles/legendary_boss.dir/src/mqtt_handler.cpp.i: cmake_force
@@ -159,7 +159,7 @@ CMakeFiles/legendary_boss.dir/src/mqtt_handler.cpp.s: cmake_force
 CMakeFiles/legendary_boss.dir/src/spitarm.cpp.o: CMakeFiles/legendary_boss.dir/flags.make
 CMakeFiles/legendary_boss.dir/src/spitarm.cpp.o: /home/gate-control-1/unified_interoperability_blockchain_security/src/spitarm.cpp
 CMakeFiles/legendary_boss.dir/src/spitarm.cpp.o: CMakeFiles/legendary_boss.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gate-control-1/unified_interoperability_blockchain_security/build/raspi/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/legendary_boss.dir/src/spitarm.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gate-control-1/unified_interoperability_blockchain_security/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/legendary_boss.dir/src/spitarm.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/legendary_boss.dir/src/spitarm.cpp.o -MF CMakeFiles/legendary_boss.dir/src/spitarm.cpp.o.d -o CMakeFiles/legendary_boss.dir/src/spitarm.cpp.o -c /home/gate-control-1/unified_interoperability_blockchain_security/src/spitarm.cpp
 
 CMakeFiles/legendary_boss.dir/src/spitarm.cpp.i: cmake_force
@@ -173,7 +173,7 @@ CMakeFiles/legendary_boss.dir/src/spitarm.cpp.s: cmake_force
 CMakeFiles/legendary_boss.dir/src/tour_de_scheduler.cpp.o: CMakeFiles/legendary_boss.dir/flags.make
 CMakeFiles/legendary_boss.dir/src/tour_de_scheduler.cpp.o: /home/gate-control-1/unified_interoperability_blockchain_security/src/tour_de_scheduler.cpp
 CMakeFiles/legendary_boss.dir/src/tour_de_scheduler.cpp.o: CMakeFiles/legendary_boss.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gate-control-1/unified_interoperability_blockchain_security/build/raspi/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/legendary_boss.dir/src/tour_de_scheduler.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gate-control-1/unified_interoperability_blockchain_security/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/legendary_boss.dir/src/tour_de_scheduler.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/legendary_boss.dir/src/tour_de_scheduler.cpp.o -MF CMakeFiles/legendary_boss.dir/src/tour_de_scheduler.cpp.o.d -o CMakeFiles/legendary_boss.dir/src/tour_de_scheduler.cpp.o -c /home/gate-control-1/unified_interoperability_blockchain_security/src/tour_de_scheduler.cpp
 
 CMakeFiles/legendary_boss.dir/src/tour_de_scheduler.cpp.i: cmake_force
@@ -187,7 +187,7 @@ CMakeFiles/legendary_boss.dir/src/tour_de_scheduler.cpp.s: cmake_force
 CMakeFiles/legendary_boss.dir/src/data_structure.cpp.o: CMakeFiles/legendary_boss.dir/flags.make
 CMakeFiles/legendary_boss.dir/src/data_structure.cpp.o: /home/gate-control-1/unified_interoperability_blockchain_security/src/data_structure.cpp
 CMakeFiles/legendary_boss.dir/src/data_structure.cpp.o: CMakeFiles/legendary_boss.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gate-control-1/unified_interoperability_blockchain_security/build/raspi/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/legendary_boss.dir/src/data_structure.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gate-control-1/unified_interoperability_blockchain_security/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/legendary_boss.dir/src/data_structure.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/legendary_boss.dir/src/data_structure.cpp.o -MF CMakeFiles/legendary_boss.dir/src/data_structure.cpp.o.d -o CMakeFiles/legendary_boss.dir/src/data_structure.cpp.o -c /home/gate-control-1/unified_interoperability_blockchain_security/src/data_structure.cpp
 
 CMakeFiles/legendary_boss.dir/src/data_structure.cpp.i: cmake_force
@@ -226,12 +226,12 @@ legendary_boss: CMakeFiles/legendary_boss.dir/build.make
 legendary_boss: CMakeFiles/legendary_boss.dir/compiler_depend.ts
 legendary_boss: /usr/lib/aarch64-linux-gnu/libssl.so
 legendary_boss: /usr/lib/aarch64-linux-gnu/libspdlog.so.1.15.2
-legendary_boss: /usr/local/lib/libsimpleble.so.0.12.2
+legendary_boss: /usr/local/lib/libsimpleble.a
 legendary_boss: /usr/lib/aarch64-linux-gnu/libcrypto.so
 legendary_boss: /usr/lib/aarch64-linux-gnu/libfmt.so.10.1.0
 legendary_boss: /usr/lib/aarch64-linux-gnu/libcpp-httplib.so
 legendary_boss: CMakeFiles/legendary_boss.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/gate-control-1/unified_interoperability_blockchain_security/build/raspi/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable legendary_boss"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/gate-control-1/unified_interoperability_blockchain_security/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable legendary_boss"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/legendary_boss.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -243,6 +243,6 @@ CMakeFiles/legendary_boss.dir/clean:
 .PHONY : CMakeFiles/legendary_boss.dir/clean
 
 CMakeFiles/legendary_boss.dir/depend:
-	cd /home/gate-control-1/unified_interoperability_blockchain_security/build/raspi && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gate-control-1/unified_interoperability_blockchain_security /home/gate-control-1/unified_interoperability_blockchain_security /home/gate-control-1/unified_interoperability_blockchain_security/build/raspi /home/gate-control-1/unified_interoperability_blockchain_security/build/raspi /home/gate-control-1/unified_interoperability_blockchain_security/build/raspi/CMakeFiles/legendary_boss.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/gate-control-1/unified_interoperability_blockchain_security/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gate-control-1/unified_interoperability_blockchain_security /home/gate-control-1/unified_interoperability_blockchain_security /home/gate-control-1/unified_interoperability_blockchain_security/build /home/gate-control-1/unified_interoperability_blockchain_security/build /home/gate-control-1/unified_interoperability_blockchain_security/build/CMakeFiles/legendary_boss.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/legendary_boss.dir/depend
 

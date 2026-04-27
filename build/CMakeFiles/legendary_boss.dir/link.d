@@ -14,10 +14,11 @@ legendary_boss: \
   /usr/lib/gcc/aarch64-linux-gnu/14/../../../aarch64-linux-gnu/libmosquitto.so \
   /usr/lib/aarch64-linux-gnu/libssl.so \
   /usr/lib/aarch64-linux-gnu/libspdlog.so.1.15.2 \
-  /usr/local/lib/libsimpleble.so.0.12.2 \
+  /usr/local/lib/libsimpleble.a \
   /usr/lib/aarch64-linux-gnu/libcrypto.so \
   /usr/lib/aarch64-linux-gnu/libfmt.so.10.1.0 \
   /usr/lib/gcc/aarch64-linux-gnu/14/../../../aarch64-linux-gnu/libpthread.a \
+  /usr/lib/gcc/aarch64-linux-gnu/14/../../../aarch64-linux-gnu/libdbus-1.so \
   /usr/lib/aarch64-linux-gnu/libcpp-httplib.so \
   /usr/lib/gcc/aarch64-linux-gnu/14/libstdc++.so \
   /usr/lib/gcc/aarch64-linux-gnu/14/../../../aarch64-linux-gnu/libm.so \
@@ -49,15 +50,14 @@ legendary_boss: \
   /usr/lib/aarch64-linux-gnu/libssl.so \
   /usr/lib/aarch64-linux-gnu/libcrypto.so \
   /lib/ld-linux-aarch64.so.1 \
-  /lib/aarch64-linux-gnu/libdbus-1.so.3 \
+  /lib/aarch64-linux-gnu/libsystemd.so.0 \
   /lib/aarch64-linux-gnu/libz.so.1 \
   /lib/aarch64-linux-gnu/libbrotlidec.so.1 \
   /lib/aarch64-linux-gnu/libbrotlienc.so.1 \
   /lib/aarch64-linux-gnu/libm.so.6 \
   /lib/aarch64-linux-gnu/libzstd.so.1 \
-  /lib/aarch64-linux-gnu/libsystemd.so.0 \
-  /lib/aarch64-linux-gnu/libbrotlicommon.so.1 \
-  /lib/aarch64-linux-gnu/libcap.so.2
+  /lib/aarch64-linux-gnu/libcap.so.2 \
+  /lib/aarch64-linux-gnu/libbrotlicommon.so.1
 
 /usr/lib/gcc/aarch64-linux-gnu/14/../../../aarch64-linux-gnu/Scrt1.o:
 
@@ -89,13 +89,15 @@ CMakeFiles/legendary_boss.dir/src/data_structure.cpp.o:
 
 /usr/lib/aarch64-linux-gnu/libspdlog.so.1.15.2:
 
-/usr/local/lib/libsimpleble.so.0.12.2:
+/usr/local/lib/libsimpleble.a:
 
 /usr/lib/aarch64-linux-gnu/libcrypto.so:
 
 /usr/lib/aarch64-linux-gnu/libfmt.so.10.1.0:
 
 /usr/lib/gcc/aarch64-linux-gnu/14/../../../aarch64-linux-gnu/libpthread.a:
+
+/usr/lib/gcc/aarch64-linux-gnu/14/../../../aarch64-linux-gnu/libdbus-1.so:
 
 /usr/lib/aarch64-linux-gnu/libcpp-httplib.so:
 
@@ -159,7 +161,7 @@ CMakeFiles/legendary_boss.dir/src/data_structure.cpp.o:
 
 /lib/ld-linux-aarch64.so.1:
 
-/lib/aarch64-linux-gnu/libdbus-1.so.3:
+/lib/aarch64-linux-gnu/libsystemd.so.0:
 
 /lib/aarch64-linux-gnu/libz.so.1:
 
@@ -171,8 +173,6 @@ CMakeFiles/legendary_boss.dir/src/data_structure.cpp.o:
 
 /lib/aarch64-linux-gnu/libzstd.so.1:
 
-/lib/aarch64-linux-gnu/libsystemd.so.0:
+/lib/aarch64-linux-gnu/libcap.so.2:
 
 /lib/aarch64-linux-gnu/libbrotlicommon.so.1:
-
-/lib/aarch64-linux-gnu/libcap.so.2:

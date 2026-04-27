@@ -32,10 +32,10 @@ int ble_handler(DataStructure::Instance *ds) {
   adapter.set_callback_on_scan_start([]() { std::cout << "Scan started." << std::endl; });
   adapter.set_callback_on_scan_stop([]() { std::cout << "Scan stopped." << std::endl; });
 
-  // adapter.scan_for(3000);
-  adapter.scan_start();
+  adapter.scan_for(5000);
+//  adapter.scan_start();
 
-  while (adapter.scan_is_active()) {
+//  while (1) {
     if (!scanned_peripherals.empty()) {
       for (auto &scanned_peripheral : scanned_peripherals) {
         scanned_peripheral.connect();
@@ -71,10 +71,12 @@ int ble_handler(DataStructure::Instance *ds) {
         } catch (const std::exception &e) {
           spdlog::error("(BLE) Error: {}", e.what());
         }
+
+        spdlog::debug("(BLE) Notifications defined");
         connected_peripherals.pop_back();
       }
     }
-  }
+//  }
 
   return EXIT_SUCCESS;
 }

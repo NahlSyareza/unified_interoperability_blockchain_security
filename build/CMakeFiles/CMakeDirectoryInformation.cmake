@@ -3,7 +3,7 @@
 
 # Relative path conversion top directories.
 set(CMAKE_RELATIVE_PATH_TOP_SOURCE "/home/gate-control-1/unified_interoperability_blockchain_security")
-set(CMAKE_RELATIVE_PATH_TOP_BINARY "/home/gate-control-1/unified_interoperability_blockchain_security/build/raspi")
+set(CMAKE_RELATIVE_PATH_TOP_BINARY "/home/gate-control-1/unified_interoperability_blockchain_security/build")
 
 # Force unix paths in dependencies.
 set(CMAKE_FORCE_UNIX_PATHS 1)
