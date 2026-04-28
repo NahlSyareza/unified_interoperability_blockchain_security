@@ -1,10 +1,10 @@
 #include "de_ruyter.hpp"
 
-void ble_processor(DataStructure::Instance *ds, std::string identifier, std::string payload) {
-  for (auto &p : ds->peripherals) {
-    if (p.identifier() == identifier)
-      p.write_request(ds->uuid_pair[identifier].first, ds->uuid_pair[identifier].second, payload);
-  }
+void ble_processor(DataStructure::Instance *ds [[maybe_unused]], std::string identifier [[maybe_unused]], std::string payload [[maybe_unused]]) {
+  // for (auto &p : ds->peripherals) {
+  //   if (p.identifier() == identifier)
+  //     p.write_request(ds->uuid_pair[identifier].first, ds->uuid_pair[identifier].second, payload);
+  // }
 }
 
 void mqtt_processor(DataStructure::Instance *ds, std::string topic, std::string payload) {
@@ -165,6 +165,7 @@ void de_ruyter(DataStructure::Instance *ds, nlohmann::json *interop_data, std::s
   } else if (dest_conn == "wifi/mqtt") {
     mqtt_processor(ds, dst_name, final_payload);
   } else if (dest_conn == "ble") {
-    ble_processor(ds, dst_name, final_payload);
+    spdlog::error("Bluetooth is not yet cool");
+    // ble_processor(ds, dst_name, final_payload);
   }
 }

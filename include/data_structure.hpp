@@ -2,7 +2,7 @@
 
 #include "mosquitto.h"
 #include "nlohmann/json.hpp"
-#include "simpleble/SimpleBLE.h"
+#include "simplebluez/Bluez.h"
 #include "spdlog/spdlog.h"
 #include <fstream>
 #include <iostream>
@@ -28,8 +28,8 @@ public:
 
   std::map<std::string, TaskData *> active_registers;
 
-  std::vector<SimpleBLE::Peripheral> peripherals;
-  std::map<std::string, std::pair<SimpleBLE::BluetoothUUID, SimpleBLE::BluetoothUUID>> uuid_pair;
+  // std::vector<SimpleBLE::Peripheral> peripherals;
+  // std::map<std::string, std::pair<SimpleBLE::BluetoothUUID, SimpleBLE::BluetoothUUID>> uuid_pair;
 
   nlohmann::json ble_addresses;
   nlohmann::json mqtt_topics;

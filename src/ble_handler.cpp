@@ -1,82 +1,126 @@
 #include "ble_handler.hpp"
-#include "simpleble/Backend.h"
+// #include "simpleble/Backend.h"
 
-int ble_handler(DataStructure::Instance *ds) {
-  // std::optional<SimpleBLE::Adapter> adapter_optional = Utils::getAdapter();
+SimpleBluez::Bluez bluez;
+bool should_run = true;
 
-  std::vector<SimpleBLE::Adapter> adapters = SimpleBLE::Adapter::get_adapters();
-
-  // if (!adapter_optional.has_value()) {
-  //   return EXIT_FAILURE;
-  // }
-
-  if (adapters.empty()) {
-    spdlog::error("No adapter was found");
-    return EXIT_FAILURE;
+void bluez_async_function() {
+  while (should_run) {
+    bluez.run_async();
+    std::this_thread::sleep_for(std::chrono::milliseconds(10));
   }
+  std::cout << "This task has ended" << std::endl;
+}
 
-  // auto adapter = adapter_optional.value();
-  SimpleBLE::Adapter adapter = adapters.at(0);
+int ble_handler(DataStructure::Instance *ds [[maybe_unused]]) {
+  std::ifstream input("./config/ble_addresses.json");
+  nlohmann::json addresses = nlohmann::json::parse(input);
 
-  std::vector<SimpleBLE::Peripheral> scanned_peripherals;
-  std::vector<SimpleBLE::Peripheral> connected_peripherals;
+  bluez.init();
 
-  adapter.set_callback_on_scan_found([&](SimpleBLE::Peripheral p) {
-    if (ds->ble_addresses.count(p.identifier()) > 0 && p.is_connectable()) {
-      spdlog::info("Found device {} ({})", p.identifier(), p.address());
-      ds->peripherals.push_back(p);
-      scanned_peripherals.push_back(p);
+  // std::thread *bluez_async_thread = new std::thread(bluez_async_function, &bluez, &should_run);
+  std::thread *bluez_async_thread = new std::thread(bluez_async_function);
+  // bluez_async_thread.detach();
+
+  std::vector<std::shared_ptr<SimpleBluez::Adapter>> adapters = bluez.get_adapters();
+  std::shared_ptr<SimpleBluez::Adapter> adapter = adapters.at(0);
+
+  SimpleBluez::Adapter::DiscoveryFilter filter;
+  filter.Transport = SimpleBluez::Adapter::DiscoveryFilter::TransportType::LE;
+  adapter->discovery_filter(filter);
+
+  std::vector<std::shared_ptr<SimpleBluez::Device>> devices;
+
+  adapter->set_on_device_updated([&devices, addresses](std::shared_ptr<SimpleBluez::Device> device) {
+    if (addresses.count(device->name()) && std::find(devices.begin(), devices.end(), device) == devices.end()) {
+      std::cout << "Detected: " << device->name() << std::endl;
+      devices.push_back(device);
     }
   });
 
-  adapter.set_callback_on_scan_start([]() { std::cout << "Scan started." << std::endl; });
-  adapter.set_callback_on_scan_stop([]() { std::cout << "Scan stopped." << std::endl; });
+  adapter->discovery_start();
+  std::this_thread::sleep_for(std::chrono::milliseconds(5000));
+  adapter->discovery_stop();
 
-  adapter.scan_for(5000);
-//  adapter.scan_start();
+  std::cout << "Attempting to connect to devices" << std::endl;
 
-//  while (1) {
-    if (!scanned_peripherals.empty()) {
-      for (auto &scanned_peripheral : scanned_peripherals) {
-        scanned_peripheral.connect();
-        spdlog::info("(BLE) Connected to {}", scanned_peripheral.identifier());
-        connected_peripherals.push_back(scanned_peripheral);
-        scanned_peripherals.pop_back();
+  for (auto &device : devices) {
+    nlohmann::json selected_device = addresses[device->name()];
+
+    if (!adapter->powered()) {
+      adapter->powered(true);
+      std::this_thread::sleep_for(std::chrono::milliseconds(500));
+    }
+
+    while (!device->connected()) {
+      try {
+        device->connect();
+      } catch (SimpleDBus::Exception::SendFailed &e) {
+        std::cout << ".";
+        std::this_thread::sleep_for(std::chrono::milliseconds(10));
       }
     }
 
-    if (!connected_peripherals.empty()) {
-      for (auto &connected_peripheral : connected_peripherals) {
-        spdlog::debug("(BLE) Registering pairs");
-        nlohmann::json ble_address = ds->ble_addresses[connected_peripheral.identifier()];
-        std::string identifier = connected_peripheral.identifier();
-        std::string service = ble_address["service"];
-        std::string characteristic = ble_address["characteristic"];
-        SimpleBLE::BluetoothUUID service_uuid(service);
-        SimpleBLE::BluetoothAddress characteristic_uuid(characteristic);
-        ds->uuid_pair[identifier] = std::make_pair(service_uuid, characteristic_uuid);
-
-        spdlog::debug("(BLE) Defining notifications {} {}", service, characteristic);
-        try {
-          connected_peripheral.notify(service_uuid, characteristic_uuid, [identifier, ds](SimpleBLE::ByteArray rx) {
-            std::string payload(rx.begin(), rx.end());
-            spdlog::debug("(BLE) From {}: {}", identifier, payload);
-            ds->ble_map[identifier] = payload;
-
-            if (!ds->active_registers.count(identifier)) {
-              create_task_detached(ds, identifier);
-            }
-            // de_ruyter(ds, identifier, payload_str);
-          });
-        } catch (const std::exception &e) {
-          spdlog::error("(BLE) Error: {}", e.what());
-        }
-
-        spdlog::debug("(BLE) Notifications defined");
-        connected_peripherals.pop_back();
-      }
+    while (!device->services_resolved()) {
+      std::cout << ".";
+      std::this_thread::sleep_for(std::chrono::milliseconds(10));
     }
-//  }
 
-  return EXIT_SUCCESS;
+    std::cout << std::endl;
+
+    std::this_thread::sleep_for(std::chrono::milliseconds(500));
+
+    spdlog::info("Connected to {}", device->name());
+
+    std::shared_ptr<SimpleBluez::Characteristic> characteristic;
+
+    std::string service_uuid = selected_device["service"];
+    std::string characteristic_uuid = selected_device["characteristic"];
+
+    try {
+      auto service = device->get_service(service_uuid);
+
+      try {
+        characteristic = service->get_characteristic(characteristic_uuid);
+      } catch (std::exception &e) {
+        std::cout << e.what() << std::endl;
+      }
+    } catch (std::exception &e) {
+      std::cout << e.what() << std::endl;
+    }
+
+    std::this_thread::sleep_for(std::chrono::milliseconds(100));
+
+    characteristic->set_on_value_changed([&](SimpleBluez::ByteArray new_value) {
+      std::string payload(new_value.begin(), new_value.end());
+      std::cout << "Notified: " << payload << std::endl;
+      // std::cout << "Message arrived" << std::endl;
+    });
+
+    characteristic->start_notify();
+
+    std::cout << "Standard connection established" << std::endl;
+
+    while (device->connected()) {
+      // try
+      // {
+      //     characteristic->read();
+      // }
+      // catch (std::exception &e)
+      // {
+      //     std::cout << e.what() << std::endl;
+      // }
+
+      std::this_thread::sleep_for(std::chrono::milliseconds(10));
+    }
+
+    characteristic->stop_notify();
+  }
+
+  spdlog::info("Device disconnected");
+
+  should_run = false;
+  bluez_async_thread->join();
+
+  return 0;
 }

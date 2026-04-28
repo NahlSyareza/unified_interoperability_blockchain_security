@@ -1,5 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/legendary_boss.dir/link.d"
   "CMakeFiles/legendary_boss.dir/main.cpp.o"
   "CMakeFiles/legendary_boss.dir/main.cpp.o.d"
   "CMakeFiles/legendary_boss.dir/src/ble_handler.cpp.o"
@@ -16,8 +15,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/legendary_boss.dir/src/spitarm.cpp.o.d"
   "CMakeFiles/legendary_boss.dir/src/tour_de_scheduler.cpp.o"
   "CMakeFiles/legendary_boss.dir/src/tour_de_scheduler.cpp.o.d"
-  "CMakeFiles/legendary_boss.dir/src/utils.cpp.o"
-  "CMakeFiles/legendary_boss.dir/src/utils.cpp.o.d"
   "legendary_boss"
   "legendary_boss.pdb"
 )

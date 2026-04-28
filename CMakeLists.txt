@@ -18,7 +18,7 @@ project(legendary_boss)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-add_executable(legendary_boss main.cpp src/utils.cpp src/ble_handler.cpp src/de_ruyter.cpp src/http_handler.cpp src/mqtt_handler.cpp src/spitarm.cpp src/tour_de_scheduler.cpp src/data_structure.cpp)
+add_executable(legendary_boss main.cpp src/ble_handler.cpp src/de_ruyter.cpp src/http_handler.cpp src/mqtt_handler.cpp src/spitarm.cpp src/tour_de_scheduler.cpp src/data_structure.cpp)
 
 if(WIN32)
     find_package(PThreads4W REQUIRED)
@@ -54,8 +54,10 @@ target_link_libraries(legendary_boss PRIVATE OpenSSL::SSL)
 find_package(spdlog CONFIG REQUIRED)
 target_link_libraries(legendary_boss PRIVATE spdlog::spdlog)
 
-find_package(simpleble CONFIG REQUIRED)
-target_link_libraries(legendary_boss PRIVATE simpleble::simpleble)
+find_package(simplebluez CONFIG REQUIRED)
+target_link_libraries(legendary_boss PRIVATE simplebluez::simplebluez)
+
+add_compile_definitions(FMT_HEADER_ONLY)
 
 if(WIN32)
     find_package(httplib CONFIG REQUIRED)
