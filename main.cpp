@@ -23,12 +23,12 @@ int main() {
 
   // return 0;
 
-  // std::thread mqtt_thread(mqtt_handler, &ds);
-  // std::thread http_thread(http_handler, &ds);
+  std::thread mqtt_thread(mqtt_handler, &ds);
+  std::thread http_thread(http_handler, &ds);
   std::thread ble_thread(ble_handler, &ds);
 
-  // mqtt_thread.join();
-  // http_thread.join();
+  mqtt_thread.join();
+  http_thread.join();
   ble_thread.join();
 
   return 0;

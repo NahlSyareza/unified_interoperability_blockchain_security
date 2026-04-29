@@ -1,10 +1,25 @@
 #include "de_ruyter.hpp"
 
 void ble_processor(DataStructure::Instance *ds [[maybe_unused]], std::string identifier [[maybe_unused]], std::string payload [[maybe_unused]]) {
-  // for (auto &p : ds->peripherals) {
-  //   if (p.identifier() == identifier)
-  //     p.write_request(ds->uuid_pair[identifier].first, ds->uuid_pair[identifier].second, payload);
-  // }
+  for (auto &p : ds->ble_peripherals) {
+    if (p->name() == identifier) {
+      nlohmann::json ble_uuids = ds->ble_addresses[identifier];
+      std::string service_uuid = ble_uuids["service"];
+      std::string characteristic_uuid = ble_uuids["characteristic"];
+      // spdlog::info("BLE {} Service: {} Characteristic {} ", identifier, service_uuid, characteristic_uuid);
+
+      try {
+        auto characteristic = p->get_characteristic(service_uuid, characteristic_uuid);
+        SimpleBluez::ByteArray byte_array(payload.begin(), payload.end());
+
+        characteristic->write_request(byte_array);
+      } catch (std::exception &e) {
+        spdlog::error("{}", e.what());
+      }
+    }
+
+    // p.write_request(ds->uuid_pair[identifier].first, ds->uuid_pair[identifier].second, payload);
+  }
 }
 
 void mqtt_processor(DataStructure::Instance *ds, std::string topic, std::string payload) {
@@ -132,15 +147,18 @@ void de_ruyter(DataStructure::Instance *ds, nlohmann::json *interop_data, std::s
   std::stringstream ss;
   std::string payload;
 
+  // spdlog::debug("src_name {} dst_name {}", src_name, dst_name);
+
   if (src_conn == "wifi/http") {
+    // spdlog::debug("src_conn: wifi/http");
     payload = ds->http_map[src_name];
   } else if (src_conn == "wifi/mqtt") {
+    // spdlog::debug("src_conn: wifi/mqtt");
     payload = ds->mqtt_map[src_name];
   } else if (src_conn == "ble") {
+    // spdlog::debug("src_conn: ble");
     payload = ds->ble_map[src_name];
   }
-
-  // spdlog::debug("Actual payload: {}", payload);
 
   OperationRegister op_reg;
 
@@ -165,7 +183,7 @@ void de_ruyter(DataStructure::Instance *ds, nlohmann::json *interop_data, std::s
   } else if (dest_conn == "wifi/mqtt") {
     mqtt_processor(ds, dst_name, final_payload);
   } else if (dest_conn == "ble") {
-    spdlog::error("Bluetooth is not yet cool");
-    // ble_processor(ds, dst_name, final_payload);
+    // spdlog::error("Bluetooth is not yet cool");
+    ble_processor(ds, dst_name, final_payload);
   }
 }

@@ -11,14 +11,10 @@
   },
   "ter_stegen": {
     "destination": "BLE_DEV_0",
-    "interval": 400
-  },
-  "ROG Phone 9 FE": {
-    "destination": "l_martinez",
-    "interval": 300
+    "interval": 1000
   },
   "ble_sensor_x": {
     "destination": "l_martinez",
-    "interval": 100
+    "interval": 1000
   }
 }

@@ -1,1 +1,5 @@
-["gen_mqtt", "handshake/#", "unhandshake/#"]
+[
+    "gen_mqtt",
+    "handshake/#",
+    "unhandshake/#"
+]

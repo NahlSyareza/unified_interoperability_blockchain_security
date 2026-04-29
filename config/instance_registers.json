@@ -16,15 +16,19 @@
     "format": "req-67-json"
   },
   "ter_stegen": {
-    "device": "generic-wifi/mqtt",
+    "device": "generic-wifi/http",
     "format": "generic-raw"
   },
   "BLE_DEV_0": {
     "device": "generic-ble",
     "format": "generic-raw"
   },
+  "ble_sensor_x": {
+    "device": "generic-ble",
+    "format": "generic-raw"
+  },
   "l_martinez": {
-    "device": "generic-wifi/http",
+    "device": "generic-wifi/mqtt",
     "format": "generic-raw"
   },
   "ROG Phone 9 FE": {

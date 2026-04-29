@@ -28,6 +28,8 @@ public:
 
   std::map<std::string, TaskData *> active_registers;
 
+  std::vector<std::shared_ptr<SimpleBluez::Device>> ble_peripherals;
+  std::vector<std::shared_ptr<SimpleBluez::Characteristic>> ble_characteristics;
   // std::vector<SimpleBLE::Peripheral> peripherals;
   // std::map<std::string, std::pair<SimpleBLE::BluetoothUUID, SimpleBLE::BluetoothUUID>> uuid_pair;
 
