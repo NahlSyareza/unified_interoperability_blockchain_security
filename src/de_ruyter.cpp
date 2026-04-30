@@ -147,8 +147,6 @@ void de_ruyter(DataStructure::Instance *ds, nlohmann::json *interop_data, std::s
   std::stringstream ss;
   std::string payload;
 
-  // spdlog::debug("src_name {} dst_name {}", src_name, dst_name);
-
   if (src_conn == "wifi/http") {
     // spdlog::debug("src_conn: wifi/http");
     payload = ds->http_map[src_name];
@@ -159,6 +157,8 @@ void de_ruyter(DataStructure::Instance *ds, nlohmann::json *interop_data, std::s
     // spdlog::debug("src_conn: ble");
     payload = ds->ble_map[src_name];
   }
+
+  spdlog::debug("payload {} src_name {} dst_name {}", payload, src_name, dst_name);
 
   OperationRegister op_reg;
 

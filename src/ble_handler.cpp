@@ -48,10 +48,10 @@ int ble_handler(DataStructure::Instance *ds [[maybe_unused]]) {
     nlohmann::json selected_peripheral = ds->ble_addresses[peripheral->name()];
     std::string name = peripheral->name();
 
-    if (!adapter->powered()) {
-      adapter->powered(true);
-      std::this_thread::sleep_for(std::chrono::milliseconds(500));
-    }
+    // if (!adapter->powered()) {
+    //   adapter->powered(true);
+    //   std::this_thread::sleep_for(std::chrono::milliseconds(500));
+    // }
 
     while (!peripheral->connected()) {
       try {
@@ -69,7 +69,7 @@ int ble_handler(DataStructure::Instance *ds [[maybe_unused]]) {
 
     std::cout << std::endl;
 
-    std::this_thread::sleep_for(std::chrono::milliseconds(500));
+    std::this_thread::sleep_for(std::chrono::milliseconds(1000));
 
     spdlog::info("Connected to {}", peripheral->name());
 

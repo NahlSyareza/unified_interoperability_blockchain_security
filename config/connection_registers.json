@@ -1,20 +1,6 @@
 {
-  "temp_wifi_sen": {
-    "destination": "mqtt_led",
-    "interval": 200,
-    "rules": "universal_collapse.txt"
-  },
-  "gen_mqtt": {
-    "destination": "led_req_data",
-    "interval": 200,
-    "rules": "consequences.txt"
-  },
-  "ter_stegen": {
-    "destination": "BLE_DEV_0",
-    "interval": 1000
-  },
-  "ble_sensor_x": {
-    "destination": "l_martinez",
+  "mqtt_to_ble": {
+    "destination": "ble_from_mqtt",
     "interval": 1000
   }
 }

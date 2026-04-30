@@ -1,5 +1,3 @@
 [
-    "gen_mqtt",
-    "handshake/#",
-    "unhandshake/#"
+    "mqtt_to_ble"
 ]

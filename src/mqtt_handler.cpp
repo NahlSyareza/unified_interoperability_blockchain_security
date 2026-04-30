@@ -42,7 +42,7 @@ void on_subscribe(struct mosquitto *mosq, void *obj [[maybe_unused]], int mid, i
 void on_message(struct mosquitto *mosq [[maybe_unused]], void *obj, const struct mosquitto_message *msg) {
   DataStructure::Instance *ds = (DataStructure::Instance *)obj;
 
-  spdlog::debug("MQTT: {} {} {}", msg->topic, msg->qos, (char *)msg->payload);
+  // spdlog::debug("MQTT: {} {} {}", msg->topic, msg->qos, (char *)msg->payload);
 
   std::string topic((char *)msg->topic);
   std::string payload((char *)msg->payload);
@@ -50,7 +50,7 @@ void on_message(struct mosquitto *mosq [[maybe_unused]], void *obj, const struct
   ds->mqtt_map[topic] = payload;
 
   if (!ds->active_registers.count(topic)) {
-    create_task_detached(ds, payload);
+    create_task_detached(ds, topic);
   }
 }
 

@@ -1,37 +1,9 @@
 {
-  "temp_wifi_sen": {
-    "device": "generic-wifi/http",
-    "format": "generic-raw"
-  },
-  "mqtt_led": {
+  "mqtt_to_ble": {
     "device": "generic-wifi/mqtt",
     "format": "generic-raw"
   },
-  "gen_mqtt": {
-    "device": "generic-wifi/mqtt",
-    "format": "generic-raw"
-  },
-  "led_req_data": {
-    "device": "generic-wifi/http",
-    "format": "req-67-json"
-  },
-  "ter_stegen": {
-    "device": "generic-wifi/http",
-    "format": "generic-raw"
-  },
-  "BLE_DEV_0": {
-    "device": "generic-ble",
-    "format": "generic-raw"
-  },
-  "ble_sensor_x": {
-    "device": "generic-ble",
-    "format": "generic-raw"
-  },
-  "l_martinez": {
-    "device": "generic-wifi/mqtt",
-    "format": "generic-raw"
-  },
-  "ROG Phone 9 FE": {
+  "ble_from_mqtt": {
     "device": "generic-ble",
     "format": "generic-raw"
   }
