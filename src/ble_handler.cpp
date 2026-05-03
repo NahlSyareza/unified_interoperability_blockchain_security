@@ -12,7 +12,7 @@ void bluez_async_function() {
   std::cout << "This task has ended" << std::endl;
 }
 
-int ble_handler(DataStructure::Instance *ds [[maybe_unused]]) {
+int ble_handler(DataStructure::Instance *ds) {
   bluez.init();
 
   // std::thread *bluez_async_thread = new std::thread(bluez_async_function, &bluez, &should_run);
