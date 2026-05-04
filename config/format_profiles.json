@@ -9,16 +9,8 @@
       "payload": "string"
     }
   },
-  "req-67-json": {
-    "syntax": "json",
-    "pairs": {
-      "pyl": "int"
-    }
-  },
-  "test-json": {
-    "syntax": "json",
-    "pairs": {
-      "sensor_data": "int"
-    }
+  "celcius-raw": {
+    "syntax": "raw",
+    "unit": "celcius"
   }
 }

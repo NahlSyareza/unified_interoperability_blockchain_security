@@ -1,3 +1,0 @@
-/home/nahl-syareza/unified_interoperability_blockchain_security/build/CMakeFiles/legendary_boss.dir
-/home/nahl-syareza/unified_interoperability_blockchain_security/build/CMakeFiles/edit_cache.dir
-/home/nahl-syareza/unified_interoperability_blockchain_security/build/CMakeFiles/rebuild_cache.dir

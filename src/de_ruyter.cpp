@@ -1,6 +1,6 @@
 #include "de_ruyter.hpp"
 
-void ble_processor(DataStructure::Instance *ds [[maybe_unused]], std::string identifier [[maybe_unused]], std::string payload [[maybe_unused]]) {
+void ble_processor(DataStructure::Instance *ds, std::string identifier, std::string payload) {
   for (auto &p : ds->ble_peripherals) {
     if (p->name() == identifier) {
       nlohmann::json ble_uuids = ds->ble_addresses[identifier];
@@ -122,6 +122,12 @@ void process_instr(std::string instr, std::string act, std::string payload, Oper
   } else if (instr == "IF") {
     std::string compared_value = strget(act, 1);
     reg->logic_comparison = compare(act, std::stoi(reg->input_data), std::stoi(compared_value));
+  } else if (instr == "ELSEIF") {
+    if (!reg->logic_comparison) {
+      spdlog::debug("Kylian Mbappe");
+      std::string compared_value = strget(act, 1);
+      reg->logic_comparison = compare(act, std::stoi(reg->input_data), std::stoi(compared_value));
+    }
   } else if (instr == "CONV_TO") {
     reg->convert = act;
   } else if (instr == "THEN") {
@@ -158,7 +164,7 @@ void de_ruyter(DataStructure::Instance *ds, nlohmann::json *interop_data, std::s
     payload = ds->ble_map[src_name];
   }
 
-  spdlog::debug("payload {} src_name {} dst_name {}", payload, src_name, dst_name);
+  // spdlog::debug("payload {} src_name {} dst_name {}", payload, src_name, dst_name);
 
   OperationRegister op_reg;
 
@@ -177,6 +183,8 @@ void de_ruyter(DataStructure::Instance *ds, nlohmann::json *interop_data, std::s
   }
 
   std::string final_payload = !op_reg.output_data.empty() ? op_reg.output_data : payload;
+
+  spdlog::debug("final_payload {} src_name {} dst_name {}", final_payload, src_name, dst_name);
 
   if (dest_conn == "wifi/http") {
     http_processor(ds, dst_name, final_payload);

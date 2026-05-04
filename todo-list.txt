@@ -1,7 +1,7 @@
 1. Check for the utils.hpp and utils.cpp, analyze if they are still relevant or not
 2. Solve the mystery for syntactic interoperability, which includes not just changing formats, but DATA TYPES too
 
-24/03/2025
+24/03/2026
 Problemos:
 1. MQTT needs handling for the void* payload type
 2. Search on how to handle data type conversion on BLE
@@ -12,32 +12,42 @@ Solutions:
 
 WELL GUESS WHAT BRO. THESE ACTUALLY DON'T MATTER LMAOOOO
 
-25/03/2025
+25/03/2026
 1. Think up a solution for dynamic payload JSON in HTTP, and MQTT perhaps
 2. Think about how to handle special scenarios involving writing custom rules (e.g. if sensor value is 1 then send "low",
    if sensor value is 2 then send "med", and if sensor value is 3 then send "high")
 
-31/03/2025
+31/03/2026
 1. Continue on the conditional logic of my current "compiler"
 2. Yes, I am working on a dynamic payload in JSON, using the NeedAction part of the Service Layer.
 
-05/04/2025
+05/04/2026
 1. Message is now protected by Private and Public Keys, this will at least prevent MitM attacks, and to a certain extent spoofing
 2. I need to work on how to "authenticate" a sensor/actuator device.
 3. I will learn about asymmetric encryption
 
-11/04/2025
+11/04/2026
 1. I start to implement schedulers
 2. I want to implement error handlings for VARIOUS processes
 3. I want to review the NeedAction compiler
 4. Rn I am working on implementing a dynamic bluetooth
 
-12/04/2025
+12/04/2026
 1. I have implemented interoperability using tasks
 2. I have yet to implement error handlings for VARIOUS processes
 3. I need to review the NeedAction compiler
 4. I believe the dynamic bluetooth has worked
 
-14/04/2024
+14/04/2026
 1. I used Gemini for: TaskData struct and Instance class "race condition", asking about threads declared on a function and what happens when it ends
 2. 
+
+04/05/2026
+1. Explain what interop is
+2. Integrate blockchain //TODO later
+3. Change title
+4. Present results
+5. Evaluate msg by 100, 200, ..., 1000 msg/second
+6. Test for 30s, 1m, 1m 30s, ..., 5m
+7. Establish baseline when idle first
+

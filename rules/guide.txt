@@ -17,6 +17,9 @@ Okay so here's the commands so far:
 * IF <condition>
   Compare a value. Condition is always a string value for now
 
+* ELSEIF <condition>
+  It's an else if dawg
+
 * THEN <value>
   If it's true, then update the value
   

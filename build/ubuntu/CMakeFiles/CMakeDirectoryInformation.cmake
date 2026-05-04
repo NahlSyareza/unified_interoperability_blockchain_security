@@ -3,7 +3,7 @@
 
 # Relative path conversion top directories.
 set(CMAKE_RELATIVE_PATH_TOP_SOURCE "/home/nahl-syareza/unified_interoperability_blockchain_security")
-set(CMAKE_RELATIVE_PATH_TOP_BINARY "/home/nahl-syareza/unified_interoperability_blockchain_security/build")
+set(CMAKE_RELATIVE_PATH_TOP_BINARY "/home/nahl-syareza/unified_interoperability_blockchain_security/build/ubuntu")
 
 # Force unix paths in dependencies.
 set(CMAKE_FORCE_UNIX_PATHS 1)

@@ -6,5 +6,21 @@
   "ble_from_mqtt": {
     "device": "generic-ble",
     "format": "generic-raw"
+  },
+  "http_to_http": {
+    "device": "generic-wifi/http",
+    "format": "celcius-raw"
+  },
+  "http_from_http": {
+    "device": "generic-wifi/http",
+    "format": "generic-raw"
+  },
+  "mqtt_to_http": {
+    "device": "generic-wifi/mqtt",
+    "format": "generic-raw"
+  },
+  "http_from_mqtt": {
+    "device": "generic-wifi/http",
+    "format": "generic-raw"
   }
 }
