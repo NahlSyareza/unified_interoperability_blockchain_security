@@ -14,7 +14,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/gate-control-1/unified_interoperability_blockchain_security/src/de_ruyter.cpp" "CMakeFiles/legendary_boss.dir/src/de_ruyter.cpp.o" "gcc" "CMakeFiles/legendary_boss.dir/src/de_ruyter.cpp.o.d"
   "/home/gate-control-1/unified_interoperability_blockchain_security/src/http_handler.cpp" "CMakeFiles/legendary_boss.dir/src/http_handler.cpp.o" "gcc" "CMakeFiles/legendary_boss.dir/src/http_handler.cpp.o.d"
   "/home/gate-control-1/unified_interoperability_blockchain_security/src/mqtt_handler.cpp" "CMakeFiles/legendary_boss.dir/src/mqtt_handler.cpp.o" "gcc" "CMakeFiles/legendary_boss.dir/src/mqtt_handler.cpp.o.d"
-  "/home/gate-control-1/unified_interoperability_blockchain_security/src/nrf24_handler.cpp" "CMakeFiles/legendary_boss.dir/src/nrf24_handler.cpp.o" "gcc" "CMakeFiles/legendary_boss.dir/src/nrf24_handler.cpp.o.d"
+  "/home/gate-control-1/unified_interoperability_blockchain_security/src/rf24_handler.cpp" "CMakeFiles/legendary_boss.dir/src/rf24_handler.cpp.o" "gcc" "CMakeFiles/legendary_boss.dir/src/rf24_handler.cpp.o.d"
   "/home/gate-control-1/unified_interoperability_blockchain_security/src/spitarm.cpp" "CMakeFiles/legendary_boss.dir/src/spitarm.cpp.o" "gcc" "CMakeFiles/legendary_boss.dir/src/spitarm.cpp.o.d"
   "/home/gate-control-1/unified_interoperability_blockchain_security/src/tour_de_scheduler.cpp" "CMakeFiles/legendary_boss.dir/src/tour_de_scheduler.cpp.o" "gcc" "CMakeFiles/legendary_boss.dir/src/tour_de_scheduler.cpp.o.d"
   "" "legendary_boss" "gcc" "CMakeFiles/legendary_boss.dir/link.d"

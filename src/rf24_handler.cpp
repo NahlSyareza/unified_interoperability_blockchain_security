@@ -1,4 +1,4 @@
-#include "nrf24_handler.hpp"
+#include "rf24_handler.hpp"
 
 // uint8_t tx_addr[][6] = {"2Node", "6Node"};
 // uint8_t rx_addr[][6] = {"1Node", "5Node"};
@@ -18,13 +18,23 @@ void do_receive(RF24 *radio) {
   }
 }
 
-void do_transmit(RF24 *radio) {
-  radio->stopListening();
-  bool report = radio->write(outgoing_payload, 64);
+void do_transmit(DataStructure::Instance* ds) {
+  ds->radio.stopListening();
 
-  if(report) {
-    spdlog::info("Sent {}", outgoing_payload);
+  std::string ot_payload = "";
+
+  if(ds->tx_rf24_map.count("6Node")) {
+    spdlog::debug("(RF24) payload is available");
+    ot_payload = ds->tx_rf24_map["6Node"];
+
+    bool report = ds->radio.write(ot_payload.c_str(), 64);
+
+    if(report) {
+      spdlog::info("Sent {}", outgoing_payload);
+    }
   }
+
+
 }
 
 int nrf24_handler(DataStructure::Instance *ds) {
@@ -48,7 +58,8 @@ int nrf24_handler(DataStructure::Instance *ds) {
 
     std::this_thread::sleep_for(std::chrono::milliseconds(500));
 
-    do_transmit(&ds->radio);
+    do_transmit(ds);
+    //    ds->radio.stopListening();
 
     std::this_thread::sleep_for(std::chrono::milliseconds(500));
 

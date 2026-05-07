@@ -184,19 +184,19 @@ CMakeFiles/legendary_boss.dir/src/data_structure.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/legendary_boss.dir/src/data_structure.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gate-control-1/unified_interoperability_blockchain_security/src/data_structure.cpp -o CMakeFiles/legendary_boss.dir/src/data_structure.cpp.s
 
-CMakeFiles/legendary_boss.dir/src/nrf24_handler.cpp.o: CMakeFiles/legendary_boss.dir/flags.make
-CMakeFiles/legendary_boss.dir/src/nrf24_handler.cpp.o: /home/gate-control-1/unified_interoperability_blockchain_security/src/nrf24_handler.cpp
-CMakeFiles/legendary_boss.dir/src/nrf24_handler.cpp.o: CMakeFiles/legendary_boss.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gate-control-1/unified_interoperability_blockchain_security/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/legendary_boss.dir/src/nrf24_handler.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/legendary_boss.dir/src/nrf24_handler.cpp.o -MF CMakeFiles/legendary_boss.dir/src/nrf24_handler.cpp.o.d -o CMakeFiles/legendary_boss.dir/src/nrf24_handler.cpp.o -c /home/gate-control-1/unified_interoperability_blockchain_security/src/nrf24_handler.cpp
+CMakeFiles/legendary_boss.dir/src/rf24_handler.cpp.o: CMakeFiles/legendary_boss.dir/flags.make
+CMakeFiles/legendary_boss.dir/src/rf24_handler.cpp.o: /home/gate-control-1/unified_interoperability_blockchain_security/src/rf24_handler.cpp
+CMakeFiles/legendary_boss.dir/src/rf24_handler.cpp.o: CMakeFiles/legendary_boss.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gate-control-1/unified_interoperability_blockchain_security/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/legendary_boss.dir/src/rf24_handler.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/legendary_boss.dir/src/rf24_handler.cpp.o -MF CMakeFiles/legendary_boss.dir/src/rf24_handler.cpp.o.d -o CMakeFiles/legendary_boss.dir/src/rf24_handler.cpp.o -c /home/gate-control-1/unified_interoperability_blockchain_security/src/rf24_handler.cpp
 
-CMakeFiles/legendary_boss.dir/src/nrf24_handler.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/legendary_boss.dir/src/nrf24_handler.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gate-control-1/unified_interoperability_blockchain_security/src/nrf24_handler.cpp > CMakeFiles/legendary_boss.dir/src/nrf24_handler.cpp.i
+CMakeFiles/legendary_boss.dir/src/rf24_handler.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/legendary_boss.dir/src/rf24_handler.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gate-control-1/unified_interoperability_blockchain_security/src/rf24_handler.cpp > CMakeFiles/legendary_boss.dir/src/rf24_handler.cpp.i
 
-CMakeFiles/legendary_boss.dir/src/nrf24_handler.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/legendary_boss.dir/src/nrf24_handler.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gate-control-1/unified_interoperability_blockchain_security/src/nrf24_handler.cpp -o CMakeFiles/legendary_boss.dir/src/nrf24_handler.cpp.s
+CMakeFiles/legendary_boss.dir/src/rf24_handler.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/legendary_boss.dir/src/rf24_handler.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gate-control-1/unified_interoperability_blockchain_security/src/rf24_handler.cpp -o CMakeFiles/legendary_boss.dir/src/rf24_handler.cpp.s
 
 # Object files for target legendary_boss
 legendary_boss_OBJECTS = \
@@ -208,7 +208,7 @@ legendary_boss_OBJECTS = \
 "CMakeFiles/legendary_boss.dir/src/spitarm.cpp.o" \
 "CMakeFiles/legendary_boss.dir/src/tour_de_scheduler.cpp.o" \
 "CMakeFiles/legendary_boss.dir/src/data_structure.cpp.o" \
-"CMakeFiles/legendary_boss.dir/src/nrf24_handler.cpp.o"
+"CMakeFiles/legendary_boss.dir/src/rf24_handler.cpp.o"
 
 # External object files for target legendary_boss
 legendary_boss_EXTERNAL_OBJECTS =
@@ -221,7 +221,7 @@ legendary_boss: CMakeFiles/legendary_boss.dir/src/mqtt_handler.cpp.o
 legendary_boss: CMakeFiles/legendary_boss.dir/src/spitarm.cpp.o
 legendary_boss: CMakeFiles/legendary_boss.dir/src/tour_de_scheduler.cpp.o
 legendary_boss: CMakeFiles/legendary_boss.dir/src/data_structure.cpp.o
-legendary_boss: CMakeFiles/legendary_boss.dir/src/nrf24_handler.cpp.o
+legendary_boss: CMakeFiles/legendary_boss.dir/src/rf24_handler.cpp.o
 legendary_boss: CMakeFiles/legendary_boss.dir/build.make
 legendary_boss: CMakeFiles/legendary_boss.dir/compiler_depend.ts
 legendary_boss: /usr/local/lib/librf24.so

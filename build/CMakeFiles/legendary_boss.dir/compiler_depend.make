@@ -7,7 +7,7 @@ CMakeFiles/legendary_boss.dir/main.cpp.o: /home/gate-control-1/unified_interoper
   /home/gate-control-1/unified_interoperability_blockchain_security/include/de_ruyter.hpp \
   /home/gate-control-1/unified_interoperability_blockchain_security/include/http_handler.hpp \
   /home/gate-control-1/unified_interoperability_blockchain_security/include/mqtt_handler.hpp \
-  /home/gate-control-1/unified_interoperability_blockchain_security/include/nrf24_handler.hpp \
+  /home/gate-control-1/unified_interoperability_blockchain_security/include/rf24_handler.hpp \
   /home/gate-control-1/unified_interoperability_blockchain_security/include/spitarm.hpp \
   /home/gate-control-1/unified_interoperability_blockchain_security/include/tour_de_scheduler.hpp \
   /usr/include/aarch64-linux-gnu/bits/atomic_wide_counter.h \
@@ -3519,9 +3519,9 @@ CMakeFiles/legendary_boss.dir/src/mqtt_handler.cpp.o: /home/gate-control-1/unifi
   /usr/local/include/simpledbus/interfaces/ObjectManager.h \
   /usr/local/include/simpledbus/interfaces/Properties.h
 
-CMakeFiles/legendary_boss.dir/src/nrf24_handler.cpp.o: /home/gate-control-1/unified_interoperability_blockchain_security/src/nrf24_handler.cpp \
+CMakeFiles/legendary_boss.dir/src/rf24_handler.cpp.o: /home/gate-control-1/unified_interoperability_blockchain_security/src/rf24_handler.cpp \
   /home/gate-control-1/unified_interoperability_blockchain_security/include/data_structure.hpp \
-  /home/gate-control-1/unified_interoperability_blockchain_security/include/nrf24_handler.hpp \
+  /home/gate-control-1/unified_interoperability_blockchain_security/include/rf24_handler.hpp \
   /usr/include/aarch64-linux-gnu/bits/atomic_wide_counter.h \
   /usr/include/aarch64-linux-gnu/bits/byteswap.h \
   /usr/include/aarch64-linux-gnu/bits/confname.h \
@@ -4970,7 +4970,7 @@ legendary_boss: /lib/aarch64-linux-gnu/libbrotlicommon.so.1 \
   CMakeFiles/legendary_boss.dir/src/de_ruyter.cpp.o \
   CMakeFiles/legendary_boss.dir/src/http_handler.cpp.o \
   CMakeFiles/legendary_boss.dir/src/mqtt_handler.cpp.o \
-  CMakeFiles/legendary_boss.dir/src/nrf24_handler.cpp.o \
+  CMakeFiles/legendary_boss.dir/src/rf24_handler.cpp.o \
   CMakeFiles/legendary_boss.dir/src/spitarm.cpp.o \
   CMakeFiles/legendary_boss.dir/src/tour_de_scheduler.cpp.o
 
@@ -4978,8 +4978,6 @@ legendary_boss: /lib/aarch64-linux-gnu/libbrotlicommon.so.1 \
 CMakeFiles/legendary_boss.dir/src/tour_de_scheduler.cpp.o:
 
 CMakeFiles/legendary_boss.dir/src/spitarm.cpp.o:
-
-CMakeFiles/legendary_boss.dir/src/nrf24_handler.cpp.o:
 
 CMakeFiles/legendary_boss.dir/src/de_ruyter.cpp.o:
 
@@ -5014,8 +5012,6 @@ CMakeFiles/legendary_boss.dir/src/data_structure.cpp.o:
 /lib/aarch64-linux-gnu/libbrotlicommon.so.1:
 
 /home/gate-control-1/unified_interoperability_blockchain_security/src/tour_de_scheduler.cpp:
-
-/home/gate-control-1/unified_interoperability_blockchain_security/src/nrf24_handler.cpp:
 
 /home/gate-control-1/unified_interoperability_blockchain_security/src/http_handler.cpp:
 
@@ -5084,6 +5080,8 @@ CMakeFiles/legendary_boss.dir/src/data_structure.cpp.o:
 /usr/local/include/nlohmann/detail/json_pointer.hpp:
 
 /usr/lib/gcc/aarch64-linux-gnu/14/libstdc++.so:
+
+/home/gate-control-1/unified_interoperability_blockchain_security/src/rf24_handler.cpp:
 
 /usr/local/include/simplebluez/interfaces/GattDescriptor1.h:
 
@@ -5300,6 +5298,8 @@ CMakeFiles/legendary_boss.dir/src/data_structure.cpp.o:
 /usr/include/c++/14/bits/erase_if.h:
 
 /usr/include/aarch64-linux-gnu/sys/socket.h:
+
+/home/gate-control-1/unified_interoperability_blockchain_security/include/rf24_handler.hpp:
 
 /usr/include/c++/14/bits/std_function.h:
 
@@ -5669,14 +5669,6 @@ CMakeFiles/legendary_boss.dir/src/ble_handler.cpp.o:
 
 /usr/include/openssl/bio.h:
 
-/home/gate-control-1/unified_interoperability_blockchain_security/include/nrf24_handler.hpp:
-
-/usr/include/aarch64-linux-gnu/bits/waitstatus.h:
-
-/usr/include/aarch64-linux-gnu/bits/types/FILE.h:
-
-/usr/include/aarch64-linux-gnu/bits/fp-fast.h:
-
 /home/gate-control-1/unified_interoperability_blockchain_security/include/de_ruyter.hpp:
 
 /usr/include/assert.h:
@@ -5710,6 +5702,8 @@ CMakeFiles/legendary_boss.dir/src/ble_handler.cpp.o:
 /usr/include/c++/14/cmath:
 
 /usr/include/c++/14/sstream:
+
+CMakeFiles/legendary_boss.dir/src/rf24_handler.cpp.o:
 
 /usr/include/aarch64-linux-gnu/bits/types/mbstate_t.h:
 
@@ -5904,6 +5898,12 @@ CMakeFiles/legendary_boss.dir/src/ble_handler.cpp.o:
 /home/gate-control-1/unified_interoperability_blockchain_security/src/mqtt_handler.cpp:
 
 /usr/include/c++/14/bits/exception_ptr.h:
+
+/usr/include/aarch64-linux-gnu/bits/waitstatus.h:
+
+/usr/include/aarch64-linux-gnu/bits/types/FILE.h:
+
+/usr/include/aarch64-linux-gnu/bits/fp-fast.h:
 
 /usr/include/zconf.h:
 

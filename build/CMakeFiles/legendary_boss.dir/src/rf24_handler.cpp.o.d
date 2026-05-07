@@ -1,7 +1,7 @@
-CMakeFiles/legendary_boss.dir/src/nrf24_handler.cpp.o: \
- /home/gate-control-1/unified_interoperability_blockchain_security/src/nrf24_handler.cpp \
+CMakeFiles/legendary_boss.dir/src/rf24_handler.cpp.o: \
+ /home/gate-control-1/unified_interoperability_blockchain_security/src/rf24_handler.cpp \
  /usr/include/stdc-predef.h \
- /home/gate-control-1/unified_interoperability_blockchain_security/include/nrf24_handler.hpp \
+ /home/gate-control-1/unified_interoperability_blockchain_security/include/rf24_handler.hpp \
  /usr/local/include/RF24/RF24.h /usr/local/include/RF24/RF24_config.h \
  /usr/local/include/RF24/utility/includes.h /usr/include/c++/14/cstring \
  /usr/include/c++/14/bits/version.h \

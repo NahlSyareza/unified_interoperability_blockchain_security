@@ -1,6 +1,6 @@
 {
-  "mqtt_to_ble": {
-    "destination": "ble_from_mqtt",
-      "interval": 1000
+  "httpSen": {
+    "destination": "6Node",
+      "interval": 600
   }
 }

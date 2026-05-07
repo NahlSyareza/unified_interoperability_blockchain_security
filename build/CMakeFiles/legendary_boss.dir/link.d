@@ -10,7 +10,7 @@ legendary_boss: \
   CMakeFiles/legendary_boss.dir/src/spitarm.cpp.o \
   CMakeFiles/legendary_boss.dir/src/tour_de_scheduler.cpp.o \
   CMakeFiles/legendary_boss.dir/src/data_structure.cpp.o \
-  CMakeFiles/legendary_boss.dir/src/nrf24_handler.cpp.o \
+  CMakeFiles/legendary_boss.dir/src/rf24_handler.cpp.o \
   /usr/local/lib/librf24.so \
   /usr/lib/gcc/aarch64-linux-gnu/14/../../../aarch64-linux-gnu/libmosquitto.so \
   /usr/lib/aarch64-linux-gnu/libssl.so \
@@ -82,7 +82,7 @@ CMakeFiles/legendary_boss.dir/src/tour_de_scheduler.cpp.o:
 
 CMakeFiles/legendary_boss.dir/src/data_structure.cpp.o:
 
-CMakeFiles/legendary_boss.dir/src/nrf24_handler.cpp.o:
+CMakeFiles/legendary_boss.dir/src/rf24_handler.cpp.o:
 
 /usr/local/lib/librf24.so:
 

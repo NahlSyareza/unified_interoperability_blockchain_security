@@ -557,5 +557,5 @@ CMakeFiles/legendary_boss.dir/main.cpp.o: \
  /usr/include/brotli/port.h /usr/include/brotli/shared_dictionary.h \
  /usr/include/brotli/types.h /usr/include/brotli/encode.h \
  /home/gate-control-1/unified_interoperability_blockchain_security/include/mqtt_handler.hpp \
- /home/gate-control-1/unified_interoperability_blockchain_security/include/nrf24_handler.hpp \
+ /home/gate-control-1/unified_interoperability_blockchain_security/include/rf24_handler.hpp \
  /usr/include/c++/14/future /usr/include/c++/14/bits/atomic_futex.h

@@ -273,29 +273,29 @@ src/mqtt_handler.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/legendary_boss.dir/build.make CMakeFiles/legendary_boss.dir/src/mqtt_handler.cpp.s
 .PHONY : src/mqtt_handler.cpp.s
 
-src/nrf24_handler.o: src/nrf24_handler.cpp.o
-.PHONY : src/nrf24_handler.o
+src/rf24_handler.o: src/rf24_handler.cpp.o
+.PHONY : src/rf24_handler.o
 
 # target to build an object file
-src/nrf24_handler.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/legendary_boss.dir/build.make CMakeFiles/legendary_boss.dir/src/nrf24_handler.cpp.o
-.PHONY : src/nrf24_handler.cpp.o
+src/rf24_handler.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/legendary_boss.dir/build.make CMakeFiles/legendary_boss.dir/src/rf24_handler.cpp.o
+.PHONY : src/rf24_handler.cpp.o
 
-src/nrf24_handler.i: src/nrf24_handler.cpp.i
-.PHONY : src/nrf24_handler.i
+src/rf24_handler.i: src/rf24_handler.cpp.i
+.PHONY : src/rf24_handler.i
 
 # target to preprocess a source file
-src/nrf24_handler.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/legendary_boss.dir/build.make CMakeFiles/legendary_boss.dir/src/nrf24_handler.cpp.i
-.PHONY : src/nrf24_handler.cpp.i
+src/rf24_handler.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/legendary_boss.dir/build.make CMakeFiles/legendary_boss.dir/src/rf24_handler.cpp.i
+.PHONY : src/rf24_handler.cpp.i
 
-src/nrf24_handler.s: src/nrf24_handler.cpp.s
-.PHONY : src/nrf24_handler.s
+src/rf24_handler.s: src/rf24_handler.cpp.s
+.PHONY : src/rf24_handler.s
 
 # target to generate assembly for a file
-src/nrf24_handler.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/legendary_boss.dir/build.make CMakeFiles/legendary_boss.dir/src/nrf24_handler.cpp.s
-.PHONY : src/nrf24_handler.cpp.s
+src/rf24_handler.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/legendary_boss.dir/build.make CMakeFiles/legendary_boss.dir/src/rf24_handler.cpp.s
+.PHONY : src/rf24_handler.cpp.s
 
 src/spitarm.o: src/spitarm.cpp.o
 .PHONY : src/spitarm.o
@@ -372,9 +372,9 @@ help:
 	@echo "... src/mqtt_handler.o"
 	@echo "... src/mqtt_handler.i"
 	@echo "... src/mqtt_handler.s"
-	@echo "... src/nrf24_handler.o"
-	@echo "... src/nrf24_handler.i"
-	@echo "... src/nrf24_handler.s"
+	@echo "... src/rf24_handler.o"
+	@echo "... src/rf24_handler.i"
+	@echo "... src/rf24_handler.s"
 	@echo "... src/spitarm.o"
 	@echo "... src/spitarm.i"
 	@echo "... src/spitarm.s"

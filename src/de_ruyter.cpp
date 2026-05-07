@@ -1,5 +1,16 @@
 #include "de_ruyter.hpp"
 
+void rf24_processor(DataStructure::Instance *ds, std::string identifier, std::string payload) {
+
+  ds->tx_rf24_map[identifier] = payload;
+
+//  bool report = ds->radio.write(payload.c_str(), 64);
+
+//  if(report) {
+//    spdlog::debug("(RF24) Sent {}", payload);
+//  }
+}
+
 void ble_processor(DataStructure::Instance *ds, std::string identifier, std::string payload) {
   for (auto &p : ds->ble_peripherals) {
     if (p->name() == identifier) {
@@ -184,7 +195,7 @@ void de_ruyter(DataStructure::Instance *ds, nlohmann::json *interop_data, std::s
 
   std::string final_payload = !op_reg.output_data.empty() ? op_reg.output_data : payload;
 
-  spdlog::debug("final_payload {} src_name {} dst_name {}", final_payload, src_name, dst_name);
+//  spdlog::debug("final_payload {} src_name {} dst_name {}", final_payload, src_name, dst_name);
 
   if (dest_conn == "wifi/http") {
     http_processor(ds, dst_name, final_payload);
@@ -194,5 +205,6 @@ void de_ruyter(DataStructure::Instance *ds, nlohmann::json *interop_data, std::s
     // spdlog::error("Bluetooth is not yet cool");
     ble_processor(ds, dst_name, final_payload);
   } else if (dest_conn == "rf24") {
+    rf24_processor(ds, dst_name, final_payload);
   }
 }
