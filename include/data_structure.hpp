@@ -25,7 +25,7 @@ namespace DataStructure {
       std::map<std::string, std::string> http_map;
       std::map<std::string, std::string> mqtt_map;
       std::map<std::string, std::string> ble_map;
-      std::map<std::string, std::string> rf24_map;
+      std::map<std::string, std::string> rx_rf24_map;
       std::map<std::string, std::string> tx_rf24_map;
       
       RF24 radio = RF24(22, 0);

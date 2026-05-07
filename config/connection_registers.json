@@ -2,5 +2,9 @@
   "httpSen": {
     "destination": "6Node",
       "interval": 600
+  },
+  "1Node": {
+    "destination": "httpAct",
+    "interval": 300
   }
 }

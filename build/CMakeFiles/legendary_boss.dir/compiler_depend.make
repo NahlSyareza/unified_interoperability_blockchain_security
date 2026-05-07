@@ -3521,7 +3521,10 @@ CMakeFiles/legendary_boss.dir/src/mqtt_handler.cpp.o: /home/gate-control-1/unifi
 
 CMakeFiles/legendary_boss.dir/src/rf24_handler.cpp.o: /home/gate-control-1/unified_interoperability_blockchain_security/src/rf24_handler.cpp \
   /home/gate-control-1/unified_interoperability_blockchain_security/include/data_structure.hpp \
+  /home/gate-control-1/unified_interoperability_blockchain_security/include/de_ruyter.hpp \
   /home/gate-control-1/unified_interoperability_blockchain_security/include/rf24_handler.hpp \
+  /home/gate-control-1/unified_interoperability_blockchain_security/include/spitarm.hpp \
+  /home/gate-control-1/unified_interoperability_blockchain_security/include/tour_de_scheduler.hpp \
   /usr/include/aarch64-linux-gnu/bits/atomic_wide_counter.h \
   /usr/include/aarch64-linux-gnu/bits/byteswap.h \
   /usr/include/aarch64-linux-gnu/bits/confname.h \
@@ -3906,6 +3909,7 @@ CMakeFiles/legendary_boss.dir/src/rf24_handler.cpp.o: /home/gate-control-1/unifi
   /usr/include/locale.h \
   /usr/include/math.h \
   /usr/include/mosquitto.h \
+  /usr/include/mqtt_protocol.h \
   /usr/include/pthread.h \
   /usr/include/sched.h \
   /usr/include/semaphore.h \

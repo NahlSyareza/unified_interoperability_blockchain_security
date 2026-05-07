@@ -7,14 +7,19 @@ char incoming_payload[64] = "";
 
 const char outgoing_payload[64] = "Internazionale Milano";
 
-void do_receive(RF24 *radio) {
-  radio->startListening();
+void do_receive(DataStructure::Instance *ds) {
+  ds->radio.startListening();
   uint8_t pipe;
-  if (radio->available(&pipe))
+  if (ds->radio.available(&pipe))
   {
-    uint8_t bytes = radio->getPayloadSize();
-    radio->read(incoming_payload, bytes);
+    uint8_t bytes = ds->radio.getPayloadSize();
+    ds->radio.read(incoming_payload, bytes);
     spdlog::info("Received {} bytes on pipe {}: {}", bytes, pipe, incoming_payload);
+
+    ds->rx_rf24_map["1Node"] = incoming_payload;
+
+    if(!ds->active_registers.count("1Node"))
+      create_task_detached(ds, "1Node");
   }
 }
 
@@ -54,7 +59,7 @@ int nrf24_handler(DataStructure::Instance *ds) {
 
   while (1)
   {
-    do_receive(&ds->radio);
+    do_receive(ds);
 
     std::this_thread::sleep_for(std::chrono::milliseconds(500));
 

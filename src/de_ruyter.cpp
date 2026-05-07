@@ -173,6 +173,8 @@ void de_ruyter(DataStructure::Instance *ds, nlohmann::json *interop_data, std::s
   } else if (src_conn == "ble") {
     // spdlog::debug("src_conn: ble");
     payload = ds->ble_map[src_name];
+  } else if (src_conn == "rf24") {
+    payload = ds->rx_rf24_map[src_name];
   }
 
   // spdlog::debug("payload {} src_name {} dst_name {}", payload, src_name, dst_name);
