@@ -193,5 +193,7 @@ void de_ruyter(DataStructure::Instance *ds, nlohmann::json *interop_data, std::s
   } else if (dest_conn == "ble") {
     // spdlog::error("Bluetooth is not yet cool");
     ble_processor(ds, dst_name, final_payload);
+  } else if (dest_conn == "nrf24") {
+
   }
 }

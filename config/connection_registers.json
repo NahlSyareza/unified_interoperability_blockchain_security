@@ -1,11 +1,6 @@
 {
   "mqtt_to_ble": {
     "destination": "ble_from_mqtt",
-    "interval": 1000
-  },
-  "http_to_http": {
-    "destination": "http_from_http",
-    "interval": 100,
-    "rules": "h2h.txt"
+      "interval": 1000
   }
 }

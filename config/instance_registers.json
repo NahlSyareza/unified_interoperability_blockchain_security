@@ -1,26 +1,34 @@
 {
-  "mqtt_to_ble": {
+  "mqttSen": {
     "device": "generic-wifi/mqtt",
     "format": "generic-raw"
   },
-  "ble_from_mqtt": {
+  "bleSen": {
     "device": "generic-ble",
     "format": "generic-raw"
   },
-  "http_to_http": {
+  "httpSen": {
     "device": "generic-wifi/http",
     "format": "celcius-raw"
   },
-  "http_from_http": {
+  "httpAct": {
     "device": "generic-wifi/http",
     "format": "generic-raw"
   },
-  "mqtt_to_http": {
+  "mqttAct": {
     "device": "generic-wifi/mqtt",
     "format": "generic-raw"
   },
-  "http_from_mqtt": {
+  "bleAct": {
     "device": "generic-wifi/http",
+    "format": "generic-raw"
+  },
+  "1Node": {
+    "device": "generic-nrf24",
+    "format": "generic-raw"
+  },
+  "6Node": {
+    "device": "generic-nrf24",
     "format": "generic-raw"
   }
 }

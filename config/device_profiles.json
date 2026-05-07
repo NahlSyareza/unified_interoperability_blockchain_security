@@ -10,5 +10,9 @@
   "generic-ble": {
     "category": "dummy",
     "connection": "ble"
+  },
+  "generic-nrf24": {
+    "cateogry": "dummy",
+    "connection": "nrf24"
   }
 }
