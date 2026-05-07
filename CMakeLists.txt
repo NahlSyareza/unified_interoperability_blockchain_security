@@ -18,7 +18,13 @@ project(legendary_boss)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-add_executable(legendary_boss main.cpp src/ble_handler.cpp src/de_ruyter.cpp src/http_handler.cpp src/mqtt_handler.cpp src/spitarm.cpp src/tour_de_scheduler.cpp src/data_structure.cpp)
+add_executable(legendary_boss main.cpp src/ble_handler.cpp src/de_ruyter.cpp src/http_handler.cpp src/mqtt_handler.cpp src/spitarm.cpp src/tour_de_scheduler.cpp src/data_structure.cpp src/nrf24_handler.cpp)
+
+find_path(RF24_INCLUDE RF24.h PATH_SUFFIXES RF24)
+find_library(RF24_LIB NAMES rf24)
+
+target_include_directories(legendary_boss PRIVATE ${RF24_INCLUDE})
+target_link_libraries(legendary_boss PRIVATE ${RF24_LIB})
 
 if(WIN32)
     find_package(PThreads4W REQUIRED)
