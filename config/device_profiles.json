@@ -11,8 +11,8 @@
     "category": "dummy",
     "connection": "ble"
   },
-  "generic-nrf24": {
+  "generic-rf24": {
     "cateogry": "dummy",
-    "connection": "nrf24"
+    "connection": "rf24"
   }
 }

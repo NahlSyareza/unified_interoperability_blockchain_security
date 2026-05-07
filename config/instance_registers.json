@@ -24,11 +24,11 @@
     "format": "generic-raw"
   },
   "1Node": {
-    "device": "generic-nrf24",
+    "device": "generic-rf24",
     "format": "generic-raw"
   },
   "6Node": {
-    "device": "generic-nrf24",
+    "device": "generic-rf24",
     "format": "generic-raw"
   }
 }

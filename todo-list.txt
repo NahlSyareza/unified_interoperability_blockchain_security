@@ -51,3 +51,6 @@ WELL GUESS WHAT BRO. THESE ACTUALLY DON'T MATTER LMAOOOO
 6. Test for 30s, 1m, 1m 30s, ..., 5m
 7. Establish baseline when idle first
 
+06/05/2026
+1. Explain the mathematical theory for NRF24L01 mode switching timing
+2. 
