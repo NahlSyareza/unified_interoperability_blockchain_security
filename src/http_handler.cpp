@@ -68,15 +68,12 @@ int http_handler(DataStructure::Instance *ds) {
     }
 
     // de_ruyter(ds, path, body);
-    spdlog::debug("{}", path);
+    // spdlog::debug("{}", path);
     ds->http_map[path] = body;
 
     if (!ds->active_registers.count(path)) {
       create_task_detached(ds, path);
     }
-
-    std::string test = ds->http_map[path];
-    spdlog::debug("{}", test);
 
     ret["state"] = true;
     ret["msg"] = "Successfully posted new data";

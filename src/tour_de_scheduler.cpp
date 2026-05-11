@@ -2,11 +2,11 @@
 
 void generic_task_function(DataStructure::TaskData *td) {
   nlohmann::json interop_data;
-  TourDeScheduler::create_task_register(td->source, &interop_data);
+  bool success_create_register = TourDeScheduler::create_task_register(td->source, &interop_data);
 
   // spdlog::debug("Interop Data:\n{}", interop_data.dump(2));
 
-  while (!interop_data.empty() && td->active) {
+  while (!interop_data.empty() && td->active && success_create_register) {
     de_ruyter(td->ds, &interop_data, interop_data["rules"]);
 
     std::this_thread::sleep_for(std::chrono::milliseconds((int)interop_data["interval"]));
@@ -50,13 +50,19 @@ void TourDeScheduler::extract_config(std::string path, nlohmann::json *json_ptr)
   file.close();
 }
 
-void TourDeScheduler::create_task_register(std::string source, nlohmann::json *json_ptr) {
+bool TourDeScheduler::create_task_register(std::string source, nlohmann::json *json_ptr) {
   nlohmann::json connection_registers, instance_registers, device_profiles, format_profiles;
 
   extract_config("./config/connection_registers.json", &connection_registers);
   extract_config("./config/instance_registers.json", &instance_registers);
   extract_config("./config/device_profiles.json", &device_profiles);
   extract_config("./config/format_profiles.json", &format_profiles);
+
+  if(!connection_registers.count(source)) {
+    spdlog::error("(TDS) Unknown source!");
+
+    return false;
+  }
 
   std::string destination = connection_registers[source]["destination"];
 
@@ -74,18 +80,18 @@ void TourDeScheduler::create_task_register(std::string source, nlohmann::json *j
   if (!instance_registers.count(source)) {
     spdlog::error("Source instance {} is not recognized!", source);
     json_ptr->clear();
-    return;
+    return false;
   } else if (!instance_registers.count(destination)) {
     spdlog::error("Destination instance {} is not recognized!", destination);
     json_ptr->clear();
-    return;
+    return false;
   }
 
   std::string device = instance_registers[source]["device"];
   if (!device_profiles.count(device)) {
     spdlog::error("Source device profile {} is not found!", device);
     json_ptr->clear();
-    return;
+    return false;
   }
   data["device"] = device_profiles[device];
 
@@ -93,7 +99,7 @@ void TourDeScheduler::create_task_register(std::string source, nlohmann::json *j
   if (!format_profiles.count(format)) {
     spdlog::error("Source format profile {} is nout found!", format);
     json_ptr->clear();
-    return;
+    return false;
   }
   data["format"] = format_profiles[format];
 
@@ -105,7 +111,7 @@ void TourDeScheduler::create_task_register(std::string source, nlohmann::json *j
   if (!device_profiles.count(device)) {
     spdlog::error("Destination device profile {} is not found!", device);
     json_ptr->clear();
-    return;
+    return false;
   }
   data["device"] = device_profiles[device];
 
@@ -113,9 +119,11 @@ void TourDeScheduler::create_task_register(std::string source, nlohmann::json *j
   if (!format_profiles.count(format)) {
     spdlog::error("Destination format profile {} is not found!", format);
     json_ptr->clear();
-    return;
+    return false;
   }
   data["format"] = format_profiles[format];
 
   (*json_ptr)["dst"] = data;
+
+  return true;
 }

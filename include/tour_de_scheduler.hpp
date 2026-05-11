@@ -8,7 +8,7 @@
 
 namespace TourDeScheduler {
 void extract_config(std::string path, nlohmann::json *json_ptr);
-void create_task_register(std::string source, nlohmann::json *json_ptr);
+bool create_task_register(std::string source, nlohmann::json *json_ptr);
 }; // namespace TourDeScheduler
 
 void generic_task_function(DataStructure::TaskData *td);

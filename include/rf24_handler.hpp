@@ -6,6 +6,6 @@
 #include <iostream>
 #include "tour_de_scheduler.hpp"
 
-int nrf24_handler(DataStructure::Instance *ds);
+int rf24_handler(DataStructure::Instance *ds);
 void do_receive(DataStructure::Instance *ds);
 void do_transmit(DataStructure::Instance *ds);

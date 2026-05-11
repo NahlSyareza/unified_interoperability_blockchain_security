@@ -53,4 +53,8 @@ WELL GUESS WHAT BRO. THESE ACTUALLY DON'T MATTER LMAOOOO
 
 06/05/2026
 1. Explain the mathematical theory for NRF24L01 mode switching timing
-2. 
+
+11/05/2026
+1. Do the same case evaluation for message reading, "10, 20, 30, ..., 100ms"
+2. I need to find a paper that mentions the communication range to be considered real-time
+3. I need to find paper that can say if a measurement is good or not...

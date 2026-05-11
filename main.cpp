@@ -22,12 +22,12 @@ int main() {
 
   // spdlog::debug("{}", json_obj.dump(1));
 
-  std::thread nrf24_thread(nrf24_handler, &ds);
+  std::thread rf24_thread(rf24_handler, &ds);
   std::thread mqtt_thread(mqtt_handler, &ds);
   std::thread http_thread(http_handler, &ds);
   std::thread ble_thread(ble_handler, &ds);
 
-  nrf24_thread.join();
+  rf24_thread.join();
   mqtt_thread.join();
   http_thread.join();
   ble_thread.join();

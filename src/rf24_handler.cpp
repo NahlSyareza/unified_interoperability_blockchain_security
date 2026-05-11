@@ -42,7 +42,7 @@ void do_transmit(DataStructure::Instance* ds) {
 
 }
 
-int nrf24_handler(DataStructure::Instance *ds) {
+int rf24_handler(DataStructure::Instance *ds) {
   if(!ds->radio.begin()) {
     spdlog::error("Cannot initialize radio dawg");
 
@@ -61,12 +61,12 @@ int nrf24_handler(DataStructure::Instance *ds) {
   {
     do_receive(ds);
 
-    std::this_thread::sleep_for(std::chrono::milliseconds(500));
+    std::this_thread::sleep_for(std::chrono::milliseconds(200));
 
     do_transmit(ds);
     //    ds->radio.stopListening();
 
-    std::this_thread::sleep_for(std::chrono::milliseconds(500));
+    std::this_thread::sleep_for(std::chrono::milliseconds(200));
 
   }
 
