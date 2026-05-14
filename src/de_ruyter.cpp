@@ -156,9 +156,9 @@ void de_ruyter(DataStructure::Instance *ds, nlohmann::json *interop_data, std::s
   nlohmann::json src = (*interop_data)["src"];
   nlohmann::json dst = (*interop_data)["dst"];
 
-  std::string src_conn = src["device"]["connection"];
+  std::string src_conn = src["network"]["connection"];
   std::string src_name = src["name"];
-  std::string dest_conn = dst["device"]["connection"];
+  std::string dest_conn = dst["network"]["connection"];
   std::string dst_name = dst["name"];
   std::ifstream rule_file("./rules/" + rule_file_location);
   std::stringstream ss;

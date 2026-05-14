@@ -345,6 +345,30 @@ src/tour_de_scheduler.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/legendary_boss.dir/build.make CMakeFiles/legendary_boss.dir/src/tour_de_scheduler.cpp.s
 .PHONY : src/tour_de_scheduler.cpp.s
 
+src/uart_handler.o: src/uart_handler.cpp.o
+.PHONY : src/uart_handler.o
+
+# target to build an object file
+src/uart_handler.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/legendary_boss.dir/build.make CMakeFiles/legendary_boss.dir/src/uart_handler.cpp.o
+.PHONY : src/uart_handler.cpp.o
+
+src/uart_handler.i: src/uart_handler.cpp.i
+.PHONY : src/uart_handler.i
+
+# target to preprocess a source file
+src/uart_handler.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/legendary_boss.dir/build.make CMakeFiles/legendary_boss.dir/src/uart_handler.cpp.i
+.PHONY : src/uart_handler.cpp.i
+
+src/uart_handler.s: src/uart_handler.cpp.s
+.PHONY : src/uart_handler.s
+
+# target to generate assembly for a file
+src/uart_handler.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/legendary_boss.dir/build.make CMakeFiles/legendary_boss.dir/src/uart_handler.cpp.s
+.PHONY : src/uart_handler.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -381,6 +405,9 @@ help:
 	@echo "... src/tour_de_scheduler.o"
 	@echo "... src/tour_de_scheduler.i"
 	@echo "... src/tour_de_scheduler.s"
+	@echo "... src/uart_handler.o"
+	@echo "... src/uart_handler.i"
+	@echo "... src/uart_handler.s"
 .PHONY : help
 
 

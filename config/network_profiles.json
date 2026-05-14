@@ -14,5 +14,9 @@
   "generic-rf24": {
     "cateogry": "dummy",
     "connection": "rf24"
+  },
+  "generic-uart": {
+    "category": "dummy",
+    "connection": "uart"
   }
 }

@@ -4,7 +4,7 @@ void generic_task_function(DataStructure::TaskData *td) {
   nlohmann::json interop_data;
   bool success_create_register = TourDeScheduler::create_task_register(td->source, &interop_data);
 
-  // spdlog::debug("Interop Data:\n{}", interop_data.dump(2));
+  spdlog::debug("Interop Data:\n{}", interop_data.dump(2));
 
   while (!interop_data.empty() && td->active && success_create_register) {
     de_ruyter(td->ds, &interop_data, interop_data["rules"]);
@@ -46,16 +46,21 @@ bool create_task_detached(DataStructure::Instance *ds, std::string source) {
 
 void TourDeScheduler::extract_config(std::string path, nlohmann::json *json_ptr) {
   std::ifstream file(path);
+  
+  if(file.fail()) {
+    spdlog::error("(TDS) Error cannot open file path {}", path);
+  }
+
   *json_ptr = nlohmann::json::parse(file);
   file.close();
 }
 
 bool TourDeScheduler::create_task_register(std::string source, nlohmann::json *json_ptr) {
-  nlohmann::json connection_registers, instance_registers, device_profiles, format_profiles;
+  nlohmann::json connection_registers, instance_registers, network_profiles, format_profiles;
 
   extract_config("./config/connection_registers.json", &connection_registers);
   extract_config("./config/instance_registers.json", &instance_registers);
-  extract_config("./config/device_profiles.json", &device_profiles);
+  extract_config("./config/network_profiles.json", &network_profiles);
   extract_config("./config/format_profiles.json", &format_profiles);
 
   if(!connection_registers.count(source)) {
@@ -87,13 +92,13 @@ bool TourDeScheduler::create_task_register(std::string source, nlohmann::json *j
     return false;
   }
 
-  std::string device = instance_registers[source]["device"];
-  if (!device_profiles.count(device)) {
-    spdlog::error("Source device profile {} is not found!", device);
+  std::string network = instance_registers[source]["network"];
+  if (!network_profiles.count(network)) {
+    spdlog::error("Source network profile {} is not found!", network);
     json_ptr->clear();
     return false;
   }
-  data["device"] = device_profiles[device];
+  data["network"] = network_profiles[network];
 
   std::string format = instance_registers[source]["format"];
   if (!format_profiles.count(format)) {
@@ -107,13 +112,13 @@ bool TourDeScheduler::create_task_register(std::string source, nlohmann::json *j
 
   data["name"] = destination;
 
-  device = instance_registers[destination]["device"];
-  if (!device_profiles.count(device)) {
-    spdlog::error("Destination device profile {} is not found!", device);
+  network = instance_registers[destination]["network"];
+  if (!network_profiles.count(network)) {
+    spdlog::error("Destination network profile {} is not found!", network);
     json_ptr->clear();
     return false;
   }
-  data["device"] = device_profiles[device];
+  data["network"] = network_profiles[network];
 
   format = instance_registers[destination]["format"];
   if (!format_profiles.count(format)) {

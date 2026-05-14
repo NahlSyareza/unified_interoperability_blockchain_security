@@ -1,10 +1,6 @@
 {
   "httpSen": {
-    "destination": "6Node",
+    "destination": "mqttAct",
       "interval": 600
-  },
-  "1Node": {
-    "destination": "httpAct",
-    "interval": 300
   }
 }

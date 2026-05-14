@@ -17,6 +17,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/gate-control-1/unified_interoperability_blockchain_security/src/rf24_handler.cpp" "CMakeFiles/legendary_boss.dir/src/rf24_handler.cpp.o" "gcc" "CMakeFiles/legendary_boss.dir/src/rf24_handler.cpp.o.d"
   "/home/gate-control-1/unified_interoperability_blockchain_security/src/spitarm.cpp" "CMakeFiles/legendary_boss.dir/src/spitarm.cpp.o" "gcc" "CMakeFiles/legendary_boss.dir/src/spitarm.cpp.o.d"
   "/home/gate-control-1/unified_interoperability_blockchain_security/src/tour_de_scheduler.cpp" "CMakeFiles/legendary_boss.dir/src/tour_de_scheduler.cpp.o" "gcc" "CMakeFiles/legendary_boss.dir/src/tour_de_scheduler.cpp.o.d"
+  "/home/gate-control-1/unified_interoperability_blockchain_security/src/uart_handler.cpp" "CMakeFiles/legendary_boss.dir/src/uart_handler.cpp.o" "gcc" "CMakeFiles/legendary_boss.dir/src/uart_handler.cpp.o.d"
   "" "legendary_boss" "gcc" "CMakeFiles/legendary_boss.dir/link.d"
   )
 

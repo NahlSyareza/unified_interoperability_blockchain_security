@@ -1,7 +1,7 @@
-CMakeFiles/legendary_boss.dir/main.cpp.o: \
- /home/gate-control-1/unified_interoperability_blockchain_security/main.cpp \
+CMakeFiles/legendary_boss.dir/src/uart_handler.cpp.o: \
+ /home/gate-control-1/unified_interoperability_blockchain_security/src/uart_handler.cpp \
  /usr/include/stdc-predef.h \
- /home/gate-control-1/unified_interoperability_blockchain_security/include/ble_handler.hpp \
+ /home/gate-control-1/unified_interoperability_blockchain_security/include/uart_handler.hpp \
  /home/gate-control-1/unified_interoperability_blockchain_security/include/data_structure.hpp \
  /usr/include/mosquitto.h \
  /usr/lib/gcc/aarch64-linux-gnu/14/include/stddef.h \
@@ -421,141 +421,20 @@ CMakeFiles/legendary_boss.dir/main.cpp.o: \
  /usr/include/c++/14/fstream \
  /usr/include/aarch64-linux-gnu/c++/14/bits/basic_file.h \
  /usr/include/aarch64-linux-gnu/c++/14/bits/c++io.h \
- /usr/include/c++/14/bits/fstream.tcc \
- /usr/local/include/simplebluez/Exceptions.h \
- /usr/local/include/simpledbus/base/Exceptions.h \
- /home/gate-control-1/unified_interoperability_blockchain_security/include/tour_de_scheduler.hpp \
- /home/gate-control-1/unified_interoperability_blockchain_security/include/de_ruyter.hpp \
- /usr/include/mqtt_protocol.h \
- /home/gate-control-1/unified_interoperability_blockchain_security/include/spitarm.hpp \
- /home/gate-control-1/unified_interoperability_blockchain_security/include/http_handler.hpp \
- /usr/include/httplib.h /usr/include/arpa/inet.h \
- /usr/include/netinet/in.h /usr/include/aarch64-linux-gnu/sys/socket.h \
- /usr/include/aarch64-linux-gnu/bits/types/struct_iovec.h \
- /usr/include/aarch64-linux-gnu/bits/socket.h \
- /usr/include/aarch64-linux-gnu/bits/socket_type.h \
- /usr/include/aarch64-linux-gnu/bits/sockaddr.h \
- /usr/lib/linux/uapi/arm64/asm/socket.h /usr/include/asm-generic/socket.h \
- /usr/lib/linux/uapi/arm64/asm/sockios.h \
- /usr/include/asm-generic/sockios.h \
- /usr/include/aarch64-linux-gnu/bits/types/struct_osockaddr.h \
- /usr/include/aarch64-linux-gnu/bits/in.h /usr/include/ifaddrs.h \
- /usr/include/net/if.h /usr/include/netdb.h /usr/include/rpc/netdb.h \
- /usr/include/aarch64-linux-gnu/bits/types/sigevent_t.h \
- /usr/include/aarch64-linux-gnu/bits/types/__sigval_t.h \
- /usr/include/aarch64-linux-gnu/bits/netdb.h /usr/include/resolv.h \
- /usr/include/aarch64-linux-gnu/sys/param.h /usr/include/signal.h \
- /usr/include/aarch64-linux-gnu/bits/signum-generic.h \
- /usr/include/aarch64-linux-gnu/bits/signum-arch.h \
- /usr/include/aarch64-linux-gnu/bits/types/sig_atomic_t.h \
- /usr/include/aarch64-linux-gnu/bits/types/siginfo_t.h \
- /usr/include/aarch64-linux-gnu/bits/siginfo-arch.h \
- /usr/include/aarch64-linux-gnu/bits/siginfo-consts.h \
- /usr/include/aarch64-linux-gnu/bits/siginfo-consts-arch.h \
- /usr/include/aarch64-linux-gnu/bits/types/sigval_t.h \
- /usr/include/aarch64-linux-gnu/bits/sigevent-consts.h \
- /usr/include/aarch64-linux-gnu/bits/sigaction.h \
- /usr/include/aarch64-linux-gnu/bits/sigcontext.h \
- /usr/lib/linux/uapi/arm64/asm/sigcontext.h \
- /usr/lib/linux/uapi/arm64/asm/sve_context.h \
- /usr/include/aarch64-linux-gnu/bits/types/stack_t.h \
- /usr/include/aarch64-linux-gnu/sys/ucontext.h \
- /usr/include/aarch64-linux-gnu/sys/procfs.h \
- /usr/include/aarch64-linux-gnu/sys/user.h \
- /usr/include/aarch64-linux-gnu/bits/procfs.h \
- /usr/include/aarch64-linux-gnu/bits/procfs-id.h \
- /usr/include/aarch64-linux-gnu/bits/procfs-prregset.h \
- /usr/include/aarch64-linux-gnu/bits/procfs-extra.h \
- /usr/include/aarch64-linux-gnu/bits/sigstack.h \
- /usr/include/aarch64-linux-gnu/bits/sigstksz.h \
- /usr/include/aarch64-linux-gnu/bits/ss_flags.h \
- /usr/include/aarch64-linux-gnu/bits/types/struct_sigstack.h \
- /usr/include/aarch64-linux-gnu/bits/sigthread.h \
- /usr/include/aarch64-linux-gnu/bits/signal_ext.h \
- /usr/include/aarch64-linux-gnu/bits/param.h /usr/include/linux/param.h \
- /usr/lib/linux/uapi/arm64/asm/param.h /usr/include/asm-generic/param.h \
- /usr/include/arpa/nameser.h /usr/include/arpa/nameser_compat.h \
- /usr/include/aarch64-linux-gnu/bits/types/res_state.h \
- /usr/include/netinet/tcp.h /usr/include/c++/14/csignal \
- /usr/include/aarch64-linux-gnu/sys/mman.h \
- /usr/include/aarch64-linux-gnu/bits/mman.h \
- /usr/include/aarch64-linux-gnu/bits/mman-map-flags-generic.h \
- /usr/include/aarch64-linux-gnu/bits/mman-linux.h \
- /usr/include/aarch64-linux-gnu/bits/mman-shared.h \
- /usr/include/aarch64-linux-gnu/bits/mman_ext.h \
- /usr/include/aarch64-linux-gnu/sys/un.h /usr/include/fcntl.h \
+ /usr/include/c++/14/bits/fstream.tcc /usr/include/termios.h \
+ /usr/include/aarch64-linux-gnu/bits/termios.h \
+ /usr/include/aarch64-linux-gnu/bits/termios-struct.h \
+ /usr/include/aarch64-linux-gnu/bits/termios-c_cc.h \
+ /usr/include/aarch64-linux-gnu/bits/termios-c_iflag.h \
+ /usr/include/aarch64-linux-gnu/bits/termios-c_oflag.h \
+ /usr/include/aarch64-linux-gnu/bits/termios-baud.h \
+ /usr/include/aarch64-linux-gnu/bits/termios-c_cflag.h \
+ /usr/include/aarch64-linux-gnu/bits/termios-c_lflag.h \
+ /usr/include/aarch64-linux-gnu/bits/termios-tcflow.h \
+ /usr/include/aarch64-linux-gnu/bits/termios-misc.h \
+ /usr/include/aarch64-linux-gnu/sys/ttydefaults.h /usr/include/fcntl.h \
  /usr/include/aarch64-linux-gnu/bits/fcntl.h \
  /usr/include/aarch64-linux-gnu/bits/fcntl-linux.h \
+ /usr/include/aarch64-linux-gnu/bits/types/struct_iovec.h \
  /usr/include/linux/falloc.h /usr/include/aarch64-linux-gnu/bits/stat.h \
- /usr/include/aarch64-linux-gnu/bits/struct_stat.h \
- /usr/include/c++/14/list /usr/include/c++/14/bits/stl_list.h \
- /usr/include/c++/14/bits/list.tcc /usr/include/c++/14/random \
- /usr/include/c++/14/bits/random.h \
- /usr/include/aarch64-linux-gnu/c++/14/bits/opt_random.h \
- /usr/include/c++/14/bits/random.tcc /usr/include/c++/14/regex \
- /usr/include/c++/14/bitset /usr/include/c++/14/stack \
- /usr/include/c++/14/deque /usr/include/c++/14/bits/stl_deque.h \
- /usr/include/c++/14/bits/deque.tcc /usr/include/c++/14/bits/stl_stack.h \
- /usr/include/c++/14/bits/regex_constants.h \
- /usr/include/c++/14/bits/regex_error.h \
- /usr/include/c++/14/bits/regex_automaton.h \
- /usr/include/c++/14/bits/regex_automaton.tcc \
- /usr/include/c++/14/bits/regex_scanner.h \
- /usr/include/c++/14/bits/regex_scanner.tcc \
- /usr/include/c++/14/bits/regex_compiler.h \
- /usr/include/c++/14/bits/regex_compiler.tcc \
- /usr/include/c++/14/bits/regex.h /usr/include/c++/14/bits/regex.tcc \
- /usr/include/c++/14/bits/regex_executor.h \
- /usr/include/c++/14/bits/regex_executor.tcc /usr/include/c++/14/set \
- /usr/include/c++/14/bits/stl_set.h \
- /usr/include/c++/14/bits/stl_multiset.h \
- /usr/include/aarch64-linux-gnu/sys/stat.h \
- /usr/include/aarch64-linux-gnu/bits/statx.h /usr/include/linux/stat.h \
- /usr/include/aarch64-linux-gnu/bits/statx-generic.h \
- /usr/include/aarch64-linux-gnu/bits/types/struct_statx_timestamp.h \
- /usr/include/aarch64-linux-gnu/bits/types/struct_statx.h \
- /usr/include/c++/14/unordered_set \
- /usr/include/c++/14/bits/unordered_set.h /usr/include/openssl/err.h \
- /usr/include/openssl/macros.h \
- /usr/include/aarch64-linux-gnu/openssl/opensslconf.h \
- /usr/include/aarch64-linux-gnu/openssl/configuration.h \
- /usr/include/openssl/opensslv.h /usr/include/openssl/e_os2.h \
- /usr/include/c++/14/stdlib.h /usr/include/openssl/types.h \
- /usr/include/openssl/safestack.h /usr/include/openssl/stack.h \
- /usr/include/openssl/bio.h /usr/include/openssl/crypto.h \
- /usr/include/openssl/cryptoerr.h /usr/include/openssl/symhacks.h \
- /usr/include/openssl/cryptoerr_legacy.h /usr/include/openssl/core.h \
- /usr/include/openssl/bioerr.h /usr/include/openssl/lhash.h \
- /usr/include/openssl/evp.h /usr/include/openssl/core_dispatch.h \
- /usr/include/openssl/indicator.h /usr/include/openssl/params.h \
- /usr/include/openssl/bn.h /usr/include/openssl/bnerr.h \
- /usr/include/openssl/evperr.h /usr/include/openssl/objects.h \
- /usr/include/openssl/obj_mac.h /usr/include/openssl/asn1.h \
- /usr/include/openssl/asn1err.h /usr/include/openssl/objectserr.h \
- /usr/include/openssl/ssl.h /usr/include/openssl/e_ostime.h \
- /usr/include/openssl/comp.h /usr/include/openssl/comperr.h \
- /usr/include/openssl/x509.h /usr/include/openssl/buffer.h \
- /usr/include/openssl/buffererr.h /usr/include/openssl/ec.h \
- /usr/include/openssl/ecerr.h /usr/include/openssl/rsa.h \
- /usr/include/openssl/rsaerr.h /usr/include/openssl/dsa.h \
- /usr/include/openssl/dh.h /usr/include/openssl/dherr.h \
- /usr/include/openssl/dsaerr.h /usr/include/openssl/sha.h \
- /usr/include/openssl/x509err.h /usr/include/openssl/x509_vfy.h \
- /usr/include/openssl/pkcs7.h /usr/include/openssl/pkcs7err.h \
- /usr/include/openssl/http.h /usr/include/openssl/conf.h \
- /usr/include/openssl/conferr.h /usr/include/openssl/conftypes.h \
- /usr/include/openssl/pem.h /usr/include/openssl/pemerr.h \
- /usr/include/openssl/hmac.h /usr/include/openssl/async.h \
- /usr/include/openssl/asyncerr.h /usr/include/openssl/ct.h \
- /usr/include/openssl/cterr.h /usr/include/openssl/sslerr.h \
- /usr/include/openssl/sslerr_legacy.h /usr/include/openssl/prov_ssl.h \
- /usr/include/openssl/ssl2.h /usr/include/openssl/ssl3.h \
- /usr/include/openssl/tls1.h /usr/include/openssl/dtls1.h \
- /usr/include/openssl/srtp.h /usr/include/openssl/quic.h \
- /usr/include/openssl/x509v3.h /usr/include/openssl/x509v3err.h \
- /usr/include/zlib.h /usr/include/zconf.h /usr/include/brotli/decode.h \
- /usr/include/brotli/port.h /usr/include/brotli/shared_dictionary.h \
- /usr/include/brotli/types.h /usr/include/brotli/encode.h \
- /home/gate-control-1/unified_interoperability_blockchain_security/include/mqtt_handler.hpp \
- /home/gate-control-1/unified_interoperability_blockchain_security/include/rf24_handler.hpp \
- /home/gate-control-1/unified_interoperability_blockchain_security/include/uart_handler.hpp
+ /usr/include/aarch64-linux-gnu/bits/struct_stat.h

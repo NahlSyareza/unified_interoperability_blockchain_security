@@ -18,6 +18,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/legendary_boss.dir/src/spitarm.cpp.o.d"
   "CMakeFiles/legendary_boss.dir/src/tour_de_scheduler.cpp.o"
   "CMakeFiles/legendary_boss.dir/src/tour_de_scheduler.cpp.o.d"
+  "CMakeFiles/legendary_boss.dir/src/uart_handler.cpp.o"
+  "CMakeFiles/legendary_boss.dir/src/uart_handler.cpp.o.d"
   "legendary_boss"
   "legendary_boss.pdb"
 )
