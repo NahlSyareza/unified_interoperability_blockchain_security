@@ -1,11 +1,11 @@
 {
-  "generic-wifi/http": {
+  "generic-http": {
     "category": "dummy",
-    "connection": "wifi/http"
+    "connection": "http"
   },
-  "generic-wifi/mqtt": {
+  "generic-mqtt": {
     "category": "dummy",
-    "connection": "wifi/mqtt"
+    "connection": "mqtt"
   },
   "generic-ble": {
     "category": "dummy",
@@ -18,5 +18,9 @@
   "generic-uart": {
     "category": "dummy",
     "connection": "uart"
+  },
+  "generic-i2c": {
+    "category": "dummy",
+    "connection": "i2c"
   }
 }

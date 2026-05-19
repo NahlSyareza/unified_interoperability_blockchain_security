@@ -12,7 +12,7 @@ int http_handler(DataStructure::Instance *ds) {
     nlohmann::json ret;
 
     // if (ds->http_map.find(path) == ds->http_map.end()) {
-    if (!ds->http_map.count(path)) {
+    if (!ds->universal_map.count("http/" + path)) {
       ret["state"] = false;
       ret["msg"] = "Key doesn't exist in record.";
       ret["payload"] = "";
@@ -25,7 +25,7 @@ int http_handler(DataStructure::Instance *ds) {
     }
 
     bool is_json = false;
-    std::string payload = ds->http_map.at(path);
+    std::string payload = ds->universal_map.at("http/" + path);
 
     try {
       ret = nlohmann::json::parse(payload);
@@ -67,9 +67,8 @@ int http_handler(DataStructure::Instance *ds) {
       is_json = false;
     }
 
-    // de_ruyter(ds, path, body);
-    // spdlog::debug("{}", path);
-    ds->http_map[path] = body;
+    ds->universal_map["http/" + path] = body;
+    // ds->http_map[path] = body;
 
     if (!ds->active_registers.count(path)) {
       create_task_detached(ds, path);
@@ -87,6 +86,8 @@ int http_handler(DataStructure::Instance *ds) {
 
     res.set_content(ret.dump(), "application/json");
   });
+
+  spdlog::info("HTTP initialized!");
 
   svr.listen("0.0.0.0", 18080);
 

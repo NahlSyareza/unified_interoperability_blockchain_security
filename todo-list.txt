@@ -58,3 +58,7 @@ WELL GUESS WHAT BRO. THESE ACTUALLY DON'T MATTER LMAOOOO
 1. Do the same case evaluation for message reading, "10, 20, 30, ..., 100ms"
 2. I need to find a paper that mentions the communication range to be considered real-time
 3. I need to find paper that can say if a measurement is good or not...
+
+17/05/2026
+1. UART returns a 0 or -1 IF no data is written
+2. I2C returns the EXPECTED BYTES even if nothing is written, thus send a value 0 then check for the very first index on the buffer. If 0 then it means no data is transferred.

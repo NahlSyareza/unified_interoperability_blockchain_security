@@ -1,5 +1,0 @@
-"device-1/test" "device-10/course" 200 "universal_collapse.txt"
-"gen_mqtt" "device-67/req_data" 200 "consequences.txt"
-"ter_stegen" "BLE_DEV_0" 400
-"ROG Phone 9 FE" "l_martinez" 300
-"ble_sensor_x" "l_martinez" 100

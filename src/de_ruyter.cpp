@@ -1,14 +1,15 @@
 #include "de_ruyter.hpp"
 
+void i2c_processor(DataStructure::Instance *ds, std::string payload) {
+  write(ds->i2c_fd, payload.c_str(), payload.size());
+}
+
+void uart_processor(DataStructure::Instance *ds, std::string payload) {
+  write(ds->uart_fd, payload.c_str(), payload.size());
+}
+
 void rf24_processor(DataStructure::Instance *ds, std::string identifier, std::string payload) {
-
   ds->tx_rf24_map[identifier] = payload;
-
-//  bool report = ds->radio.write(payload.c_str(), 64);
-
-//  if(report) {
-//    spdlog::debug("(RF24) Sent {}", payload);
-//  }
 }
 
 void ble_processor(DataStructure::Instance *ds, std::string identifier, std::string payload) {
@@ -17,7 +18,7 @@ void ble_processor(DataStructure::Instance *ds, std::string identifier, std::str
       nlohmann::json ble_uuids = ds->ble_addresses[identifier];
       std::string service_uuid = ble_uuids["service"];
       std::string characteristic_uuid = ble_uuids["characteristic"];
-      // spdlog::info("BLE {} Service: {} Characteristic {} ", identifier, service_uuid, characteristic_uuid);
+      //      spdlog::info("BLE {} Service: {} Characteristic {} ", identifier, service_uuid, characteristic_uuid);
 
       try {
         auto characteristic = p->get_characteristic(service_uuid, characteristic_uuid);
@@ -48,7 +49,7 @@ void mqtt_processor(DataStructure::Instance *ds, std::string topic, std::string 
   }
 }
 
-void http_processor(DataStructure::Instance *ds, std::string path, std::string payload) { ds->http_map[path] = payload; }
+void http_processor(DataStructure::Instance *ds, std::string path, std::string payload) { ds->universal_map["http/" + path] = payload; }
 
 void get_instr(std::string op, std::string payload, OperationRegister *reg) {
   size_t ctrl;
@@ -164,21 +165,29 @@ void de_ruyter(DataStructure::Instance *ds, nlohmann::json *interop_data, std::s
   std::stringstream ss;
   std::string payload;
 
-  if (src_conn == "wifi/http") {
-    // spdlog::debug("src_conn: wifi/http");
-    payload = ds->http_map[src_name];
-  } else if (src_conn == "wifi/mqtt") {
-    // spdlog::debug("src_conn: wifi/mqtt");
-    payload = ds->mqtt_map[src_name];
-  } else if (src_conn == "ble") {
-    // spdlog::debug("src_conn: ble");
-    payload = ds->ble_map[src_name];
-  } else if (src_conn == "rf24") {
+  std::string map_location = "";
+  map_location.append(src_conn).append("/").append(src_name);
+
+  // spdlog::debug("New map locator: {}", map_location);
+
+  //  if (src_conn == "http") {
+  //    payload = ds->http_map[src_name];
+  //  } else if (src_conn == "mqtt") {
+  //    payload = ds->mqtt_map[src_name];
+  //  } else if (src_conn == "ble") {
+  //    payload = ds->ble_map[src_name];
+  //  } else if (src_conn == "rf24") {
+  //    payload = ds->rx_rf24_map[src_name];
+  //  } else if (src_conn == "uart") {
+  //    payload = ds->universal_map[src_name];
+  //  }
+
+  if(src_conn == "rf24") {
     payload = ds->rx_rf24_map[src_name];
+  } else {
+    payload = ds->universal_map[src_conn + "/" + src_name];
   }
-
-  // spdlog::debug("payload {} src_name {} dst_name {}", payload, src_name, dst_name);
-
+  
   OperationRegister op_reg;
 
   std::string line;
@@ -197,16 +206,17 @@ void de_ruyter(DataStructure::Instance *ds, nlohmann::json *interop_data, std::s
 
   std::string final_payload = !op_reg.output_data.empty() ? op_reg.output_data : payload;
 
-//  spdlog::debug("final_payload {} src_name {} dst_name {}", final_payload, src_name, dst_name);
-
-  if (dest_conn == "wifi/http") {
+  if (dest_conn == "http") {
     http_processor(ds, dst_name, final_payload);
-  } else if (dest_conn == "wifi/mqtt") {
+  } else if (dest_conn == "mqtt") {
     mqtt_processor(ds, dst_name, final_payload);
   } else if (dest_conn == "ble") {
-    // spdlog::error("Bluetooth is not yet cool");
     ble_processor(ds, dst_name, final_payload);
   } else if (dest_conn == "rf24") {
     rf24_processor(ds, dst_name, final_payload);
+  } else if(dest_conn == "uart") {
+    uart_processor(ds, final_payload);   
+  } else if(dest_conn == "i2c") {
+    i2c_processor(ds, final_payload);
   }
 }

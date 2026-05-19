@@ -1,50 +1,73 @@
 #include "uart_handler.hpp"
-#include <termios.h>
 #include <fcntl.h>
 #include "spdlog/spdlog.h"
+#include "tour_de_scheduler.hpp"
 
 #define SERIAL_PATH "/dev/ttyS0"
 
 int uart_handler(DataStructure::Instance *ds [[maybe_unused]]) {
-  termios tty;
-  int fd = open(SERIAL_PATH, O_RDWR | O_NONBLOCK);
+  // termios tty;
+  ds->uart_fd = open(SERIAL_PATH, O_RDWR);
 
-  spdlog::debug("Starting UART handler...");
-
-  if(fd < 0) {
+  if(ds->uart_fd < 0) {
     spdlog::error("Cannot open {}", SERIAL_PATH);
     return 1;
   }
 
-  if(tcgetattr(fd, &tty)) {
+  if(tcgetattr(ds->uart_fd, &ds->tty)) {
     spdlog::error("Something wrong when getting port attributes...");
     return 1;
   }
 
-  cfsetispeed(&tty, B115200);
-  cfsetospeed(&tty, B115200);
+  ds->tty.c_cflag &= ~PARENB;
+  ds->tty.c_cflag &= ~CSTOPB;
+  ds->tty.c_cflag &= ~CSIZE;
+  ds->tty.c_cflag |= CS8;
+  ds->tty.c_cflag &= ~CRTSCTS;
+  ds->tty.c_cflag |= CREAD | CLOCAL;
+  ds->tty.c_lflag &= ~ICANON;
+  ds->tty.c_lflag &= ~ECHO;
+  ds->tty.c_lflag &= ~ECHOE;
+  ds->tty.c_lflag &= ~ECHONL;
+  ds->tty.c_lflag &= ~ISIG;
+  ds->tty.c_iflag &= ~(IXON | IXOFF | IXANY);
+  ds->tty.c_iflag &= ~(IGNBRK|BRKINT|PARMRK|ISTRIP|INLCR|IGNCR|ICRNL);
+  ds->tty.c_oflag &= ~OPOST;
+  ds->tty.c_oflag &= ~ONLCR;
+  ds->tty.c_cc[VTIME] = 10;
+  ds->tty.c_cc[VMIN] = 0;
 
-  cfmakeraw(&tty);
+  cfsetispeed(&ds->tty, B115200);
+  cfsetospeed(&ds->tty, B115200);
 
-  if(tcsetattr(fd, TCSANOW, &tty)) {
+  //  cfmakeraw(&ds->tty);
+
+  if(tcsetattr(ds->uart_fd, TCSANOW, &ds->tty)) {
     spdlog::error("Something went wrong when SETTING port attributes...");
     return 1;
   }
 
-  spdlog::info("UART handler up and ready!");
+  spdlog::info("UART initialized!");
 
-//  char tx_msg[64] = "The world\n";
   char rx_msg[64];
-
-  for(int i = 0 ; i < 5 ; i++) {
-//    write(fd, (uint8_t *) tx_msg, strlen(tx_msg));
-    
+  ssize_t rx_bytes = read(ds->uart_fd, rx_msg, 64);
+  
+  while(1) {
     memset(rx_msg, 0, 64);
-    read(fd, (uint8_t *) rx_msg, 64);
-    
-    std::cout << rx_msg << std::endl;
-    
-    std::this_thread::sleep_for(std::chrono::milliseconds(200));
+    rx_bytes = read(ds->uart_fd, rx_msg, 64);
+
+    if(rx_bytes > 0) {
+      std::string payload(rx_msg);
+      ds->universal_map["uart/uartSen"] = payload; 
+
+      // spdlog::debug("{} {}", payload, rx_msg);
+
+      if (!ds->active_registers.count("uartSen")) {
+        create_task_detached(ds, "uartSen");
+      }
+    }
+
+    std::this_thread::sleep_for(std::chrono::milliseconds(100));
   }
 
   return 0;

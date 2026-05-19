@@ -47,7 +47,7 @@ void on_message(struct mosquitto *mosq [[maybe_unused]], void *obj, const struct
   std::string topic((char *)msg->topic);
   std::string payload((char *)msg->payload);
 
-  ds->mqtt_map[topic] = payload;
+  ds->universal_map["mqtt/" + topic] = payload;
 
   if (!ds->active_registers.count(topic)) {
     create_task_detached(ds, topic);
@@ -78,6 +78,7 @@ int mqtt_handler(DataStructure::Instance *ds) {
     return 1;
   }
 
+  spdlog::info("MQTT initialized");
   mosquitto_loop_forever(ds->mosq, -1, 1);
   // mosquitto_loop_start(ds->mosq);
 

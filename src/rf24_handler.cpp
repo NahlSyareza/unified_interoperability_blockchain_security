@@ -1,8 +1,5 @@
 #include "rf24_handler.hpp"
 
-// uint8_t tx_addr[][6] = {"2Node", "6Node"};
-// uint8_t rx_addr[][6] = {"1Node", "5Node"};
-
 char incoming_payload[64] = "";
 
 const char outgoing_payload[64] = "Internazionale Milano";
@@ -14,7 +11,7 @@ void do_receive(DataStructure::Instance *ds) {
   {
     uint8_t bytes = ds->radio.getPayloadSize();
     ds->radio.read(incoming_payload, bytes);
-    spdlog::info("Received {} bytes on pipe {}: {}", bytes, pipe, incoming_payload);
+    // spdlog::debug("Received {} bytes on pipe {}: {}", bytes, pipe, incoming_payload);
 
     ds->rx_rf24_map["1Node"] = incoming_payload;
 
@@ -28,14 +25,14 @@ void do_transmit(DataStructure::Instance* ds) {
 
   std::string ot_payload = "";
 
-  if(ds->tx_rf24_map.count("6Node")) {
+  if(ds->tx_rf24_map.count("2Node")) {
     spdlog::debug("(RF24) payload is available");
-    ot_payload = ds->tx_rf24_map["6Node"];
+    ot_payload = ds->tx_rf24_map["2Node"];
 
     bool report = ds->radio.write(ot_payload.c_str(), 64);
 
     if(report) {
-      spdlog::info("Sent {}", outgoing_payload);
+      spdlog::debug("Sent {}", outgoing_payload);
     }
   }
 
@@ -55,7 +52,7 @@ int rf24_handler(DataStructure::Instance *ds) {
 
   ds->radio.openReadingPipe(1, (uint8_t *)"1Node");
 
-  ds->radio.stopListening((uint8_t *)"6Node");
+  ds->radio.stopListening((uint8_t *)"2Node");
 
   while (1)
   {

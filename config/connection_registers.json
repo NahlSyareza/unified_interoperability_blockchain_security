@@ -1,6 +1,14 @@
 {
-  "httpSen": {
-    "destination": "mqttAct",
-      "interval": 600
-  }
+    "mqttSen": {
+      "destination": "i2cAct",
+      "interval": 100
+    },
+    "httpSen": {
+      "destination": "mqttAct",
+      "interval": 100
+    },
+    "1Node": {
+      "destination": "uartSen",
+      "interval": 100
+    }
 }

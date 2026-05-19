@@ -1,34 +1,50 @@
 {
   "mqttSen": {
-    "network": "generic-wifi/mqtt",
-    "format": "generic-raw"
+    "network": "generic-mqtt",
+      "format": "generic-raw"
   },
-  "bleSen": {
-    "network": "generic-ble",
-    "format": "generic-raw"
-  },
-  "httpSen": {
-    "network": "generic-wifi/http",
-    "format": "celcius-raw"
-  },
-  "httpAct": {
-    "network": "generic-wifi/http",
-    "format": "generic-raw"
-  },
-  "mqttAct": {
-    "network": "generic-wifi/mqtt",
-    "format": "generic-raw"
-  },
-  "bleAct": {
-    "network": "generic-wifi/http",
-    "format": "generic-raw"
-  },
-  "1Node": {
-    "network": "generic-rf24",
-    "format": "generic-raw"
-  },
-  "6Node": {
-    "network": "generic-rf24",
-    "format": "generic-raw"
-  }
-}
+    "bleSen": {
+      "network": "generic-ble",
+      "format": "generic-raw"
+    },
+    "httpSen": {
+      "network": "generic-http",
+      "format": "celcius-raw"
+    },
+    "httpAct": {
+      "network": "generic-http",
+      "format": "generic-raw"
+    },
+    "mqttAct": {
+      "network": "generic-mqtt",
+      "format": "generic-raw"
+    },
+    "bleAct": {
+      "network": "generic-ble",
+      "format": "generic-raw"
+    },
+    "1Node": {
+      "network": "generic-rf24",
+      "format": "generic-raw"
+    },
+    "6Node": {
+      "network": "generic-rf24",
+      "format": "generic-raw"
+    },
+    "uartSen": {
+      "network": "generic-uart",
+      "format": "generic-raw"
+    },
+    "uartAct": {
+      "network": "generic-uart",
+      "format": "generic-raw"
+    },
+    "i2cSen": {
+      "network": "generic-i2c",
+      "format": "generic-raw"
+    },
+    "i2cAct": {
+      "network": "generic-i2c",
+      "format": "generic-raw"
+    }
+} 

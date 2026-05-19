@@ -1,5 +1,4 @@
 #include "ble_handler.hpp"
-// #include "simpleble/Backend.h"
 
 SimpleBluez::Bluez bluez;
 bool should_run = true;
@@ -29,12 +28,12 @@ int ble_handler(DataStructure::Instance *ds) {
   std::vector<std::shared_ptr<SimpleBluez::Device>> peripherals;
 
   adapter->set_on_device_updated([&peripherals, ds](std::shared_ptr<SimpleBluez::Device> peripheral) {
-    if (ds->ble_addresses.count(peripheral->name()) && std::find(peripherals.begin(), peripherals.end(), peripheral) == peripherals.end()) {
+      if (ds->ble_addresses.count(peripheral->name()) && std::find(peripherals.begin(), peripherals.end(), peripheral) == peripherals.end()) {
       std::cout << "Detected: " << peripheral->name() << std::endl;
       peripherals.push_back(peripheral);
       ds->ble_peripherals.push_back(peripheral);
-    }
-  });
+      }
+      });
 
   adapter->discovery_start();
   spdlog::info("BLE discovery start");
@@ -48,22 +47,19 @@ int ble_handler(DataStructure::Instance *ds) {
     nlohmann::json selected_peripheral = ds->ble_addresses[peripheral->name()];
     std::string name = peripheral->name();
 
-    // if (!adapter->powered()) {
-    //   adapter->powered(true);
-    //   std::this_thread::sleep_for(std::chrono::milliseconds(500));
-    // }
-
     while (!peripheral->connected()) {
       try {
         peripheral->connect();
       } catch (SimpleDBus::Exception::SendFailed &e) {
-        std::cout << ".";
-        std::this_thread::sleep_for(std::chrono::milliseconds(10));
+        // std::cout << ".";
+        std::this_thread::sleep_for(std::chrono::milliseconds(100));
       }
     }
 
+    spdlog::info("Discovering services...");
+
     while (!peripheral->services_resolved()) {
-      std::cout << ".";
+      // std::cout << ".";
       std::this_thread::sleep_for(std::chrono::milliseconds(10));
     }
 
@@ -93,15 +89,15 @@ int ble_handler(DataStructure::Instance *ds) {
     std::this_thread::sleep_for(std::chrono::milliseconds(100));
 
     characteristic->set_on_value_changed([name, ds](SimpleBluez::ByteArray new_value) {
-      std::string payload(new_value.begin(), new_value.end());
-      // std::cout << "Notified: " << payload << std::endl;
-      ds->ble_map[name] = payload;
-      // spdlog::debug("(BLE) {}", payload);
-      // std::cout << "Message arrived" << std::endl;
-      if (!ds->active_registers.count(name)) {
+        std::string payload(new_value.begin(), new_value.end());
+        // std::cout << "Notified: " << payload << std::endl;
+        ds->universal_map["ble/" + name] = payload;
+        // spdlog::debug("(BLE) {}", payload);
+        // std::cout << "Message arrived" << std::endl;
+        if (!ds->active_registers.count(name)) {
         create_task_detached(ds, name);
-      }
-    });
+        }
+        });
 
     characteristic->start_notify();
 

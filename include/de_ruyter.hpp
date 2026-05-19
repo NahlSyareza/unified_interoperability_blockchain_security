@@ -15,3 +15,5 @@ void get_instr(std::string op, std::string data, OperationRegister *reg);
 void http_processor(DataStructure::Instance *dstructure, std::string path, std::string payload);
 void mqtt_processor(DataStructure::Instance *dstructure, std::string topic, std::string payload);
 void ble_processor(DataStructure::Instance *dstructure, std::string identifier, std::string payload);
+void uart_processor(DataStructure::Instance *ds, std::string payload);
+void i2c_processor(DataStructure::Instance *ds, std::string payload);

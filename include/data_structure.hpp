@@ -8,6 +8,7 @@
 #include <fstream>
 #include <iostream>
 #include <map>
+#include <termios.h>
 
 namespace DataStructure {
   class Instance;
@@ -20,28 +21,29 @@ namespace DataStructure {
 
   class Instance {
     public:
-      struct mosquitto *mosq = nullptr;
+      termios tty;
+      int uart_fd;
+      int i2c_fd;
 
-      std::map<std::string, std::string> http_map;
-      std::map<std::string, std::string> mqtt_map;
-      std::map<std::string, std::string> ble_map;
-      std::map<std::string, std::string> rx_rf24_map;
-      std::map<std::string, std::string> tx_rf24_map;
-      
+      mosquitto *mosq = nullptr;
       RF24 radio = RF24(22, 0);
 
-      std::map<std::string, TaskData *> active_registers;
+      std::map<std::string, std::string> universal_map;
 
+      std::map<std::string, std::string> rx_rf24_map;
+      std::map<std::string, std::string> tx_rf24_map;
+      std::map<std::string, TaskData *> active_registers;
       std::vector<std::shared_ptr<SimpleBluez::Device>> ble_peripherals;
       std::vector<std::shared_ptr<SimpleBluez::Characteristic>> ble_characteristics;
-      // std::vector<SimpleBLE::Peripheral> peripherals;
-      // std::map<std::string, std::pair<SimpleBLE::BluetoothUUID, SimpleBLE::BluetoothUUID>> uuid_pair;
 
       nlohmann::json ble_addresses;
       nlohmann::json mqtt_topics;
 
-      Instance() { fill_maps(); }
+      Instance() { 
+        fill_maps(); 
+
+      }
 
       void fill_maps();
   };
-} // namespace DataStructure
+} 
