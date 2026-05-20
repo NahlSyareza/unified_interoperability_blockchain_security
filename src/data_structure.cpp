@@ -1,4 +1,5 @@
 #include "data_structure.hpp"
+#include <fstream>
 
 void DataStructure::Instance::fill_maps() {
   std::ifstream _ble_addresses("./config/ble_addresses.json");
@@ -7,3 +8,5 @@ void DataStructure::Instance::fill_maps() {
   ble_addresses = nlohmann::json::parse(_ble_addresses);
   mqtt_topics = nlohmann::json::parse(_mqtt_topics);
 }
+
+
