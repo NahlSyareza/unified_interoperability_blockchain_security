@@ -1,20 +1,20 @@
 #include "uart_handler.hpp"
 #include <fcntl.h>
-#include "spdlog/spdlog.h"
-#include "tour_de_scheduler.hpp"
+#include <spdlog/spdlog.h>
+#include "task_scheduler.hpp"
 
 #define SERIAL_PATH "/dev/ttyS0"
 
-int uart_handler(DataStructure::Instance *ds [[maybe_unused]]) {
+int uart_handler(DataStructure::Instance *ds) {
   // termios tty;
-  ds->uart_fd = open(SERIAL_PATH, O_RDWR);
+  ds->uart_h = open(SERIAL_PATH, O_RDWR);
 
-  if(ds->uart_fd < 0) {
+  if(ds->uart_h < 0) {
     spdlog::error("Cannot open {}", SERIAL_PATH);
     return 1;
   }
 
-  if(tcgetattr(ds->uart_fd, &ds->tty)) {
+  if(tcgetattr(ds->uart_h, &ds->tty)) {
     spdlog::error("Something wrong when getting port attributes...");
     return 1;
   }
@@ -42,7 +42,7 @@ int uart_handler(DataStructure::Instance *ds [[maybe_unused]]) {
 
   //  cfmakeraw(&ds->tty);
 
-  if(tcsetattr(ds->uart_fd, TCSANOW, &ds->tty)) {
+  if(tcsetattr(ds->uart_h, TCSANOW, &ds->tty)) {
     spdlog::error("Something went wrong when SETTING port attributes...");
     return 1;
   }
@@ -50,11 +50,11 @@ int uart_handler(DataStructure::Instance *ds [[maybe_unused]]) {
   spdlog::info("UART initialized!");
 
   char rx_msg[64];
-  ssize_t rx_bytes = read(ds->uart_fd, rx_msg, 64);
+  ssize_t rx_bytes = read(ds->uart_h, rx_msg, 64);
   
   while(1) {
     memset(rx_msg, 0, 64);
-    rx_bytes = read(ds->uart_fd, rx_msg, 64);
+    rx_bytes = read(ds->uart_h, rx_msg, 64);
 
     if(rx_bytes > 0) {
       std::string payload(rx_msg);

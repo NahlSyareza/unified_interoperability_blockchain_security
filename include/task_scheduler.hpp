@@ -1,10 +1,6 @@
 #pragma once
 
 #include "data_structure.hpp"
-#include "de_ruyter.hpp"
-#include <functional>
-#include <iostream>
-#include <thread>
 
 namespace TourDeScheduler {
 void extract_config(std::string path, nlohmann::json *json_ptr);

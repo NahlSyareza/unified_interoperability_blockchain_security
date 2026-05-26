@@ -1,12 +1,13 @@
-#include "spitarm.hpp"
+#include "cust_instr_handler.hpp"
+#include "spdlog/spdlog.h"
 
 void print_op_reg(OperationRegister *op_reg) {
   spdlog::debug("\ntype: \"{}\"\ninput_data: \"{}\"\noutput_data: \"{}\"\nconvert: \"{}\"\nlogic_comparison: \"{}\"\n", op_reg->type, op_reg->input_data, op_reg->output_data, op_reg->convert,
                 op_reg->logic_comparison);
 }
 
-// If the segment is greater than the space count inside that string, then return the whole string dawg.
-string strget(string base, int segment_count) {
+// If the segment is greater than the space count inside that std::string, then return the whole std::string dawg.
+std::string strget(std::string base, int segment_count) {
   int internal_segment_counter, start_index, end_index;
 
   internal_segment_counter = 0;
@@ -34,13 +35,13 @@ string strget(string base, int segment_count) {
   // spdlog::debug("start_index: {} end_index: {}", start_index, end_index);
   // std::cout << "start_index: " << start_index << " end_index: " << end_index << std::endl;
 
-  string rtn = "";
+  std::string rtn = "";
   rtn.assign(base, start_index, end_index - start_index + 1);
 
   return rtn;
 }
 
-bool compare(string sign, int a, int b) {
+bool compare(std::string sign, int a, int b) {
   // b is the one defined inside the instruction text
 
   if (sign.at(1) == '=') {
@@ -55,6 +56,6 @@ bool compare(string sign, int a, int b) {
     return a > b;
   }
 
-  spdlog::error("(Spitarm) Sign not recognized!");
+  spdlog::error("(CI Handler) Sign not recognized!");
   return false;
 }

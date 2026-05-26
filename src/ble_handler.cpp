@@ -1,4 +1,6 @@
 #include "ble_handler.hpp"
+#include "simplebluez/Exceptions.h"
+#include "task_scheduler.hpp"
 
 SimpleBluez::Bluez bluez;
 bool should_run = true;

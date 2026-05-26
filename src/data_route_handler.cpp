@@ -1,11 +1,16 @@
-#include "de_ruyter.hpp"
+#include "data_route_handler.hpp"
+#include <spdlog/spdlog.h>
+#include <fstream>
+#include <sstream>
+#include "mosquitto.h"
+#include "mqtt_protocol.h"
 
 void i2c_processor(DataStructure::Instance *ds, std::string payload) {
-  write(ds->i2c_fd, payload.c_str(), payload.size());
+  write(ds->i2c_h, payload.c_str(), payload.size());
 }
 
 void uart_processor(DataStructure::Instance *ds, std::string payload) {
-  write(ds->uart_fd, payload.c_str(), payload.size());
+  write(ds->uart_h, payload.c_str(), payload.size());
 }
 
 void rf24_processor(DataStructure::Instance *ds, std::string identifier, std::string payload) {

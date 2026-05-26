@@ -4,36 +4,33 @@ extern "C" {
 }
 
 #include <fcntl.h>
-#include <iostream>
 #include <cstring>
 #include <sys/ioctl.h>
 #include <cstdint>
 #include <unistd.h>
-#include <thread>
-#include <chrono>
 #include "i2c_handler.hpp"
-#include "tour_de_scheduler.hpp"
+#include "task_scheduler.hpp"
 
 #define PORT_PATH "/dev/i2c-1"
 
 int i2c_handler(DataStructure::Instance* ds) {
-  ds->i2c_fd = open(PORT_PATH, O_RDWR);
+  ds->i2c_h = open(PORT_PATH, O_RDWR);
 
-  if (ds->i2c_fd < 0) {
+  if (ds->i2c_h < 0) {
     std::cerr << "Cannot open file" << std::endl;
     return 1;
   }
 
   int addr = 0x67;
 
-  if(ioctl(ds->i2c_fd, I2C_SLAVE, addr) < 0) {
+  if(ioctl(ds->i2c_h, I2C_SLAVE, addr) < 0) {
     std::cerr << "Pizdec" << std::endl;
     return 1;
   }
 
   uint8_t i_bf[64];
 
-  ssize_t starter_read = read(ds->i2c_fd, i_bf, sizeof(i_bf));
+  ssize_t starter_read = read(ds->i2c_h, i_bf, sizeof(i_bf));
 
   if(starter_read < 0) {
     spdlog::error("I2C not connected");
@@ -44,7 +41,7 @@ int i2c_handler(DataStructure::Instance* ds) {
 
   while(1) {
     memset(i_bf, 0, sizeof(i_bf));
-    ssize_t bytes_received [[maybe_unused]] = read(ds->i2c_fd, i_bf, sizeof(i_bf));
+    ssize_t bytes_received [[maybe_unused]] = read(ds->i2c_h, i_bf, sizeof(i_bf));
     
     if(*(i_bf)) {
       std::string payload((char *) i_bf);

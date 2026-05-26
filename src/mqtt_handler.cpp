@@ -1,4 +1,7 @@
 #include "mqtt_handler.hpp"
+#include <mqtt_protocol.h>
+#include "task_scheduler.hpp"
+#include <spdlog/spdlog.h>
 
 void on_connect(struct mosquitto *mosq, void *obj, int reason_code) {
   int rc;

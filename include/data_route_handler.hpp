@@ -1,13 +1,8 @@
 #pragma once
 
 #include "data_structure.hpp"
-#include "mosquitto.h"
-#include "mqtt_protocol.h"
 #include "nlohmann/json.hpp"
-#include "spdlog/spdlog.h"
-#include "spitarm.hpp"
-#include <fstream>
-#include <sstream>
+#include "cust_instr_handler.hpp"
 
 void de_ruyter(DataStructure::Instance *ds, nlohmann::json *interop_data, std::string rule_file_location);
 void process_instr(std::string instr, std::string act, std::string payload, OperationRegister *reg);

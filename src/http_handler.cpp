@@ -1,11 +1,14 @@
 #include "http_handler.hpp"
+// #include "httplib.h"
+#include "nlohmann/json.hpp"
+#include "task_scheduler.hpp"
 
 int http_handler(DataStructure::Instance *ds) {
-  httplib::Server svr;
+  // httplib::Server svr;
 
-  svr.Get("/dummy", [](const httplib::Request &req [[maybe_unused]], httplib::Response &res) { res.set_content("Hello World!", "text/plain"); });
+  // svr.Get("/dummy", [](const httplib::Request &req [[maybe_unused]], httplib::Response &res) { res.set_content("Hello World!", "text/plain"); });
 
-  svr.Get(R"(/(.*))", [ds](const httplib::Request &req, httplib::Response &res) {
+  ds->svr.Get(R"(/(.*))", [ds](const httplib::Request &req, httplib::Response &res) {
     std::string path = req.matches[1];
     // path.erase(0, 1);
 
@@ -48,7 +51,7 @@ int http_handler(DataStructure::Instance *ds) {
     }
   });
 
-  svr.Post(R"(/(.*))", [ds](const httplib::Request &req, httplib::Response &res) {
+  ds->svr.Post(R"(/(.*))", [ds](const httplib::Request &req, httplib::Response &res) {
     nlohmann::json ret;
 
     nlohmann::json json_body;
@@ -89,7 +92,7 @@ int http_handler(DataStructure::Instance *ds) {
 
   spdlog::info("HTTP initialized!");
 
-  svr.listen("0.0.0.0", 18080);
+  ds->svr.listen("0.0.0.0", 18080);
 
   return 0;
 }

@@ -1,10 +1,14 @@
-#include "tour_de_scheduler.hpp"
+#include "task_scheduler.hpp"
+#include "data_route_handler.hpp"
+#include <functional>
+#include <iostream>
+#include <thread>
 
 void generic_task_function(DataStructure::TaskData *td) {
   nlohmann::json interop_data;
   bool success_create_register = TourDeScheduler::create_task_register(td->source, &interop_data);
 
-  spdlog::debug("Interop Data:\n{}", interop_data.dump(2));
+//  spdlog::debug("Interop Data:\n{}", interop_data.dump(2));
 
   while (!interop_data.empty() && td->active && success_create_register) {
     de_ruyter(td->ds, &interop_data, interop_data["rules"]);
@@ -39,7 +43,7 @@ bool create_task_detached(DataStructure::Instance *ds, std::string source) {
   std::thread thr(generic_task_function, td);
   thr.detach();
 
-  spdlog::info("Task {} is starting...", source);
+//  spdlog::info("Task {} is starting...", source);
 
   return true;
 }
