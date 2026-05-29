@@ -9,9 +9,7 @@ extern "C" {
 #include <cstdint>
 #include <unistd.h>
 #include "i2c_handler.hpp"
-#include "task_scheduler.hpp"
-
-#define PORT_PATH "/dev/i2c-1"
+#include "data_route_handler.hpp"
 
 int i2c_handler(DataStructure::Instance* ds) {
   ds->i2c_h = open(PORT_PATH, O_RDWR);
@@ -46,10 +44,11 @@ int i2c_handler(DataStructure::Instance* ds) {
     if(*(i_bf)) {
       std::string payload((char *) i_bf);
       ds->universal_map["i2c/i2cSen"] = payload;
+      data_route_handler(ds, "i2cSen");
 
-      if(!ds->active_registers.count("i2cSen")) {
-        create_task_detached(ds, "i2cSen");
-      }
+      // if(!ds->active_registers.count("i2cSen")) {
+      //   create_task_detached(ds, "i2cSen");
+      // }
     }
   }
 

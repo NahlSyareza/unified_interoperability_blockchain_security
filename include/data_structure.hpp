@@ -6,12 +6,11 @@
 #include <RF24/RF24.h>
 #include <spidev_lib++.h>
 #include <spdlog/spdlog.h>
-// #include <fstream>
-// #include <iostream>
 #include <map>
 #include <termios.h>
 #include <httplib.h>
 #include <chrono>
+#include <coap3/coap.h>
 
 namespace DataStructure {
   class Instance;
@@ -26,6 +25,7 @@ namespace DataStructure {
     public:
       termios tty;
       const std::chrono::time_point<std::chrono::high_resolution_clock> epoch_point = std::chrono::high_resolution_clock::now();
+      coap_context_t *coap_ctx = nullptr;
       int uart_h;
       int i2c_h;
       httplib::Server svr;

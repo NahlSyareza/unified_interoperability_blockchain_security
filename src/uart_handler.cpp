@@ -1,12 +1,9 @@
 #include "uart_handler.hpp"
 #include <fcntl.h>
 #include <spdlog/spdlog.h>
-#include "task_scheduler.hpp"
-
-#define SERIAL_PATH "/dev/ttyS0"
+#include "data_route_handler.hpp"
 
 int uart_handler(DataStructure::Instance *ds) {
-  // termios tty;
   ds->uart_h = open(SERIAL_PATH, O_RDWR);
 
   if(ds->uart_h < 0) {
@@ -59,12 +56,13 @@ int uart_handler(DataStructure::Instance *ds) {
     if(rx_bytes > 0) {
       std::string payload(rx_msg);
       ds->universal_map["uart/uartSen"] = payload; 
+      data_route_handler(ds, "uartSen");
 
       // spdlog::debug("{} {}", payload, rx_msg);
 
-      if (!ds->active_registers.count("uartSen")) {
-        create_task_detached(ds, "uartSen");
-      }
+      // if (!ds->active_registers.count("uartSen")) {
+      //   create_task_detached(ds, "uartSen");
+      // }
     }
 
     std::this_thread::sleep_for(std::chrono::milliseconds(100));

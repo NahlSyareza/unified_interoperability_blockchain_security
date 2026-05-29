@@ -4,135 +4,49 @@
 #include <iostream>
 #include <thread>
 
-void generic_task_function(DataStructure::TaskData *td) {
-  nlohmann::json interop_data;
-  bool success_create_register = TourDeScheduler::create_task_register(td->source, &interop_data);
+void generic_task_function(DataStructure::TaskData *td [[maybe_unused]]) {
+  //nlohmann::json interop_data;
+  //bool success_create_register = TourDeScheduler::create_task_register(td->source, &interop_data);
 
-//  spdlog::debug("Interop Data:\n{}", interop_data.dump(2));
+////  spdlog::debug("Interop Data:\n{}", interop_data.dump(2));
 
-  while (!interop_data.empty() && td->active && success_create_register) {
-    de_ruyter(td->ds, &interop_data, interop_data["rules"]);
+  //while (!interop_data.empty() && td->active && success_create_register) {
+  //  data_route_handler(td->ds, &interop_data, interop_data["rules"]);
 
-    std::this_thread::sleep_for(std::chrono::milliseconds((int)interop_data["interval"]));
-  }
+  //  std::this_thread::sleep_for(std::chrono::milliseconds((int)interop_data["interval"]));
+  //}
 
-  spdlog::info("Task {} is done", td->source);
+  //spdlog::info("Task {} is done", td->source);
 
-  if (td->ds != nullptr) {
-    td->ds->active_registers.erase(td->source);
-  } else {
-    spdlog::error("(Task) TaskData's DataStructure is undefined!");
-  }
+  //if (td->ds != nullptr) {
+  //  td->ds->active_registers.erase(td->source);
+  //} else {
+  //  spdlog::error("(Task) TaskData's DataStructure is undefined!");
+  //}
 
-  delete td;
+  //delete td;
 }
 
-bool create_task_detached(DataStructure::Instance *ds, std::string source) {
-  if (ds->active_registers.count(source)) {
-    spdlog::error("Task with this name has already been created");
-    return false;
-  }
+bool create_task_detached(DataStructure::Instance *ds [[maybe_unused]], std::string source [[maybe_unused]]) {
+  // if (ds->active_registers.count(source)) {
+  //   spdlog::error("Task with this name has already been created");
+  //   return false;
+  // }
 
-  DataStructure::TaskData *td = new DataStructure::TaskData();
-  td->source = source;
-  td->ds = ds;
-  td->active = true;
+  // DataStructure::TaskData *td = new DataStructure::TaskData();
+  // td->source = source;
+  // td->ds = ds;
+  // td->active = true;
 
-  ds->active_registers[source] = td;
+  // ds->active_registers[source] = td;
 
-  std::thread thr(generic_task_function, td);
-  thr.detach();
+  // std::thread thr(generic_task_function, td);
+  // thr.detach();
 
-//  spdlog::info("Task {} is starting...", source);
+////   spdlog::info("Task {} is starting...", source);
 
-  return true;
+  // return true;
+  //
+  return false;
 }
 
-void TourDeScheduler::extract_config(std::string path, nlohmann::json *json_ptr) {
-  std::ifstream file(path);
-  
-  if(file.fail()) {
-    spdlog::error("(TDS) Error cannot open file path {}", path);
-  }
-
-  *json_ptr = nlohmann::json::parse(file);
-  file.close();
-}
-
-bool TourDeScheduler::create_task_register(std::string source, nlohmann::json *json_ptr) {
-  nlohmann::json connection_registers, instance_registers, network_profiles, format_profiles;
-
-  extract_config("./config/connection_registers.json", &connection_registers);
-  extract_config("./config/instance_registers.json", &instance_registers);
-  extract_config("./config/network_profiles.json", &network_profiles);
-  extract_config("./config/format_profiles.json", &format_profiles);
-
-  if(!connection_registers.count(source)) {
-    spdlog::error("(TDS) Unknown source!");
-
-    return false;
-  }
-
-  std::string destination = connection_registers[source]["destination"];
-
-  (*json_ptr)["interval"] = connection_registers[source]["interval"];
-
-  if (connection_registers[source].count("rules")) {
-    (*json_ptr)["rules"] = connection_registers[source]["rules"];
-  } else {
-    (*json_ptr)["rules"] = "";
-  }
-
-  nlohmann::json data;
-  data["name"] = source;
-
-  if (!instance_registers.count(source)) {
-    spdlog::error("Source instance {} is not recognized!", source);
-    json_ptr->clear();
-    return false;
-  } else if (!instance_registers.count(destination)) {
-    spdlog::error("Destination instance {} is not recognized!", destination);
-    json_ptr->clear();
-    return false;
-  }
-
-  std::string network = instance_registers[source]["network"];
-  if (!network_profiles.count(network)) {
-    spdlog::error("Source network profile {} is not found!", network);
-    json_ptr->clear();
-    return false;
-  }
-  data["network"] = network_profiles[network];
-
-  std::string format = instance_registers[source]["format"];
-  if (!format_profiles.count(format)) {
-    spdlog::error("Source format profile {} is nout found!", format);
-    json_ptr->clear();
-    return false;
-  }
-  data["format"] = format_profiles[format];
-
-  (*json_ptr)["src"] = data;
-
-  data["name"] = destination;
-
-  network = instance_registers[destination]["network"];
-  if (!network_profiles.count(network)) {
-    spdlog::error("Destination network profile {} is not found!", network);
-    json_ptr->clear();
-    return false;
-  }
-  data["network"] = network_profiles[network];
-
-  format = instance_registers[destination]["format"];
-  if (!format_profiles.count(format)) {
-    spdlog::error("Destination format profile {} is not found!", format);
-    json_ptr->clear();
-    return false;
-  }
-  data["format"] = format_profiles[format];
-
-  (*json_ptr)["dst"] = data;
-
-  return true;
-}

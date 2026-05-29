@@ -8,6 +8,7 @@
 #include "i2c_handler.hpp"
 #include "gpio_handler.hpp"
 #include "spi_handler.hpp"
+#include "coap_handler.hpp"
 #include <iostream>
 #include <thread>
 #include <spdlog/spdlog.h>
@@ -20,23 +21,27 @@ int main() {
 
   spdlog::set_level(spdlog::level::debug);
 
-  std::thread rf24_th(rf24_handler, &ds);
-  std::thread mqtt_th(mqtt_handler, &ds);
-  std::thread http_th(http_handler, &ds);
-  std::thread ble_th(ble_handler, &ds);
-  std::thread uart_th(uart_handler, &ds);
-  std::thread i2c_th(i2c_handler, &ds);
-  std::thread spi_th(spi_handler, &ds);
-  std::thread gpio_th(gpio_handler, &ds);
+  std::thread coap_th(coap_handler, &ds);
+  // std::thread rf24_th(rf24_handler, &ds);
+  // std::thread mqtt_th(mqtt_handler, &ds);
+  // std::thread http_th(http_handler, &ds);
+  // std::thread ble_th(ble_handler, &ds);
+  // std::thread uart_th(uart_handler, &ds);
+  // std::thread i2c_th(i2c_handler, &ds);
+  // std::thread spi_th(spi_handler, &ds);
+  // std::thread gpio_th(gpio_handler, &ds);
 
-  i2c_th.join();
-  rf24_th.join();
-  mqtt_th.join();
-  http_th.join();
-  ble_th.join();
-  uart_th.join();
-  spi_th.join();
-  gpio_th.join();
+  spdlog::debug("ONNA BUSHI!");
+
+  coap_th.join();
+  // i2c_th.join();
+  // rf24_th.join();
+  // mqtt_th.join();
+  // http_th.join();
+  // ble_th.join();
+  // uart_th.join();
+  // spi_th.join();
+  // gpio_th.join();
 
   return 0;
 }

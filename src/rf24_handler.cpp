@@ -1,7 +1,7 @@
 #include "rf24_handler.hpp"
 #include <RF24/RF24.h>
 #include <spdlog/spdlog.h>
-#include "task_scheduler.hpp"
+#include "data_route_handler.hpp"
 
 char incoming_payload[64] = "";
 
@@ -18,8 +18,10 @@ void do_receive(DataStructure::Instance *ds) {
 
     ds->rx_rf24_map["1Node"] = incoming_payload;
 
-    if(!ds->active_registers.count("1Node"))
-      create_task_detached(ds, "1Node");
+    data_route_handler(ds, "1Node");
+
+    // if(!ds->active_registers.count("1Node"))
+    //   create_task_detached(ds, "1Node");
   }
 }
 

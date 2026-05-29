@@ -5,6 +5,95 @@
 #include "mosquitto.h"
 #include "mqtt_protocol.h"
 
+void extract_config(std::string path, nlohmann::json *json_ptr) {
+  std::ifstream file(path);
+  
+  if(file.fail()) {
+    spdlog::error("(TDS) Error cannot open file path {}", path);
+  }
+
+  *json_ptr = nlohmann::json::parse(file);
+  file.close();
+}
+
+bool create_interop_data(std::string source, nlohmann::json *json_ptr) {
+  nlohmann::json connection_registers, instance_registers, network_profiles, format_profiles;
+
+  extract_config("./config/connection_registers.json", &connection_registers);
+  extract_config("./config/instance_registers.json", &instance_registers);
+  extract_config("./config/network_profiles.json", &network_profiles);
+  extract_config("./config/format_profiles.json", &format_profiles);
+
+  if(!connection_registers.count(source)) {
+    spdlog::error("(TDS) Unknown source!");
+
+    return false;
+  }
+
+  std::string destination = connection_registers[source]["destination"];
+
+  (*json_ptr)["interval"] = connection_registers[source]["interval"];
+
+  if (connection_registers[source].count("rules")) {
+    (*json_ptr)["rules"] = connection_registers[source]["rules"];
+  } else {
+    (*json_ptr)["rules"] = "";
+  }
+
+  nlohmann::json data;
+  data["name"] = source;
+
+  if (!instance_registers.count(source)) {
+    spdlog::error("Source instance {} is not recognized!", source);
+    json_ptr->clear();
+    return false;
+  } else if (!instance_registers.count(destination)) {
+    spdlog::error("Destination instance {} is not recognized!", destination);
+    json_ptr->clear();
+    return false;
+  }
+
+  std::string network = instance_registers[source]["network"];
+  if (!network_profiles.count(network)) {
+    spdlog::error("Source network profile {} is not found!", network);
+    json_ptr->clear();
+    return false;
+  }
+  data["network"] = network_profiles[network];
+
+  std::string format = instance_registers[source]["format"];
+  if (!format_profiles.count(format)) {
+    spdlog::error("Source format profile {} is nout found!", format);
+    json_ptr->clear();
+    return false;
+  }
+  data["format"] = format_profiles[format];
+
+  (*json_ptr)["src"] = data;
+
+  data["name"] = destination;
+
+  network = instance_registers[destination]["network"];
+  if (!network_profiles.count(network)) {
+    spdlog::error("Destination network profile {} is not found!", network);
+    json_ptr->clear();
+    return false;
+  }
+  data["network"] = network_profiles[network];
+
+  format = instance_registers[destination]["format"];
+  if (!format_profiles.count(format)) {
+    spdlog::error("Destination format profile {} is not found!", format);
+    json_ptr->clear();
+    return false;
+  }
+  data["format"] = format_profiles[format];
+
+  (*json_ptr)["dst"] = data;
+
+  return true;
+}
+
 void i2c_processor(DataStructure::Instance *ds, std::string payload) {
   write(ds->i2c_h, payload.c_str(), payload.size());
 }
@@ -158,34 +247,26 @@ void process_instr(std::string instr, std::string act, std::string payload, Oper
   }
 }
 
-void de_ruyter(DataStructure::Instance *ds, nlohmann::json *interop_data, std::string rule_file_location) {
-  nlohmann::json src = (*interop_data)["src"];
-  nlohmann::json dst = (*interop_data)["dst"];
+void data_route_handler(DataStructure::Instance *ds, std::string source) {
+  nlohmann::json interop_data;
+  create_interop_data(source, &interop_data);
+
+  // spdlog::debug("{}", interop_data.dump(2));
+
+  nlohmann::json src = interop_data["src"];
+  nlohmann::json dst = interop_data["dst"];
 
   std::string src_conn = src["network"]["connection"];
   std::string src_name = src["name"];
   std::string dest_conn = dst["network"]["connection"];
   std::string dst_name = dst["name"];
-  std::ifstream rule_file("./rules/" + rule_file_location);
+  std::string rules = interop_data["rules"];
+  std::ifstream rule_file("./rules/" + rules);
   std::stringstream ss;
   std::string payload;
 
   std::string map_location = "";
   map_location.append(src_conn).append("/").append(src_name);
-
-  // spdlog::debug("New map locator: {}", map_location);
-
-  //  if (src_conn == "http") {
-  //    payload = ds->http_map[src_name];
-  //  } else if (src_conn == "mqtt") {
-  //    payload = ds->mqtt_map[src_name];
-  //  } else if (src_conn == "ble") {
-  //    payload = ds->ble_map[src_name];
-  //  } else if (src_conn == "rf24") {
-  //    payload = ds->rx_rf24_map[src_name];
-  //  } else if (src_conn == "uart") {
-  //    payload = ds->universal_map[src_name];
-  //  }
 
   if(src_conn == "rf24") {
     payload = ds->rx_rf24_map[src_name];
@@ -219,9 +300,9 @@ void de_ruyter(DataStructure::Instance *ds, nlohmann::json *interop_data, std::s
     ble_processor(ds, dst_name, final_payload);
   } else if (dest_conn == "rf24") {
     rf24_processor(ds, dst_name, final_payload);
-  } else if(dest_conn == "uart") {
+  } else if (dest_conn == "uart") {
     uart_processor(ds, final_payload);   
-  } else if(dest_conn == "i2c") {
+  } else if (dest_conn == "i2c") {
     i2c_processor(ds, final_payload);
   }
 }

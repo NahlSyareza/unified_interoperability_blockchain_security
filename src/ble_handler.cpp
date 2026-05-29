@@ -1,6 +1,6 @@
 #include "ble_handler.hpp"
-#include "simplebluez/Exceptions.h"
-#include "task_scheduler.hpp"
+#include <simplebluez/Exceptions.h>
+#include "data_route_handler.hpp"
 
 SimpleBluez::Bluez bluez;
 bool should_run = true;
@@ -94,11 +94,12 @@ int ble_handler(DataStructure::Instance *ds) {
         std::string payload(new_value.begin(), new_value.end());
         // std::cout << "Notified: " << payload << std::endl;
         ds->universal_map["ble/" + name] = payload;
+        data_route_handler(ds, name);
         // spdlog::debug("(BLE) {}", payload);
         // std::cout << "Message arrived" << std::endl;
-        if (!ds->active_registers.count(name)) {
-        create_task_detached(ds, name);
-        }
+        // if (!ds->active_registers.count(name)) {
+        // create_task_detached(ds, name);
+        // }
         });
 
     characteristic->start_notify();

@@ -1,6 +1,6 @@
 #include "mqtt_handler.hpp"
 #include <mqtt_protocol.h>
-#include "task_scheduler.hpp"
+#include "data_route_handler.hpp"
 #include <spdlog/spdlog.h>
 
 void on_connect(struct mosquitto *mosq, void *obj, int reason_code) {
@@ -52,9 +52,11 @@ void on_message(struct mosquitto *mosq [[maybe_unused]], void *obj, const struct
 
   ds->universal_map["mqtt/" + topic] = payload;
 
-  if (!ds->active_registers.count(topic)) {
-    create_task_detached(ds, topic);
-  }
+  data_route_handler(ds, topic);
+
+  // if (!ds->active_registers.count(topic)) {
+  //   create_task_detached(ds, topic);
+  // }
 }
 
 int mqtt_handler(DataStructure::Instance *ds) {

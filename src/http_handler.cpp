@@ -1,13 +1,10 @@
 #include "http_handler.hpp"
 // #include "httplib.h"
-#include "nlohmann/json.hpp"
-#include "task_scheduler.hpp"
+#include <nlohmann/json.hpp>
+// #include "task_scheduler.hpp"
+#include "data_route_handler.hpp"
 
 int http_handler(DataStructure::Instance *ds) {
-  // httplib::Server svr;
-
-  // svr.Get("/dummy", [](const httplib::Request &req [[maybe_unused]], httplib::Response &res) { res.set_content("Hello World!", "text/plain"); });
-
   ds->svr.Get(R"(/(.*))", [ds](const httplib::Request &req, httplib::Response &res) {
     std::string path = req.matches[1];
     // path.erase(0, 1);
@@ -57,7 +54,6 @@ int http_handler(DataStructure::Instance *ds) {
     nlohmann::json json_body;
     std::string body = req.body;
     std::string path = req.matches[1];
-    // path.erase(0, 1);
 
     bool is_json = false;
 
@@ -73,9 +69,11 @@ int http_handler(DataStructure::Instance *ds) {
     ds->universal_map["http/" + path] = body;
     // ds->http_map[path] = body;
 
-    if (!ds->active_registers.count(path)) {
-      create_task_detached(ds, path);
-    }
+    // if (!ds->active_registers.count(path)) {
+    //   create_task_detached(ds, path);
+    // }
+
+    data_route_handler(ds, path);
 
     ret["state"] = true;
     ret["msg"] = "Successfully posted new data";
@@ -95,4 +93,4 @@ int http_handler(DataStructure::Instance *ds) {
   ds->svr.listen("0.0.0.0", 18080);
 
   return 0;
-}
+  }
