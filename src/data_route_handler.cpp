@@ -102,6 +102,13 @@ void uart_processor(DataStructure::Instance *ds, std::string payload) {
   write(ds->uart_h, payload.c_str(), payload.size());
 }
 
+void spi_processor(DataStructure::Instance *ds, std::string payload) {
+  // uint8_t rx_buffer[16];
+  uint8_t *rx_buffer;
+
+  ds->spi_h.xfer(payload.c_str(), payload.size(), rx_buffer, 1);
+}
+
 void rf24_processor(DataStructure::Instance *ds, std::string identifier, std::string payload) {
   ds->tx_rf24_map[identifier] = payload;
 }
@@ -304,5 +311,7 @@ void data_route_handler(DataStructure::Instance *ds, std::string source) {
     uart_processor(ds, final_payload);   
   } else if (dest_conn == "i2c") {
     i2c_processor(ds, final_payload);
+  } else if (dest_conn == "spi") {
+    spi_processor(ds, final_payload);
   }
 }

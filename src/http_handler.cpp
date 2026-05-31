@@ -67,11 +67,6 @@ int http_handler(DataStructure::Instance *ds) {
     }
 
     ds->universal_map["http/" + path] = body;
-    // ds->http_map[path] = body;
-
-    // if (!ds->active_registers.count(path)) {
-    //   create_task_detached(ds, path);
-    // }
 
     data_route_handler(ds, path);
 

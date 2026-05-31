@@ -7,10 +7,7 @@ DataStructure::Instance::Instance() {
 
   ble_addresses = nlohmann::json::parse(_ble_addresses);
   mqtt_topics = nlohmann::json::parse(_mqtt_topics);
-}
 
-long DataStructure::Instance::time_now() {
-  auto current_point = std::chrono::high_resolution_clock::now();
-  auto dur = std::chrono::duration_cast<std::chrono::milliseconds>(current_point - epoch_point);
-  return dur.count();
+  _mqtt_topics.close();
+  _ble_addresses.close();
 }

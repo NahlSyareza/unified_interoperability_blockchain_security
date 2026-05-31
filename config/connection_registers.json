@@ -1,10 +1,6 @@
 {
-    "httpSen": {
-      "destination": "mqttAct",
-      "interval": 100
-    },
-    "mqttSen": {
-      "destination": "bleAct",
-      "interval": 100
-    }
+  "coapSen": {
+    "destination": "mqttAct",
+    "interval": 100
+  }
 }

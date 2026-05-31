@@ -1,26 +1,23 @@
 {
-  "generic-http": {
-    "category": "dummy",
-    "connection": "http"
+  "generic-coap": {
+    "connection": "coap"
   },
   "generic-mqtt": {
-    "category": "dummy",
     "connection": "mqtt"
   },
   "generic-ble": {
-    "category": "dummy",
     "connection": "ble"
   },
   "generic-rf24": {
-    "cateogry": "dummy",
     "connection": "rf24"
   },
   "generic-uart": {
-    "category": "dummy",
     "connection": "uart"
   },
   "generic-i2c": {
-    "category": "dummy",
     "connection": "i2c"
+  },
+  "generic-spi": {
+    "connection": "spi"
   }
 }
