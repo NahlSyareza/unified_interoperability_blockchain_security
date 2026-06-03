@@ -5,95 +5,6 @@
 #include "mosquitto.h"
 #include "mqtt_protocol.h"
 
-void extract_config(std::string path, nlohmann::json *json_ptr) {
-  std::ifstream file(path);
-  
-  if(file.fail()) {
-    spdlog::error("(TDS) Error cannot open file path {}", path);
-  }
-
-  *json_ptr = nlohmann::json::parse(file);
-  file.close();
-}
-
-bool create_interop_data(std::string source, nlohmann::json *json_ptr) {
-  nlohmann::json connection_registers, instance_registers, network_profiles, format_profiles;
-
-  extract_config("./config/connection_registers.json", &connection_registers);
-  extract_config("./config/instance_registers.json", &instance_registers);
-  extract_config("./config/network_profiles.json", &network_profiles);
-  extract_config("./config/format_profiles.json", &format_profiles);
-
-  if(!connection_registers.count(source)) {
-    spdlog::error("(TDS) Unknown source!");
-
-    return false;
-  }
-
-  std::string destination = connection_registers[source]["destination"];
-
-  (*json_ptr)["interval"] = connection_registers[source]["interval"];
-
-  if (connection_registers[source].count("rules")) {
-    (*json_ptr)["rules"] = connection_registers[source]["rules"];
-  } else {
-    (*json_ptr)["rules"] = "";
-  }
-
-  nlohmann::json data;
-  data["name"] = source;
-
-  if (!instance_registers.count(source)) {
-    spdlog::error("Source instance {} is not recognized!", source);
-    json_ptr->clear();
-    return false;
-  } else if (!instance_registers.count(destination)) {
-    spdlog::error("Destination instance {} is not recognized!", destination);
-    json_ptr->clear();
-    return false;
-  }
-
-  std::string network = instance_registers[source]["network"];
-  if (!network_profiles.count(network)) {
-    spdlog::error("Source network profile {} is not found!", network);
-    json_ptr->clear();
-    return false;
-  }
-  data["network"] = network_profiles[network];
-
-  std::string format = instance_registers[source]["format"];
-  if (!format_profiles.count(format)) {
-    spdlog::error("Source format profile {} is nout found!", format);
-    json_ptr->clear();
-    return false;
-  }
-  data["format"] = format_profiles[format];
-
-  (*json_ptr)["src"] = data;
-
-  data["name"] = destination;
-
-  network = instance_registers[destination]["network"];
-  if (!network_profiles.count(network)) {
-    spdlog::error("Destination network profile {} is not found!", network);
-    json_ptr->clear();
-    return false;
-  }
-  data["network"] = network_profiles[network];
-
-  format = instance_registers[destination]["format"];
-  if (!format_profiles.count(format)) {
-    spdlog::error("Destination format profile {} is not found!", format);
-    json_ptr->clear();
-    return false;
-  }
-  data["format"] = format_profiles[format];
-
-  (*json_ptr)["dst"] = data;
-
-  return true;
-}
-
 void i2c_processor(DataStructure::Instance *ds, std::string payload) {
   write(ds->i2c_h, payload.c_str(), payload.size());
 }
@@ -102,15 +13,22 @@ void uart_processor(DataStructure::Instance *ds, std::string payload) {
   write(ds->uart_h, payload.c_str(), payload.size());
 }
 
-void spi_processor(DataStructure::Instance *ds, std::string payload) {
+void spi_processor(DataStructure::Instance *ds [[maybe_unused]], std::string payload [[maybe_unused]]) {
   // uint8_t rx_buffer[16];
-  uint8_t *rx_buffer;
+  // uint8_t *rx_buffer;
 
-  ds->spi_h.xfer(payload.c_str(), payload.size(), rx_buffer, 1);
+  // ds->spi_h.xfer((uint8_t*) payload.c_str(), payload.size(), rx_buffer, 1);
 }
 
-void rf24_processor(DataStructure::Instance *ds, std::string identifier, std::string payload) {
-  ds->tx_rf24_map[identifier] = payload;
+void rf24_processor(DataStructure::Instance *ds, std::string identifier [[maybe_unused]], std::string payload) {
+  ds->radio_mode = true;
+
+  ds->radio.stopListening();
+  bool report = ds->radio.write(payload.c_str(), 64);
+  if(report) {
+  }
+
+  ds->radio_mode = false;
 }
 
 void ble_processor(DataStructure::Instance *ds, std::string identifier, std::string payload) {
@@ -133,6 +51,87 @@ void ble_processor(DataStructure::Instance *ds, std::string identifier, std::str
 
     // p.write_request(ds->uuid_pair[identifier].first, ds->uuid_pair[identifier].second, payload);
   }
+}
+
+int resolve_address(coap_str_const_t *host, uint16_t port, coap_address_t *dst,
+    int scheme_hint_bits) {
+  int ret = 0;
+  coap_addr_info_t *addr_info;
+
+  addr_info = coap_resolve_address_info(host, port, port,  port, port,
+      AF_UNSPEC, scheme_hint_bits,
+      COAP_RESOLVE_TYPE_REMOTE);
+  if (addr_info) {
+    ret = 1;
+    *dst = addr_info->addr;
+  }
+
+  coap_free_address_info(addr_info);
+  return ret;
+}
+
+void coap_processor(DataStructure::Instance *ds, std::string query, std::string payload, std::string ip) {
+  coap_uri_t uri;
+  coap_address_t dst;
+  coap_optlist_t *optlist = nullptr;
+  coap_pdu_t *pdu = nullptr;
+  unsigned char scratch[100];
+  int res;
+  int len;
+
+  std::string final_ip = "coap://" + ip + "/" + query;
+
+  len = coap_split_uri((const unsigned char*)final_ip.c_str(), final_ip.size(), &uri);
+  if(len) {
+    spdlog::error("Failed to parse uri!");
+    return;
+  }
+
+  len = resolve_address(&uri.host, uri.port, &dst, 1 << uri.scheme);
+
+  if(len <= 0) {
+    spdlog::error("Faile to resolve address");
+  }
+
+  int is_mcast = coap_is_mcast(&dst);
+
+  if(ds->coap_sess == nullptr) {
+    ds->coap_sess = coap_new_client_session(ds->coap_ctx, NULL, &dst, COAP_PROTO_UDP);
+  }
+
+  pdu = coap_pdu_init(is_mcast ? COAP_MESSAGE_NON : COAP_MESSAGE_CON, COAP_REQUEST_CODE_POST, coap_new_message_id(ds->coap_sess), coap_session_max_pdu_size(ds->coap_sess));
+
+  if(!pdu) {
+    spdlog::error("Cannot create pdu!");
+    return;
+  }
+
+  if(!optlist) {
+    len = coap_uri_into_options(&uri, &dst, &optlist, 1, scratch, sizeof(scratch));
+
+    if(len) {
+      spdlog::error("Failed to create options!");
+
+      return;
+    }
+  }
+
+  if(optlist) {
+    res = coap_add_optlist_pdu(pdu, &optlist);
+    if(res != 1) {
+      spdlog::error("Failed to add options list!");
+      return;
+    }
+  }
+
+  coap_add_data(pdu, payload.size(), (const uint8_t*)payload.c_str());
+
+  if(coap_send(ds->coap_sess, pdu) == COAP_INVALID_MID) {
+    spdlog::error("Cannot send CoAP PDU!");
+    return;
+  }
+
+  coap_delete_optlist(optlist);
 }
 
 void mqtt_processor(DataStructure::Instance *ds, std::string topic, std::string payload) {
@@ -249,10 +248,107 @@ void process_instr(std::string instr, std::string act, std::string payload, Oper
   } else if (instr == "OTHERWISE") {
     if (!reg->logic_comparison)
       reg->output_data = act;
+  } esle if(instr == "OUT") {
+    reg->output_data = reg->input_data;
   } else {
-    spdlog::error("(INSTR) Unrecognized instruction {}", instr);
+    spdlog::error("(Process Instr) Unrecognized instruction {}", instr);
   }
 }
+
+void extract_config(std::string path, nlohmann::json *json_ptr) {
+  std::ifstream file(path);
+
+  if(file.fail()) {
+    spdlog::error("(Extract Config) Error cannot open file path {}", path);
+  }
+
+  *json_ptr = nlohmann::json::parse(file);
+  file.close();
+}
+
+bool create_interop_data(std::string source, nlohmann::json *json_ptr) {
+  nlohmann::json connection_registers, instance_registers, network_profiles, format_profiles;
+
+  extract_config("./config/connection_registers.json", &connection_registers);
+  extract_config("./config/instance_registers.json", &instance_registers);
+  extract_config("./config/network_profiles.json", &network_profiles);
+  extract_config("./config/format_profiles.json", &format_profiles);
+
+  if(!connection_registers.count(source)) {
+    spdlog::error("(Create Interop Data) Unknown source: {}!", source);
+
+    return false;
+  }
+
+  std::string destination = connection_registers[source]["destination"];
+
+  // (*json_ptr)["interval"] = connection_registers[source]["interval"];
+
+  if (connection_registers[source].count("rules")) {
+    (*json_ptr)["rules"] = connection_registers[source]["rules"];
+  } else {
+    (*json_ptr)["rules"] = "";
+  }
+
+  nlohmann::json data;
+  data["name"] = source;
+
+  if (!instance_registers.count(source)) {
+    spdlog::error("Source instance {} is not recognized!", source);
+    json_ptr->clear();
+    return false;
+  } else if (!instance_registers.count(destination)) {
+    spdlog::error("Destination instance {} is not recognized!", destination);
+    json_ptr->clear();
+    return false;
+  }
+
+  std::string network = instance_registers[source]["network"];
+  if (!network_profiles.count(network)) {
+    spdlog::error("Source network profile {} is not found!", network);
+    json_ptr->clear();
+    return false;
+  }
+  data["network"] = network_profiles[network];
+
+  std::string format = instance_registers[source]["format"];
+  if (!format_profiles.count(format)) {
+    spdlog::error("Source format profile {} is nout found!", format);
+    json_ptr->clear();
+    return false;
+  }
+  data["format"] = format_profiles[format];
+
+  (*json_ptr)["src"] = data;
+
+  data["name"] = destination;
+
+  if(destination == "coapAct") {
+    data["ip"] = instance_registers[destination]["ip"];
+  }
+
+  network = instance_registers[destination]["network"];
+  if (!network_profiles.count(network)) {
+    spdlog::error("Destination network profile {} is not found!", network);
+    json_ptr->clear();
+    return false;
+  }
+
+  data["network"] = network_profiles[network];
+
+  format = instance_registers[destination]["format"];
+  if (!format_profiles.count(format)) {
+    spdlog::error("Destination format profile {} is not found!", format);
+    json_ptr->clear();
+    return false;
+  }
+  data["format"] = format_profiles[format];
+
+  (*json_ptr)["dst"] = data;
+
+  return true;
+}
+
 
 void data_route_handler(DataStructure::Instance *ds, std::string source) {
   nlohmann::json interop_data;
@@ -275,12 +371,8 @@ void data_route_handler(DataStructure::Instance *ds, std::string source) {
   std::string map_location = "";
   map_location.append(src_conn).append("/").append(src_name);
 
-  if(src_conn == "rf24") {
-    payload = ds->rx_rf24_map[src_name];
-  } else {
-    payload = ds->universal_map[src_conn + "/" + src_name];
-  }
-  
+  payload = ds->universal_map[src_conn + "/" + src_name];
+
   OperationRegister op_reg;
 
   std::string line;
@@ -294,13 +386,14 @@ void data_route_handler(DataStructure::Instance *ds, std::string source) {
     }
 
   } else {
-    spdlog::error("(De Ruyter) Rule file location not found? Perhaps a typo? Or maybe deliberate.");
+    spdlog::error("(Data Route Handler) Rule not found? Perhaps a typo? Or maybe deliberate.");
   }
 
   std::string final_payload = !op_reg.output_data.empty() ? op_reg.output_data : payload;
 
-  if (dest_conn == "http") {
-    http_processor(ds, dst_name, final_payload);
+  if (dest_conn == "coap") {
+    std::string ip = dst["ip"];
+    coap_processor(ds, dst_name, final_payload, ip);
   } else if (dest_conn == "mqtt") {
     mqtt_processor(ds, dst_name, final_payload);
   } else if (dest_conn == "ble") {
@@ -314,4 +407,11 @@ void data_route_handler(DataStructure::Instance *ds, std::string source) {
   } else if (dest_conn == "spi") {
     spi_processor(ds, final_payload);
   }
+
+  if(ds->pr_time) {
+    auto current_point = std::chrono::high_resolution_clock::now();
+    auto dur = std::chrono::duration_cast<std::chrono::microseconds>(current_point - ds->epoch_point);
+    spdlog::info("End: {}", dur.count());
+  }
+
 }

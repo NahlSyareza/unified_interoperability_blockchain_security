@@ -8,7 +8,7 @@ bool should_run = true;
 void bluez_async_function() {
   while (should_run) {
     bluez.run_async();
-    std::this_thread::sleep_for(std::chrono::milliseconds(10));
+    std::this_thread::sleep_for(std::chrono::milliseconds(1));
   }
   std::cout << "This task has ended" << std::endl;
 }

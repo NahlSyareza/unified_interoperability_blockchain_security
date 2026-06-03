@@ -24,7 +24,11 @@ namespace DataStructure {
   class Instance {
     public:
       termios tty;
+      bool radio_mode = false;
       coap_context_t *coap_ctx = nullptr;
+      coap_session_t *coap_sess = nullptr;
+      std::chrono::time_point<std::chrono::high_resolution_clock> epoch_point = std::chrono::high_resolution_clock::now();
+      bool pr_time = true;
       int uart_h;
       int i2c_h;
       httplib::Server svr;

@@ -1,6 +1,9 @@
 {
+  "mqttSen": {
+    "destination": "mqttAct"
+  },
   "coapSen": {
     "destination": "mqttAct",
-    "interval": 100
+    "rules": "multi_raw.txt"
   }
 }

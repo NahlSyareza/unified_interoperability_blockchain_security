@@ -5,8 +5,6 @@
 
 char incoming_payload[64] = "";
 
-const char outgoing_payload[64] = "Internazionale Milano";
-
 void do_receive(DataStructure::Instance *ds) {
   ds->radio.startListening();
   uint8_t pipe;
@@ -14,34 +12,9 @@ void do_receive(DataStructure::Instance *ds) {
   {
     uint8_t bytes = ds->radio.getPayloadSize();
     ds->radio.read(incoming_payload, bytes);
-    // spdlog::debug("Received {} bytes on pipe {}: {}", bytes, pipe, incoming_payload);
-
-    ds->rx_rf24_map["1Node"] = incoming_payload;
-
+    ds->universal_map["rf24/1Node"] = incoming_payload;
     data_route_handler(ds, "1Node");
-
-    // if(!ds->active_registers.count("1Node"))
-    //   create_task_detached(ds, "1Node");
   }
-}
-
-void do_transmit(DataStructure::Instance* ds) {
-  ds->radio.stopListening();
-
-  std::string ot_payload = "";
-
-  if(ds->tx_rf24_map.count("2Node")) {
-    spdlog::debug("(RF24) payload is available");
-    ot_payload = ds->tx_rf24_map["2Node"];
-
-    bool report = ds->radio.write(ot_payload.c_str(), 64);
-
-    if(report) {
-      spdlog::debug("Sent {}", outgoing_payload);
-    }
-  }
-
-
 }
 
 int rf24_handler(DataStructure::Instance *ds) {
@@ -61,15 +34,8 @@ int rf24_handler(DataStructure::Instance *ds) {
 
   while (1)
   {
-    do_receive(ds);
-
-    std::this_thread::sleep_for(std::chrono::milliseconds(200));
-
-    do_transmit(ds);
-    //    ds->radio.stopListening();
-
-    std::this_thread::sleep_for(std::chrono::milliseconds(200));
-
+    if(!ds->radio_mode)
+      do_receive(ds);
   }
 
   return 0;

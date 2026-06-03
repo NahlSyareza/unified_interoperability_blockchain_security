@@ -1,0 +1,10 @@
+GET 0
+CONV_TO int
+ASGN_TO t1
+GET 1
+ASGN_TO t2
+GET 2
+IF < 50
+THEN low
+OTHERWISE high
+ASGN_TO t3

@@ -32,14 +32,14 @@ int main() {
   // std::thread gpio_th(gpio_handler);
 
   coap_th.join();
-   i2c_th.join();
-   rf24_th.join();
-   mqtt_th.join();
-   // http_th.join();
-   ble_th.join();
-   uart_th.join();
-   spi_th.join();
-   // gpio_th.join();
+  i2c_th.join();
+  rf24_th.join();
+  mqtt_th.join();
+  // http_th.join();
+  ble_th.join();
+  uart_th.join();
+  spi_th.join();
+  // gpio_th.join();
 
   return 0;
 }

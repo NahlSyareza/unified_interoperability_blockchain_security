@@ -6,38 +6,6 @@
 #include <spdlog/spdlog.h>
 #include "data_route_handler.hpp"
 
-void coap_post_callback(coap_resource_t *resource, coap_session_t *session [[maybe_unused]], const coap_pdu_t *request, const coap_string_t *query, coap_pdu_t* response) {
-  const char* msg = "Ready to fire sir";
-
-  DataStructure::Instance *ds = (DataStructure::Instance*) coap_resource_get_userdata(resource);
-
-  size_t len;
-  const uint8_t *databuf;
-  size_t offset;
-  size_t total;
-
-  if(query && query->s) {
-    if (coap_get_data_large(request, &len, &databuf, &offset, &total)) {
-      std::string path((char*)query->s, query->length);
-      std::string payload((char*)databuf, len);
-
-      spdlog::debug("From {}: {}", path, payload);
-
-      ds->universal_map["coap/" + path] = payload;
-
-      data_route_handler(ds, path);
-    }
-  } else {
-    // printf("Query is undefined!");
-    spdlog::error("Query is undefined!");
-  }
-
-  // coap_show_pdu(COAP_LOG_WARN, request);
-  coap_pdu_set_code(response, COAP_RESPONSE_CODE_CONTENT);
-  coap_add_data(response, strlen(msg), (const uint8_t*)msg);
-  // coap_show_pdu(COAP_LOG_WARN, response);
-}
-
 int coap_handler(DataStructure::Instance *ds) {
   // coap_context_t  *ds->coap_ctx = nullptr;
   coap_resource_t *resource = nullptr;
@@ -97,59 +65,9 @@ int coap_handler(DataStructure::Instance *ds) {
 
   /* Create a resource that the server can respond to with information */
   // GET endpoint
-  resource = coap_resource_init(coap_make_str_const("api"), 0);
+  resource = coap_resource_init(coap_make_str_const("coapSen"), 0);
 
   coap_resource_set_userdata(resource, (void*)ds);
-
-  coap_register_handler(resource, COAP_REQUEST_GET,
-      [](auto, auto,
-        const coap_pdu_t *request,
-        const coap_string_t *query,
-        coap_pdu_t *response) {
-      const char* msg = "At the double";
-
-      if(query && query->s) {
-      printf("%s\n", query->s);
-      } else {
-      printf("Query is undefined!");
-      }
-
-      coap_show_pdu(COAP_LOG_WARN, request);
-      coap_pdu_set_code(response, COAP_RESPONSE_CODE_CONTENT);
-      coap_add_data(response, strlen(msg), (const uint8_t*)msg);
-      coap_show_pdu(COAP_LOG_WARN, response);
-      });
-  // coap_add_resource(ds->coap_ctx, resource);
-
-  // coap_register_handler(resource, COAP_REQUEST_POST,
-  //     [](auto, auto,
-  //       const coap_pdu_t *request,
-  //       const coap_string_t *query,
-  //       coap_pdu_t *response) {
-  //     const char* msg = "Ready to fire sir";
-
-  //     size_t len;
-  //     const uint8_t *databuf;
-  //     size_t offset;
-  //     size_t total;
-
-  //     if(query && query->s) {
-  //     printf("%s\n", query->s);
-
-  //     if (coap_get_data_large(request, &len, &databuf, &offset, &total)) {
-  //     printf("%s\n", (char*)databuf);
-
-  //     ds->universal_map["coap/" + query->s] = databuf
-  //     }
-  //     } else {
-  //       printf("Query is undefined!");
-  //     }
-
-  //     coap_show_pdu(COAP_LOG_WARN, request);
-  //     coap_pdu_set_code(response, COAP_RESPONSE_CODE_CONTENT);
-  //     coap_add_data(response, strlen(msg), (const uint8_t*)msg);
-  //     coap_show_pdu(COAP_LOG_WARN, response);
-  //     });
 
   coap_register_handler(resource, COAP_REQUEST_POST, coap_post_callback);
 
@@ -169,4 +87,41 @@ finish:
 
   return result;
 }
+
+void coap_post_callback(coap_resource_t *resource, coap_session_t *session [[maybe_unused]], const coap_pdu_t *request, const coap_string_t *query [[maybe_unused]], coap_pdu_t* response) {
+  DataStructure::Instance *ds = (DataStructure::Instance*) coap_resource_get_userdata(resource);
+  coap_str_const_t *uri = coap_resource_get_uri_path(resource);
+
+  if(ds->pr_time) {
+    auto current_point = std::chrono::high_resolution_clock::now();
+    auto dur = std::chrono::duration_cast<std::chrono::microseconds>(current_point - ds->epoch_point);
+    spdlog::info("Start: {}", dur.count());
+  }
+
+  size_t len;
+  const uint8_t *databuf;
+  size_t offset;
+  size_t total;
+
+  if(uri) {
+    std::string path((char*)uri->s, uri->length);
+    // fprintf(stdout, "Path: %s\n", pth.c_str());
+
+    if (coap_get_data_large(request, &len, &databuf, &offset, &total)) {
+      std::string payload((char*)databuf, len);
+
+      ds->universal_map["coap/" + path] = payload;
+
+      data_route_handler(ds, path);
+    }
+  }
+
+  const char* msg = "Ready to fire sir";
+
+  // coap_show_pdu(COAP_LOG_WARN, request);
+  coap_pdu_set_code(response, COAP_RESPONSE_CODE_CONTENT);
+  coap_add_data(response, strlen(msg), (const uint8_t*)msg);
+  // coap_show_pdu(COAP_LOG_WARN, response);
+}
+
 
