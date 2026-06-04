@@ -23,7 +23,7 @@ void spi_processor(DataStructure::Instance *ds [[maybe_unused]], std::string pay
 void rf24_processor(DataStructure::Instance *ds, std::string identifier [[maybe_unused]], std::string payload) {
   ds->radio_mode = true;
 
-  ds->radio.stopListening();
+  ds->radio.stopListening((uint8_t*)identifier.c_str());
   bool report = ds->radio.write(payload.c_str(), 64);
   if(report) {
   }
@@ -31,7 +31,7 @@ void rf24_processor(DataStructure::Instance *ds, std::string identifier [[maybe_
   ds->radio_mode = false;
 }
 
-void ble_processor(DataStructure::Instance *ds, std::string identifier, std::string payload) {
+void ble_processor_helper(DataStructure::Instance *ds, std::string identifier, std::string payload) {
   for (auto &p : ds->ble_peripherals) {
     if (p->name() == identifier) {
       nlohmann::json ble_uuids = ds->ble_addresses[identifier];
@@ -51,6 +51,30 @@ void ble_processor(DataStructure::Instance *ds, std::string identifier, std::str
 
     // p.write_request(ds->uuid_pair[identifier].first, ds->uuid_pair[identifier].second, payload);
   }
+}
+
+void ble_processor(DataStructure::Instance *ds, std::string identifier, std::string payload) {
+  std::thread ble_write_thread(ble_processor_helper, ds, identifier, payload);
+  ble_write_thread.detach();
+  // for (auto &p : ds->ble_peripherals) {
+  //   if (p->name() == identifier) {
+  //     nlohmann::json ble_uuids = ds->ble_addresses[identifier];
+  //     std::string service_uuid = ble_uuids["service"];
+  //     std::string characteristic_uuid = ble_uuids["characteristic"];
+  //     //      spdlog::info("BLE {} Service: {} Characteristic {} ", identifier, service_uuid, characteristic_uuid);
+
+  //     try {
+  //       auto characteristic = p->get_characteristic(service_uuid, characteristic_uuid);
+  //       SimpleBluez::ByteArray byte_array(payload.begin(), payload.end());
+
+  //       characteristic->write_request(byte_array);
+  //     } catch (std::exception &e) {
+  //       spdlog::error("{}", e.what());
+  //     }
+  //   }
+
+  //   // p.write_request(ds->uuid_pair[identifier].first, ds->uuid_pair[identifier].second, payload);
+  // }
 }
 
 int resolve_address(coap_str_const_t *host, uint16_t port, coap_address_t *dst,
@@ -233,23 +257,26 @@ void process_instr(std::string instr, std::string act, std::string payload, Oper
     reg->output_data = json_obj.dump();
   } else if (instr == "IF") {
     std::string compared_value = strget(act, 1);
-    reg->logic_comparison = compare(act, std::stoi(reg->input_data), std::stoi(compared_value));
+    // reg->logic_comparison = compare(act, std::stoi(reg->input_data), std::stoi(compared_value));
+    reg->logic_comparison = compare(act, reg->type, reg->input_data, compared_value);
   } else if (instr == "ELSEIF") {
     if (!reg->logic_comparison) {
-      spdlog::debug("Kylian Mbappe");
       std::string compared_value = strget(act, 1);
-      reg->logic_comparison = compare(act, std::stoi(reg->input_data), std::stoi(compared_value));
+      // reg->logic_comparison = compare(act, std::stoi(reg->input_data), std::stoi(compared_value));
+      reg->logic_comparison = compare(act, reg->type, reg->input_data, compared_value);
     }
   } else if (instr == "CONV_TO") {
     reg->convert = act;
   } else if (instr == "THEN") {
     if (reg->logic_comparison)
-      reg->output_data = act;
+      reg->input_data = act;
   } else if (instr == "OTHERWISE") {
     if (!reg->logic_comparison)
-      reg->output_data = act;
-  } esle if(instr == "OUT") {
+      reg->input_data = act;
+  } else if(instr == "OUT") {
     reg->output_data = reg->input_data;
+  } else if(instr == "APPEND_OUT") {
+    reg->output_data.append(" " + reg->input_data);
   } else {
     spdlog::error("(Process Instr) Unrecognized instruction {}", instr);
   }
@@ -411,7 +438,9 @@ void data_route_handler(DataStructure::Instance *ds, std::string source) {
   if(ds->pr_time) {
     auto current_point = std::chrono::high_resolution_clock::now();
     auto dur = std::chrono::duration_cast<std::chrono::microseconds>(current_point - ds->epoch_point);
-    spdlog::info("End: {}", dur.count());
+    ds->end_time = dur.count();
+    ds->save_pr_time();
+    // spdlog::info("End: {}", dur.count());
   }
 
 }

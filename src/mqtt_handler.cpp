@@ -47,10 +47,10 @@ void on_message(struct mosquitto *mosq [[maybe_unused]], void *obj, const struct
 
   // spdlog::debug("MQTT: {} {} {}", msg->topic, msg->qos, (char *)msg->payload);
 
-  if(ds->pr_time) {
+  if(ds->pr_time) { 
     auto current_point = std::chrono::high_resolution_clock::now();
     auto dur = std::chrono::duration_cast<std::chrono::microseconds>(current_point - ds->epoch_point);
-    spdlog::info("Start: {}", dur.count());
+    ds->start_time = dur.count();
   }
 
   std::string topic((char *)msg->topic);

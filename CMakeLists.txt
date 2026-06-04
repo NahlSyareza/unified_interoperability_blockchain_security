@@ -7,7 +7,7 @@ project(legendary_boss)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-add_executable(legendary_boss main.cpp src/ble_handler.cpp src/data_route_handler.cpp src/http_handler.cpp src/mqtt_handler.cpp src/cust_instr_handler.cpp src/task_scheduler.cpp src/data_structure.cpp src/rf24_handler.cpp src/uart_handler.cpp src/i2c_handler.cpp src/gpio_handler.cpp src/spi_handler.cpp src/coap_handler.cpp)
+add_executable(legendary_boss main.cpp src/ble_handler.cpp src/data_route_handler.cpp src/mqtt_handler.cpp src/cust_instr_handler.cpp src/data_structure.cpp src/rf24_handler.cpp src/uart_handler.cpp src/i2c_handler.cpp src/spi_handler.cpp src/coap_handler.cpp)
 # add_executable(legendary_boss main.cpp src/data_structure.cpp)
 
 # RF24
@@ -37,8 +37,8 @@ target_link_libraries(legendary_boss PRIVATE PkgConfig::LIBCOAP)
 
 # GPIODCXX
 # find_package(PkgConfig REQUIRED)
-pkg_check_modules(GPIODCXX REQUIRED IMPORTED_TARGET libgpiodcxx>=2.0)
-target_link_libraries(legendary_boss PRIVATE PkgConfig::GPIODCXX)
+# pkg_check_modules(GPIODCXX REQUIRED IMPORTED_TARGET libgpiodcxx>=2.0)
+# target_link_libraries(legendary_boss PRIVATE PkgConfig::GPIODCXX)
 
 # SPI
 target_link_libraries(legendary_boss PRIVATE spidev-lib++)
@@ -59,8 +59,8 @@ add_compile_definitions(FMT_HEADER_ONLY)
 
 # cpp-httplib
 # find_package(PkgConfig REQUIRED)
-pkg_check_modules(HTTPLIB REQUIRED IMPORTED_TARGET cpp-httplib)
-target_link_libraries(legendary_boss PRIVATE PkgConfig::HTTPLIB)
+# pkg_check_modules(HTTPLIB REQUIRED IMPORTED_TARGET cpp-httplib)
+# target_link_libraries(legendary_boss PRIVATE PkgConfig::HTTPLIB)
 
 # json
 find_package(nlohmann_json CONFIG REQUIRED)

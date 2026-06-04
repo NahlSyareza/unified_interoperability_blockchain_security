@@ -1,9 +1,15 @@
 {
   "mqttSen": {
-    "destination": "mqttAct"
+    "destination": "bleAct"
   },
   "coapSen": {
-    "destination": "mqttAct",
-    "rules": "multi_raw.txt"
+    "destination": "coapAct",
+    "rules": "single_json_to_raw.txt"
+  },
+  "bleSen": {
+    "destination": "bleAct"
+  },
+  "1Node": {
+    "destination": "bleAct"
   }
 }

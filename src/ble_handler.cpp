@@ -13,6 +13,10 @@ void bluez_async_function() {
   std::cout << "This task has ended" << std::endl;
 }
 
+void bluez_async_write() {
+
+}
+
 int ble_handler(DataStructure::Instance *ds) {
   bluez.init();
 
@@ -92,6 +96,11 @@ int ble_handler(DataStructure::Instance *ds) {
 
     characteristic->set_on_value_changed([name, ds](SimpleBluez::ByteArray new_value) {
         std::string payload(new_value.begin(), new_value.end());
+        if(ds->pr_time) { 
+        auto current_point = std::chrono::high_resolution_clock::now();
+        auto dur = std::chrono::duration_cast<std::chrono::microseconds>(current_point - ds->epoch_point);
+        ds->start_time = dur.count();
+        }
         // std::cout << "Notified: " << payload << std::endl;
         ds->universal_map["ble/" + name] = payload;
         data_route_handler(ds, name);

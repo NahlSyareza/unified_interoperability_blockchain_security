@@ -1,0 +1,9 @@
+GET 0
+IF < 100
+THEN low
+ELSEIF < 200
+THEN medium
+ELSEIF < 300
+THEN high
+OTHERWISE extreme
+OUT

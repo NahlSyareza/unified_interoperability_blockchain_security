@@ -27,3 +27,25 @@ DataStructure::Instance::Instance() {
   _ble_addresses.close();
 
 }
+
+void DataStructure::Instance::save_pr_time() {
+  if(pr_time_count < max_pr_time_count) {
+    pr_time_detailed.push_back(std::make_pair(start_time, end_time));
+    pr_time_sum.push_back(end_time - start_time);
+  } else {
+    fprintf(stdout, "Measured in microseconds");
+    int index = 0;
+    for(auto& e : pr_time_sum) {
+      fprintf(stdout, "(%d) Time: %ld\n", index, e);
+      index++;
+    }     
+
+    for(auto& e : pr_time_detailed) {
+      fprintf(stdout, "%ld %ld\n", e.first, e.second);
+    }
+
+    exit(0);
+  }
+
+  pr_time_count++;
+}

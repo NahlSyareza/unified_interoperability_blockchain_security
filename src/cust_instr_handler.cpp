@@ -3,7 +3,7 @@
 
 void print_op_reg(OperationRegister *op_reg) {
   spdlog::debug("\ntype: \"{}\"\ninput_data: \"{}\"\noutput_data: \"{}\"\nconvert: \"{}\"\nlogic_comparison: \"{}\"\n", op_reg->type, op_reg->input_data, op_reg->output_data, op_reg->convert,
-                op_reg->logic_comparison);
+      op_reg->logic_comparison);
 }
 
 // If the segment is greater than the space count inside that std::string, then return the whole std::string dawg.
@@ -41,21 +41,43 @@ std::string strget(std::string base, int segment_count) {
   return rtn;
 }
 
-bool compare(std::string sign, int a, int b) {
+bool compare(std::string sign, std::string type, std::string a, std::string b) {
   // b is the one defined inside the instruction text
 
-  if (sign.at(1) == '=') {
-    if (sign.at(0) == '>') {
-      return a >= b;
+  if(type == "char") {
+    return a == b;
+  } else if (type == "int")  {
+    int ia = std::stoi(a);
+    int ib = std::stoi(b); 
+
+    if (sign.at(1) == '=') {
+      if (sign.at(0) == '>') {
+        return ia >= ib;
+      } else if (sign.at(0) == '<') {
+        return ia <= ib;
+      }
     } else if (sign.at(0) == '<') {
-      return a <= b;
+      return ia < ib;
+    } else if (sign.at(0) == '>') {
+      return ia > ib;
     }
-  } else if (sign.at(0) == '<') {
-    return a < b;
-  } else if (sign.at(0) == '>') {
-    return a > b;
+  } else if (type == "double") {
+    double da = std::stod(a);
+    double db = std::stod(b); 
+
+    if (sign.at(1) == '=') {
+      if (sign.at(0) == '>') {
+        return da >= db;
+      } else if (sign.at(0) == '<') {
+        return da <= db;
+      }
+    } else if (sign.at(0) == '<') {
+      return da < db;
+    } else if (sign.at(0) == '>') {
+      return da > db;
+    }
   }
 
-  spdlog::error("(CI Handler) Sign not recognized!");
+  spdlog::error("(Cust Instr Handler) Sign not recognized!");
   return false;
 }

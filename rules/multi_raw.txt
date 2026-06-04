@@ -1,10 +1,14 @@
 GET 0
-CONV_TO int
-ASGN_TO t1
+ASGN_TO status
 GET 1
-ASGN_TO t2
+CONV_TO int
+ASGN_TO distance
 GET 2
-IF < 50
-THEN low
-OTHERWISE high
-ASGN_TO t3
+CONV_TO double
+ASGN_TO humidity
+GET 3
+CONV_TO char
+ASGN_TO time
+GET 4
+CONV_TO double
+ASGN_TO temperature

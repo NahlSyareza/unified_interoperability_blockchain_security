@@ -15,23 +15,30 @@
 namespace DataStructure {
   class Instance;
 
-  struct TaskData {
-    Instance *ds;
-    std::string source;
-    bool active;
-  };
+  // struct TaskData {
+  //   Instance *ds;
+  //   std::string source;
+  //   bool active;
+  // };
 
   class Instance {
     public:
+      std::chrono::time_point<std::chrono::high_resolution_clock> epoch_point = std::chrono::high_resolution_clock::now();
+      long start_time = 0;
+      long end_time = 0;
+      bool pr_time = true;
+      const int max_pr_time_count = 60;
+      int pr_time_count = 0;
+      std::vector<long> pr_time_sum;
+      std::vector<std::pair<long, long>> pr_time_detailed;
+
       termios tty;
       bool radio_mode = false;
       coap_context_t *coap_ctx = nullptr;
       coap_session_t *coap_sess = nullptr;
-      std::chrono::time_point<std::chrono::high_resolution_clock> epoch_point = std::chrono::high_resolution_clock::now();
-      bool pr_time = true;
       int uart_h;
       int i2c_h;
-      httplib::Server svr;
+      // httplib::Server svr;
       mosquitto *mosq = nullptr;
       RF24 radio = RF24(22, 0);
       spi_config_t spi_config_settings = {
@@ -46,12 +53,14 @@ namespace DataStructure {
 
       std::map<std::string, std::string> rx_rf24_map;
       std::map<std::string, std::string> tx_rf24_map;
-      std::map<std::string, TaskData *> active_registers;
+      // std::map<std::string, TaskData *> active_registers;
       std::vector<std::shared_ptr<SimpleBluez::Device>> ble_peripherals;
       std::vector<std::shared_ptr<SimpleBluez::Characteristic>> ble_characteristics;
 
       nlohmann::json ble_addresses;
       nlohmann::json mqtt_topics;
+
+      void save_pr_time();
 
       Instance();
   };

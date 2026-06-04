@@ -12,4 +12,4 @@ struct OperationRegister {
 
 std::string strget(std::string base, int segment_count);
 void print_op_reg(OperationRegister *op_reg);
-bool compare(std::string sign, int a, int b);
+bool compare(std::string sign, std::string type, std::string a, std::string b);

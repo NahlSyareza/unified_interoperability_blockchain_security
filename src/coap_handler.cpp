@@ -95,7 +95,8 @@ void coap_post_callback(coap_resource_t *resource, coap_session_t *session [[may
   if(ds->pr_time) {
     auto current_point = std::chrono::high_resolution_clock::now();
     auto dur = std::chrono::duration_cast<std::chrono::microseconds>(current_point - ds->epoch_point);
-    spdlog::info("Start: {}", dur.count());
+    ds->start_time = dur.count();
+    // spdlog::info("Start: {}", dur.count());
   }
 
   size_t len;

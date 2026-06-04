@@ -12,6 +12,13 @@ void do_receive(DataStructure::Instance *ds) {
   {
     uint8_t bytes = ds->radio.getPayloadSize();
     ds->radio.read(incoming_payload, bytes);
+
+    if(ds->pr_time) { 
+      auto current_point = std::chrono::high_resolution_clock::now();
+      auto dur = std::chrono::duration_cast<std::chrono::microseconds>(current_point - ds->epoch_point);
+      ds->start_time = dur.count();
+    }
+
     ds->universal_map["rf24/1Node"] = incoming_payload;
     data_route_handler(ds, "1Node");
   }
