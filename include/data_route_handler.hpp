@@ -13,4 +13,4 @@ void ble_processor(DataStructure::Instance *dstructure, std::string identifier, 
 void uart_processor(DataStructure::Instance *ds, std::string payload);
 void i2c_processor(DataStructure::Instance *ds, std::string payload);
 void extract_config(std::string path, nlohmann::json *json_ptr);
-bool create_interop_data(std::string source, nlohmann::json *json_ptr);
+bool create_interop_data(DataStructure::Instance *ds, std::string source, nlohmann::json *json_ptr);

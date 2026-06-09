@@ -9,7 +9,7 @@ Okay so here's the commands so far:
 * GET <n>
   Used to get a sliced string based after n amounts of spaces. Can be improved to also detect another delimiter (i.e. semicolon, colon, comma, etc.)
 
-* GET_DELIM <delimiter>
+* DELIM <delimiter>
   Define a delimiter to detect. Unimplemented
 
 * SRC_UNIT <unit>

@@ -13,10 +13,6 @@ void bluez_async_function() {
   std::cout << "This task has ended" << std::endl;
 }
 
-void bluez_async_write() {
-
-}
-
 int ble_handler(DataStructure::Instance *ds) {
   bluez.init();
 
@@ -43,7 +39,7 @@ int ble_handler(DataStructure::Instance *ds) {
 
   adapter->discovery_start();
   spdlog::info("BLE discovery start");
-  std::this_thread::sleep_for(std::chrono::milliseconds(5000));
+  std::this_thread::sleep_for(std::chrono::milliseconds(1000));
   adapter->discovery_stop();
   spdlog::info("BLE discovery stop");
 
@@ -95,20 +91,14 @@ int ble_handler(DataStructure::Instance *ds) {
     std::this_thread::sleep_for(std::chrono::milliseconds(100));
 
     characteristic->set_on_value_changed([name, ds](SimpleBluez::ByteArray new_value) {
-        std::string payload(new_value.begin(), new_value.end());
         if(ds->pr_time) { 
-        auto current_point = std::chrono::high_resolution_clock::now();
-        auto dur = std::chrono::duration_cast<std::chrono::microseconds>(current_point - ds->epoch_point);
-        ds->start_time = dur.count();
+        ds->start_time = std::chrono::high_resolution_clock::now();;
         }
-        // std::cout << "Notified: " << payload << std::endl;
+
+        std::string payload(new_value.begin(), new_value.end());
+
         ds->universal_map["ble/" + name] = payload;
         data_route_handler(ds, name);
-        // spdlog::debug("(BLE) {}", payload);
-        // std::cout << "Message arrived" << std::endl;
-        // if (!ds->active_registers.count(name)) {
-        // create_task_detached(ds, name);
-        // }
         });
 
     characteristic->start_notify();

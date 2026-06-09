@@ -1,0 +1,3 @@
+DELIM ;
+GET 0
+OUT

@@ -90,15 +90,12 @@ finish:
 
 void coap_post_callback(coap_resource_t *resource, coap_session_t *session [[maybe_unused]], const coap_pdu_t *request, const coap_string_t *query [[maybe_unused]], coap_pdu_t* response) {
   DataStructure::Instance *ds = (DataStructure::Instance*) coap_resource_get_userdata(resource);
-  coap_str_const_t *uri = coap_resource_get_uri_path(resource);
 
-  if(ds->pr_time) {
-    auto current_point = std::chrono::high_resolution_clock::now();
-    auto dur = std::chrono::duration_cast<std::chrono::microseconds>(current_point - ds->epoch_point);
-    ds->start_time = dur.count();
-    // spdlog::info("Start: {}", dur.count());
+  if(ds->pr_time) { 
+    ds->start_time = std::chrono::high_resolution_clock::now();;
   }
 
+  coap_str_const_t *uri = coap_resource_get_uri_path(resource);
   size_t len;
   const uint8_t *databuf;
   size_t offset;

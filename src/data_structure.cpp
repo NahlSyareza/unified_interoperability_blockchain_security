@@ -30,19 +30,21 @@ DataStructure::Instance::Instance() {
 
 void DataStructure::Instance::save_pr_time() {
   if(pr_time_count < max_pr_time_count) {
-    pr_time_detailed.push_back(std::make_pair(start_time, end_time));
-    pr_time_sum.push_back(end_time - start_time);
+    auto dur = std::chrono::duration_cast<std::chrono::microseconds>(end_time - start_time);
+    pr_time_sum.push_back(dur.count());
   } else {
     fprintf(stdout, "Measured in microseconds");
     int index = 0;
+    long total = 0;
     for(auto& e : pr_time_sum) {
       fprintf(stdout, "(%d) Time: %ld\n", index, e);
+      total += e;
       index++;
     }     
 
-    for(auto& e : pr_time_detailed) {
-      fprintf(stdout, "%ld %ld\n", e.first, e.second);
-    }
+    float avg = (float) total / 60;
+    
+    fprintf(stdout, "Avg: (%.2f)\n", avg);
 
     exit(0);
   }

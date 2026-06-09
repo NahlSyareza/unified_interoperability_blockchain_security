@@ -12,7 +12,7 @@
     "format": "celcius-raw"
   },
   "coapAct": {
-    "ip": "192.168.18.28",
+    "ip": "192.168.0.3",
     "network": "generic-coap",
     "format": "generic-raw"
   },

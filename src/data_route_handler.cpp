@@ -37,7 +37,6 @@ void ble_processor_helper(DataStructure::Instance *ds, std::string identifier, s
       nlohmann::json ble_uuids = ds->ble_addresses[identifier];
       std::string service_uuid = ble_uuids["service"];
       std::string characteristic_uuid = ble_uuids["characteristic"];
-      //      spdlog::info("BLE {} Service: {} Characteristic {} ", identifier, service_uuid, characteristic_uuid);
 
       try {
         auto characteristic = p->get_characteristic(service_uuid, characteristic_uuid);
@@ -48,8 +47,6 @@ void ble_processor_helper(DataStructure::Instance *ds, std::string identifier, s
         spdlog::error("{}", e.what());
       }
     }
-
-    // p.write_request(ds->uuid_pair[identifier].first, ds->uuid_pair[identifier].second, payload);
   }
 }
 
@@ -207,9 +204,12 @@ void get_instr(std::string op, std::string payload, OperationRegister *reg) {
 void process_instr(std::string instr, std::string act, std::string payload, OperationRegister *reg) {
   // spdlog::debug("Running instruction: {}", instr);
 
-  if (instr == "GET") {
+  if(instr == "DELIM") {
+    reg->delimiter = act.at(0);
+    fprintf(stdout, "%c\n", reg->delimiter);
+  } else if (instr == "GET") {
     int detects = std::stoi(act);
-    reg->input_data = strget(payload, detects);
+    reg->input_data = strget(payload, detects, reg->delimiter);
   } else if (instr == "GET_FROM") {
     nlohmann::json json_obj;
 
@@ -256,12 +256,12 @@ void process_instr(std::string instr, std::string act, std::string payload, Oper
     reg->convert = "";
     reg->output_data = json_obj.dump();
   } else if (instr == "IF") {
-    std::string compared_value = strget(act, 1);
+    std::string compared_value = strget(act, 1, ' ');
     // reg->logic_comparison = compare(act, std::stoi(reg->input_data), std::stoi(compared_value));
     reg->logic_comparison = compare(act, reg->type, reg->input_data, compared_value);
   } else if (instr == "ELSEIF") {
     if (!reg->logic_comparison) {
-      std::string compared_value = strget(act, 1);
+      std::string compared_value = strget(act, 1, ' ');
       // reg->logic_comparison = compare(act, std::stoi(reg->input_data), std::stoi(compared_value));
       reg->logic_comparison = compare(act, reg->type, reg->input_data, compared_value);
     }
@@ -293,7 +293,7 @@ void extract_config(std::string path, nlohmann::json *json_ptr) {
   file.close();
 }
 
-bool create_interop_data(std::string source, nlohmann::json *json_ptr) {
+bool create_interop_data(DataStructure::Instance *ds, std::string source, nlohmann::json *json_ptr) {
   nlohmann::json connection_registers, instance_registers, network_profiles, format_profiles;
 
   extract_config("./config/connection_registers.json", &connection_registers);
@@ -373,13 +373,21 @@ bool create_interop_data(std::string source, nlohmann::json *json_ptr) {
 
   (*json_ptr)["dst"] = data;
 
+  ds->interop_map[source] = *json_ptr;
+
   return true;
 }
 
 
 void data_route_handler(DataStructure::Instance *ds, std::string source) {
   nlohmann::json interop_data;
-  create_interop_data(source, &interop_data);
+
+  if(!ds->interop_map.count(source)) {
+    create_interop_data(ds, source, &interop_data);
+  } else {
+    interop_data = ds->interop_map[source];
+  }
+  // create_interop_data(source, &interop_data);
 
   // spdlog::debug("{}", interop_data.dump(2));
 
@@ -394,6 +402,7 @@ void data_route_handler(DataStructure::Instance *ds, std::string source) {
   std::ifstream rule_file("./rules/" + rules);
   std::stringstream ss;
   std::string payload;
+  std::string line;
 
   std::string map_location = "";
   map_location.append(src_conn).append("/").append(src_name);
@@ -402,9 +411,7 @@ void data_route_handler(DataStructure::Instance *ds, std::string source) {
 
   OperationRegister op_reg;
 
-  std::string line;
-
-  if (rule_file) {
+  if (rule_file && rule_file.peek() != EOF) {
     ss << rule_file.rdbuf();
     rule_file.close();
 
@@ -412,8 +419,6 @@ void data_route_handler(DataStructure::Instance *ds, std::string source) {
       get_instr(line, payload, &op_reg);
     }
 
-  } else {
-    spdlog::error("(Data Route Handler) Rule not found? Perhaps a typo? Or maybe deliberate.");
   }
 
   std::string final_payload = !op_reg.output_data.empty() ? op_reg.output_data : payload;
@@ -436,11 +441,9 @@ void data_route_handler(DataStructure::Instance *ds, std::string source) {
   }
 
   if(ds->pr_time) {
-    auto current_point = std::chrono::high_resolution_clock::now();
-    auto dur = std::chrono::duration_cast<std::chrono::microseconds>(current_point - ds->epoch_point);
-    ds->end_time = dur.count();
-    ds->save_pr_time();
-    // spdlog::info("End: {}", dur.count());
-  }
+    ds->end_time = std::chrono::high_resolution_clock::now();;
+    auto dur = std::chrono::duration_cast<std::chrono::microseconds>(ds->end_time - ds->start_time);
 
+    ds->save_pr_time();
+  }
 }

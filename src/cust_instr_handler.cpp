@@ -7,7 +7,7 @@ void print_op_reg(OperationRegister *op_reg) {
 }
 
 // If the segment is greater than the space count inside that std::string, then return the whole std::string dawg.
-std::string strget(std::string base, int segment_count) {
+std::string strget(std::string base, int segment_count, char delimiter) {
   int internal_segment_counter, start_index, end_index;
 
   internal_segment_counter = 0;
@@ -15,7 +15,7 @@ std::string strget(std::string base, int segment_count) {
   end_index = -1;
 
   for (size_t i = 0; i < base.length(); i++) {
-    if (base.at(i) == ' ') {
+    if (base.at(i) == delimiter) {
       if (segment_count == internal_segment_counter) {
         end_index = i - 1;
         break;
