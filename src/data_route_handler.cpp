@@ -14,10 +14,10 @@ void uart_processor(DataStructure::Instance *ds, std::string payload) {
 }
 
 void spi_processor(DataStructure::Instance *ds [[maybe_unused]], std::string payload [[maybe_unused]]) {
-  // uint8_t rx_buffer[16];
-  // uint8_t *rx_buffer;
+  uint8_t rx_buffer[16];
+  uint8_t *rx_buffer;
 
-  // ds->spi_h.xfer((uint8_t*) payload.c_str(), payload.size(), rx_buffer, 1);
+  ds->spi_h.xfer((uint8_t*) payload.c_str(), payload.size(), rx_buffer, 1);
 }
 
 void rf24_processor(DataStructure::Instance *ds, std::string identifier [[maybe_unused]], std::string payload) {

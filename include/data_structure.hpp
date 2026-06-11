@@ -51,12 +51,12 @@ namespace DataStructure {
         .speed = 1000000,
         .delay = 0
       };
-      SPI spi_h = SPI("/dev/spidev0.0", &spi_config_settings);;
+      SPI spi_s = SPI("/dev/spidev0.0", &spi_config_settings);
+      SPI spi_d = SPI("/dev/spidev0.1", &spi_config)settings);
 
       std::map<std::string, std::string> universal_map;
       std::map<std::string, nlohmann::json> interop_map;
 
-      // std::map<std::string, TaskData *> active_registers;
       std::vector<std::shared_ptr<SimpleBluez::Device>> ble_peripherals;
       std::vector<std::shared_ptr<SimpleBluez::Characteristic>> ble_characteristics;
 
