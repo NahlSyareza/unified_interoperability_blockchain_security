@@ -4,6 +4,7 @@
 #include <nlohmann/json.hpp>
 #include <simplebluez/Bluez.h>
 #include <RF24/RF24.h>
+#include <RF24Network/RF24Network.h>
 #include <spidev_lib++.h>
 #include <spdlog/spdlog.h>
 #include <map>
@@ -42,6 +43,8 @@ namespace DataStructure {
       // httplib::Server svr;
       mosquitto *mosq = nullptr;
       RF24 radio = RF24(22, 0);
+      RF24Network radio_net = RF24Network(radio);
+
       spi_config_t spi_config_settings = {
         .mode = 0,
         .bits_per_word = 8,

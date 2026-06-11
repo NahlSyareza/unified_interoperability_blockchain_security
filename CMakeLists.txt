@@ -11,10 +11,12 @@ add_executable(legendary_boss main.cpp src/ble_handler.cpp src/data_route_handle
 # add_executable(legendary_boss main.cpp src/data_structure.cpp)
 
 # RF24
-find_path(RF24_INCLUDE RF24.h PATH_SUFFIXES RF24)
-find_library(RF24_LIB NAMES rf24)
+# find_path(RF24_INCLUDE RF24.h PATH_SUFFIXES RF24)
+# find_library(RF24_LIB NAMES rf24)
+find_library(RF24_LIB rf24 REQUIRED)
+find_library(RF24NETWORK_LIB rf24network REQUIRED)
 target_include_directories(legendary_boss PRIVATE ${RF24_INCLUDE})
-target_link_libraries(legendary_boss PRIVATE ${RF24_LIB})
+target_link_libraries(legendary_boss PRIVATE ${RF24_LIB} ${RF24NETWORK_LIB})
 
 # Threads or Pthreads I think
 find_package(Threads REQUIRED)

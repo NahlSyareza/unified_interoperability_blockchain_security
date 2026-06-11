@@ -1,14 +1,14 @@
 {
   "mqttSen": {
-    "destination": "coapAct"
+    "destination": "bleAct"
   },
   "coapSen": {
-    "destination": "coapAct"
+    "destination": "bleAct"
   },
   "bleSen": {
-    "destination": "coapAct"
+    "destination": "bleAct"
   },
-  "1Node": {
-    "destination": "coapAct"
+  "011": {
+    "destination": "bleAct"
   }
 }

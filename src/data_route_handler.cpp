@@ -23,9 +23,11 @@ void spi_processor(DataStructure::Instance *ds [[maybe_unused]], std::string pay
 void rf24_processor(DataStructure::Instance *ds, std::string identifier [[maybe_unused]], std::string payload) {
   ds->radio_mode = true;
 
-  ds->radio.stopListening((uint8_t*)identifier.c_str());
-  bool report = ds->radio.write(payload.c_str(), 64);
-  if(report) {
+  uint16_t target = static_cast<uint16_t>(std::stoul(identifier, nullptr, 8));
+  RF24NetworkHeader header2(target, 1);
+  bool ok = ds->radio_net.write(header2, payload.c_str(), payload.size() + 1);
+  if(!ok) {
+    spdlog::error("Not ok dawg\n");
   }
 
   ds->radio_mode = false;
@@ -156,15 +158,7 @@ void coap_processor(DataStructure::Instance *ds, std::string query, std::string 
 }
 
 void mqtt_processor(DataStructure::Instance *ds, std::string topic, std::string payload) {
-  int rc;
-
-  mosquitto_property *proplist = NULL;
-  rc = mosquitto_property_add_string_pair(&proplist, MQTT_PROP_USER_PROPERTY, "origin", "external");
-  if (rc != MOSQ_ERR_SUCCESS) {
-    spdlog::error("Something's wrong I can feel it");
-  }
-
-  rc = mosquitto_publish(ds->mosq, nullptr, topic.c_str(), (int)payload.length(), payload.c_str(), 2, false);
+  int rc = mosquitto_publish(ds->mosq, nullptr, topic.c_str(), (int)payload.length(), payload.c_str(), 2, false);
   if (rc != MOSQ_ERR_SUCCESS) {
     spdlog::error("Error publishing: {}", mosquitto_strerror(rc));
   }

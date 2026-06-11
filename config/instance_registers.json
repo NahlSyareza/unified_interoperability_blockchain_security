@@ -12,7 +12,7 @@
     "format": "celcius-raw"
   },
   "coapAct": {
-    "ip": "192.168.0.3",
+    "ip": "192.168.18.28",
     "network": "generic-coap",
     "format": "generic-raw"
   },
@@ -24,11 +24,11 @@
     "network": "generic-ble",
     "format": "generic-raw"
   },
-  "1Node": {
+  "011": {
     "network": "generic-rf24",
     "format": "generic-raw"
   },
-  "2Node": {
+  "0111": {
     "network": "generic-rf24",
     "format": "generic-raw"
   },
