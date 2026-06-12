@@ -1,5 +1,0 @@
-TYPE string
-GET_FROM sensor
-IF > 30
-THEN on
-OTHERWISE off

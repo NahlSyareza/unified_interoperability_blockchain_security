@@ -1,6 +1,0 @@
-GET 0
-IF < 100
-THEN medium
-;ELSEIF < 50
-;THEN fast
-OTHERWISE slow

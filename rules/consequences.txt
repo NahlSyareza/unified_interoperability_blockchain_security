@@ -1,4 +1,0 @@
-TYPE raw
-GET 0
-CONV_TO int
-ASGN_TO pyl

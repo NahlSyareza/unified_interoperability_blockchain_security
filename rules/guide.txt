@@ -1,10 +1,10 @@
 Okay so here's the commands so far:
 * TYPE <type> 
-  Used to declare a type of something. Unused for now
+  Used to declare a type of something. Used for comparisons
   Planned usable <type>:
     - char
     - int
-    - float
+    - double
   
 * GET <n>
   Used to get a sliced string based after n amounts of spaces. Can be improved to also detect another delimiter (i.e. semicolon, colon, comma, etc.)
@@ -41,4 +41,5 @@ Okay so here's the commands so far:
   Used to convert a reg->input_data into reg->output_data. Mainly used to handle THEN and OTHERWISE
 
 * APPEND_OUT
-  Used to append reg->input_data into reg->output_data
+  Used to append reg->input_data into reg->output_data, uses reg->delimiter if multiple data is to be appended out.
+

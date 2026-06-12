@@ -5,20 +5,20 @@
 #include "mosquitto.h"
 #include "mqtt_protocol.h"
 
-void i2c_processor(DataStructure::Instance *ds, std::string payload) {
-  write(ds->i2c_h, payload.c_str(), payload.size());
-}
-
-void uart_processor(DataStructure::Instance *ds, std::string payload) {
-  write(ds->uart_h, payload.c_str(), payload.size());
-}
-
-void spi_processor(DataStructure::Instance *ds [[maybe_unused]], std::string payload [[maybe_unused]]) {
-  uint8_t rx_buffer[16];
-  uint8_t *rx_buffer;
-
-  ds->spi_h.xfer((uint8_t*) payload.c_str(), payload.size(), rx_buffer, 1);
-}
+// void i2c_processor(DataStructure::Instance *ds, std::string payload) {
+//   write(ds->i2c_h, payload.c_str(), payload.size());
+// }
+// 
+// void uart_processor(DataStructure::Instance *ds, std::string payload) {
+//   write(ds->uart_h, payload.c_str(), payload.size());
+// }
+// 
+// void spi_processor(DataStructure::Instance *ds [[maybe_unused]], std::string payload [[maybe_unused]]) {
+//   uint8_t rx_buffer[16];
+//   uint8_t *rx_buffer;
+// 
+//   ds->spi_h.xfer((uint8_t*) payload.c_str(), payload.size(), rx_buffer, 1);
+// }
 
 void rf24_processor(DataStructure::Instance *ds, std::string identifier [[maybe_unused]], std::string payload) {
   ds->radio_mode = true;
@@ -200,7 +200,6 @@ void process_instr(std::string instr, std::string act, std::string payload, Oper
 
   if(instr == "DELIM") {
     reg->delimiter = act.at(0);
-    fprintf(stdout, "%c\n", reg->delimiter);
   } else if (instr == "GET") {
     int detects = std::stoi(act);
     reg->input_data = strget(payload, detects, reg->delimiter);
@@ -217,9 +216,11 @@ void process_instr(std::string instr, std::string act, std::string payload, Oper
       spdlog::error("(GET_FROM) {}", e.what());
     }
 
-    reg->input_data = json_obj[act].dump();
-  } else if (instr == "TYPE") {
-    reg->type = act;
+    if(json_obj[act].is_string()) {
+      reg->input_data = json_obj[act].get<std::string>();
+    } else {
+      reg->input_data = json_obj[act].dump();
+    }
   } else if (instr == "ASGN_TO") {
     nlohmann::json json_obj;
 
@@ -236,8 +237,8 @@ void process_instr(std::string instr, std::string act, std::string payload, Oper
     try {
       if (reg->convert == "int") {
         json_obj[act] = std::stoi(reg->input_data);
-      } else if (reg->convert == "double") {
-        json_obj[act] = std::stod(reg->input_data);
+      } else if (reg->convert == "float") {
+        json_obj[act] = std::stof(reg->input_data);
       } else {
         json_obj[act] = reg->input_data;
       }
@@ -252,12 +253,12 @@ void process_instr(std::string instr, std::string act, std::string payload, Oper
   } else if (instr == "IF") {
     std::string compared_value = strget(act, 1, ' ');
     // reg->logic_comparison = compare(act, std::stoi(reg->input_data), std::stoi(compared_value));
-    reg->logic_comparison = compare(act, reg->type, reg->input_data, compared_value);
+    reg->logic_comparison = compare(act, reg->convert, reg->input_data, compared_value);
   } else if (instr == "ELSEIF") {
     if (!reg->logic_comparison) {
       std::string compared_value = strget(act, 1, ' ');
       // reg->logic_comparison = compare(act, std::stoi(reg->input_data), std::stoi(compared_value));
-      reg->logic_comparison = compare(act, reg->type, reg->input_data, compared_value);
+      reg->logic_comparison = compare(act, reg->convert, reg->input_data, compared_value);
     }
   } else if (instr == "CONV_TO") {
     reg->convert = act;
@@ -268,9 +269,37 @@ void process_instr(std::string instr, std::string act, std::string payload, Oper
     if (!reg->logic_comparison)
       reg->input_data = act;
   } else if(instr == "OUT") {
-    reg->output_data = reg->input_data;
+    try {
+      if (reg->convert == "int") {
+        reg->output_data = std::to_string(std::stoi(reg->input_data));
+      } else if (reg->convert == "float") {
+        reg->output_data = std::to_string(std::stof(reg->input_data));
+      } else {
+        reg->output_data = reg->input_data;
+      }
+    } catch (const std::invalid_argument &e) {
+      spdlog::error("(OUT) {}", e.what());
+      reg->output_data = reg->input_data;
+    }
+
+    reg->convert = "";
   } else if(instr == "APPEND_OUT") {
-    reg->output_data.append(" " + reg->input_data);
+    try {
+      if (reg->convert == "int") {
+        reg->output_data.append(reg->delimiter + std::to_string(std::stoi(reg->input_data)));
+      } else if (reg->convert == "float") {
+        reg->output_data.append(reg->delimiter + std::to_string(std::stof(reg->input_data)));
+      }else {
+        reg->output_data.append(reg->delimiter + reg->input_data);
+      }
+    } catch (const std::invalid_argument &e) {
+      spdlog::error("(APPEND_OUT) {}", e.what());
+      reg->output_data.append(reg->delimiter + reg->input_data);
+    }
+
+    reg->convert = "";
+  } else if(instr == "UNIT_CONV") {
+    reg->input_data = unit_conversion(act, reg->input_data);
   } else {
     spdlog::error("(Process Instr) Unrecognized instruction {}", instr);
   }
@@ -426,13 +455,14 @@ void data_route_handler(DataStructure::Instance *ds, std::string source) {
     ble_processor(ds, dst_name, final_payload);
   } else if (dest_conn == "rf24") {
     rf24_processor(ds, dst_name, final_payload);
-  } else if (dest_conn == "uart") {
-    uart_processor(ds, final_payload);   
-  } else if (dest_conn == "i2c") {
-    i2c_processor(ds, final_payload);
-  } else if (dest_conn == "spi") {
-    spi_processor(ds, final_payload);
-  }
+  } 
+  // else if (dest_conn == "uart") {
+  //   uart_processor(ds, final_payload);   
+  // } else if (dest_conn == "i2c") {
+  //   i2c_processor(ds, final_payload);
+  // } else if (dest_conn == "spi") {
+  //   spi_processor(ds, final_payload);
+  // }
 
   if(ds->pr_time) {
     ds->end_time = std::chrono::high_resolution_clock::now();;

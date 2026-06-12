@@ -1,2 +1,0 @@
-GET_FROM data
-OUT

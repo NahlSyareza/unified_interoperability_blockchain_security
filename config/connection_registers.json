@@ -1,14 +1,15 @@
 {
   "mqttSen": {
-    "destination": "bleAct"
+    "destination": "mqttAct",
+    "rules": "15_raw_to_json.txt"
   },
   "coapSen": {
-    "destination": "bleAct"
+    "destination": "0111"
   },
   "bleSen": {
-    "destination": "bleAct"
+    "destination": "0111"
   },
   "011": {
-    "destination": "bleAct"
+    "destination": "0111"
   }
 }

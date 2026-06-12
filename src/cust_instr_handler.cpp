@@ -61,9 +61,9 @@ bool compare(std::string sign, std::string type, std::string a, std::string b) {
     } else if (sign.at(0) == '>') {
       return ia > ib;
     }
-  } else if (type == "double") {
-    double da = std::stod(a);
-    double db = std::stod(b); 
+  } else if (type == "float") {
+    float da = std::stof(a);
+    float db = std::stof(b); 
 
     if (sign.at(1) == '=') {
       if (sign.at(0) == '>') {
@@ -80,4 +80,29 @@ bool compare(std::string sign, std::string type, std::string a, std::string b) {
 
   spdlog::error("(Cust Instr Handler) Sign not recognized!");
   return false;
+}
+
+std::string unit_conversion(std::string command, std::string a) {
+  float data = std::stof(a);
+  float result = 0;
+
+  if (command == "tctf") {           
+    result = (data * 9.0f / 5.0f) + 32.0f;
+  } else if (command == "tctk") {    
+    result = data + 273.15f;
+  } else if (command == "tftc") {      
+    result = (data - 32.0f) * 5.0f / 9.0f;
+  } else if (command == "tftk") {    
+    result = (data - 32.0f) * 5.0f / 9.0f + 273.15f;
+  } else if (command == "tktc") {    
+    result = data - 273.15f;
+  } else if (command == "tktf") {    
+    result = (data - 273.15f) * 9.0f / 5.0f + 32.0f;
+  } else if (command == "dmtmi") {
+    result = data / 1609.344f;
+  } else if (command == "dmitm") {   
+    result = data * 1609.344f;
+  }
+
+  return std::to_string(result);
 }

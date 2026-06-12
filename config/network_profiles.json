@@ -10,14 +10,5 @@
   },
   "generic-rf24": {
     "connection": "rf24"
-  },
-  "generic-uart": {
-    "connection": "uart"
-  },
-  "generic-i2c": {
-    "connection": "i2c"
-  },
-  "generic-spi": {
-    "connection": "spi"
   }
 }

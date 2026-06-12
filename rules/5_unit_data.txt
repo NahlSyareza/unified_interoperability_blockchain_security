@@ -1,0 +1,15 @@
+GET_FROM k0
+UNIT_CONV tctf
+ASGN_TO temp_fahrenheit
+GET_FROM k1
+UNIT_CONV tftc
+ASGN_TO temp_celcius
+GET_FROM k2
+UNIT_CONV tctk
+ASGN_TO temp_kelvin
+GET_FROM k3
+UNIT_CONV dmitm
+ASGN_TO dist_meter
+GET_FROM k4
+UNIT_CONV dmtmi
+ASGN_TO dist_mile
