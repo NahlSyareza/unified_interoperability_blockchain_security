@@ -166,7 +166,7 @@ void mqtt_processor(DataStructure::Instance *ds, std::string topic, std::string 
 
 void http_processor(DataStructure::Instance *ds, std::string path, std::string payload) { ds->universal_map["http/" + path] = payload; }
 
-void get_instr(std::string op, std::string payload, OperationRegister *reg) {
+void get_instr(DataStructure::Instance* ds, std::string op, std::string payload, OperationRegister *reg) {
   size_t ctrl;
   std::string instr, act;
 
@@ -192,10 +192,10 @@ void get_instr(std::string op, std::string payload, OperationRegister *reg) {
   // std::cout << "Instruction: " << instr << std::endl;
   // std::cout << "Act: " << act << std::endl;
 
-  process_instr(instr, act, payload, reg);
+  process_instr(ds, instr, act, payload, reg);
 }
 
-void process_instr(std::string instr, std::string act, std::string payload, OperationRegister *reg) {
+void process_instr(DataStructure::Instance *ds, std::string instr, std::string act, std::string payload, OperationRegister *reg) {
   // spdlog::debug("Running instruction: {}", instr);
 
   if(instr == "DELIM") {
@@ -300,6 +300,37 @@ void process_instr(std::string instr, std::string act, std::string payload, Oper
     reg->convert = "";
   } else if(instr == "UNIT_CONV") {
     reg->input_data = unit_conversion(act, reg->input_data);
+  } else if(instr == "BLOCKCHAIN_VERIFY") {
+    nlohmann::json json_obj;
+
+    try {
+      json_obj = nlohmann::json::parse(payload);
+      if (!json_obj.is_object()) {
+        // This shouldn't happen to be honest
+        throw nlohmann::json::parse_error::create(6767, 0, "Technically valid, but not an object dawg. Thus pizdec", nullptr);
+      }
+    } catch (const nlohmann::json::parse_error &e) {
+      spdlog::error("(BLOCKCHAIN_VERIFY) {}", e.what());
+    }
+
+    std::string selected_key = "";
+    if(ds->device_keys.count(act)) {
+      selected_key = ds->device_keys[act];
+
+      std::string payload = json_obj["payload"];
+      std::string sign = json_obj["sign"];
+      
+      std::vector<unsigned char> encoded_key = encode_the_key(selected_key);
+      bool is_verified = verify_sign(payload, sign, encoded_key);
+
+      if(!is_verified) {
+        reg->output_data = "PAYLOAD AND SIGN IS NOT A MATCH";
+      }
+    } else {
+
+      reg->output_data = "CORRESPONDING DEVICE IS NOT REGISTERED";
+      // spdlog::warn("Key is not found!");
+    }
   } else {
     spdlog::error("(Process Instr) Unrecognized instruction {}", instr);
   }
@@ -439,7 +470,7 @@ void data_route_handler(DataStructure::Instance *ds, std::string source) {
     rule_file.close();
 
     while (std::getline(ss, line)) {
-      get_instr(line, payload, &op_reg);
+      get_instr(ds, line, payload, &op_reg);
     }
 
   }

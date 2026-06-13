@@ -7,7 +7,7 @@ project(legendary_boss)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-add_executable(legendary_boss main.cpp src/ble_handler.cpp src/data_route_handler.cpp src/mqtt_handler.cpp src/cust_instr_handler.cpp src/data_structure.cpp src/rf24_handler.cpp src/coap_handler.cpp)
+add_executable(legendary_boss main.cpp src/ble_handler.cpp src/data_route_handler.cpp src/mqtt_handler.cpp src/cust_instr_handler.cpp src/data_structure.cpp src/rf24_handler.cpp src/coap_handler.cpp src/blockchain_handler.cpp)
 # add_executable(legendary_boss main.cpp src/data_structure.cpp)
 
 # RF24
@@ -28,6 +28,16 @@ pkg_check_modules(mosquitto REQUIRED libmosquitto)
 target_link_libraries(legendary_boss PRIVATE ${mosquitto_LIBRARIES})
 # target_link_directories(legendary_boss PRIVATE ${mosquitto_LIBRARY_DIRS}) 
 target_include_directories(legendary_boss PRIVATE ${mosquitto_INCLUDE_DIRS})
+
+# cURL
+pkg_check_modules(CURL REQUIRED libcurl) 
+target_include_directories(legendary_boss PRIVATE ${CURL_INCLUDE_DIRS})
+target_link_libraries(legendary_boss PRIVATE ${CURL_LIBRARIES})
+
+# Sodium
+pkg_check_modules(SODIUM REQUIRED libsodium) 
+target_include_directories(legendary_boss PRIVATE ${SODIUM_INCLUDE_DIRS})
+target_link_libraries(legendary_boss PRIVATE ${SODIUM_LIBRARIES})
 
 # CoAP
 pkg_search_module(LIBCOAP REQUIRED IMPORTED_TARGET 

@@ -1,4 +1,5 @@
 #include "data_structure.hpp"
+// #include "blockchain_handler.hpp"
 #include <fstream>
 
 DataStructure::Instance::Instance() {
@@ -25,7 +26,6 @@ DataStructure::Instance::Instance() {
 
   _mqtt_topics.close();
   _ble_addresses.close();
-
 }
 
 void DataStructure::Instance::save_pr_time() {

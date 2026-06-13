@@ -38,6 +38,7 @@ namespace DataStructure {
 
       nlohmann::json ble_addresses;
       nlohmann::json mqtt_topics;
+      nlohmann::json device_keys;
 
       void save_pr_time();
 

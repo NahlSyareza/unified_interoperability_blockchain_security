@@ -3,6 +3,7 @@
 #include "mqtt_handler.hpp"
 #include "rf24_handler.hpp"
 #include "coap_handler.hpp"
+#include "blockchain_handler.hpp"
 #include <iostream>
 #include <thread>
 #include <spdlog/spdlog.h>
@@ -11,6 +12,8 @@ int main() {
   spdlog::info("Walking by the wall");
 
   DataStructure::Instance ds;
+
+  blockchain_handler(&ds);
 
   spdlog::set_level(spdlog::level::debug);
 

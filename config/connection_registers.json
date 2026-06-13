@@ -1,6 +1,14 @@
 {
   "mqttSen": {
     "destination": "mqttAct",
+    "rules": "blockchain_verify.txt"
+  },
+  "mqttGlob": {
+    "destination": "mqttAct",
+    "rules": "15_raw_to_json.txt"
+  },
+  "mqttNet": {
+    "destination": "mqttAct",
     "rules": "15_raw_to_json.txt"
   },
   "coapSen": {
