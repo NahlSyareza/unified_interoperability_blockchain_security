@@ -1,7 +1,7 @@
 {
   "mqttSen": {
     "destination": "mqttAct",
-    "rules": "blockchain_verify.txt"
+    "rules": "10_json_to_raw.txt"
   },
   "mqttGlob": {
     "destination": "mqttAct",
